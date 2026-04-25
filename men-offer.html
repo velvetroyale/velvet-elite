@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -14,26 +15,32 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #0b0b0b;
-    color: #fff;
+    color: #d4af37; /* GOLD */
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* HERO */
 .hero {
-    padding: 70px 20px;
+    padding: 80px 20px;
     background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
+/* TITLE */
 h1 {
-    color: #7CFFB2;
-    font-size: 40px;
+    color: #d4af37;
+    font-size: 44px;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
+/* HERO TEXT */
 .hero p {
-    opacity: 0.85;
+    opacity: 0.9;
     max-width: 800px;
-    margin: auto;
+    margin: 10px auto 0 auto;
+    font-size: 16px;
+    color: #d4af37;
 }
 
 /* CONTAINER */
@@ -45,12 +52,18 @@ h1 {
 
 /* CARD */
 .card {
-    background: #1a1a1a;
+    background: #141414;
     padding: 25px;
     margin: 18px auto;
     max-width: 650px;
     border-radius: 14px;
-    border: 1px solid #333;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    color: #d4af37;
+}
+
+/* HEADINGS */
+.card h2 {
+    color: #d4af37;
 }
 
 /* BUTTON */
@@ -58,36 +71,44 @@ a.button {
     display: block;
     padding: 18px;
     margin: 30px auto 10px auto;
-    background: #7CFFB2;
-    color: #000;
+    background: #d4af37;
+    color: #0b0b0b;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
     max-width: 400px;
     font-size: 18px;
+    transition: 0.2s ease;
+}
+
+a.button:hover {
+    background: #e6c35a;
 }
 
 /* SMALL TEXT */
 .small {
     font-size: 12px;
-    opacity: 0.7;
+    opacity: 0.75;
     margin-top: 8px;
+    color: #d4af37;
 }
 
 /* FOOTER */
 .footer {
     margin-top: 40px;
     font-size: 12px;
-    opacity: 0.5;
+    opacity: 0.6;
     padding: 20px;
+    color: #d4af37;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
     h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
 }
+
 </style>
 </head>
 
@@ -132,13 +153,13 @@ a.button {
     </p>
 </div>
 
-<!-- SINGLE CTA -->
+<!-- CTA -->
 <a class="button" href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2">
     Activate Membership Access
 </a>
 
 <div class="small">
-    You will select your membership tier securely during checkout.
+    Secure checkout • Membership tier selected during payment
 </div>
 
 </div>
