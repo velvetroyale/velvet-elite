@@ -18,36 +18,44 @@ body {
     line-height: 1.6;
 }
 
-/* CONTAINER */
-.container {
-    max-width: 850px;
-    margin: auto;
-    padding: 16px;
-}
-
 /* HERO */
 .hero {
     text-align: center;
-    padding: 60px 16px;
+    padding: 70px 16px;
     background: linear-gradient(135deg, #111, #1f1f1f);
 }
 
 .hero h1 {
+    font-size: 34px;
     color: #7CFFB2;
-    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .hero p {
     opacity: 0.85;
+    max-width: 700px;
+    margin: auto;
 }
 
-/* CARD */
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 16px;
+}
+
+/* CARDS */
 .card {
     background: #1a1a1a;
-    padding: 20px;
+    padding: 22px;
     border-radius: 12px;
     border: 1px solid #333;
     margin-bottom: 15px;
+}
+
+/* HEADINGS */
+h2 {
+    color: #7CFFB2;
 }
 
 /* FORM */
@@ -69,27 +77,38 @@ input, textarea {
 /* BUTTON */
 .btn {
     width: 100%;
-    padding: 15px;
+    padding: 16px;
     background: #7CFFB2;
     color: #000;
     font-weight: bold;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
 }
 
-/* FOOTER NOTE */
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* NOTE */
 .note {
     text-align: center;
     font-size: 12px;
     opacity: 0.6;
+    margin-top: 10px;
+}
+
+/* HIGHLIGHT */
+.highlight {
+    color: #7CFFB2;
+    font-weight: bold;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
     .hero h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 }
 </style>
@@ -101,31 +120,49 @@ input, textarea {
 <!-- HERO -->
 <div class="hero">
     <h1>💎 Velvet Elite</h1>
-    <p>Private international matchmaking network for selective introductions</p>
+    <p>
+        A private international matchmaking network connecting selected individuals across 
+        Philippines, Europe, North America, and Latin America through curated introductions.
+    </p>
 </div>
 
 <div class="container">
 
-<!-- VALUE PROPOSITION -->
+<!-- VALUE SECTION -->
 <div class="card">
-    <h2 style="color:#7CFFB2;">Elite Global Matchmaking Network</h2>
+    <h2>Exclusive Private Network</h2>
     <p>
-        Velvet Elite connects selected individuals across Philippines, Europe, US, Canada, and Latin America
-        through a private, curated introduction system.
+        Velvet Elite is not a dating app. It is a curated matchmaking system where every profile is reviewed 
+        before access is granted.
     </p>
+
+    <p class="highlight">
+        ✔ Selective approval only<br>
+        ✔ International introductions<br>
+        ✔ Privacy-first system<br>
+        ✔ High-quality matches only
+    </p>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="card">
+    <h2>How It Works</h2>
     <p>
-        Applications are reviewed individually. Not all applicants are accepted.
+        1. Submit your application<br>
+        2. Profile review and selection<br>
+        3. Approval notification (if selected)<br>
+        4. Access activation + introductions begin
     </p>
 </div>
 
 <!-- APPLICATION FORM -->
 <div class="card">
 
-<h2 style="color:#7CFFB2;">Apply for Access</h2>
+<h2>Apply for Private Access</h2>
 
 <form action="https://formspree.io/f/xqewnrey" method="POST">
 
-<!-- Redirect to custom thank you page -->
+<!-- Redirect -->
 <input type="hidden" name="_next" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
 
 <!-- Email subject -->
@@ -149,7 +186,7 @@ input, textarea {
 <label>Preferred Countries</label>
 <input type="text" name="countries">
 
-<label>About You</label>
+<label>Tell us about yourself</label>
 <textarea name="message" rows="5"></textarea>
 
 <button class="btn" type="submit">
@@ -159,9 +196,18 @@ Submit Application
 </form>
 
 <p class="note">
-Private network. Selective approval process. Response within 24–72 hours if selected.
+Not all applicants are accepted. If selected, you will receive private access instructions within 24–72 hours.
 </p>
 
+</div>
+
+<!-- TRUST SECTION -->
+<div class="card">
+    <h2>Why Apply?</h2>
+    <p>
+        Modern dating apps are random and inefficient. Velvet Elite uses a curated system designed to 
+        improve compatibility, privacy, and long-term relationship success.
+    </p>
 </div>
 
 </div>
