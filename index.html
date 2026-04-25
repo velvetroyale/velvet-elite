@@ -21,42 +21,57 @@ body {
 
 /* HERO */
 .hero {
-    padding: 95px 20px;
+    padding: 110px 20px;
     background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
-/* PREMIUM LOGO */
+/* 🔥 FIXED PREMIUM LOGO (BIG + RESPONSIVE) */
 .hero img {
-    max-width: 340px;
-    width: 100%;
-    margin-bottom: 28px;
-    opacity: 0.98;
+    width: min(680px, 95vw);   /* KEY FIX: allows it to scale BIG */
+    height: auto;
 
-    /* GOLD DIAMOND EFFECT */
-    filter: drop-shadow(0 0 25px rgba(255, 215, 120, 0.35));
-    transform: scale(1.02);
-    border-radius: 18px;
-    padding: 6px;
-    background: radial-gradient(circle, rgba(255,215,120,0.25), transparent 60%);
+    margin-bottom: 35px;
+    opacity: 1;
+
+    /* luxury glow */
+    filter: drop-shadow(0 0 45px rgba(255, 215, 120, 0.6));
+
+    border-radius: 26px;
+    padding: 12px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 215, 120, 0.38),
+        transparent 65%
+    );
+
+    transform: scale(1.08);
 }
 
 h1 {
     color: #7CFFB2;
-    font-size: 48px;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    font-size: 56px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
 }
 
 .hero p {
     opacity: 0.85;
     max-width: 780px;
     margin: auto;
-    font-size: 17px;
+    font-size: 18px;
+}
+
+/* TRUST */
+.trust {
+    font-size: 13px;
+    opacity: 0.65;
+    margin-top: 14px;
 }
 
 /* CONTAINER */
 .container {
-    padding: 50px 16px;
+    padding: 60px 16px;
     max-width: 900px;
     margin: auto;
 }
@@ -64,9 +79,9 @@ h1 {
 /* CARD */
 .card {
     background: #1a1a1a;
-    padding: 32px;
-    margin: 18px auto;
-    max-width: 560px;
+    padding: 34px;
+    margin: 20px auto;
+    max-width: 580px;
     border-radius: 16px;
     border: 1px solid #333;
     transition: 0.2s ease;
@@ -78,7 +93,7 @@ h1 {
 }
 
 .card h2 {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 /* BUTTON */
@@ -106,16 +121,9 @@ a.button:hover {
     margin-top: 10px;
 }
 
-/* TRUST TEXT */
-.trust {
-    font-size: 13px;
-    opacity: 0.65;
-    margin-top: 12px;
-}
-
 /* FOOTER */
 .footer {
-    margin-top: 50px;
+    margin-top: 60px;
     font-size: 13px;
     opacity: 0.55;
     padding: 25px;
@@ -124,15 +132,16 @@ a.button:hover {
 /* MOBILE */
 @media (max-width: 600px) {
     h1 {
-        font-size: 34px;
+        font-size: 36px;
     }
 
     .hero {
-        padding: 75px 16px;
+        padding: 80px 16px;
     }
 
     .hero img {
-        max-width: 260px;
+        width: 95vw; /* ensures full width impact on mobile */
+        transform: scale(1.02);
     }
 
     .card {
