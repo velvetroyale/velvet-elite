@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Velvet Elite Application</title>
+<title>Velvet Elite - Private Matchmaking Network</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -20,24 +20,25 @@ body {
 
 /* CONTAINER */
 .container {
-    max-width: 750px;
+    max-width: 850px;
     margin: auto;
     padding: 16px;
 }
 
-/* HEADER */
-.header {
+/* HERO */
+.hero {
     text-align: center;
-    padding: 40px 16px;
+    padding: 60px 16px;
+    background: linear-gradient(135deg, #111, #1f1f1f);
 }
 
-.header h1 {
+.hero h1 {
     color: #7CFFB2;
-    margin-bottom: 10px;
+    font-size: 30px;
 }
 
-.header p {
-    opacity: 0.8;
+.hero p {
+    opacity: 0.85;
 }
 
 /* CARD */
@@ -46,9 +47,10 @@ body {
     padding: 20px;
     border-radius: 12px;
     border: 1px solid #333;
+    margin-bottom: 15px;
 }
 
-/* INPUTS */
+/* FORM */
 label {
     font-size: 13px;
     color: #bbb;
@@ -77,16 +79,18 @@ input, textarea {
     cursor: pointer;
 }
 
-.btn:hover {
-    opacity: 0.9;
-}
-
 /* FOOTER NOTE */
 .note {
     text-align: center;
     font-size: 12px;
     opacity: 0.6;
-    margin-top: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 24px;
+    }
 }
 </style>
 
@@ -94,18 +98,37 @@ input, textarea {
 
 <body>
 
-<div class="container">
-
-<div class="header">
-    <h1>💎 Velvet Elite Application</h1>
-    <p>Private international matchmaking network (selective approval only)</p>
+<!-- HERO -->
+<div class="hero">
+    <h1>💎 Velvet Elite</h1>
+    <p>Private international matchmaking network for selective introductions</p>
 </div>
 
+<div class="container">
+
+<!-- VALUE PROPOSITION -->
 <div class="card">
+    <h2 style="color:#7CFFB2;">Elite Global Matchmaking Network</h2>
+    <p>
+        Velvet Elite connects selected individuals across Philippines, Europe, US, Canada, and Latin America
+        through a private, curated introduction system.
+    </p>
+    <p>
+        Applications are reviewed individually. Not all applicants are accepted.
+    </p>
+</div>
+
+<!-- APPLICATION FORM -->
+<div class="card">
+
+<h2 style="color:#7CFFB2;">Apply for Access</h2>
 
 <form action="https://formspree.io/f/xqewnrey" method="POST">
 
-<!-- EMAIL SUBJECT -->
+<!-- Redirect to custom thank you page -->
+<input type="hidden" name="_next" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
+
+<!-- Email subject -->
 <input type="hidden" name="_subject" value="New Velvet Elite Application">
 
 <label>Full Name</label>
@@ -114,7 +137,7 @@ input, textarea {
 <label>Age</label>
 <input type="number" name="age" required>
 
-<label>Location (Country / City)</label>
+<label>Location</label>
 <input type="text" name="location" required>
 
 <label>Occupation</label>
@@ -127,7 +150,7 @@ input, textarea {
 <input type="text" name="countries">
 
 <label>About You</label>
-<textarea name="message" rows="5" placeholder="Tell us about yourself..."></textarea>
+<textarea name="message" rows="5"></textarea>
 
 <button class="btn" type="submit">
 Submit Application
@@ -135,9 +158,9 @@ Submit Application
 
 </form>
 
-<div class="note">
-Not all applicants are accepted. Only selected profiles receive access to the network.
-</div>
+<p class="note">
+Private network. Selective approval process. Response within 24–72 hours if selected.
+</p>
 
 </div>
 
