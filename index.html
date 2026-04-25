@@ -6,76 +6,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #0b0b0b;
     color: #fff;
     text-align: center;
+    line-height: 1.5;
 }
 
+/* HERO */
 .hero {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #111, #1f1f1f);
+    padding: 90px 20px;
+    background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
 h1 {
     color: #7CFFB2;
-    font-size: 36px;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-p {
+.hero p {
     opacity: 0.85;
-    max-width: 700px;
+    max-width: 750px;
+    margin: auto;
+    font-size: 16px;
+}
+
+/* CONTAINER */
+.container {
+    padding: 40px 16px;
+    max-width: 900px;
     margin: auto;
 }
 
-.container {
-    padding: 40px 20px;
-}
-
+/* CARD */
 .card {
     background: #1a1a1a;
-    padding: 25px;
-    margin: 15px auto;
-    max-width: 500px;
-    border-radius: 12px;
+    padding: 28px;
+    margin: 16px auto;
+    max-width: 520px;
+    border-radius: 14px;
     border: 1px solid #333;
+    transition: 0.2s ease;
 }
 
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* BUTTON */
 a.button {
     display: block;
     padding: 16px;
-    margin-top: 15px;
+    margin-top: 16px;
     background: #7CFFB2;
     color: #000;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
+    font-size: 15px;
 }
 
+/* TAGS */
+.tag {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .hero {
+        padding: 70px 16px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    a.button {
+        font-size: 15px;
+        padding: 15px;
+    }
+}
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
     <h1>💎 Velvet Elite</h1>
-    <p>Private curated matchmaking network connecting selected individuals worldwide</p>
+    <p>
+        A private international matchmaking network built for selective introductions between 
+        high-intent individuals across Europe, North America, Latin America, and Asia.
+    </p>
 </div>
 
+<!-- OPTIONS -->
 <div class="container">
 
+<!-- WOMEN -->
 <div class="card">
-    <h2>I am looking for a partner</h2>
-    <p>Join as a curated profile and be considered for private introductions.</p>
-    <a class="button" href="women.html">Apply as Member</a>
+    <h2>💠 For Women</h2>
+    <p>
+        Join as a curated profile and be considered for private international introductions.
+        All applications are reviewed individually.
+    </p>
+
+    <a class="button" href="women.html">
+        Apply as WOMAN (Free Profile Review)
+    </a>
+
+    <div class="tag">✔ Free application • ✔ Profile-based selection</div>
 </div>
 
+<!-- MEN -->
 <div class="card">
-    <h2>I want curated introductions</h2>
-    <p>Exclusive membership for serious clients seeking high-quality matches.</p>
-    <a class="button" href="men.html">Become a Member</a>
+    <h2>💼 For Men</h2>
+    <p>
+        Access curated introductions and premium matchmaking services through a private membership system.
+    </p>
+
+    <a class="button" href="men.html">
+        Join as MAN (Paid Membership Access)
+    </a>
+
+    <div class="tag">✔ Premium access • ✔ High-ticket matchmaking ($1K–$5K)</div>
 </div>
 
 </div>
