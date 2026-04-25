@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+/* =========================
+   GLOBAL RESET (IMPORTANT)
+========================= */
 * {
     box-sizing: border-box;
 }
@@ -19,10 +23,17 @@ body {
     line-height: 1.6;
 }
 
-/* HERO */
+/* remove ALL default spacing */
+p, h1, h2 {
+    margin: 0;
+}
+
+/* =========================
+   HERO
+========================= */
 .hero {
-    padding: 90px 20px 60px 20px; /* 🔥 reduced bottom space */
-    margin-bottom: 0; /* 🔥 removes gap below hero */
+    padding: 70px 20px 40px 20px; /* tighter luxury spacing */
+    margin: 0;
     background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
@@ -30,7 +41,7 @@ body {
 .hero img {
     width: min(680px, 95vw);
     height: auto;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     opacity: 1;
 
@@ -48,37 +59,34 @@ body {
     transform: scale(1.08);
 }
 
-/* REMOVE TITLE */
-.hero h1 {
-    display: none;
-}
-
 /* HERO TEXT */
 .hero p {
-    opacity: 0.9;
-    max-width: 780px;
-    margin: 0 auto 4px auto;
     font-size: 18px;
     color: #d4af37;
+    max-width: 780px;
+    margin: 12px auto 6px auto; /* controlled spacing */
 }
 
 /* TRUST LINE */
 .trust {
     font-size: 13px;
     opacity: 0.8;
-    margin-top: 4px;
-    margin-bottom: 0;
+    margin: 6px 0 0 0; /* tight */
     color: #d4af37;
 }
 
-/* CONTAINER */
+/* =========================
+   CONTAINER
+========================= */
 .container {
-    padding: 30px 16px 60px 16px; /* 🔥 reduced top spacing */
+    padding: 20px 16px 60px 16px; /* reduced top spacing */
     max-width: 900px;
-    margin: 0 auto; /* 🔥 removes extra gap */
+    margin: 0 auto;
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 .card {
     background: #141414;
     padding: 34px;
@@ -101,7 +109,9 @@ body {
     color: #d4af37;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 a.button {
     display: block;
     padding: 18px;
@@ -139,7 +149,7 @@ a.button:hover {
 /* MOBILE */
 @media (max-width: 600px) {
     .hero {
-        padding: 80px 16px 50px 16px;
+        padding: 60px 16px 30px 16px;
     }
 
     .hero img {
@@ -151,6 +161,7 @@ a.button:hover {
         padding: 24px;
     }
 }
+
 </style>
 </head>
 
