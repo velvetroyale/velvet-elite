@@ -21,7 +21,8 @@ body {
 
 /* HERO */
 .hero {
-    padding: 110px 20px;
+    padding: 90px 20px 60px 20px; /* 🔥 reduced bottom space */
+    margin-bottom: 0; /* 🔥 removes gap below hero */
     background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
@@ -52,11 +53,11 @@ body {
     display: none;
 }
 
-/* TEXT */
+/* HERO TEXT */
 .hero p {
     opacity: 0.9;
     max-width: 780px;
-    margin: 0 auto 4px auto; /* 🔥 tighter spacing */
+    margin: 0 auto 4px auto;
     font-size: 18px;
     color: #d4af37;
 }
@@ -65,16 +66,16 @@ body {
 .trust {
     font-size: 13px;
     opacity: 0.8;
-    margin-top: 4px;   /* 🔥 reduced gap */
-    margin-bottom: 0;   /* 🔥 no extra space below */
+    margin-top: 4px;
+    margin-bottom: 0;
     color: #d4af37;
 }
 
 /* CONTAINER */
 .container {
-    padding: 60px 16px;
+    padding: 30px 16px 60px 16px; /* 🔥 reduced top spacing */
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto; /* 🔥 removes extra gap */
 }
 
 /* CARD */
@@ -138,7 +139,7 @@ a.button:hover {
 /* MOBILE */
 @media (max-width: 600px) {
     .hero {
-        padding: 80px 16px;
+        padding: 80px 16px 50px 16px;
     }
 
     .hero img {
