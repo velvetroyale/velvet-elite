@@ -1,29 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Thank You</title>
+<title>Velvet Elite - Application Received</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     background:#0b0b0b;
-    color:#fff;
+    color:#d4af37; /* GOLD */
     font-family:Arial;
     text-align:center;
-    padding:80px 20px;
+    padding:90px 20px;
+    margin:0;
 }
-h1 { color:#7CFFB2; }
+
+/* TITLE */
+h1 {
+    color:#d4af37;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+/* TEXT */
+p {
+    opacity:0.9;
+    margin:10px auto;
+    max-width:600px;
+}
+
+/* CARD STYLE FEEL (optional depth) */
+.container {
+    max-width:700px;
+    margin:auto;
+}
+
+/* BUTTON LINK */
+a {
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 22px;
+    background:#d4af37;
+    color:#0b0b0b;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+    transition:0.2s ease;
+}
+
+a:hover {
+    background:#e6c35a;
+}
+
+/* SMALL STATUS TEXT */
+.status {
+    font-size:13px;
+    opacity:0.7;
+    margin-top:15px;
+}
+
 </style>
 </head>
+
 <body>
+
+<div class="container">
 
 <h1>✅ Application Received</h1>
 
 <p>Thank you for applying to Velvet Elite.</p>
 
-<p>Your application is under review. If selected, you will be contacted shortly.</p>
+<p>
+Your application has been successfully submitted and is now under private review.
+If selected, you will be contacted shortly.
+</p>
 
-<a href="index.html" style="color:#7CFFB2;">Return to Home</a>
+<div class="status">
+Private screening in progress • Confidential evaluation
+</div>
+
+<a href="index.html">Return to Home</a>
+
+</div>
 
 </body>
 </html>
