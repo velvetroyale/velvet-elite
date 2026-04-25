@@ -14,7 +14,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #0b0b0b;
-    color: #d4af37; /* GOLD BASE */
+    color: #d4af37;
     text-align: center;
     line-height: 1.6;
 }
@@ -29,7 +29,8 @@ body {
 .hero img {
     width: min(680px, 95vw);
     height: auto;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+
     opacity: 1;
 
     filter: drop-shadow(0 0 45px rgba(255, 215, 120, 0.65));
@@ -46,24 +47,26 @@ body {
     transform: scale(1.08);
 }
 
-/* REMOVE TITLE TEXT LOOK BUT KEEP SPACING CONTROL */
+/* REMOVE TITLE */
 .hero h1 {
     display: none;
 }
 
+/* TEXT */
 .hero p {
     opacity: 0.9;
     max-width: 780px;
-    margin: auto;
+    margin: 0 auto 4px auto; /* 🔥 tighter spacing */
     font-size: 18px;
-    color: #d4af37; /* GOLD */
+    color: #d4af37;
 }
 
-/* TRUST */
+/* TRUST LINE */
 .trust {
     font-size: 13px;
     opacity: 0.8;
-    margin-top: 14px;
+    margin-top: 4px;   /* 🔥 reduced gap */
+    margin-bottom: 0;   /* 🔥 no extra space below */
     color: #d4af37;
 }
 
@@ -102,7 +105,7 @@ a.button {
     display: block;
     padding: 18px;
     margin-top: 18px;
-    background: #d4af37; /* GOLD BUTTON */
+    background: #d4af37;
     color: #0b0b0b;
     text-decoration: none;
     font-weight: bold;
@@ -155,7 +158,7 @@ a.button:hover {
 <!-- HERO -->
 <div class="hero">
 
-    <!-- LOGO ONLY (NO TEXT TITLE) -->
+    <!-- LOGO ONLY -->
     <img src="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/velvet-elite-banner.png" alt="Velvet Elite Logo">
 
     <p>
