@@ -16,38 +16,47 @@ body {
     background: #0b0b0b;
     color: #fff;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* HERO */
 .hero {
-    padding: 90px 20px;
+    padding: 95px 20px;
     background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
+/* PREMIUM LOGO */
 .hero img {
-    max-width: 180px;
+    max-width: 340px;
     width: 100%;
-    margin-bottom: 20px;
-    opacity: 0.95;
+    margin-bottom: 28px;
+    opacity: 0.98;
+
+    /* GOLD DIAMOND EFFECT */
+    filter: drop-shadow(0 0 25px rgba(255, 215, 120, 0.35));
+    transform: scale(1.02);
+    border-radius: 18px;
+    padding: 6px;
+    background: radial-gradient(circle, rgba(255,215,120,0.25), transparent 60%);
 }
 
 h1 {
     color: #7CFFB2;
-    font-size: 42px;
+    font-size: 48px;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .hero p {
     opacity: 0.85;
     max-width: 780px;
     margin: auto;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 /* CONTAINER */
 .container {
-    padding: 40px 16px;
+    padding: 50px 16px;
     max-width: 900px;
     margin: auto;
 }
@@ -55,65 +64,79 @@ h1 {
 /* CARD */
 .card {
     background: #1a1a1a;
-    padding: 28px;
-    margin: 16px auto;
-    max-width: 540px;
-    border-radius: 14px;
+    padding: 32px;
+    margin: 18px auto;
+    max-width: 560px;
+    border-radius: 16px;
     border: 1px solid #333;
     transition: 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    border-color: #7CFFB2;
+}
+
+.card h2 {
+    font-size: 24px;
 }
 
 /* BUTTON */
 a.button {
     display: block;
-    padding: 16px;
-    margin-top: 16px;
+    padding: 18px;
+    margin-top: 18px;
     background: #7CFFB2;
     color: #000;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+a.button:hover {
+    background: #62e09a;
 }
 
 /* TAG */
 .tag {
-    font-size: 12px;
-    opacity: 0.7;
-    margin-top: 8px;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 10px;
 }
 
 /* TRUST TEXT */
 .trust {
-    font-size: 12px;
-    opacity: 0.6;
-    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.65;
+    margin-top: 12px;
 }
 
 /* FOOTER */
 .footer {
-    margin-top: 40px;
-    font-size: 12px;
-    opacity: 0.5;
-    padding: 20px;
+    margin-top: 50px;
+    font-size: 13px;
+    opacity: 0.55;
+    padding: 25px;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
     h1 {
-        font-size: 30px;
+        font-size: 34px;
     }
 
     .hero {
-        padding: 70px 16px;
+        padding: 75px 16px;
+    }
+
+    .hero img {
+        max-width: 260px;
     }
 
     .card {
-        padding: 22px;
+        padding: 24px;
     }
 }
 </style>
@@ -124,10 +147,11 @@ a.button {
 <!-- HERO -->
 <div class="hero">
 
-    <!-- LOGO IMAGE -->
+    <!-- LOGO -->
     <img src="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/velvet-elite-banner.png" alt="Velvet Elite Logo">
 
     <h1>💎 Velvet Elite</h1>
+
     <p>
         A private international matchmaking network offering curated introductions between 
         verified individuals across Europe, North America, Latin America, and Asia.
@@ -141,35 +165,35 @@ a.button {
 <!-- OPTIONS -->
 <div class="container">
 
-<!-- WOMEN -->
-<div class="card">
-    <h2>💠 For Women</h2>
-    <p>
-        Apply to be considered for curated international introductions.
-        All profiles are individually reviewed for quality and compatibility.
-    </p>
+    <!-- WOMEN -->
+    <div class="card">
+        <h2>💠 For Women</h2>
+        <p>
+            Apply to be considered for curated international introductions.
+            All profiles are individually reviewed for quality and compatibility.
+        </p>
 
-    <a class="button" href="women.html">
-        Apply as WOMAN (Free Profile Review)
-    </a>
+        <a class="button" href="women.html">
+            Apply as WOMAN (Free Profile Review)
+        </a>
 
-    <div class="tag">✔ No fees • ✔ Selective approval • ✔ Confidential review</div>
-</div>
+        <div class="tag">✔ No fees • ✔ Selective approval • ✔ Confidential review</div>
+    </div>
 
-<!-- MEN -->
-<div class="card">
-    <h2>💼 For Men</h2>
-    <p>
-        Join a private matchmaking concierge system designed for serious relationship seekers.
-        Access is granted after application review.
-    </p>
+    <!-- MEN -->
+    <div class="card">
+        <h2>💼 For Men</h2>
+        <p>
+            Join a private matchmaking concierge system designed for serious relationship seekers.
+            Access is granted after application review.
+        </p>
 
-    <a class="button" href="men.html">
-        Apply as MAN (Membership Consideration)
-    </a>
+        <a class="button" href="men.html">
+            Apply as MAN (Membership Consideration)
+        </a>
 
-    <div class="tag">✔ Application required • ✔ Curated introductions • ✔ Premium concierge access</div>
-</div>
+        <div class="tag">✔ Application required • ✔ Curated introductions • ✔ Premium concierge access</div>
+    </div>
 
 </div>
 
