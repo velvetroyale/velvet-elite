@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Velvet Elite - Membership</title>
+<title>Velvet Elite - Men Application</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -32,22 +32,29 @@ h1 {
     margin-bottom: 15px;
 }
 
-.price {
-    color: #7CFFB2;
-    font-size: 22px;
-    font-weight: bold;
+label {
+    font-size: 13px;
+    color: #bbb;
 }
 
-a.btn {
-    display: block;
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 14px 0;
+    background: #111;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+}
+
+button {
+    width: 100%;
     padding: 16px;
     background: #7CFFB2;
-    color: #000;
-    text-decoration: none;
+    border: none;
     font-weight: bold;
     border-radius: 10px;
-    text-align: center;
-    margin-top: 10px;
+    cursor: pointer;
 }
 </style>
 </head>
@@ -56,27 +63,42 @@ a.btn {
 
 <div class="container">
 
-<h1>💎 Elite Membership</h1>
+<h1>💼 Men Application</h1>
 
 <div class="card">
-<p>Private matchmaking access for serious clients seeking curated international introductions.</p>
+<p>
+Apply for access to Velvet Elite’s private matchmaking system.
+Applications are reviewed for eligibility before approval.
+</p>
 </div>
 
 <div class="card">
-<h2>Membership Tiers</h2>
 
-<p class="price">Starter Access — $1,000</p>
-<p>Initial curated introductions + profile activation</p>
+<form action="https://formspree.io/f/xqewnrey" method="POST">
 
-<p class="price">Priority Matching — $2,500</p>
-<p>Faster matchmaking + expanded network access</p>
+<input type="hidden" name="_subject" value="New Velvet Elite Men Application">
 
-<p class="price">Elite Concierge — $5,000</p>
-<p>Weekly curated introductions + priority selection pool</p>
+<label>Full Name</label>
+<input type="text" name="name" required>
 
-<a class="btn" href="https://www.paypal.com/ncp/payment/S59RCY2DQSPTQ">
-Pay Now & Activate Membership
-</a>
+<label>Age</label>
+<input type="number" name="age" required>
+
+<label>Location</label>
+<input type="text" name="location" required>
+
+<label>Occupation</label>
+<input type="text" name="occupation">
+
+<label>Relationship Goals</label>
+<input type="text" name="goal">
+
+<label>What are you looking for?</label>
+<textarea name="message" rows="5"></textarea>
+
+<button type="submit">Submit Application</button>
+
+</form>
 
 </div>
 
