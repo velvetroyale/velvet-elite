@@ -21,20 +21,20 @@ body {
 /* HERO */
 .hero {
     text-align: center;
-    padding: 70px 16px;
-    background: linear-gradient(135deg, #111, #1f1f1f);
+    padding: 80px 16px;
+    background: radial-gradient(circle at top, #1f1f1f, #0b0b0b);
 }
 
 .hero h1 {
-    font-size: 34px;
+    font-size: 38px;
     color: #7CFFB2;
     margin-bottom: 10px;
 }
 
 .hero p {
-    opacity: 0.85;
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
+    opacity: 0.85;
 }
 
 /* CONTAINER */
@@ -44,10 +44,10 @@ body {
     padding: 16px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
     background: #1a1a1a;
-    padding: 22px;
+    padding: 24px;
     border-radius: 12px;
     border: 1px solid #333;
     margin-bottom: 15px;
@@ -56,6 +56,12 @@ body {
 /* HEADINGS */
 h2 {
     color: #7CFFB2;
+}
+
+/* HIGHLIGHT BOX */
+.highlight {
+    color: #7CFFB2;
+    font-weight: bold;
 }
 
 /* FORM */
@@ -99,17 +105,8 @@ input, textarea {
     margin-top: 10px;
 }
 
-/* HIGHLIGHT */
-.highlight {
-    color: #7CFFB2;
-    font-weight: bold;
-}
-
-/* MOBILE */
 @media (max-width: 600px) {
-    .hero h1 {
-        font-size: 26px;
-    }
+    .hero h1 { font-size: 26px; }
 }
 </style>
 
@@ -121,26 +118,34 @@ input, textarea {
 <div class="hero">
     <h1>💎 Velvet Elite</h1>
     <p>
-        A private international matchmaking network connecting selected individuals across 
-        Philippines, Europe, North America, and Latin America through curated introductions.
+        A private international matchmaking network built for selective introductions between 
+        high-intent individuals across Europe, North America, Latin America, and Asia.
     </p>
 </div>
 
 <div class="container">
 
-<!-- VALUE SECTION -->
+<!-- POSITIONING -->
+<div class="card">
+    <h2>Why Velvet Elite Exists</h2>
+    <p>
+        Modern dating platforms are random, overloaded, and inefficient.
+        Velvet Elite replaces mass-market dating with a curated private system focused on compatibility, intent, and quality.
+    </p>
+</div>
+
+<!-- WHAT MAKES IT ELITE -->
 <div class="card">
     <h2>Exclusive Private Network</h2>
     <p>
-        Velvet Elite is not a dating app. It is a curated matchmaking system where every profile is reviewed 
-        before access is granted.
+        Every profile is manually reviewed before access is granted.
     </p>
 
     <p class="highlight">
-        ✔ Selective approval only<br>
-        ✔ International introductions<br>
-        ✔ Privacy-first system<br>
-        ✔ High-quality matches only
+        ✔ Selective approval system<br>
+        ✔ International curated introductions<br>
+        ✔ Privacy-first matchmaking<br>
+        ✔ High-quality only network
     </p>
 </div>
 
@@ -148,24 +153,21 @@ input, textarea {
 <div class="card">
     <h2>How It Works</h2>
     <p>
-        1. Submit your application<br>
-        2. Profile review and selection<br>
-        3. Approval notification (if selected)<br>
-        4. Access activation + introductions begin
+        1. Submit application<br>
+        2. Profile evaluation<br>
+        3. Approval decision<br>
+        4. Private introductions begin
     </p>
 </div>
 
-<!-- APPLICATION FORM -->
+<!-- APPLICATION -->
 <div class="card">
 
 <h2>Apply for Private Access</h2>
 
 <form action="https://formspree.io/f/xqewnrey" method="POST">
 
-<!-- Redirect -->
 <input type="hidden" name="_next" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
-
-<!-- Email subject -->
 <input type="hidden" name="_subject" value="New Velvet Elite Application">
 
 <label>Full Name</label>
@@ -196,18 +198,9 @@ Submit Application
 </form>
 
 <p class="note">
-Not all applicants are accepted. If selected, you will receive private access instructions within 24–72 hours.
+Applications are reviewed individually. If selected, you will receive private access within 24–72 hours.
 </p>
 
-</div>
-
-<!-- TRUST SECTION -->
-<div class="card">
-    <h2>Why Apply?</h2>
-    <p>
-        Modern dating apps are random and inefficient. Velvet Elite uses a curated system designed to 
-        improve compatibility, privacy, and long-term relationship success.
-    </p>
 </div>
 
 </div>
