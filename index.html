@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Velvet Elite | Private Matchmaking</title>
+<title>Velvet Elite Application</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -16,168 +18,104 @@ body {
     line-height: 1.6;
 }
 
+/* CONTAINER */
 .container {
-    max-width: 1000px;
+    max-width: 750px;
     margin: auto;
     padding: 16px;
 }
 
-.hero {
+/* HEADER */
+.header {
     text-align: center;
-    padding: 70px 16px;
-    background: linear-gradient(135deg, #111, #1f2a22);
+    padding: 40px 16px;
 }
 
-h1, h2, h3 {
+.header h1 {
     color: #7CFFB2;
+    margin-bottom: 10px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 16px 26px;
-    background: #7CFFB2;
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 10px;
-    margin-top: 18px;
+.header p {
+    opacity: 0.8;
 }
 
+/* CARD */
 .card {
     background: #1a1a1a;
-    padding: 18px;
+    padding: 20px;
     border-radius: 12px;
     border: 1px solid #333;
-    margin-bottom: 15px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 12px;
+/* INPUTS */
+label {
+    font-size: 13px;
+    color: #bbb;
 }
 
-.highlight {
-    color: #7CFFB2;
-    font-weight: bold;
-}
-
-.footer {
-    text-align: center;
-    font-size: 12px;
-    opacity: 0.6;
-    padding: 30px;
-}
-
-input, select, textarea {
+input, textarea {
     width: 100%;
     padding: 12px;
-    margin-top: 8px;
-    margin-bottom: 12px;
+    margin: 8px 0 14px 0;
     border-radius: 6px;
     border: none;
     background: #111;
     color: #fff;
 }
 
-label {
-    font-size: 14px;
-    color: #ccc;
+/* BUTTON */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #7CFFB2;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* FOOTER NOTE */
+.note {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 12px;
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>💎 Velvet Elite</h1>
-    <h2>Private International Matchmaking for Serious Men</h2>
-
-    <p>
-        Discreet curated introductions to high-quality women across Philippines, US, Canada & Europe.
-    </p>
-
-    <p>
-        No dating apps. No randomness. No swiping.
-    </p>
-
-    <a class="btn" href="#apply">Apply for Private Access</a>
-</div>
-
 <div class="container">
 
-<!-- WHAT THIS IS -->
-<div class="card">
-    <h2>🧠 What This Is</h2>
-    <p>
-        Velvet Elite is a private matchmaking network designed for men who value
-        quality, discretion, and curated introductions instead of dating apps.
-    </p>
-</div>
-
-<!-- HOW IT WORKS -->
-<div class="card">
-    <h2>🌍 How It Works</h2>
-    <p>1. Apply for private access</p>
-    <p>2. We review your profile</p>
-    <p>3. If approved, you activate membership</p>
-    <p>4. You receive curated introductions</p>
-</div>
-
-<!-- PRICING -->
-<h2>💰 Membership Options</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>🥉 Select Access</h3>
-<p>$1,000</p>
-<p>Entry into private network</p>
-<p>Limited curated introductions</p>
+<div class="header">
+    <h1>💎 Velvet Elite Application</h1>
+    <p>Private international matchmaking network (selective approval only)</p>
 </div>
 
 <div class="card">
-<h3>🥈 Private Concierge</h3>
-<p>$2,500</p>
-<p>3–5 curated introductions/month</p>
-<p>Priority matching</p>
-</div>
 
-<div class="card">
-<h3>🥇 Elite Concierge</h3>
-<p>$5,000+</p>
-<p>Priority global matchmaking</p>
-<p>Ongoing curated introductions</p>
-<p>Fast-track access</p>
-</div>
+<form action="https://formspree.io/f/xqewnrey" method="POST">
 
-</div>
+<!-- EMAIL SUBJECT -->
+<input type="hidden" name="_subject" value="New Velvet Elite Application">
 
-<!-- WHY US -->
-<div class="card">
-<h2>⚡ Why Velvet Elite</h2>
-<p>✔ No dating apps</p>
-<p>✔ Fully curated introductions</p>
-<p>✔ Privacy-first system</p>
-<p>✔ Quality over volume</p>
-</div>
-
-<!-- APPLICATION FORM -->
-<div class="card" id="apply">
-
-<h2>📝 Apply for Private Access</h2>
-
-<form action="mailto:rg.salesnetwork@gmail.com" method="post" enctype="text/plain">
-
-<label>Name</label>
-<input type="text" name="name">
+<label>Full Name</label>
+<input type="text" name="name" required>
 
 <label>Age</label>
-<input type="text" name="age">
+<input type="number" name="age" required>
 
-<label>Location</label>
-<input type="text" name="location">
+<label>Location (Country / City)</label>
+<input type="text" name="location" required>
 
 <label>Occupation</label>
 <input type="text" name="occupation">
@@ -188,34 +126,21 @@ label {
 <label>Preferred Countries</label>
 <input type="text" name="countries">
 
-<label>Message</label>
-<textarea name="message"></textarea>
+<label>About You</label>
+<textarea name="message" rows="5" placeholder="Tell us about yourself..."></textarea>
 
-<button class="btn" type="submit">Submit Application</button>
+<button class="btn" type="submit">
+Submit Application
+</button>
 
 </form>
 
-<p style="font-size:12px; opacity:0.7;">
-Not all applicants are accepted.
-</p>
-
-</div>
-
-<!-- PAYMENT SECTION -->
-<div class="card" style="text-align:center;">
-<h2>💳 Activate Membership</h2>
-<p>Once approved, complete activation below:</p>
-
-<a class="btn" href="https://www.paypal.com/ncp/payment/S59RCY2DQSPTQ">
-Activate Access
-</a>
+<div class="note">
+Not all applicants are accepted. Only selected profiles receive access to the network.
 </div>
 
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-© 2026 Velvet Elite. Private Matchmaking Network.
 </div>
 
 </body>
