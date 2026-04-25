@@ -26,10 +26,15 @@ h1 {
 
 .card {
     background: #1a1a1a;
-    padding: 20px;
+    padding: 22px;
     border-radius: 12px;
     border: 1px solid #333;
     margin-bottom: 15px;
+}
+
+label {
+    font-size: 13px;
+    color: #bbb;
 }
 
 input, textarea {
@@ -61,16 +66,20 @@ button {
 <h1>💎 Women Application</h1>
 
 <div class="card">
-<p>Join Velvet Elite for curated international introductions. All profiles are reviewed before approval.</p>
+<p>
+Join Velvet Elite for curated international matchmaking opportunities.
+All profiles are reviewed manually before approval.
+</p>
 </div>
 
 <div class="card">
 
 <form action="https://formspree.io/f/xqewnrey" method="POST">
 
-<input type="hidden" name="_next" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
+<!-- FIXED REDIRECT -->
+<input type="hidden" name="_subject" value="New Velvet Elite Women Application">
 
-<label>Name</label>
+<label>Full Name</label>
 <input type="text" name="name" required>
 
 <label>Age</label>
@@ -80,7 +89,7 @@ button {
 <input type="text" name="location" required>
 
 <label>About You</label>
-<textarea name="message"></textarea>
+<textarea name="message" rows="5"></textarea>
 
 <button type="submit">Submit Application</button>
 
