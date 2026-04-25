@@ -14,7 +14,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #0b0b0b;
-    color: #fff;
+    color: #d4af37; /* GOLD BASE */
     text-align: center;
     line-height: 1.6;
 }
@@ -25,16 +25,14 @@ body {
     background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
-/* 🔥 FIXED PREMIUM LOGO (BIG + RESPONSIVE) */
+/* LOGO */
 .hero img {
-    width: min(680px, 95vw);   /* KEY FIX: allows it to scale BIG */
+    width: min(680px, 95vw);
     height: auto;
-
     margin-bottom: 35px;
     opacity: 1;
 
-    /* luxury glow */
-    filter: drop-shadow(0 0 45px rgba(255, 215, 120, 0.6));
+    filter: drop-shadow(0 0 45px rgba(255, 215, 120, 0.65));
 
     border-radius: 26px;
     padding: 12px;
@@ -48,25 +46,25 @@ body {
     transform: scale(1.08);
 }
 
-h1 {
-    color: #7CFFB2;
-    font-size: 56px;
-    margin-bottom: 12px;
-    letter-spacing: 2px;
+/* REMOVE TITLE TEXT LOOK BUT KEEP SPACING CONTROL */
+.hero h1 {
+    display: none;
 }
 
 .hero p {
-    opacity: 0.85;
+    opacity: 0.9;
     max-width: 780px;
     margin: auto;
     font-size: 18px;
+    color: #d4af37; /* GOLD */
 }
 
 /* TRUST */
 .trust {
     font-size: 13px;
-    opacity: 0.65;
+    opacity: 0.8;
     margin-top: 14px;
+    color: #d4af37;
 }
 
 /* CONTAINER */
@@ -78,22 +76,25 @@ h1 {
 
 /* CARD */
 .card {
-    background: #1a1a1a;
+    background: #141414;
     padding: 34px;
     margin: 20px auto;
     max-width: 580px;
     border-radius: 16px;
-    border: 1px solid #333;
+    border: 1px solid rgba(212, 175, 55, 0.25);
     transition: 0.2s ease;
+    color: #d4af37;
 }
 
 .card:hover {
     transform: translateY(-3px);
-    border-color: #7CFFB2;
+    border-color: #d4af37;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
 }
 
 .card h2 {
     font-size: 26px;
+    color: #d4af37;
 }
 
 /* BUTTON */
@@ -101,8 +102,8 @@ a.button {
     display: block;
     padding: 18px;
     margin-top: 18px;
-    background: #7CFFB2;
-    color: #000;
+    background: #d4af37; /* GOLD BUTTON */
+    color: #0b0b0b;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
@@ -111,36 +112,34 @@ a.button {
 }
 
 a.button:hover {
-    background: #62e09a;
+    background: #e6c35a;
 }
 
 /* TAG */
 .tag {
     font-size: 13px;
-    opacity: 0.75;
+    opacity: 0.85;
     margin-top: 10px;
+    color: #d4af37;
 }
 
 /* FOOTER */
 .footer {
     margin-top: 60px;
     font-size: 13px;
-    opacity: 0.55;
+    opacity: 0.6;
     padding: 25px;
+    color: #d4af37;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 36px;
-    }
-
     .hero {
         padding: 80px 16px;
     }
 
     .hero img {
-        width: 95vw; /* ensures full width impact on mobile */
+        width: 95vw;
         transform: scale(1.02);
     }
 
@@ -156,10 +155,8 @@ a.button:hover {
 <!-- HERO -->
 <div class="hero">
 
-    <!-- LOGO -->
+    <!-- LOGO ONLY (NO TEXT TITLE) -->
     <img src="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/velvet-elite-banner.png" alt="Velvet Elite Logo">
-
-    <h1>💎 Velvet Elite</h1>
 
     <p>
         A private international matchmaking network offering curated introductions between 
