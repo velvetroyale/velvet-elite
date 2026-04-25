@@ -6,201 +6,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #0b0b0b;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-/* HERO */
-.hero {
+    color: #fff;
     text-align: center;
-    padding: 80px 16px;
-    background: radial-gradient(circle at top, #1f1f1f, #0b0b0b);
 }
 
-.hero h1 {
-    font-size: 38px;
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #111, #1f1f1f);
+}
+
+h1 {
     color: #7CFFB2;
-    margin-bottom: 10px;
+    font-size: 36px;
 }
 
-.hero p {
-    max-width: 750px;
-    margin: auto;
+p {
     opacity: 0.85;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 900px;
+    max-width: 700px;
     margin: auto;
-    padding: 16px;
 }
 
-/* CARD */
+.container {
+    padding: 40px 20px;
+}
+
 .card {
     background: #1a1a1a;
-    padding: 24px;
+    padding: 25px;
+    margin: 15px auto;
+    max-width: 500px;
     border-radius: 12px;
     border: 1px solid #333;
-    margin-bottom: 15px;
 }
 
-/* HEADINGS */
-h2 {
-    color: #7CFFB2;
-}
-
-/* HIGHLIGHT BOX */
-.highlight {
-    color: #7CFFB2;
-    font-weight: bold;
-}
-
-/* FORM */
-label {
-    font-size: 13px;
-    color: #bbb;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0 14px 0;
-    border-radius: 6px;
-    border: none;
-    background: #111;
-    color: #fff;
-}
-
-/* BUTTON */
-.btn {
-    width: 100%;
+a.button {
+    display: block;
     padding: 16px;
+    margin-top: 15px;
     background: #7CFFB2;
     color: #000;
+    text-decoration: none;
     font-weight: bold;
-    border: none;
     border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
 }
 
-.btn:hover {
-    opacity: 0.9;
-}
-
-/* NOTE */
-.note {
-    text-align: center;
-    font-size: 12px;
-    opacity: 0.6;
-    margin-top: 10px;
-}
-
-@media (max-width: 600px) {
-    .hero h1 { font-size: 26px; }
-}
 </style>
-
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
     <h1>💎 Velvet Elite</h1>
-    <p>
-        A private international matchmaking network built for selective introductions between 
-        high-intent individuals across Europe, North America, Latin America, and Asia.
-    </p>
+    <p>Private curated matchmaking network connecting selected individuals worldwide</p>
 </div>
 
 <div class="container">
 
-<!-- POSITIONING -->
 <div class="card">
-    <h2>Why Velvet Elite Exists</h2>
-    <p>
-        Modern dating platforms are random, overloaded, and inefficient.
-        Velvet Elite replaces mass-market dating with a curated private system focused on compatibility, intent, and quality.
-    </p>
+    <h2>I am looking for a partner</h2>
+    <p>Join as a curated profile and be considered for private introductions.</p>
+    <a class="button" href="women.html">Apply as Member</a>
 </div>
 
-<!-- WHAT MAKES IT ELITE -->
 <div class="card">
-    <h2>Exclusive Private Network</h2>
-    <p>
-        Every profile is manually reviewed before access is granted.
-    </p>
-
-    <p class="highlight">
-        ✔ Selective approval system<br>
-        ✔ International curated introductions<br>
-        ✔ Privacy-first matchmaking<br>
-        ✔ High-quality only network
-    </p>
-</div>
-
-<!-- HOW IT WORKS -->
-<div class="card">
-    <h2>How It Works</h2>
-    <p>
-        1. Submit application<br>
-        2. Profile evaluation<br>
-        3. Approval decision<br>
-        4. Private introductions begin
-    </p>
-</div>
-
-<!-- APPLICATION -->
-<div class="card">
-
-<h2>Apply for Private Access</h2>
-
-<form action="https://formspree.io/f/xqewnrey" method="POST">
-
-<input type="hidden" name="_next" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
-<input type="hidden" name="_subject" value="New Velvet Elite Application">
-
-<label>Full Name</label>
-<input type="text" name="name" required>
-
-<label>Age</label>
-<input type="number" name="age" required>
-
-<label>Location</label>
-<input type="text" name="location" required>
-
-<label>Occupation</label>
-<input type="text" name="occupation">
-
-<label>Relationship Goal</label>
-<input type="text" name="goal">
-
-<label>Preferred Countries</label>
-<input type="text" name="countries">
-
-<label>Tell us about yourself</label>
-<textarea name="message" rows="5"></textarea>
-
-<button class="btn" type="submit">
-Submit Application
-</button>
-
-</form>
-
-<p class="note">
-Applications are reviewed individually. If selected, you will receive private access within 24–72 hours.
-</p>
-
+    <h2>I want curated introductions</h2>
+    <p>Exclusive membership for serious clients seeking high-quality matches.</p>
+    <a class="button" href="men.html">Become a Member</a>
 </div>
 
 </div>
