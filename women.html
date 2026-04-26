@@ -15,17 +15,15 @@ body {
     margin:0;
     font-family: Arial;
     background:#0b0b0b;
-    color:#d4af37; /* GOLD */
+    color:#d4af37;
 }
 
-/* CONTAINER */
 .container {
     max-width:800px;
     margin:auto;
     padding:20px;
 }
 
-/* TITLE */
 h1 {
     color:#d4af37;
     text-align:center;
@@ -33,23 +31,19 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* CARD */
 .card {
     background:#141414;
     padding:22px;
     border-radius:12px;
     border:1px solid rgba(212, 175, 55, 0.25);
     margin-bottom:15px;
-    color:#d4af37;
 }
 
-/* TEXT */
 p {
     margin:0;
     opacity:0.9;
 }
 
-/* INPUTS */
 input, textarea {
     width:100%;
     padding:12px;
@@ -61,13 +55,11 @@ input, textarea {
     outline:none;
 }
 
-/* focus glow */
 input:focus, textarea:focus {
     border-color:#d4af37;
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
-/* BUTTON */
 button {
     width:100%;
     padding:16px;
@@ -83,6 +75,15 @@ button {
 
 button:hover {
     background:#e6c35a;
+}
+
+label {
+    font-size:14px;
+    opacity:0.9;
+}
+
+.required {
+    color:#e6c35a;
 }
 
 </style>
@@ -108,11 +109,20 @@ Apply to be considered for private international introductions. All profiles are
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="New Velvet Elite Women Application">
 
-<label>Full Name</label>
-<input type="text" name="name" required>
+<label>First Name <span class="required">*</span></label>
+<input type="text" name="first_name" required minlength="2">
+
+<label>Last Name <span class="required">*</span></label>
+<input type="text" name="last_name" required minlength="2">
+
+<label>Email <span class="required">*</span></label>
+<input type="email" name="email" required>
+
+<label>Phone</label>
+<input type="tel" name="phone" pattern="[0-9+\-\s]{7,15}" placeholder="+63 912 345 6789">
 
 <label>Age</label>
-<input type="number" name="age" required>
+<input type="number" name="age" min="18" required>
 
 <label>Location</label>
 <input type="text" name="location" required>
