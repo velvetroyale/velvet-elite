@@ -90,37 +90,37 @@ button {
   onsubmit="redirectWomen()"
 >
 
+<!-- FormSubmit settings -->
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Velvet Elite Women Application">
-
-<!-- ADD THIS (important for reliability) -->
 <input type="hidden" name="_template" value="table">
+<input type="hidden" name="_subject" value="💎 New Velvet Elite Women Application">
 
+<!-- CLEAN COLUMN NAMES -->
 <label>First Name *</label>
-<input type="text" name="first_name" required>
+<input type="text" name="First Name" required>
 
 <label>Last Name *</label>
-<input type="text" name="last_name" required>
+<input type="text" name="Last Name" required>
 
 <label>Email *</label>
-<input type="email" name="email" required>
+<input type="email" name="Email" required>
 
 <label>Phone (optional)</label>
 <div class="phone-row">
-  <input type="text" name="country_code" placeholder="+63">
-  <input type="tel" name="phone" placeholder="9123456789">
+  <input type="text" name="Country Code" placeholder="+63">
+  <input type="tel" name="Phone" placeholder="9123456789">
 </div>
 
 <div class="hint">Optional – include if you'd like faster contact</div>
 
 <label>Age *</label>
-<input type="number" name="age" min="18" required>
+<input type="number" name="Age" min="18" required>
 
 <label>Location *</label>
-<input type="text" name="location" required>
+<input type="text" name="Location" required>
 
 <label>About You</label>
-<textarea name="message"></textarea>
+<textarea name="About You"></textarea>
 
 <button type="submit">Submit Application</button>
 
@@ -134,7 +134,7 @@ button {
 function redirectWomen() {
     setTimeout(function () {
         window.location.href = "https://velvetroyale.github.io/velvet-elite/thanks.html";
-    }, 1000);
+    }, 900);
 }
 </script>
 
