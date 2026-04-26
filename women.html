@@ -86,6 +86,24 @@ label {
     color:#e6c35a;
 }
 
+/* PHONE ROW */
+.phone-row {
+    display:flex;
+    gap:10px;
+}
+
+.phone-row input:first-child {
+    max-width:120px;
+}
+
+/* HINT TEXT */
+.hint {
+    font-size:12px;
+    opacity:0.7;
+    margin-top:-8px;
+    margin-bottom:10px;
+}
+
 </style>
 </head>
 
@@ -118,8 +136,29 @@ Apply to be considered for private international introductions. All profiles are
 <label>Email <span class="required">*</span></label>
 <input type="email" name="email" required>
 
-<label>Phone</label>
-<input type="tel" name="phone" pattern="[0-9+\-\s]{7,15}" placeholder="+63 912 345 6789">
+<label>Phone <span class="required">*</span></label>
+
+<div class="phone-row">
+  <input 
+    type="text" 
+    name="country_code" 
+    required
+    pattern="^\+[0-9]{1,4}$"
+    placeholder="+63"
+    title="Country code (e.g. +1, +63)"
+  >
+
+  <input 
+    type="tel" 
+    name="phone" 
+    required
+    pattern="^[0-9]{6,14}$"
+    placeholder="9123456789"
+    title="Enter phone number without country code"
+  >
+</div>
+
+<div class="hint">Example: +63 9123456789</div>
 
 <label>Age</label>
 <input type="number" name="age" min="18" required>
