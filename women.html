@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 * { box-sizing: border-box; }
 
 body {
@@ -22,10 +21,7 @@ body {
     padding:20px;
 }
 
-h1 {
-    text-align:center;
-    margin-bottom:20px;
-}
+h1 { text-align:center; margin-bottom:20px; }
 
 .card {
     background:#141414;
@@ -33,11 +29,6 @@ h1 {
     border-radius:12px;
     border:1px solid rgba(212,175,55,0.25);
     margin-bottom:15px;
-}
-
-p {
-    margin:0;
-    opacity:0.9;
 }
 
 input, textarea {
@@ -50,24 +41,13 @@ input, textarea {
     border-radius:6px;
 }
 
-input:focus, textarea:focus {
-    border-color:#d4af37;
-    box-shadow:0 0 10px rgba(212,175,55,0.2);
-}
-
 button {
     width:100%;
     padding:16px;
     background:#d4af37;
     color:#0b0b0b;
     border:none;
-    font-weight:bold;
     border-radius:10px;
-    cursor:pointer;
-}
-
-button:hover {
-    background:#e6c35a;
 }
 
 .phone-row {
@@ -85,7 +65,6 @@ button:hover {
     margin-top:-8px;
     margin-bottom:10px;
 }
-
 </style>
 </head>
 
@@ -96,25 +75,26 @@ button:hover {
 <h1>💎 Women Application</h1>
 
 <div class="card">
-<p>
-Apply to be considered for private international introductions. All profiles are reviewed manually.
-</p>
+<p>Apply to be considered for private international introductions.</p>
 </div>
 
 <div class="card">
 
-<!-- Hidden iframe prevents FormSubmit redirect -->
-<iframe name="hidden_iframe" style="display:none;"></iframe>
+<!-- Hidden iframe -->
+<iframe name="hidden_iframe_women" style="display:none;"></iframe>
 
 <form 
   action="https://formsubmit.co/rg.salesnetwork@gmail.com" 
   method="POST"
-  target="hidden_iframe"
-  onsubmit="redirectAfterSubmit()"
+  target="hidden_iframe_women"
+  onsubmit="redirectWomen()"
 >
 
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="New Velvet Elite Women Application">
+
+<!-- ADD THIS (important for reliability) -->
+<input type="hidden" name="_template" value="table">
 
 <label>First Name *</label>
 <input type="text" name="first_name" required>
@@ -126,7 +106,6 @@ Apply to be considered for private international introductions. All profiles are
 <input type="email" name="email" required>
 
 <label>Phone (optional)</label>
-
 <div class="phone-row">
   <input type="text" name="country_code" placeholder="+63">
   <input type="tel" name="phone" placeholder="9123456789">
@@ -152,10 +131,10 @@ Apply to be considered for private international introductions. All profiles are
 </div>
 
 <script>
-function redirectAfterSubmit() {
+function redirectWomen() {
     setTimeout(function () {
         window.location.href = "https://velvetroyale.github.io/velvet-elite/thanks.html";
-    }, 800);
+    }, 1000);
 }
 </script>
 
