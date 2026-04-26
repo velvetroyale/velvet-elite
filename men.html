@@ -110,7 +110,7 @@ Applications are reviewed for approval.
 
 <div class="card">
 
-<!-- Hidden iframe prevents FormSubmit redirect -->
+<!-- Hidden iframe prevents redirect -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
 <form 
@@ -120,41 +120,44 @@ Applications are reviewed for approval.
   onsubmit="redirectAfterSubmit()"
 >
 
+<!-- FormSubmit settings -->
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Velvet Elite Men Application">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_subject" value="💼 New Velvet Elite Men Application">
 
+<!-- CLEAN COLUMN NAMES -->
 <label>First Name *</label>
-<input type="text" name="first_name" required>
+<input type="text" name="First Name" required>
 
 <label>Last Name *</label>
-<input type="text" name="last_name" required>
+<input type="text" name="Last Name" required>
 
 <label>Email *</label>
-<input type="email" name="email" required>
+<input type="email" name="Email" required>
 
 <label>Phone (optional)</label>
 
 <div class="phone-row">
-  <input type="text" name="country_code" placeholder="+1">
-  <input type="tel" name="phone" placeholder="1234567890">
+  <input type="text" name="Country Code" placeholder="+1">
+  <input type="tel" name="Phone" placeholder="1234567890">
 </div>
 
 <div class="hint">Optional – include if you'd like faster contact</div>
 
 <label>Age *</label>
-<input type="number" name="age" min="18" required>
+<input type="number" name="Age" min="18" required>
 
 <label>Location *</label>
-<input type="text" name="location" required>
+<input type="text" name="Location" required>
 
 <label>Occupation</label>
-<input type="text" name="occupation">
+<input type="text" name="Occupation">
 
 <label>Relationship Goals</label>
-<input type="text" name="goal">
+<input type="text" name="Relationship Goals">
 
 <label>Message</label>
-<textarea name="message"></textarea>
+<textarea name="Message"></textarea>
 
 <button type="submit">Submit Application</button>
 
@@ -168,7 +171,7 @@ Applications are reviewed for approval.
 function redirectAfterSubmit() {
     setTimeout(function () {
         window.location.href = "https://velvetroyale.github.io/velvet-elite/thanks.html";
-    }, 800);
+    }, 900);
 }
 </script>
 
