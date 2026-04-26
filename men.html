@@ -86,6 +86,24 @@ p {
     opacity:0.9;
 }
 
+/* PHONE ROW */
+.phone-row {
+    display:flex;
+    gap:10px;
+}
+
+.phone-row input:first-child {
+    max-width:120px;
+}
+
+/* HINT TEXT */
+.hint {
+    font-size:12px;
+    opacity:0.7;
+    margin-top:-8px;
+    margin-bottom:10px;
+}
+
 </style>
 </head>
 
@@ -119,8 +137,29 @@ Applications are reviewed for approval.
 <label>Email <span class="required">*</span></label>
 <input type="email" name="email" required>
 
-<label>Phone</label>
-<input type="tel" name="phone" pattern="[0-9+\-\s]{7,15}" placeholder="+1 234 567 890">
+<label>Phone <span class="required">*</span></label>
+
+<div class="phone-row">
+  <input 
+    type="text" 
+    name="country_code" 
+    required
+    pattern="^\+[0-9]{1,4}$"
+    placeholder="+1"
+    title="Country code (e.g. +1, +63)"
+  >
+
+  <input 
+    type="tel" 
+    name="phone" 
+    required
+    pattern="^[0-9]{6,14}$"
+    placeholder="1234567890"
+    title="Enter phone number without country code"
+  >
+</div>
+
+<div class="hint">Example: +1 1234567890</div>
 
 <label>Age</label>
 <input type="number" name="age" min="18" required>
