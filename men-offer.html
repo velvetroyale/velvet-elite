@@ -2,83 +2,147 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Velvet Elite - Membership Access</title>
+<title>Velvet Elite | Membership Access</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+* {
+box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0b0b;
-    color: #fff;
-    text-align: center;
-    line-height: 1.5;
+margin: 0;
+font-family: Arial, sans-serif;
+background: #0b0b0b;
+color: #d4af37;
+text-align: center;
+line-height: 1.6;
 }
 
-.container {
-    max-width: 850px;
-    margin: auto;
-    padding: 20px;
+/* HERO */
+.hero {
+padding: 80px 20px;
+background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
+/* TITLE */
 h1 {
-    color: #7CFFB2;
+color: #d4af37;
+font-size: 44px;
+margin: 0;
+letter-spacing: 1px;
 }
 
+/* HERO TEXT */
+.hero p {
+opacity: 0.9;
+max-width: 800px;
+margin: 10px auto 0 auto;
+font-size: 16px;
+color: #d4af37;
+}
+
+/* CONTAINER */
+.container {
+max-width: 900px;
+margin: auto;
+padding: 20px;
+}
+
+/* CARD */
 .card {
-    background: #1a1a1a;
-    padding: 22px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    margin-bottom: 15px;
+background: #141414;
+padding: 25px;
+margin: 18px auto;
+max-width: 650px;
+border-radius: 14px;
+border: 1px solid rgba(212, 175, 55, 0.25);
+color: #d4af37;
+text-align: left;
 }
 
+/* HEADINGS */
+.card h2 {
+color: #d4af37;
+margin-top: 0;
+}
+
+/* TIER */
 .tier {
-    margin: 12px 0;
-    text-align: left;
+margin-bottom: 14px;
 }
 
-.button {
-    display: block;
-    padding: 16px;
-    background: #7CFFB2;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    margin-top: 20px;
+/* BUTTON */
+a.button {
+display: block;
+padding: 18px;
+margin: 30px auto 10px auto;
+background: #d4af37;
+color: #0b0b0b;
+text-decoration: none;
+font-weight: bold;
+border-radius: 10px;
+max-width: 400px;
+font-size: 18px;
+transition: 0.2s ease;
 }
 
+a.button:hover {
+background: #e6c35a;
+}
+
+/* SMALL TEXT */
 .small {
-    font-size: 12px;
-    opacity: 0.7;
-    margin-top: 10px;
+font-size: 12px;
+opacity: 0.75;
+margin-top: 8px;
+color: #d4af37;
+text-align: center;
 }
 
+/* FOOTER */
 .footer {
-    margin-top: 40px;
-    font-size: 12px;
-    opacity: 0.5;
+margin-top: 40px;
+font-size: 12px;
+opacity: 0.6;
+padding: 20px;
+color: #d4af37;
 }
+
+/* MOBILE */
+@media (max-width: 600px) {
+h1 {
+font-size: 32px;
+}
+.card {
+padding: 20px;
+}
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
+<!-- HERO -->
+<div class="hero">
 <h1>💼 Membership Access</h1>
-
-<div class="card">
 <p>
 Your application has been reviewed. You are eligible for curated matchmaking access within the Velvet Elite private international network.
 </p>
+</div>
 
+<div class="container">
+
+<!-- INTRO -->
+<div class="card">
 <p>
 Velvet Elite operates as a curated matchmaking concierge service. Each membership includes structured introductions, screening, and private network access.
 </p>
 </div>
 
+<!-- TIERS -->
 <div class="card">
 
 <h2>💎 Membership Options</h2>
@@ -109,6 +173,7 @@ Most approved members select Premium or Elite for faster introductions.
 
 </div>
 
+<!-- HOW IT WORKS -->
 <div class="card">
 
 <h2>🔒 How It Works</h2>
@@ -122,6 +187,7 @@ Most approved members select Premium or Elite for faster introductions.
 
 </div>
 
+<!-- TRUST -->
 <div class="card">
 
 <h2>🔐 Private & Confidential System</h2>
@@ -132,6 +198,7 @@ All profiles and introductions are handled privately. No public listings. Matche
 
 </div>
 
+<!-- CTA -->
 <a class="button" href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2">
 Activate Membership Access
 </a>
@@ -140,10 +207,11 @@ Activate Membership Access
 Secure checkout • Membership tier selected during payment
 </div>
 
-<div class="footer">
-© 2026 Velvet Elite Matchmaking. All Rights Reserved.
 </div>
 
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Velvet Elite Matchmaking. All Rights Reserved.
 </div>
 
 </body>
