@@ -6,120 +6,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #0b0b0b;
-color: #d4af37;
-text-align: center;
-line-height: 1.6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #d4af37;
+    text-align: center;
+    line-height: 1.6;
 }
 
 /* HERO */
 .hero {
-padding: 80px 20px;
-background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+    padding: 70px 16px;
+    background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
 /* TITLE */
 h1 {
-color: #d4af37;
-font-size: 44px;
-margin: 0;
-letter-spacing: 1px;
+    font-size: 34px;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
 /* HERO TEXT */
 .hero p {
-opacity: 0.9;
-max-width: 800px;
-margin: 10px auto 0 auto;
-font-size: 16px;
-color: #d4af37;
+    opacity: 0.9;
+    max-width: 720px;
+    margin: 12px auto 0 auto;
+    font-size: 15px;
 }
 
 /* CONTAINER */
 .container {
-max-width: 900px;
-margin: auto;
-padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 16px;
 }
 
 /* CARD */
 .card {
-background: #141414;
-padding: 25px;
-margin: 18px auto;
-max-width: 650px;
-border-radius: 14px;
-border: 1px solid rgba(212, 175, 55, 0.25);
-color: #d4af37;
-text-align: left;
+    background: #141414;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 650px;
+    border-radius: 14px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    text-align: left;
 }
 
 /* HEADINGS */
 .card h2 {
-color: #d4af37;
-margin-top: 0;
+    margin-top: 0;
+    font-size: 20px;
 }
 
 /* TIER */
 .tier {
-margin-bottom: 14px;
+    margin-bottom: 18px;
+    font-size: 14px;
 }
 
 /* BUTTON */
 a.button {
-display: block;
-padding: 18px;
-margin: 30px auto 10px auto;
-background: #d4af37;
-color: #0b0b0b;
-text-decoration: none;
-font-weight: bold;
-border-radius: 10px;
-max-width: 400px;
-font-size: 18px;
-transition: 0.2s ease;
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    padding: 16px;
+    margin: 30px auto 10px auto;
+    background: #d4af37;
+    color: #0b0b0b;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.2s ease;
 }
 
 a.button:hover {
-background: #e6c35a;
+    background: #e6c35a;
 }
 
 /* SMALL TEXT */
 .small {
-font-size: 12px;
-opacity: 0.75;
-margin-top: 8px;
-color: #d4af37;
-text-align: center;
+    font-size: 12px;
+    opacity: 0.75;
+    margin-top: 10px;
+    text-align: center;
 }
 
 /* FOOTER */
 .footer {
-margin-top: 40px;
-font-size: 12px;
-opacity: 0.6;
-padding: 20px;
-color: #d4af37;
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.6;
+    padding: 20px;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
+/* DESKTOP */
+@media (min-width: 768px) {
 h1 {
-font-size: 32px;
+    font-size: 44px;
+}
+.hero {
+    padding: 90px 20px;
 }
 .card {
-padding: 20px;
+    padding: 25px;
+}
+.tier {
+    font-size: 15px;
+}
+a.button {
+    font-size: 18px;
 }
 }
-
 </style>
 </head>
 
@@ -150,38 +154,66 @@ Velvet Elite operates as a curated matchmaking concierge service. Each membershi
 <div class="tier">
 <b>🥉 Starter — $1,000</b><br>
 30-day access<br>
-Expected: 2–5 curated introductions
+Target: ~1 introduction per week<br>
+Expected: 2–4 total introductions<br>
+<br>
+Support:<br>
+• Standard email support<br>
+• Queue-based matching
 </div>
 
 <div class="tier">
 <b>🥈 Premium — $2,500</b><br>
 60-day access<br>
-Expected: 6–12 curated introductions<br>
-Priority matching queue
+Target: 1–2 introductions per week<br>
+Expected: 8–12 total introductions<br>
+<br>
+Support:<br>
+• Priority email handling<br>
+• Faster match turnaround<br>
+• Profile refinement after initial feedback
 </div>
 
 <div class="tier">
 <b>🥇 Elite — $5,000</b><br>
 90-day access<br>
-Minimum 2 introductions per week<br>
-Concierge-level priority access
+Target: 2+ introductions per week<br>
+Expected: 20–30 total introductions<br>
+<br>
+Support:<br>
+• Concierge-level handling<br>
+• Active match sourcing (not passive)<br>
+• Continuous profile optimization<br>
+• Highest priority in matching queue
 </div>
 
 <p class="small">
 Most approved members select Premium or Elite for faster introductions.
 </p>
 
+<p class="small">
+Elite members receive priority access to the most recently approved and highly compatible profiles within the network.
+</p>
+
+<p class="small">
+Introduction volume depends on compatibility, availability, and mutual interest. Quality is prioritized over quantity.
+</p>
+
 </div>
 
-<!-- HOW IT WORKS -->
+<!-- NEXT STEPS -->
 <div class="card">
 
-<h2>🔒 Your Access Path</h2>
+<h2>🔒 Next Steps</h2>
 
 <p>
-1. Complete activation<br>
-2. Select your membership tier during checkout<br>
-3. Receive onboarding and private access setup<br>
+You have been approved for access. Complete activation below to begin your membership.
+</p>
+
+<p>
+1. Activate your membership<br>
+2. Select your preferred tier during checkout<br>
+3. Receive onboarding and profile setup instructions<br>
 4. Begin curated introductions
 </p>
 
