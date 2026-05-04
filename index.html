@@ -5,6 +5,9 @@
 <title>Velvet Elite | Private Matchmaking Network</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Luxury Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 
 /* =========================
@@ -16,125 +19,137 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0b0b;
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at top, #141414, #0b0b0b 70%);
     color: #d4af37;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-p, h1, h2 {
-    margin: 0;
+/* HEADINGS LUXURY */
+h1, h2 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5px;
 }
 
 /* =========================
    HERO
 ========================= */
 .hero {
-    padding: 70px 20px 40px 20px;
-    background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+    padding: 90px 20px 50px 20px;
 }
 
 /* LOGO */
 .hero img {
-    width: min(680px, 95vw);
+    width: min(620px, 92vw);
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 
-    filter: drop-shadow(0 0 45px rgba(255, 215, 120, 0.65));
-    border-radius: 26px;
-    padding: 12px;
+    filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.35));
+    border-radius: 24px;
+    padding: 10px;
 
     background: radial-gradient(
         circle,
-        rgba(255, 215, 120, 0.38),
-        transparent 65%
+        rgba(212, 175, 55, 0.25),
+        transparent 70%
     );
 
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 /* HERO TEXT */
 .hero p {
     font-size: 18px;
     max-width: 780px;
-    margin: 12px auto 6px auto;
-    color: #d4af37;
+    margin: 14px auto;
+    color: rgba(212, 175, 55, 0.95);
 }
 
 /* TRUST LINE */
 .trust {
     font-size: 13px;
-    opacity: 0.8;
-    margin: 6px 0 10px 0;
+    opacity: 0.75;
+    margin: 10px 0;
+    letter-spacing: 0.3px;
 }
 
 /* TRUST BAR */
 .trust-bar {
     font-size: 12px;
-    opacity: 0.75;
-    margin-top: 10px;
-    line-height: 1.8;
+    opacity: 0.7;
+    margin-top: 14px;
+    line-height: 1.9;
 }
 
 /* =========================
    CONTAINER
 ========================= */
 .container {
-    padding: 20px 16px 60px 16px;
-    max-width: 900px;
+    padding: 30px 16px 70px 16px;
+    max-width: 920px;
     margin: 0 auto;
 }
 
 /* =========================
-   CARD
+   CARD (LUXURY)
 ========================= */
 .card {
-    background: #141414;
-    padding: 34px;
-    margin: 20px auto;
-    max-width: 580px;
-    border-radius: 16px;
-    border: 1px solid rgba(212, 175, 55, 0.25);
-    color: #d4af37;
+    background: linear-gradient(145deg, #161616, #101010);
+    padding: 38px;
+    margin: 24px auto;
+    max-width: 600px;
+    border-radius: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    color: rgba(212, 175, 55, 0.95);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    border-color: #d4af37;
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.12);
+    transform: translateY(-2px);
 }
 
 /* =========================
-   BUTTON
+   BUTTON (LUXURY GOLD)
 ========================= */
 a.button {
     display: block;
     padding: 18px;
-    margin-top: 18px;
-    background: #d4af37;
+    margin-top: 20px;
+
+    background: linear-gradient(145deg, #d4af37, #f5dc8a);
     color: #0b0b0b;
+
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    font-size: 15px;
+
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.18);
+    transition: all 0.3s ease;
 }
 
 a.button:hover {
-    background: #e6c35a;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(212, 175, 55, 0.25);
 }
 
 /* TAG */
 .tag {
     font-size: 13px;
-    opacity: 0.85;
+    opacity: 0.8;
     margin-top: 10px;
 }
 
-/* FOOTER BASE */
+/* FOOTER */
 .footer {
     margin-top: 60px;
     font-size: 13px;
-    opacity: 0.6;
+    opacity: 0.7;
     padding: 25px;
     text-align: center;
 }
@@ -248,14 +263,13 @@ We enforce zero tolerance for coercion, fraud, or illegal activity.
 <!-- PREMIUM FOOTER -->
 <div class="footer">
 
-    <div style="max-width:900px; margin:0 auto; padding-top:30px; border-top:1px solid rgba(212,175,55,0.25);">
+    <div style="max-width:900px; margin:0 auto; padding-top:30px; border-top:1px solid rgba(212,175,55,0.2);">
 
-        <div style="font-size:13px; opacity:0.7; margin-bottom:12px;">
+        <div style="font-family:'Playfair Display', serif; font-size:14px; opacity:0.8; margin-bottom:12px;">
             © 2026 Velvet Elite Matchmaking. All Rights Reserved.
         </div>
 
-        <a href="disclaimer.html" 
-           style="color:#d4af37; text-decoration:underline; font-size:13px;">
+        <a href="disclaimer.html" style="color:#d4af37; text-decoration:underline; font-size:13px;">
             Disclaimer & Policies
         </a>
 
@@ -266,17 +280,16 @@ We enforce zero tolerance for coercion, fraud, or illegal activity.
                style="
                     display:inline-flex;
                     align-items:center;
-                    justify-content:center;
                     gap:10px;
                     padding:12px 22px;
                     border-radius:30px;
-                    border:1px solid rgba(212,175,55,0.6);
+                    border:1px solid rgba(212,175,55,0.5);
                     color:#0b0b0b;
-                    background:linear-gradient(145deg, #d4af37, #f2d27a);
+                    background:linear-gradient(145deg, #d4af37, #f5dc8a);
                     text-decoration:none;
-                    font-weight:bold;
+                    font-weight:600;
                     font-size:14px;
-                    box-shadow:0 0 18px rgba(212,175,55,0.25);
+                    box-shadow:0 8px 20px rgba(212,175,55,0.18);
                ">
 
                 <span style="font-size:16px;">📘</span>
@@ -285,7 +298,7 @@ We enforce zero tolerance for coercion, fraud, or illegal activity.
 
         </div>
 
-        <div style="font-size:11px; opacity:0.5; margin-top:18px;">
+        <div style="font-size:11px; opacity:0.5; margin-top:18px; letter-spacing:0.3px;">
             Private concierge matchmaking • International network • Application-only access
         </div>
 
