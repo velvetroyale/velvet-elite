@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+now apply same luxury style fonts to all header sections in this script keep all content as is <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Velvet Elite | Private Matchmaking Network</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Luxury Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -20,119 +21,88 @@ html, body {
     overflow-x: hidden;
 }
 
-/* ===== ULTRA LUXURY SPACING SYSTEM ===== */
-:root{
-    --space-xs: 6px;
-    --space-sm: 12px;
-    --space-md: 24px;
-    --space-lg: 48px;
-    --space-xl: 80px;
-    --space-xxl: 120px;
-}
-
 body {
     font-family: "Inter", sans-serif;
     background: radial-gradient(circle at top, #141414, #0b0b0b 70%);
     color: #d4af37;
     text-align: center;
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
-/* TYPOGRAPHY */
 h1, h2 {
     font-family: "Playfair Display", serif;
     letter-spacing: 0.5px;
-    margin-bottom: var(--space-sm);
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
-    padding: var(--space-xxl) 20px var(--space-xl) 20px;
+    padding: 90px 20px 50px 20px;
 }
 
-/* HERO IMAGE (ULTRA CLEAN LUXURY SCALE) */
+/* FIXED HERO IMAGE (DESKTOP SAFE) */
 .hero img {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1100px;
     height: auto;
 
     display: block;
-    margin: 0 auto var(--space-lg) auto;
+    margin: 0 auto 28px auto;
 
     filter: drop-shadow(0 0 45px rgba(212, 175, 55, 0.35));
-    border-radius: 22px;
+    border-radius: 24px;
 
     background: radial-gradient(
         circle,
-        rgba(212, 175, 55, 0.22),
+        rgba(212, 175, 55, 0.25),
         transparent 70%
     );
 }
 
 .hero p {
     font-size: 18px;
-    max-width: 760px;
-    margin: var(--space-md) auto;
-    color: rgba(212, 175, 55, 0.92);
+    max-width: 780px;
+    margin: 14px auto;
+    color: rgba(212, 175, 55, 0.95);
 }
 
-/* TRUST TEXT */
 .trust {
     font-size: 13px;
-    opacity: 0.72;
-    margin: var(--space-xs) 0;
+    opacity: 0.75;
+    margin: 10px 0;
 }
 
-/* TRUST BAR (REFINED LUXURY BLOCK) */
-.trust-bar {
-    font-size: 12px;
-    opacity: 0.78;
-    line-height: 1.9;
-
-    margin-top: var(--space-lg);
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ===== CONTENT WRAPPER ===== */
+/* CONTAINER */
 .container {
-    padding: var(--space-xl) 16px var(--space-xxl) 16px;
-    max-width: 940px;
+    padding: 30px 16px 70px 16px;
+    max-width: 920px;
     margin: 0 auto;
 }
 
-/* ===== CARDS (HERMÈS-STYLE BREATHING ROOM) ===== */
+/* CARD */
 .card {
     background: linear-gradient(145deg, #161616, #101010);
-
-    padding: var(--space-xl) var(--space-lg);
-
-    margin: var(--space-lg) auto;
-
-    max-width: 620px;
-
-    border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.14);
-
+    padding: 38px;
+    margin: 24px auto;
+    max-width: 600px;
+    border-radius: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
     color: rgba(212, 175, 55, 0.95);
 
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-
-    transition: all 0.35s ease;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    border-color: rgba(212, 175, 55, 0.5);
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.10);
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.12);
     transform: translateY(-2px);
 }
 
-/* BUTTON (REFINED TOUCH) */
+/* BUTTON */
 a.button {
     display: block;
     padding: 18px;
-    margin-top: var(--space-md);
+    margin-top: 20px;
 
     background: linear-gradient(145deg, #d4af37, #f5dc8a);
     color: #0b0b0b;
@@ -142,54 +112,40 @@ a.button {
     border-radius: 12px;
     font-size: 15px;
 
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.16);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.18);
     transition: all 0.3s ease;
 }
 
 a.button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(212, 175, 55, 0.22);
+    box-shadow: 0 12px 28px rgba(212, 175, 55, 0.25);
 }
 
-/* TAGS */
 .tag {
     font-size: 13px;
-    opacity: 0.78;
-    margin-top: var(--space-sm);
+    opacity: 0.8;
+    margin-top: 10px;
 }
 
-/* ===== FOOTER (LUXURY BREATHING SPACE) ===== */
+/* FOOTER */
 .footer {
-    margin-top: var(--space-xxl);
-    padding: var(--space-xl) 20px;
-
+    margin-top: 60px;
     font-size: 13px;
-    opacity: 0.75;
-
+    opacity: 0.7;
+    padding: 25px;
     text-align: center;
-    border-top: 1px solid rgba(212,175,55,0.12);
 }
 
-.footer a {
-    color: #d4af37;
-    text-decoration: underline;
-}
-
-/* MOBILE REFINEMENT ONLY */
+/* ✅ ONLY CHANGE: MOBILE IMAGE FIX */
 @media (max-width: 768px) {
 
     .hero {
-        padding: var(--space-xl) 14px var(--space-lg) 14px;
+        padding: 70px 14px 40px 14px;
     }
 
     .hero img {
-        max-width: 92vw;
+        max-width: 92vw;   /* makes image readable on mobile */
         border-radius: 18px;
-    }
-
-    .card {
-        padding: var(--space-lg) var(--space-md);
-        margin: var(--space-md) auto;
     }
 }
 
@@ -215,35 +171,43 @@ a.button:hover {
     <div class="trust-bar">
         ✔ Verified members across 20+ countries<br>
         ✔ Human-reviewed matchmaking process<br>
-        ✔ Monthly private introductions <br>
+        ✔ Monthly private introductions (limited capacity)<br>
         ✔ Selective acceptance (7–12% approval rate)<br>
         ✔ Confidential profile handling & screening<br>
-        ✔ No public profiles • No swiping • No algorithms 
+        ✔ No public profiles • No swiping • No algorithms • No open messaging
     </div>
 
-</div>
-
-<!-- CONTENT -->
+<!-- AUTHORITY BLOCK -->
 <div class="container">
 
 <div class="card">
 <h2>🔎 How Selection Works</h2>
-<p>All applicants are reviewed based on intent, authenticity, and compatibility. We do not accept every application — only curated profiles are approved.</p>
+<p>
+All applicants are reviewed based on intent, authenticity, and compatibility.  
+We do not accept every application — only curated profiles are approved.
+</p>
 </div>
 
 <div class="card">
 <h2>💎 Why Velvet Elite</h2>
-<p>Unlike dating apps, Velvet Elite is a private concierge matchmaking system focused on curated, human-reviewed introductions rather than algorithmic swiping.</p>
+<p>
+Unlike dating apps, Velvet Elite is a private concierge matchmaking system focused on curated, human-reviewed introductions rather than algorithmic swiping.
+</p>
 </div>
 
 <div class="card">
 <h2>🔐 Private System</h2>
-<p>No public profiles. No swiping. All introductions are handled privately between verified members.</p>
+<p>
+No public profiles. No swiping. All introductions are handled privately between verified members.
+</p>
 </div>
 
 <div class="card">
 <h2>⚖️ Ethical Standards</h2>
-<p>Velvet Elite operates on strict consent, privacy, and adult-only participation principles. We enforce zero tolerance for coercion, fraud, or illegal activity.</p>
+<p>
+Velvet Elite operates on strict consent, privacy, and adult-only participation principles.  
+We enforce zero tolerance for coercion, fraud, or illegal activity.
+</p>
 </div>
 
 </div>
@@ -252,21 +216,52 @@ a.button:hover {
 <div class="container">
 
 <div class="card">
-<h2>💎 For Women</h2>
-<p>Request access to join private international introductions within the Velvet Elite network.</p>
+    <h2>💎 For Women</h2>
+    <p>
+        Request access to join private international introductions within the Velvet Elite network.
+        Each profile is selectively reviewed for lifestyle alignment, presentation, and suitability for our curated global member community.
+    </p>
 
-<a class="button" href="women.html">Request Invitation Access</a>
+    <a class="button" href="women.html">
+        Request Invitation Access
+    </a>
 
-<div class="tag">✔ No fees • ✔ Confidential selection process • ✔ Limited approval slots</div>
+    <div class="tag">
+        ✔ No fees • ✔ Confidential selection process • ✔ Limited approval slots
+    </div>
+
+    <p class="tag">
+        Optional verified & featured placement available after approval for increased visibility within the network.
+    </p>
+
+    <p class="tag">
+        Only selected profiles are invited to proceed into the private network.
+    </p>
 </div>
 
+<!-- MEN SECTION -->
 <div class="card">
-<h2>💼 Private Membership for Men</h2>
-<p>Premium concierge matchmaking for serious international relationships.</p>
+    <h2>💼 Private Membership for Men</h2>
+    
+<p>
+Velvet Elite is a private concierge matchmaking network for accomplished men seeking serious, high-quality international relationships through discreet, highly curated introductions.
+</p>
+    
+    <p class="tag">
+    Membership is intentionally limited. Applications are reviewed based on lifestyle alignment, emotional readiness, and long-term relationship intent — not appearance or status alone.
+    </p>
+    
+    <p class="tag">
+    Approved members are introduced privately to pre-screened international profiles. There is no browsing, no swiping, and no public visibility at any stage.
+    </p>
 
-<a class="button" href="men.html">Apply for Invitation Membership</a>
+    <a class="button" href="men.html">
+        Apply for Invitation Membership
+    </a>
 
-<div class="tag">✔ Application required • ✔ Curated introductions • ✔ Premium concierge access</div>
+    <div class="tag">
+        ✔ Application required • ✔ Curated introductions • ✔ Premium concierge access
+    </div>
 </div>
 
 </div>
@@ -274,19 +269,45 @@ a.button:hover {
 <!-- FOOTER -->
 <div class="footer">
 
-    <div>© 2026 Velvet Elite Matchmaking. All Rights Reserved.</div>
+    <div style="max-width:900px; margin:0 auto; padding-top:30px; border-top:1px solid rgba(212,175,55,0.2);">
 
-    <div style="margin-top:12px;">
-        <a href="disclaimer.html">Disclaimer & Policies</a>
-    </div>
+        <div style="font-family:'Playfair Display', serif; font-size:14px; opacity:0.8; margin-bottom:12px;">
+            © 2026 Velvet Elite Matchmaking. All Rights Reserved.
+        </div>
 
-    <div style="margin-top:18px;">
-        <a href="https://www.facebook.com/velvetelitematchmaking" target="_blank"
-           style="display:inline-block; padding:12px 20px; border-radius:30px;
-           background:linear-gradient(145deg,#d4af37,#f5dc8a);
-           color:#0b0b0b; font-weight:600; text-decoration:none;">
-            📘 Follow us on Facebook
+        <a href="disclaimer.html" style="color:#d4af37; text-decoration:underline; font-size:13px;">
+            Disclaimer & Policies
         </a>
+
+        <div style="margin-top:22px;">
+
+            <a href="https://www.facebook.com/velvetelitematchmaking" 
+               target="_blank"
+               style="
+                    display:inline-flex;
+                    align-items:center;
+                    gap:10px;
+                    padding:12px 22px;
+                    border-radius:30px;
+                    border:1px solid rgba(212,175,55,0.5);
+                    color:#0b0b0b;
+                    background:linear-gradient(145deg, #d4af37, #f5dc8a);
+                    text-decoration:none;
+                    font-weight:600;
+                    font-size:14px;
+                    box-shadow:0 8px 20px rgba(212,175,55,0.18);
+               ">
+
+                <span style="font-size:16px;">📘</span>
+                Follow us on Facebook
+            </a>
+
+        </div>
+
+        <div style="font-size:11px; opacity:0.5; margin-top:18px;">
+            Private concierge matchmaking • International network • Application-only access
+        </div>
+
     </div>
 
 </div>
