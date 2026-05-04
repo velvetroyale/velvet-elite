@@ -39,7 +39,7 @@ h1, h2 {
     padding: 90px 20px 50px 20px;
 }
 
-/* FIXED HERO IMAGE (NO SCROLL BUG + PROPER SCALE) */
+/* FIXED HERO IMAGE (DESKTOP SAFE) */
 .hero img {
     width: 100%;
     max-width: 1100px;
@@ -134,6 +134,19 @@ a.button:hover {
     opacity: 0.7;
     padding: 25px;
     text-align: center;
+}
+
+/* ✅ ONLY CHANGE: MOBILE IMAGE FIX */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 70px 14px 40px 14px;
+    }
+
+    .hero img {
+        max-width: 92vw;   /* makes image readable on mobile */
+        border-radius: 18px;
+    }
 }
 
 </style>
