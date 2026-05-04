@@ -14,8 +14,14 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
     font-family: "Inter", sans-serif;
     background: radial-gradient(circle at top, #141414, #0b0b0b 70%);
     color: #d4af37;
@@ -33,16 +39,14 @@ h1, h2 {
     padding: 90px 20px 50px 20px;
 }
 
-/* ✅ FIXED HERO IMAGE SIZE (LARGER + CLEANER) */
+/* FIXED HERO IMAGE (NO SCROLL BUG + PROPER SCALE) */
 .hero img {
     width: 100%;
-    max-width: 980px;
+    max-width: 1100px;
     height: auto;
-    margin-bottom: 28px;
 
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 28px auto;
 
     filter: drop-shadow(0 0 45px rgba(212, 175, 55, 0.35));
     border-radius: 24px;
@@ -52,8 +56,6 @@ h1, h2 {
         rgba(212, 175, 55, 0.25),
         transparent 70%
     );
-
-    padding: 0;
 }
 
 .hero p {
@@ -119,7 +121,6 @@ a.button:hover {
     box-shadow: 0 12px 28px rgba(212, 175, 55, 0.25);
 }
 
-/* TAG */
 .tag {
     font-size: 13px;
     opacity: 0.8;
@@ -164,8 +165,140 @@ a.button:hover {
 
 </div>
 
-<!-- REST OF YOUR CONTENT UNCHANGED -->
-<!-- (everything below remains exactly the same) -->
+<!-- AUTHORITY BLOCK -->
+<div class="container">
+
+<div class="card">
+<h2>🔎 How Selection Works</h2>
+<p>
+All applicants are reviewed based on intent, authenticity, and compatibility.  
+We do not accept every application — only curated profiles are approved.
+</p>
+</div>
+
+<div class="card">
+<h2>💎 Why Velvet Elite</h2>
+<p>
+Unlike dating apps, Velvet Elite is a private concierge matchmaking system focused on curated, human-reviewed introductions rather than algorithmic swiping.
+</p>
+</div>
+
+<div class="card">
+<h2>🔐 Private System</h2>
+<p>
+No public profiles. No swiping. All introductions are handled privately between verified members.
+</p>
+</div>
+
+<div class="card">
+<h2>⚖️ Ethical Standards</h2>
+<p>
+Velvet Elite operates on strict consent, privacy, and adult-only participation principles.  
+We enforce zero tolerance for coercion, fraud, or illegal activity.
+</p>
+</div>
+
+</div>
+
+<!-- OPTIONS -->
+<div class="container">
+
+<div class="card">
+    <h2>💠 For Women</h2>
+    <p>
+        Request access to join private international introductions within the Velvet Elite network.
+        Each profile is selectively reviewed for lifestyle alignment, presentation, and suitability for our curated global member community.
+    </p>
+
+    <a class="button" href="women.html">
+        Request Invitation Access
+    </a>
+
+    <div class="tag">
+        ✔ No fees • ✔ Confidential selection process • ✔ Limited approval slots
+    </div>
+
+    <p class="tag">
+        Optional verified & featured placement available after approval for increased visibility within the network.
+    </p>
+
+    <p class="tag">
+        Only selected profiles are invited to proceed into the private network.
+    </p>
+</div>
+
+<!-- MEN SECTION -->
+<div class="card">
+    <h2>💼 Private Membership for Men</h2>
+    
+<p>
+Velvet Elite is a private concierge matchmaking network for accomplished men seeking serious, high-quality international relationships through discreet, highly curated introductions.
+</p>
+    
+    <p class="tag">
+    Membership is intentionally limited. Applications are reviewed based on lifestyle alignment, emotional readiness, and long-term relationship intent — not appearance or status alone.
+    </p>
+    
+    <p class="tag">
+    Approved members are introduced privately to pre-screened international profiles. There is no browsing, no swiping, and no public visibility at any stage.
+    </p>
+
+    <a class="button" href="men.html">
+        Apply for Invitation Membership
+    </a>
+
+    <div class="tag">
+        ✔ Application required • ✔ Curated introductions • ✔ Premium concierge access
+    </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+    <div style="max-width:900px; margin:0 auto; padding-top:30px; border-top:1px solid rgba(212,175,55,0.2);">
+
+        <div style="font-family:'Playfair Display', serif; font-size:14px; opacity:0.8; margin-bottom:12px;">
+            © 2026 Velvet Elite Matchmaking. All Rights Reserved.
+        </div>
+
+        <a href="disclaimer.html" style="color:#d4af37; text-decoration:underline; font-size:13px;">
+            Disclaimer & Policies
+        </a>
+
+        <div style="margin-top:22px;">
+
+            <a href="https://www.facebook.com/velvetelitematchmaking" 
+               target="_blank"
+               style="
+                    display:inline-flex;
+                    align-items:center;
+                    gap:10px;
+                    padding:12px 22px;
+                    border-radius:30px;
+                    border:1px solid rgba(212,175,55,0.5);
+                    color:#0b0b0b;
+                    background:linear-gradient(145deg, #d4af37, #f5dc8a);
+                    text-decoration:none;
+                    font-weight:600;
+                    font-size:14px;
+                    box-shadow:0 8px 20px rgba(212,175,55,0.18);
+               ">
+
+                <span style="font-size:16px;">📘</span>
+                Follow us on Facebook
+            </a>
+
+        </div>
+
+        <div style="font-size:11px; opacity:0.5; margin-top:18px;">
+            Private concierge matchmaking • International network • Application-only access
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
