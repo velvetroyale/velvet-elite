@@ -29,9 +29,33 @@ body {
     line-height: 1.7;
 }
 
+/* 🔥 LUXURY GOLD HEADERS (UPDATED) */
 h1, h2 {
     font-family: "Playfair Display", serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+    background: linear-gradient(
+        180deg,
+        #fff6cc 0%,
+        #f5dc8a 25%,
+        #d4af37 50%,
+        #b8962e 75%,
+        #fff1b0 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 8px rgba(212,175,55,0.25),
+        0 0 18px rgba(212,175,55,0.15);
+}
+
+/* subtle sizing polish */
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 /* HERO */
@@ -136,7 +160,7 @@ a.button:hover {
     text-align: center;
 }
 
-/* ✅ ONLY CHANGE: MOBILE IMAGE FIX */
+/* MOBILE */
 @media (max-width: 768px) {
 
     .hero {
@@ -144,8 +168,12 @@ a.button:hover {
     }
 
     .hero img {
-        max-width: 92vw;   /* makes image readable on mobile */
+        max-width: 92vw;
         border-radius: 18px;
+    }
+
+    .card h2 {
+        font-size: 20px;
     }
 }
 
@@ -240,7 +268,6 @@ We enforce zero tolerance for coercion, fraud, or illegal activity.
     </p>
 </div>
 
-<!-- MEN SECTION -->
 <div class="card">
     <h2>💼 Private Membership for Men</h2>
     
