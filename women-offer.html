@@ -63,12 +63,11 @@ h1 {
 
 /* TIER */
 .tier {
-    margin-bottom: 18px;
     font-size: 14px;
-    position: relative;
+    line-height: 1.7;
 }
 
-/* MOST REQUESTED BADGE */
+/* BADGE */
 .badge {
     display: inline-block;
     background: #d4af37;
@@ -77,9 +76,45 @@ h1 {
     font-weight: bold;
     padding: 4px 10px;
     border-radius: 20px;
-    margin-left: 8px;
-    vertical-align: middle;
     letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* TABLE */
+.table-card {
+    background: #111;
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 650px;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(212,175,55,0.15);
+    vertical-align: top;
+}
+
+th {
+    text-align: left;
+    color: #d4af37;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* HIGHLIGHT PREMIUM COLUMN */
+.premium {
+    background: rgba(212,175,55,0.08);
+    border-left: 2px solid #d4af37;
+    border-right: 2px solid #d4af37;
 }
 
 /* BUTTON */
@@ -97,12 +132,12 @@ h1 {
     font-size: 16px;
 }
 
-/* CENTER BUTTON WRAPPER */
+/* CENTER */
 .center {
     text-align: center;
 }
 
-/* SMALL TEXT */
+/* SMALL */
 .small {
     font-size: 12px;
     opacity: 0.75;
@@ -123,7 +158,6 @@ h1 {
 h1 { font-size: 44px; }
 .hero { padding: 90px 20px; }
 .card { padding: 25px; }
-.tier { font-size: 15px; }
 .button { font-size: 18px; }
 }
 </style>
@@ -148,78 +182,111 @@ Velvet Elite is a private concierge matchmaking network focused on curated, high
 </p>
 </div>
 
-<!-- TIERS -->
+<!-- COMPARISON TABLE -->
+<div class="table-card">
+
+<h2 style="text-align:center;">📊 Membership Comparison</h2>
+
+<table>
+<tr>
+<th>Feature</th>
+<th>Starter</th>
+<th class="premium">Premium ⭐</th>
+<th>Elite</th>
+</tr>
+
+<tr>
+<td>Price</td>
+<td>$250/mo</td>
+<td class="premium">$1,000</td>
+<td>$3,000</td>
+</tr>
+
+<tr>
+<td>Visibility</td>
+<td>Standard</td>
+<td class="premium">Priority</td>
+<td>Highest Priority</td>
+</tr>
+
+<tr>
+<td>Introductions</td>
+<td>Basic</td>
+<td class="premium">Frequent</td>
+<td>Maximum</td>
+</tr>
+
+<tr>
+<td>Concierge Speed</td>
+<td>Standard</td>
+<td class="premium">Fast</td>
+<td>Instant Priority</td>
+</tr>
+
+<tr>
+<td>Match Quality</td>
+<td>Curated</td>
+<td class="premium">Highly Curated</td>
+<td>Elite Selection Only</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- STARTER -->
 <div class="card">
-
-<h2>💎 Membership Options</h2>
-
 <div class="tier">
-<b>🥉 Starter — $250/month</b><br>
-⏳ Duration: Monthly access<br>
+<h2>🥉 Starter — $250/month</h2>
+⏳ Monthly access<br>
 ✔ Standard profile review<br>
-✔ Eligible for matchmaking selection queue<br>
-✔ Confidential evaluation by concierge team<br>
-<br>
+✔ Eligible for matchmaking queue<br><br>
 Target: ~1 introduction per week<br>
 Expected: 2–4 total introductions
 </div>
-
-<div class="tier">
-    <span class="badge">MOST REQUESTED</span>
-    <br>
-<b>🥈 Premium — $1,000/month 
-
-</b><br>
-⏳ Duration: 60 days<br>
-✔ Priority profile visibility<br>
-✔ Faster concierge review process<br>
-✔ Featured placement in matchmaking queue<br>
-✔ Enhanced consideration for introductions<br>
-<br>
-Target: 1–2 introductions per week<br>
-Expected: 8–12 total introductions
 </div>
 
+<!-- PREMIUM -->
+<div class="card">
 <div class="tier">
-<b>🥇 Elite — $3,000</b><br>
-⏳ Duration: 90 days<br>
-✔ Premium exposure to Elite male members<br>
-✔ Highest priority visibility<br>
-✔ Direct concierge curation<br>
-✔ Profile optimization & positioning guidance<br>
-✔ Fast-track matchmaking<br>
-✔ Top priority queue placement<br>
-<br>
+
+<span class="badge">MOST REQUESTED</span>
+
+<h2 style="margin-top:10px;">🥈 Premium — $1,000</h2>
+
+⏳ 60 days access<br>
+✔ Priority visibility<br>
+✔ Faster concierge processing<br>
+✔ Featured placement<br><br>
+
+Target: 1–2 introductions per week<br>
+Expected: 8–12 total introductions
+
+</div>
+</div>
+
+<!-- ELITE -->
+<div class="card">
+<div class="tier">
+<h2>🥇 Elite — $3,000</h2>
+
+⏳ 90 days access<br>
+✔ Highest priority<br>
+✔ Elite-level matchmaking<br>
+✔ Personal concierge curation<br><br>
+
 Target: 2+ introductions per week<br>
 Expected: 20–30 total introductions
 </div>
-
 </div>
 
-<!-- NEXT STEPS -->
-<div class="card">
-<h2>🔒 Next Steps</h2>
-<p>
-1. Your profile is approved<br>
-2. Enter matchmaking system<br>
-3. Choose membership tier<br>
-4. Concierge begins curation
-</p>
-</div>
-
-<!-- TRUST -->
-<div class="card">
-<h2>🔐 Private & Confidential System</h2>
-<p>
-All profiles are handled privately. Every introduction is curated manually based on compatibility and intent.
-</p>
 </div>
 
 <!-- CTA -->
 <div class="card center">
 
 <p>
-Upgrade your visibility or remain in the standard selection pool.
+Select your membership level to activate curated matchmaking.
 </p>
 
 <a class="button" href="https://www.paypal.com/ncp/payment/V66WX4Q6ZDRS6">
@@ -228,8 +295,6 @@ Upgrade Membership Access
 
 <div class="small">
 Secure PayPal checkout • Activation is immediate after payment
-</div>
-
 </div>
 
 </div>
