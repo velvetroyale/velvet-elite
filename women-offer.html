@@ -25,14 +25,12 @@ body {
     background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
-/* TITLE */
 h1 {
     font-size: 34px;
     margin: 0;
     letter-spacing: 1px;
 }
 
-/* HERO TEXT */
 .hero p {
     opacity: 0.9;
     max-width: 720px;
@@ -58,7 +56,6 @@ h1 {
     text-align: left;
 }
 
-/* HEADINGS */
 .card h2 {
     margin-top: 0;
     font-size: 20px;
@@ -68,48 +65,40 @@ h1 {
 .tier {
     margin-bottom: 18px;
     font-size: 14px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid rgba(212,175,55,0.15);
     position: relative;
 }
 
 /* MOST REQUESTED BADGE */
 .badge {
     display: inline-block;
+    background: #d4af37;
+    color: #0b0b0b;
     font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-weight: bold;
     padding: 4px 10px;
     border-radius: 20px;
-    background: rgba(212,175,55,0.15);
-    border: 1px solid rgba(212,175,55,0.35);
-    color: #d4af37;
     margin-left: 8px;
     vertical-align: middle;
+    letter-spacing: 0.5px;
 }
 
 /* BUTTON */
-a.button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.button {
+    display: block;
     width: 100%;
     max-width: 420px;
-
     padding: 16px;
-    margin: 18px auto 10px auto;
-
-    background: linear-gradient(145deg, #d4af37, #f5dc8a);
+    margin: 20px auto 10px auto;
+    background: #d4af37;
     color: #0b0b0b;
-
     text-decoration: none;
     font-weight: bold;
-
     border-radius: 10px;
     font-size: 16px;
+}
 
-    box-shadow: 0 8px 20px rgba(212,175,55,0.18);
+/* CENTER BUTTON WRAPPER */
+.center {
     text-align: center;
 }
 
@@ -135,7 +124,7 @@ h1 { font-size: 44px; }
 .hero { padding: 90px 20px; }
 .card { padding: 25px; }
 .tier { font-size: 15px; }
-a.button { font-size: 18px; }
+.button { font-size: 18px; }
 }
 </style>
 </head>
@@ -166,95 +155,68 @@ Velvet Elite is a private concierge matchmaking network focused on curated, high
 
 <div class="tier">
 <b>🥉 Starter — $250/month</b><br>
-⏳ Monthly access<br>
+⏳ Duration: Monthly access<br>
 ✔ Standard profile review<br>
 ✔ Eligible for matchmaking selection queue<br>
-✔ Confidential evaluation by concierge team<br><br>
-
+✔ Confidential evaluation by concierge team<br>
+<br>
 Target: ~1 introduction per week<br>
 Expected: 2–4 total introductions
-
-<a class="button" href="https://www.paypal.com/ncp/payment/V66WX4Q6ZDRS6">
-Activate Starter Access
-</a>
 </div>
 
 <div class="tier">
-<b>🥈 Premium — $1,000</b><br>
-<span class="badge">Most Requested</span><br>
-⏳ Duration: 60 days (2 months)<br>
+    <span class="badge">MOST REQUESTED</span>
+    <br>
+<b>🥈 Premium — $1,000/month 
+
+</b><br>
+⏳ Duration: 60 days<br>
 ✔ Priority profile visibility<br>
 ✔ Faster concierge review process<br>
 ✔ Featured placement in matchmaking queue<br>
-✔ Enhanced consideration for introductions<br><br>
-
+✔ Enhanced consideration for introductions<br>
+<br>
 Target: 1–2 introductions per week<br>
 Expected: 8–12 total introductions
-
-<a class="button" href="https://www.paypal.com/ncp/payment/V66WX4Q6ZDRS6">
-Activate Premium Access
-</a>
 </div>
 
-<div class="tier" style="border-bottom:none;">
+<div class="tier">
 <b>🥇 Elite — $3,000</b><br>
-⏳ Duration: 90 days (3 months)<br>
+⏳ Duration: 90 days<br>
 ✔ Premium exposure to Elite male members<br>
 ✔ Highest priority visibility<br>
 ✔ Direct concierge curation<br>
 ✔ Profile optimization & positioning guidance<br>
-✔ Fast-track matchmaking consideration<br>
-✔ Highest priority placement in matchmaking queue<br><br>
-
+✔ Fast-track matchmaking<br>
+✔ Top priority queue placement<br>
+<br>
 Target: 2+ introductions per week<br>
 Expected: 20–30 total introductions
-
-<a class="button" href="https://www.paypal.com/ncp/payment/V66WX4Q6ZDRS6">
-Activate Elite Access
-</a>
 </div>
-
-<p class="small">
-Actual introductions depend on compatibility, availability, and mutual interest within the network.
-</p>
-
-<p class="small">
-Most approved members typically choose Premium or Elite for increased visibility.
-</p>
-
-<p class="small">
-All introductions are based on compatibility and mutual interest — quality is always prioritized.
-</p>
 
 </div>
 
 <!-- NEXT STEPS -->
 <div class="card">
-
 <h2>🔒 Next Steps</h2>
-
 <p>
-1. Your profile is approved for access<br>
-2. You are entered into the private matchmaking system<br>
-3. Optional upgrade increases visibility and priority<br>
-4. Concierge team begins selection immediately<br>
+1. Your profile is approved<br>
+2. Enter matchmaking system<br>
+3. Choose membership tier<br>
+4. Concierge begins curation
 </p>
-
 </div>
 
 <!-- TRUST -->
 <div class="card">
-
 <h2>🔐 Private & Confidential System</h2>
-
 <p>
-All profiles are handled privately. No public listings exist. Every introduction is curated manually.
+All profiles are handled privately. Every introduction is curated manually based on compatibility and intent.
 </p>
-
 </div>
 
 <!-- CTA -->
-<div class="card" style="text-align:center;">
+<div class="card center">
 
 <p>
 Upgrade your visibility or remain in the standard selection pool.
@@ -267,10 +229,6 @@ Upgrade Membership Access
 <div class="small">
 Secure PayPal checkout • Activation is immediate after payment
 </div>
-
-<p class="small">
-Your profile remains active regardless of tier selection.
-</p>
 
 </div>
 
