@@ -49,25 +49,51 @@ h1 {
 
 /* CARD */
 .card {
-    background: #141414;
-    padding: 20px;
+    background: linear-gradient(145deg, #151515, #101010);
+    padding: 22px;
     margin: 20px auto;
     max-width: 650px;
-    border-radius: 14px;
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.22);
     text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 /* HEADINGS */
 .card h2 {
     margin-top: 0;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 /* TIER */
 .tier {
-    margin-bottom: 18px;
+    margin-bottom: 30px;
     font-size: 14px;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(212,175,55,0.15);
+    background: rgba(255,255,255,0.02);
+}
+
+/* PREMIUM HIGHLIGHT */
+.featured-tier {
+    border: 1px solid rgba(212,175,55,0.45);
+    background: linear-gradient(145deg, rgba(212,175,55,0.08), rgba(255,255,255,0.02));
+    transform: scale(1.01);
+}
+
+/* BADGE */
+.badge {
+    display: inline-block;
+    background: #d4af37;
+    color: #0b0b0b;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
 }
 
 /* BUTTON */
@@ -75,19 +101,22 @@ a.button {
     display: block;
     width: 100%;
     max-width: 420px;
-    padding: 16px;
+    padding: 18px;
     margin: 30px auto 10px auto;
-    background: #d4af37;
+    background: linear-gradient(145deg, #d4af37, #f5dc8a);
     color: #0b0b0b;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 16px;
     transition: 0.2s ease;
+    box-shadow: 0 8px 20px rgba(212,175,55,0.18);
+    text-align: center;
 }
 
 a.button:hover {
     background: #e6c35a;
+    transform: translateY(-1px);
 }
 
 /* SMALL TEXT */
@@ -108,21 +137,28 @@ a.button:hover {
 
 /* DESKTOP */
 @media (min-width: 768px) {
+
 h1 {
     font-size: 44px;
 }
+
 .hero {
     padding: 90px 20px;
 }
+
 .card {
-    padding: 25px;
+    padding: 28px;
 }
+
 .tier {
     font-size: 15px;
+    padding: 24px;
 }
+
 a.button {
     font-size: 18px;
 }
+
 }
 </style>
 </head>
@@ -131,19 +167,24 @@ a.button {
 
 <!-- HERO -->
 <div class="hero">
+
 <h1>💼 Membership Access</h1>
+
 <p>
 Your application has been reviewed. You have been selected for curated matchmaking access within the Velvet Elite private international network.
 </p>
+
 </div>
 
 <div class="container">
 
 <!-- INTRO -->
 <div class="card">
+
 <p>
-Velvet Elite operates as a private concierge matchmaking service. Each membership includes structured introductions, screening, and curated access to compatible profiles within our network.
+Velvet Elite operates as a private concierge matchmaking service designed for serious, high-intent individuals seeking curated international introductions through a confidential and selective process.
 </p>
+
 </div>
 
 <!-- TIERS -->
@@ -151,54 +192,115 @@ Velvet Elite operates as a private concierge matchmaking service. Each membershi
 
 <h2>💎 Membership Options</h2>
 
+<!-- STARTER -->
 <div class="tier">
-<b>🥉 Starter — $1,000</b><br>
+
+<b>🥉 Starter — $500</b><br>
 30-day access<br>
 Target: ~1 introduction per week<br>
-Expected: 2–4 total introductions<br>
+Expected: 2–4 curated introductions<br>
+
 <br>
+
 Support:<br>
+
 ✔ Standard concierge email access<br>
-✔  Queue-based matching system<br>
-✔  Scheduled response handling
+✔ Queue-based matchmaking system<br>
+✔ Scheduled response handling<br>
+✔ Entry access to active matchmaking cycle
+
+<a class="button" 
+href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2"
+style="
+margin-top:22px;
+max-width:100%;
+font-size:15px;
+padding:15px;
+">
+Activate Starter Access
+</a>
+
 </div>
 
-<div class="tier">
+<!-- PREMIUM -->
+<div class="tier featured-tier">
+
+<div class="badge">
+Most Requested
+</div>
+
+<br>
+
 <b>🥈 Premium — $2,500</b><br>
 60-day access<br>
 Target: 1–2 introductions per week<br>
-Expected: 8–12 total introductions<br>
+Expected: 8–12 curated introductions<br>
+
 <br>
+
 Support:<br>
-✔  Priority concierge handling (faster review in matchmaking queue)<br>
-✔  Expedited match selection process<br>
-✔  Profile feedback and positioning guidance
+
+✔ Priority Matchmaking Concierge Access<br>
+✔ Expedited match selection process<br>
+✔ Strategic profile positioning & match optimization<br>
+✔ Increased matchmaking visibility within active network<br>
+✔ Faster review priority in matchmaking queue
+
+<a class="button" 
+href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2"
+style="
+margin-top:22px;
+max-width:100%;
+font-size:15px;
+padding:15px;
+">
+Activate Premium Access
+</a>
+
 </div>
 
+<!-- ELITE -->
 <div class="tier">
+
 <b>🥇 Elite — $5,000</b><br>
 90-day access<br>
 Premium exposure to Elite female members<br>
 Target: 2+ introductions per week<br>
-Expected: 20–30 total introductions<br>
+Expected: 20–30 curated introductions<br>
+
 <br>
+
 Support:<br>
-✔  Dedicated concierge-level handling (personal oversight)<br>
-✔  Direct priority sourcing of highly compatible matches<br>
-✔  Continuous profile refinement & positioning<br>
-✔  Highest priority placement in matchmaking queue
+
+✔ Dedicated concierge-level handling<br>
+✔ Direct priority sourcing of highly compatible matches<br>
+✔ Continuous profile refinement & positioning<br>
+✔ Highest matchmaking queue priority<br>
+✔ Maximum profile exposure within active introductions
+
+<a class="button" 
+href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2"
+style="
+margin-top:22px;
+max-width:100%;
+font-size:15px;
+padding:15px;
+">
+Activate Elite Access
+</a>
+
 </div>
 
 <p class="small">
-Most approved members select Premium or Elite for faster and more curated introductions.
+Most approved members select Premium or Elite for faster, higher-volume, and more curated introductions.
 </p>
 
 <p class="small">
-Elite members receive priority access to the most recently approved and highly compatible profiles within the network.
+Elite members receive priority access to the newest and most compatible approved profiles within the network.
 </p>
 
 <p class="small">
-Introduction volume depends on compatibility, availability, and mutual interest. Quality is always prioritized over quantity.
+Introduction volume depends on compatibility, availability, timing, and mutual interest. Quality is always prioritized over quantity.
 </p>
 
 </div>
@@ -227,20 +329,20 @@ You have been approved for access. Complete activation below to enter the curren
 <h2>🔐 Private & Confidential System</h2>
 
 <p>
-All profiles and introductions are handled privately. No public listings exist. Matches are curated based on compatibility, intent, and screening results.
+All profiles and introductions are handled privately. No public listings exist. Matches are curated individually based on compatibility, intent, lifestyle alignment, and screening results.
 </p>
 
 </div>
 
-<!-- CTA -->
+<!-- FINAL CTA -->
 <div class="card" style="text-align:center;">
 
 <p style="text-align:center;">
-Once activated, your profile will be entered into the private matchmaking system and become eligible for curated introductions based on your selected tier.
+Once activated, your profile will officially enter the private matchmaking system and become eligible for curated introductions based on your selected membership tier.
 </p>
 
 <p class="small">
-Your profile is currently eligible for activation in the active matchmaking cycle.
+Your profile is currently eligible for activation within the active matchmaking cycle.
 </p>
 
 <a class="button" href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2">
