@@ -65,26 +65,25 @@ h1 {
 
 /* TABLE */
 .table-wrap {
-    overflow-x: auto;
     margin-top: 10px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px;
     font-size: 14px;
 }
 
 th, td {
-    padding: 14px;
+    padding: 14px 10px;
     border-bottom: 1px solid rgba(212,175,55,0.15);
     text-align: center;
+    vertical-align: middle;
 }
 
 th {
     color: #d4af37;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -95,7 +94,7 @@ th {
     border-right: 2px solid #d4af37;
 }
 
-/* TIER */
+/* TIER BOX */
 .tier {
     margin-bottom: 30px;
     font-size: 14px;
@@ -125,6 +124,29 @@ th {
     text-transform: uppercase;
 }
 
+/* BUTTON */
+a.button {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    padding: 18px;
+    margin: 30px auto 10px auto;
+    background: linear-gradient(145deg, #d4af37, #f5dc8a);
+    color: #0b0b0b;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: 0.2s ease;
+    box-shadow: 0 8px 20px rgba(212,175,55,0.18);
+    text-align: center;
+}
+
+a.button:hover {
+    background: #e6c35a;
+    transform: translateY(-1px);
+}
+
 /* SMALL TEXT */
 .small {
     font-size: 12px;
@@ -141,11 +163,32 @@ th {
     padding: 20px;
 }
 
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 10px 6px;
+    }
+}
+
 /* DESKTOP */
 @media (min-width: 768px) {
-h1 { font-size: 44px; }
-.hero { padding: 90px 20px; }
-.card { padding: 28px; }
+h1 {
+    font-size: 44px;
+}
+.hero {
+    padding: 90px 20px;
+}
+.card {
+    padding: 28px;
+}
+.tier {
+    font-size: 15px;
+    padding: 24px;
+}
 }
 </style>
 </head>
@@ -206,24 +249,24 @@ Velvet Elite operates as a private concierge matchmaking service designed for se
 </tr>
 
 <tr>
-<td>Match Priority</td>
+<td>Priority</td>
 <td>Standard</td>
-<td class="highlight">High Priority</td>
-<td>Highest Priority</td>
+<td class="highlight">High</td>
+<td>Highest</td>
 </tr>
 
 <tr>
-<td>Concierge Support</td>
+<td>Concierge</td>
 <td>Email</td>
-<td class="highlight">Priority Support</td>
-<td>Dedicated Concierge</td>
+<td class="highlight">Priority</td>
+<td>Dedicated</td>
 </tr>
 
 <tr>
 <td>Visibility</td>
-<td>Standard Queue</td>
-<td class="highlight">Featured Placement</td>
-<td>Elite Top Placement</td>
+<td>Queue</td>
+<td class="highlight">Featured</td>
+<td>Elite Top</td>
 </tr>
 
 </table>
@@ -231,10 +274,10 @@ Velvet Elite operates as a private concierge matchmaking service designed for se
 
 </div>
 
-<!-- TIERS (NO CTAS) -->
+<!-- TIERS -->
 <div class="card">
 
-<h2>💎 Membership Options</h2>
+<h2>💼 Membership Options</h2>
 
 <div class="tier">
 <b>🥉 Starter — $500</b><br>
@@ -254,7 +297,6 @@ Velvet Elite operates as a private concierge matchmaking service designed for se
 </div>
 
 <div class="tier">
-
 <b>🥇 Elite — $5,000</b><br>
 90-day access<br>
 ✔ Full concierge curation<br>
@@ -263,16 +305,20 @@ Velvet Elite operates as a private concierge matchmaking service designed for se
 
 </div>
 
-<!-- NEXT STEPS (IMPORTANT FLOW RESTORED) -->
+<!-- NEXT STEPS -->
 <div class="card">
 
 <h2>🔒 Next Steps</h2>
 
 <p>
-1. Activate membership through checkout<br>
-2. Enter private matchmaking system<br>
-3. Concierge begins curation immediately<br>
-4. Receive curated introductions based on tier
+You have been approved for access. Complete activation below to enter the current matchmaking cycle.
+</p>
+
+<p>
+1. Activate membership<br>
+2. Enter matchmaking system<br>
+3. Concierge begins curation<br>
+4. Receive introductions
 </p>
 
 </div>
@@ -285,6 +331,23 @@ Velvet Elite operates as a private concierge matchmaking service designed for se
 <p>
 All profiles and introductions are handled privately. No public listings exist. Matches are curated individually based on compatibility, intent, lifestyle alignment, and screening results.
 </p>
+
+</div>
+
+<!-- FINAL CTA -->
+<div class="card" style="text-align:center;">
+
+<p>
+Once activated, your profile will officially enter the private matchmaking system.
+</p>
+
+<a class="button" href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2">
+Activate Membership Access
+</a>
+
+<div class="small">
+Secure checkout via PayPal • Tier confirmed after payment
+</div>
 
 </div>
 
