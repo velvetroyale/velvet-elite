@@ -25,14 +25,12 @@ body {
     background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
 }
 
-/* TITLE */
 h1 {
     font-size: 34px;
     margin: 0;
     letter-spacing: 1px;
 }
 
-/* HERO TEXT */
 .hero p {
     opacity: 0.9;
     max-width: 720px;
@@ -65,6 +63,38 @@ h1 {
     font-size: 22px;
 }
 
+/* TABLE */
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(212,175,55,0.15);
+    text-align: center;
+}
+
+th {
+    color: #d4af37;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.highlight {
+    background: rgba(212,175,55,0.08);
+    border-left: 2px solid #d4af37;
+    border-right: 2px solid #d4af37;
+}
+
 /* TIER */
 .tier {
     margin-bottom: 30px;
@@ -79,7 +109,6 @@ h1 {
 .featured-tier {
     border: 1px solid rgba(212,175,55,0.45);
     background: linear-gradient(145deg, rgba(212,175,55,0.08), rgba(255,255,255,0.02));
-    transform: scale(1.01);
 }
 
 /* BADGE */
@@ -111,7 +140,6 @@ a.button {
     font-size: 16px;
     transition: 0.2s ease;
     box-shadow: 0 8px 20px rgba(212,175,55,0.18);
-    text-align: center;
 }
 
 a.button:hover {
@@ -138,27 +166,9 @@ a.button:hover {
 /* DESKTOP */
 @media (min-width: 768px) {
 
-h1 {
-    font-size: 44px;
-}
-
-.hero {
-    padding: 90px 20px;
-}
-
-.card {
-    padding: 28px;
-}
-
-.tier {
-    font-size: 15px;
-    padding: 24px;
-}
-
-a.button {
-    font-size: 18px;
-}
-
+h1 { font-size: 44px; }
+.hero { padding: 90px 20px; }
+.card { padding: 28px; }
 }
 </style>
 </head>
@@ -167,23 +177,80 @@ a.button {
 
 <!-- HERO -->
 <div class="hero">
-
 <h1>💼 Membership Access</h1>
-
 <p>
 Your application has been reviewed. You have been selected for curated matchmaking access within the Velvet Elite private international network.
 </p>
-
 </div>
 
 <div class="container">
 
 <!-- INTRO -->
 <div class="card">
-
 <p>
 Velvet Elite operates as a private concierge matchmaking service designed for serious, high-intent individuals seeking curated international introductions through a confidential and selective process.
 </p>
+</div>
+
+<!-- COMPARISON TABLE (HIGH CONVERSION) -->
+<div class="card">
+
+<h2>💎 Membership Comparison</h2>
+
+<div class="table-wrap">
+<table>
+
+<tr>
+<th>Features</th>
+<th>Starter</th>
+<th class="highlight">Premium</th>
+<th>Elite</th>
+</tr>
+
+<tr>
+<td>Price</td>
+<td>$500</td>
+<td class="highlight">$2,500</td>
+<td>$5,000</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>30 Days</td>
+<td class="highlight">60 Days</td>
+<td>90 Days</td>
+</tr>
+
+<tr>
+<td>Introductions</td>
+<td>2–4</td>
+<td class="highlight">8–12</td>
+<td>20–30</td>
+</tr>
+
+<tr>
+<td>Match Priority</td>
+<td>Standard</td>
+<td class="highlight">High Priority</td>
+<td>Highest Priority</td>
+</tr>
+
+<tr>
+<td>Concierge Support</td>
+<td>Email</td>
+<td class="highlight">Priority Support</td>
+<td>Dedicated Concierge</td>
+</tr>
+
+<tr>
+<td>Visibility</td>
+<td>Standard Queue</td>
+<td class="highlight">Featured Placement</td>
+<td>Elite Top Placement</td>
+</tr>
+
+</table>
+</div>
 
 </div>
 
@@ -197,26 +264,10 @@ Velvet Elite operates as a private concierge matchmaking service designed for se
 
 <b>🥉 Starter — $500</b><br>
 30-day access<br>
-Target: ~1 introduction per week<br>
-Expected: 2–4 curated introductions<br>
+✔ Standard matchmaking queue<br>
+✔ Entry-level curated introductions<br>
 
-<br>
-
-Support:<br>
-
-✔ Standard concierge email access<br>
-✔ Queue-based matchmaking system<br>
-✔ Scheduled response handling<br>
-✔ Entry access to active matchmaking cycle
-
-<a class="button" 
-href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2"
-style="
-margin-top:22px;
-max-width:100%;
-font-size:15px;
-padding:15px;
-">
+<a class="button" href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2">
 Activate Starter Access
 </a>
 
@@ -225,35 +276,14 @@ Activate Starter Access
 <!-- PREMIUM -->
 <div class="tier featured-tier">
 
-<div class="badge">
-Most Requested
-</div>
-
-<br>
+<div class="badge">Most Requested</div><br>
 
 <b>🥈 Premium — $2,500</b><br>
 60-day access<br>
-Target: 1–2 introductions per week<br>
-Expected: 8–12 curated introductions<br>
+✔ Priority matchmaking access<br>
+✔ Higher compatibility selection<br>
 
-<br>
-
-Support:<br>
-
-✔ Priority Matchmaking Concierge Access<br>
-✔ Expedited match selection process<br>
-✔ Strategic profile positioning & match optimization<br>
-✔ Increased matchmaking visibility within active network<br>
-✔ Faster review priority in matchmaking queue
-
-<a class="button" 
-href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2"
-style="
-margin-top:22px;
-max-width:100%;
-font-size:15px;
-padding:15px;
-">
+<a class="button" href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2">
 Activate Premium Access
 </a>
 
@@ -264,106 +294,33 @@ Activate Premium Access
 
 <b>🥇 Elite — $5,000</b><br>
 90-day access<br>
-Premium exposure to Elite female members<br>
-Target: 2+ introductions per week<br>
-Expected: 20–30 curated introductions<br>
+✔ Full concierge curation<br>
+✔ Maximum visibility & priority matches<br>
 
-<br>
-
-Support:<br>
-
-✔ Dedicated concierge-level handling<br>
-✔ Direct priority sourcing of highly compatible matches<br>
-✔ Continuous profile refinement & positioning<br>
-✔ Highest matchmaking queue priority<br>
-✔ Maximum profile exposure within active introductions
-
-<a class="button" 
-href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2"
-style="
-margin-top:22px;
-max-width:100%;
-font-size:15px;
-padding:15px;
-">
+<a class="button" href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2">
 Activate Elite Access
 </a>
 
 </div>
 
-<p class="small">
-Most approved members select Premium or Elite for faster, higher-volume, and more curated introductions.
-</p>
-
-<p class="small">
-Elite members receive priority access to the newest and most compatible approved profiles within the network.
-</p>
-
-<p class="small">
-Introduction volume depends on compatibility, availability, timing, and mutual interest. Quality is always prioritized over quantity.
-</p>
-
 </div>
 
 <!-- NEXT STEPS -->
 <div class="card">
-
 <h2>🔒 Next Steps</h2>
-
 <p>
-You have been approved for access. Complete activation below to enter the current matchmaking cycle.
+1. Activate membership<br>
+2. Enter matchmaking system<br>
+3. Concierge begins curation<br>
+4. Receive introductions
 </p>
-
-<p>
-1. Activate your membership<br>
-2. Select your preferred tier during checkout<br>
-3. Receive onboarding and profile setup instructions<br>
-4. Begin curated introductions
-</p>
-
-</div>
-
-<!-- TRUST -->
-<div class="card">
-
-<h2>🔐 Private & Confidential System</h2>
-
-<p>
-All profiles and introductions are handled privately. No public listings exist. Matches are curated individually based on compatibility, intent, lifestyle alignment, and screening results.
-</p>
-
-</div>
-
-<!-- FINAL CTA -->
-<div class="card" style="text-align:center;">
-
-<p style="text-align:center;">
-Once activated, your profile will officially enter the private matchmaking system and become eligible for curated introductions based on your selected membership tier.
-</p>
-
-<p class="small">
-Your profile is currently eligible for activation within the active matchmaking cycle.
-</p>
-
-<a class="button" href="https://www.paypal.com/ncp/payment/N45WEGYN6AMF2">
-Activate Membership Access
-</a>
-
-<div class="small">
-Secure checkout via PayPal • Tier confirmed after activation
-</div>
-
-<p class="small">
-Activation is processed within the current matchmaking cycle.
-</p>
-
-</div>
-
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
 © 2026 Velvet Elite Matchmaking. All Rights Reserved.
+</div>
+
 </div>
 
 </body>
