@@ -1,0 +1,567 @@
+<!DOCTYPE html>  
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Velvet Elite | Rețea Privată de Matchmaking</title>
+    <!-- SEO META -->
+<meta name="description" content="Velvet Elite este o rețea exclusivistă de matchmaking bazată pe invitație, pentru persoane verificate care caută relații internaționale private și serioase. Fără swipe. Fără profiluri publice. Doar introduceri atent selectate de oameni.">
+
+<meta name="keywords" content="matchmaking de lux, rețea de dating elitistă, serviciu privat de matchmaking, agenție de dating premium, matchmaking internațional, club exclusivist de dating, platformă de dating verificată, matchmaking discret, serviciu concierge de dating, relații elitiste, rețea VIP de dating, matchmaking premium, comunitate selectivă de dating, relații serioase, matchmaking global">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="Velvet Elite Matchmaking">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://velvetroyale.github.io/velvet-elite/">
+
+<!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+<meta property="og:title" content="Velvet Elite | Rețea Privată de Matchmaking">
+<meta property="og:description" content="Matchmaking de lux bazat pe invitație pentru persoane verificate. Fără swipe. Fără profiluri publice. Doar introduceri atent selectate.">
+<meta property="og:image" content="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://velvetroyale.github.io/velvet-elite/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Velvet Elite | Rețea Privată de Matchmaking">
+<meta name="twitter:description" content="Matchmaking exclusivist bazat pe invitație pentru relații internaționale elitiste.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png">
+
+<!-- Favicon (optional but recommended) -->
+<link rel="icon" href="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png">
+
+<!-- Structured Data (Google SEO Boost) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Velvet Elite",
+  "url": "https://velvetroyale.github.io/velvet-elite/",
+  "logo": "https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png",
+  "description": "Rețea privată de matchmaking bazată pe invitație care oferă introduceri internaționale atent selectate pentru persoane verificate.",
+  "sameAs": [
+    "https://www.facebook.com/velvetelitematchmaking"
+  ]
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at top, #141414, #0b0b0b 70%);
+    color: #d4af37;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* ✅ GLOBAL LUXURY HEADING SYSTEM */
+h1, h2 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* HERO */
+.hero {
+    padding: 90px 20px 40px 20px;
+}
+
+/* HERO IMAGE */
+.hero img {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 22px auto;
+    filter: drop-shadow(0 0 45px rgba(212, 175, 55, 0.35));
+    border-radius: 24px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 780px;
+    margin: 12px auto;
+    color: rgba(212, 175, 55, 0.95);
+}
+
+/* TRUST */
+.trust {
+    font-size: 13px;
+    opacity: 0.75;
+    margin: 6px 0;
+}
+
+/* TRUST BAR */
+.trust-bar {
+    font-size: 12px;
+    opacity: 0.78;
+    line-height: 1.9;
+    margin-top: 14px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CONTAINER */
+.container {
+    padding: 30px 16px 60px 16px;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(145deg, #161616, #101010);
+    padding: 34px;
+    margin: 22px auto;
+    max-width: 600px;
+    border-radius: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    color: rgba(212, 175, 55, 0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* BUTTON */
+a.button {
+    display: block;
+    padding: 18px;
+    margin-top: 18px;
+
+    background: linear-gradient(145deg, #d4af37, #f5dc8a);
+    color: #0b0b0b;
+
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 12px;
+    font-size: 15px;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.18);
+}
+
+/* TAG */
+.tag {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* FOOTER (FIXED + RESTORED) */
+.footer {
+    margin-top: 60px;
+    font-size: 13px;
+    opacity: 0.75;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(212,175,55,0.15);
+}
+
+.footer a {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 70px 14px 30px 14px;
+    }
+
+    .hero img {
+        max-width: 92vw;
+        border-radius: 18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+    <img src="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png" alt="Velvet Elite Logo">
+
+    <p>
+      Rezervat pentru persoane selectate pentru introduceri internaționale private în Europa, America de Nord, America Latină și Asia. </p>
+
+    <!-- PRIMARY POSITIONING -->
+    <div class="trust" style="font-weight:500; opacity:0.92; margin-top:14px;">
+        Acces doar pe bază de aplicație • Verificare privată • Introduceri confidențiale
+    </div>
+
+    <!-- LUXURY OPERATING PRINCIPLE -->
+    <div class="trust" style="opacity:0.72; margin-top:6px;">
+        Fiecare profil este analizat individual • Invitațiile sunt oferite selectiv în 24–72 ore
+    </div>
+<!-- DISCREET TOP CTA BUTTONS -->
+
+<div style="
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:18px;
+">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            Pentru Femei
+        </div>
+
+        <a href="women.html" style="
+            display:inline-block;
+            padding:12px 20px;
+            border-radius:10px;
+            text-decoration:none;
+            font-size:13px;
+            font-weight:600;
+            letter-spacing:0.3px;
+            background:linear-gradient(145deg, #d4af37, #f5dc8a);
+            color:#0b0b0b;
+            box-shadow:0 6px 18px rgba(212,175,55,0.18);
+        ">
+            💎 Solicită Membri Privat
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            Pentru Bărbați
+        </div>
+
+        <a href="men.html" style="
+            display:inline-block;
+            padding:12px 20px;
+            border-radius:10px;
+            text-decoration:none;
+            font-size:13px;
+            font-weight:600;
+            letter-spacing:0.3px;
+            background:linear-gradient(145deg, #d4af37, #f5dc8a);
+            color:#0b0b0b;
+            box-shadow:0 6px 18px rgba(212,175,55,0.18);
+        ">
+            💼 Solicită Evaluare Privată
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+    <!-- LUXURY DIVIDER (adds breathing + editorial feel) -->
+    <div style="width:50px; height:1px; background:rgba(212,175,55,0.25); margin:18px auto;"></div>
+
+    <!-- TRUST ARCHITECTURE (refined into 3 grouped lines) -->
+    <div class="trust-bar">
+
+        ✔ Membri verificați din peste 20 de țări<br>
+        ✔ Proces de matchmaking analizat de oameni<br>
+        ✔ Introduceri private lunare <br><br>
+
+        ✔ Acceptare selectivă (rată de aprobare 7–12%)<br>
+        ✔ Gestionare și verificare confidențială a profilurilor<br><br>
+
+        ✔ Fără profiluri publice • Fără swipe • Fără algoritmi
+
+    </div>
+
+<p style="
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    line-height:1.9;
+    opacity:0.82;
+    margin-top:18px;
+">
+    Conexiuni Extraordinare <br>
+    💎 <br>
+    Standarde Excepționale
+</p>
+   
+
+</div>
+<!-- HERO END -->
+    
+    <!-- LUXURY DIVIDER (adds breathing + editorial feel) -->
+    <div style="width:50px; height:1px; background:rgba(212,175,55,0.25); margin:18px auto;"></div>
+   <div class="container">
+
+<div class="card">
+
+<h2>💎 Cum Funcționează</h2>
+
+<p>
+Velvet Elite funcționează printr-un proces privat de matchmaking concierge construit pe aprobare selectivă, analiză umană și introduceri internaționale atent selectate.
+</p>
+
+<a class="button" href="process.html">
+Vezi Procesul Complet
+</a>
+
+</div>
+
+</div>
+    
+<!-- CONTENT -->
+<div class="container">
+
+<div class="card">
+<h2>🔎 Admitere Selectivă </h2>
+<p>Toți aplicanții sunt analizați pe baza intenției, autenticității și compatibilității. Nu acceptăm fiecare aplicație — doar profilurile atent selectate sunt aprobate.</p>
+</div>
+<div class="card">
+
+<h2>💎 Pentru Cine Este</h2>
+
+<p style="opacity:0.85;">
+Velvet Elite este rezervat persoanelor care apreciază profunzimea, discreția și compatibilitatea pe termen lung.
+</p>
+
+<ul style="
+    text-align:left;
+    margin-top:12px;
+    padding-left:18px;
+    opacity:0.9;
+    line-height:1.8;
+">
+    <li>Persoane care caută relații serioase pe termen lung</li>
+    <li>Profesioniști cu intenții serioase și stiluri de viață globale</li>
+    <li>Persoane sătule de aplicațiile de dating și cultura swipe-ului</li>
+    <li>Cei care prioritizează intimitatea, discreția și calitatea în locul cantității</li>
+</ul>
+
+<p style="margin-top:14px; opacity:0.75;">
+Aceasta nu este o platformă de dating casual — este o rețea de matchmaking atent selectată pentru conexiuni intenționate.
+</p>
+
+</div>
+<div class="card">
+<h2>💎 De Ce Velvet Elite</h2>
+<p>Spre deosebire de aplicațiile de dating, Velvet Elite este un sistem privat de matchmaking concierge axat pe introduceri atent selectate și analizate de oameni, nu pe swipe algoritmic.</p>
+</div>
+
+<div class="card">
+<h2>🔐 Sistem Privat</h2>
+<p>Fără profiluri publice. Fără swipe. Toate introducerile sunt gestionate privat între membri verificați.</p>
+</div>
+
+<div class="card">
+<h2>⚖️ Standarde Etice</h2>
+<p>Velvet Elite funcționează pe baza unor principii stricte de consimțământ, confidențialitate și participare exclusiv pentru adulți. Aplicăm toleranță zero pentru constrângere, fraudă sau activitate ilegală.</p>
+</div>
+
+</div>
+    
+    <!-- LUXURY DIVIDER (adds breathing + editorial feel) -->
+    <div style="width:50px; height:1px; background:rgba(212,175,55,0.25); margin:18px auto;"></div>
+    
+<!-- OPTIONS -->
+<div class="container">
+
+<div class="card">
+
+<h2>💎 Pentru Femei </h2>
+
+<p>
+Accesează o rețea internațională privată de introduceri atent selectate cu membri verificați din Europa, America de Nord, America Latină și Asia.
+</p>
+
+<p class="tag" style="margin-top:12px; opacity:0.85;">
+Fiecare profil este analizat individual. Membrii selectați sunt invitați în introduceri private și confidențiale pe baza compatibilității și prezentării.
+</p>
+
+<a class="button" href="women.html">
+    Solicită Membri Privat
+</a>
+
+<div class="tag" style="margin-top:12px;">
+Selecție doar pe bază de aplicație • Proces confidențial de verificare • Capacitate limitată de acceptare
+</div>
+
+<p class="tag" style="margin-top:10px; opacity:0.7;">
+Plasare opțională evidențiată poate fi oferită profilurilor selectate după aprobare.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>💼 Pentru Bărbați </h2>
+
+<p>
+Accesează o rețea discretă de matchmaking concierge pentru bărbați realizați care caută relații internaționale serioase prin introduceri complet private și atent selectate.
+</p>
+
+<p class="tag" style="margin-top:12px; opacity:0.85;">
+Fără navigare. Fără swipe. Fără profiluri publice. Fiecare introducere este selectată și organizată privat.
+</p>
+
+<a class="button" href="men.html">
+    Solicită Evaluare Privată
+</a>
+
+<div class="tag" style="margin-top:12px;">
+ Acces doar pe bază de aplicație • Introduceri internaționale selectate manual • Proces concierge confidențial
+</div>
+
+<p class="tag" style="margin-top:10px; opacity:0.7;">
+Număr limitat de membri noi pentru a menține selectivitatea și compatibilitatea în rețea.
+</p>
+
+</div>
+
+</div>
+
+    <!-- SEO FAQ SECTION -->
+<div class="container">
+
+<div class="card" style="text-align:left;">
+
+<h2>❓ Întrebări Frecvente</h2>
+
+<!-- FAQ 1 -->
+<h3>Ce este Velvet Elite?</h3>
+<p>
+Velvet Elite este o rețea privată și exclusivistă de matchmaking de lux bazată pe invitație, care conectează persoane verificate ce caută relații internaționale serioase. Spre deosebire de aplicațiile de dating, nu există swipe sau profiluri publice—fiecare introducere este atent selectată de oameni.
+</p>
+
+<!-- FAQ 2 -->
+<h3>Cum funcționează matchmaking-ul de lux?</h3>
+<p>
+Aplicanții trimit un profil privat care este analizat pe baza intenției, compatibilității și autenticității. Membrii aprobați sunt apoi introduși unor potriviri atent selectate din rețeaua noastră globală.
+</p>
+
+<!-- FAQ 3 -->
+<h3>Cine poate intra în Velvet Elite?</h3>
+<p>
+Velvet Elite este creat pentru persoane cu intenții serioase care caută relații semnificative. Toți aplicanții trec printr-un proces selectiv de analiză, iar doar un procent mic sunt aprobați.
+</p>
+
+<!-- FAQ 4 -->
+<h3>Este Velvet Elite o aplicație de dating?</h3>
+<p>
+Nu. Velvet Elite nu este o aplicație de dating. Nu există swipe, navigare publică sau algoritm. Este un serviciu de matchmaking în stil concierge axat pe introduceri atent selectate.
+</p>
+
+<!-- FAQ 5 -->
+<h3>Informațiile mele sunt private?</h3>
+<p>
+Da. Toate aplicațiile și datele membrilor sunt gestionate confidențial. Profilurile nu sunt niciodată publice, iar introducerile sunt realizate privat doar între membri verificați.
+</p>
+
+<!-- FAQ 6 -->
+<h3>Ce face Velvet Elite diferit de alte servicii de matchmaking?</h3>
+<p>
+Spre deosebire de agențiile tradiționale de matchmaking, Velvet Elite se concentrează pe introduceri internaționale atent selectate, cu verificare strictă, acceptare selectivă și o rețea globală de membri verificați.
+</p>
+
+<!-- FAQ 7 -->
+<h3>Cât durează procesul de aplicare?</h3>
+<p>
+Majoritatea aplicațiilor sunt analizate în 24–72 ore. Dacă sunt aprobate, candidații sunt invitați în rețea pentru introduceri private de matchmaking.
+</p>
+
+<!-- FAQ 8 -->
+<h3>De ce este Velvet Elite selectiv?</h3>
+<p>
+Selectivitatea asigură compatibilitatea, confidențialitatea și calitatea introducerilor. Doar un număr limitat de aplicanți sunt acceptați pentru a menține un standard ridicat de matchmaking.
+</p>
+
+</div>
+
+</div>
+    
+<img 
+  src="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/velvet-elite-banner.png" 
+  alt="Velvet Elite Access"
+  style="
+    display:block;
+    width:100%;
+    max-width:920px;
+    height:auto;
+    margin:40px auto 0 auto;
+    border-radius:18px;
+    filter: drop-shadow(0 0 25px rgba(212,175,55,0.25));
+  "
+>
+<!-- FOOTER -->
+<div class="footer" style="padding:40px 20px;">
+
+    <!-- Facebook CTA (primary element) -->
+    <div style="margin-bottom:18px;">
+        <a href="https://www.facebook.com/velvetelitematchmaking" target="_blank"
+           style="
+           display:inline-flex;
+           align-items:center;
+           gap:10px;
+           padding:12px 22px;
+           border-radius:30px;
+           background:linear-gradient(145deg,#d4af37,#f5dc8a);
+           color:#0b0b0b;
+           font-weight:600;
+           text-decoration:none;
+           box-shadow:0 8px 20px rgba(212,175,55,0.18);
+           ">
+            📘 Urmărește-ne pe Facebook
+        </a>
+    </div>
+
+    <!-- Legal link (secondary) -->
+    <div style="margin-bottom:10px;">
+        <a href="disclaimer.html"
+           style="color:rgba(212,175,55,0.75);
+           text-decoration:underline;
+           font-size:13px;">
+            Disclaimer & Politici
+        </a>
+    </div>
+
+    <!-- Divider line feel -->
+    <div style="width:60px; height:1px; background:rgba(212,175,55,0.25); margin:14px auto;"></div>
+
+    <!-- Copyright (tertiary hierarchy) -->
+    <div style="font-size:12px; opacity:0.6; margin-top:12px; letter-spacing:0.3px;">
+        © 2026 Velvet Elite Matchmaking. Toate Drepturile Rezervate.
+    </div>
+
+</div>
+
+</body>
+</html>
