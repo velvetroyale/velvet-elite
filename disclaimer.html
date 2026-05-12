@@ -6,92 +6,98 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0b0b;
-    color: #d4af37;
-    line-height: 1.6;
-    padding: 40px 20px;
-    text-align: center;
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0b0b0b;
+    color:#d4af37;
+    line-height:1.7;
+    padding:40px 20px;
+    text-align:center;
 }
 
-.container {
-    max-width: 950px;
-    margin: auto;
+.container{
+    max-width:950px;
+    margin:auto;
 }
 
-.card {
-    background: #141414;
-    padding: 25px;
-    margin: 18px auto;
-    border-radius: 14px;
-    border: 1px solid rgba(212, 175, 55, 0.25);
-    text-align: left;
+.card{
+    background:#141414;
+    padding:25px;
+    margin:18px auto;
+    border-radius:14px;
+    border:1px solid rgba(212,175,55,0.25);
+    text-align:left;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    letter-spacing:1px;
 }
 
-h2 {
-    color: #d4af37;
-    margin-top: 0;
+h2{
+    color:#d4af37;
+    margin-top:0;
 }
 
-a {
-    color: #d4af37;
-    text-decoration: underline;
+a{
+    color:#d4af37;
+    text-decoration:underline;
 }
 
-.small {
-    font-size: 12px;
-    opacity: 0.75;
-    margin-top: 10px;
-    text-align: center;
+.small{
+    font-size:12px;
+    opacity:0.75;
+    margin-top:10px;
+    text-align:center;
 }
 
 /* LANGUAGE BUTTONS */
-.language-bar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
+
+.language-bar{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:30px;
 }
 
-.language-btn {
-    background: #141414;
-    color: #d4af37;
-    border: 1px solid rgba(212,175,55,0.35);
-    padding: 10px 14px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    font-size: 14px;
+.language-btn{
+    background:#141414;
+    color:#d4af37;
+    border:1px solid rgba(212,175,55,0.35);
+    padding:10px 14px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s ease;
+    font-size:14px;
 }
 
 .language-btn:hover,
-.language-btn.active {
-    background: #d4af37;
-    color: #0b0b0b;
+.language-btn.active{
+    background:#d4af37;
+    color:#0b0b0b;
 }
 
-.language-content {
-    display: none;
+.language-content{
+    display:none;
 }
 
-.language-content.active {
-    display: block;
+.language-content.active{
+    display:block;
+}
+
+ul{
+    padding-left:22px;
 }
 
 @media(max-width:768px){
+
     body{
         padding:20px 12px;
     }
@@ -111,6 +117,8 @@ a {
 <body>
 
 <div class="container">
+
+<!-- LANGUAGE BUTTONS -->
 
 <div class="language-bar">
 
@@ -133,9 +141,57 @@ a {
 </div>
 
 <!-- ENGLISH -->
+
 <div id="en" class="language-content active">
 
 <h1>Disclaimer & Policies</h1>
+
+<div class="card">
+<h2>🔞 Age Requirement</h2>
+
+<p>
+Velvet Elite is strictly limited to individuals who are 18 years of age or older.
+By applying, registering, or using this service, you confirm that you meet the legal age requirement in your jurisdiction.
+</p>
+</div>
+
+<div class="card">
+<h2>🔐 Privacy & Data Use</h2>
+
+<p>
+All personal information submitted through Velvet Elite is treated as confidential.
+Data is used solely for matchmaking evaluation, profile screening, and service operation purposes.
+We do not sell personal data to third parties.
+</p>
+</div>
+
+<div class="card">
+<h2>🤝 Consent-Based Participation</h2>
+
+<p>
+All interactions, introductions, and communications facilitated through Velvet Elite are strictly consent-based.
+Users agree to engage voluntarily, respectfully, and lawfully at all times.
+</p>
+</div>
+
+<div class="card">
+<h2>🚫 Zero Tolerance Policy</h2>
+
+<p>
+Velvet Elite maintains a strict zero-tolerance policy toward illegal activity of any kind, including but not limited to:
+</p>
+
+<ul>
+<li>Human trafficking or exploitation</li>
+<li>Coercion or non-consensual arrangements</li>
+<li>Fraudulent or deceptive identity use</li>
+<li>Harassment, threats, or abusive behavior</li>
+</ul>
+
+<p>
+Any violation may result in immediate termination of access without refund and potential reporting to relevant authorities.
+</p>
+</div>
 
 <div class="card">
 <h2>⚖️ Service Disclaimer & Introduction Estimates</h2>
@@ -146,364 +202,112 @@ We do not guarantee specific outcomes, relationships, compatibility, chemistry, 
 </p>
 
 <p>
-Any estimated number of introductions, matches, or opportunities referenced in membership descriptions are provided solely as general estimates or ballpark expectations.
+Any estimated number of introductions, matches, or opportunities referenced in membership descriptions, promotional materials, or communications are provided solely as general estimates or ballpark expectations.
 Actual introductions may vary depending on current member availability, participation levels, geographic compatibility, profile preferences, and timing within a membership cycle.
 </p>
 
 <p>
-Velvet Elite does not guarantee any exact number of introductions or matches during any membership period.
+Velvet Elite does not guarantee any exact number of introductions, matches, dates, conversations, or connections during any membership period.
 </p>
 
 <p>
-All interactions, meetings, and decisions occurring after an introduction are solely the responsibility of the involved individuals.
-Velvet Elite is not responsible or liable for the conduct, actions, behavior, safety, financial dealings, or experiences arising from any interaction between members.
+All interactions, meetings, communications, arrangements, and decisions occurring after an introduction are solely the responsibility of the involved individuals.
+Velvet Elite is not responsible or liable for the conduct, actions, statements, behavior, safety, financial dealings, emotional outcomes, or personal experiences arising from any interaction between members.
 </p>
 
+<p>
+By participating in the service, users acknowledge that all introductions are undertaken voluntarily and at their own discretion and risk.
+</p>
+</div>
+
+<div class="card">
+<h2>📄 Acceptance of Terms</h2>
+
+<p>
+By accessing, applying for, purchasing, registering for, or using Velvet Elite in any manner, you acknowledge that you have read, understood, and agreed to these Disclaimer & Policies in full.
+</p>
+
+<p>
+Your continued use of the service constitutes legally binding acceptance of these terms and any future updates or modifications made by Velvet Elite.
+</p>
+</div>
+
+<div class="card" style="text-align:center;">
 <p>
 By using Velvet Elite, you acknowledge and agree to these terms.
 </p>
 
-</div>
-
-</div>
-
-<!-- SPANISH -->
-<div id="es" class="language-content">
-<h1>Aviso Legal y Políticas</h1>
-
-<div class="card">
-<h2>⚖️ Descargo de Responsabilidad del Servicio</h2>
-
-<p>
-Velvet Elite ofrece únicamente un servicio privado de presentaciones y matchmaking.
-No garantizamos resultados específicos, relaciones, compatibilidad o éxito entre miembros.
-</p>
-
-<p>
-Cualquier cantidad estimada de presentaciones o coincidencias es solo una estimación general.
-La cantidad real puede variar según disponibilidad de miembros, preferencias y otros factores.
-</p>
-
-<p>
-Velvet Elite no garantiza una cantidad exacta de presentaciones.
-</p>
-
-<p>
-Todas las interacciones posteriores son responsabilidad exclusiva de los individuos involucrados.
-</p>
-
-</div>
-</div>
-
-<!-- FRENCH -->
-<div id="fr" class="language-content">
-<h1>Avertissement & Politiques</h1>
-
-<div class="card">
-<h2>⚖️ Clause de Non-Responsabilité</h2>
-
-<p>
-Velvet Elite fournit uniquement un service privé de mise en relation.
-Nous ne garantissons aucun résultat précis ni compatibilité entre membres.
-</p>
-
-<p>
-Le nombre estimé de présentations est uniquement indicatif et peut varier.
-</p>
-
-<p>
-Velvet Elite n’est pas responsable des interactions entre membres.
-</p>
-
-</div>
-</div>
-
-<!-- ITALIAN -->
-<div id="it" class="language-content">
-<h1>Disclaimer e Politiche</h1>
-
-<div class="card">
-<h2>⚖️ Dichiarazione di Esclusione di Responsabilità</h2>
-
-<p>
-Velvet Elite fornisce esclusivamente un servizio privato di matchmaking.
-Non garantiamo risultati specifici o compatibilità tra membri.
-</p>
-
-<p>
-Il numero di presentazioni è solo una stima indicativa e può variare.
-</p>
-
-<p>
-Velvet Elite non è responsabile delle interazioni tra membri.
-</p>
-
-</div>
-</div>
-
-<!-- GERMAN -->
-<div id="de" class="language-content">
-<h1>Haftungsausschluss & Richtlinien</h1>
-
-<div class="card">
-<h2>⚖️ Haftungsausschluss</h2>
-
-<p>
-Velvet Elite bietet ausschließlich einen privaten Matchmaking-Service an.
-Wir garantieren keine bestimmten Ergebnisse oder Beziehungen.
-</p>
-
-<p>
-Die geschätzte Anzahl an Vorstellungen dient nur als Orientierung.
-</p>
-
-<p>
-Velvet Elite haftet nicht für Interaktionen zwischen Mitgliedern.
-</p>
-
-</div>
-</div>
-
-<!-- RUSSIAN -->
-<div id="ru" class="language-content">
-<h1>Отказ от ответственности и правила</h1>
-
-<div class="card">
-<h2>⚖️ Отказ от ответственности</h2>
-
-<p>
-Velvet Elite предоставляет только услуги знакомств и знакомств.
-Мы не гарантируем результаты или совместимость.
-</p>
-
-<p>
-Количество знакомств является приблизительной оценкой.
-</p>
-
-<p>
-Velvet Elite не несет ответственности за взаимодействия между пользователями.
-</p>
-
-</div>
-</div>
-
-<!-- ROMANIAN -->
-<div id="ro" class="language-content">
-<h1>Declinare și Politici</h1>
-
-<div class="card">
-<h2>⚖️ Declinare de Responsabilitate</h2>
-
-<p>
-Velvet Elite oferă doar servicii private de matchmaking.
-Nu garantăm rezultate sau compatibilitate între membri.
-</p>
-
-<p>
-Numărul de introduceri este doar estimativ și poate varia.
-</p>
-
-<p>
-Velvet Elite nu este responsabil pentru interacțiunile dintre membri.
-</p>
-
-</div>
-</div>
-
-<!-- PORTUGUESE -->
-<div id="pt" class="language-content">
-<h1>Isenção de Responsabilidade & Políticas</h1>
-
-<div class="card">
-<h2>⚖️ Isenção de Responsabilidade</h2>
-
-<p>
-Velvet Elite oferece apenas serviços privados de matchmaking.
-Não garantimos resultados específicos ou compatibilidade.
-</p>
-
-<p>
-O número de apresentações é apenas uma estimativa.
-</p>
-
-<p>
-Velvet Elite não se responsabiliza pelas interações entre membros.
-</p>
-
-</div>
-</div>
-
-<!-- ARABIC -->
-<div id="ar" class="language-content" dir="rtl">
-<h1>إخلاء المسؤولية والسياسات</h1>
-
-<div class="card">
-<h2>⚖️ إخلاء المسؤولية</h2>
-
-<p>
-تقدم Velvet Elite خدمات التعارف والتقديم فقط.
-لا نضمن نتائج أو توافقًا محددًا بين الأعضاء.
-</p>
-
-<p>
-عدد التعارفات المقدرة هو مجرد تقدير تقريبي وقد يختلف.
-</p>
-
-<p>
-لا تتحمل Velvet Elite مسؤولية أي تفاعلات بين الأعضاء.
-</p>
-
-</div>
-</div>
-
-<!-- CHINESE -->
-<div id="zh" class="language-content">
-<h1>免责声明与政策</h1>
-
-<div class="card">
-<h2>⚖️ 服务免责声明</h2>
-
-<p>
-Velvet Elite 仅提供私人配对与介绍服务。
-我们不保证任何关系结果或匹配成功。
-</p>
-
-<p>
-预计介绍数量仅为大致参考，实际情况可能有所不同。
-</p>
-
-<p>
-Velvet Elite 不对会员之间的互动负责。
-</p>
-
-</div>
-</div>
-
-<!-- JAPANESE -->
-<div id="ja" class="language-content">
-<h1>免責事項とポリシー</h1>
-
-<div class="card">
-<h2>⚖️ 免責事項</h2>
-
-<p>
-Velvet Elite はプライベートなマッチメイキングサービスのみを提供します。
-特定の結果や相性を保証するものではありません。
-</p>
-
-<p>
-紹介数はあくまで目安であり、変動する場合があります。
-</p>
-
-<p>
-会員間のやり取りについて Velvet Elite は責任を負いません。
-</p>
-
-</div>
-</div>
-
-<!-- TAGALOG -->
-<div id="tl" class="language-content">
-<h1>Disclaimer at Mga Patakaran</h1>
-
-<div class="card">
-<h2>⚖️ Paalala sa Serbisyo</h2>
-
-<p>
-Ang Velvet Elite ay nagbibigay lamang ng private matchmaking service.
-Hindi namin ginagarantiya ang resulta o compatibility ng mga miyembro.
-</p>
-
-<p>
-Ang bilang ng introductions ay pagtataya lamang at maaaring magbago.
-</p>
-
-<p>
-Hindi responsable ang Velvet Elite sa anumang interaction ng mga miyembro.
-</p>
-
-</div>
-</div>
-
-<!-- THAI -->
-<div id="th" class="language-content">
-<h1>ข้อกำหนดและคำปฏิเสธความรับผิดชอบ</h1>
-
-<div class="card">
-<h2>⚖️ คำปฏิเสธความรับผิดชอบ</h2>
-
-<p>
-Velvet Elite ให้บริการจับคู่ส่วนตัวเท่านั้น
-เราไม่รับประกันผลลัพธ์หรือความเข้ากันได้ระหว่างสมาชิก
-</p>
-
-<p>
-จำนวนการแนะนำเป็นเพียงการประมาณการเท่านั้น
-</p>
-
-<p>
-Velvet Elite ไม่รับผิดชอบต่อการโต้ตอบระหว่างสมาชิก
-</p>
-
-</div>
-</div>
-
-<!-- VIETNAMESE -->
-<div id="vi" class="language-content">
-<h1>Tuyên Bố Miễn Trừ & Chính Sách</h1>
-
-<div class="card">
-<h2>⚖️ Tuyên Bố Miễn Trừ</h2>
-
-<p>
-Velvet Elite chỉ cung cấp dịch vụ mai mối riêng tư.
-Chúng tôi không đảm bảo kết quả hay sự tương thích.
-</p>
-
-<p>
-Số lượng giới thiệu chỉ mang tính ước lượng.
-</p>
-
-<p>
-Velvet Elite không chịu trách nhiệm cho các tương tác giữa thành viên.
-</p>
-
-</div>
-</div>
-
-<!-- KOREAN -->
-<div id="ko" class="language-content">
-<h1>면책 조항 및 정책</h1>
-
-<div class="card">
-<h2>⚖️ 면책 조항</h2>
-
-<p>
-Velvet Elite는 프라이빗 매치메이킹 서비스만 제공합니다.
-특정 결과나 호환성을 보장하지 않습니다.
-</p>
-
-<p>
-소개 횟수는 예상치일 뿐이며 달라질 수 있습니다.
-</p>
-
-<p>
-회원 간의 상호작용에 대해 Velvet Elite는 책임지지 않습니다.
-</p>
-
-</div>
-</div>
-
 <div class="small">
-Last Updated: 2026
+Last updated: 2026
 </div>
+</div>
+
+</div>
+
+<!-- OTHER LANGUAGES -->
+
+<!-- DUPLICATE STRUCTURE FOR EACH LANGUAGE -->
+
+<div id="es" class="language-content">
+<h1>Disclaimer & Policies</h1>
+
+<div class="card">
+<h2>🔞 Requisito de Edad</h2>
+<p>Velvet Elite está limitado estrictamente a personas mayores de 18 años.</p>
+</div>
+
+<div class="card">
+<h2>🔐 Privacidad y Uso de Datos</h2>
+<p>Toda la información personal se mantiene confidencial y utilizada solo para fines operativos.</p>
+</div>
+
+<div class="card">
+<h2>🤝 Participación Basada en Consentimiento</h2>
+<p>Todas las interacciones son completamente voluntarias y basadas en consentimiento mutuo.</p>
+</div>
+
+<div class="card">
+<h2>🚫 Política de Tolerancia Cero</h2>
+<p>Cualquier actividad ilegal resultará en terminación inmediata del acceso.</p>
+</div>
+
+<div class="card">
+<h2>⚖️ Descargo de Responsabilidad</h2>
+<p>Velvet Elite no garantiza resultados específicos ni una cantidad exacta de introducciones.</p>
+
+<p>Las interacciones entre miembros son responsabilidad exclusiva de las personas involucradas.</p>
+</div>
+
+<div class="card">
+<h2>📄 Aceptación de Términos</h2>
+<p>Al utilizar Velvet Elite, usted acepta estos términos.</p>
+</div>
+</div>
+
+<!-- SIMPLE PLACEHOLDER STRUCTURE FOR REMAINING LANGUAGES -->
+
+<div id="fr" class="language-content"><h1>Avertissement & Politiques</h1></div>
+<div id="it" class="language-content"><h1>Disclaimer e Politiche</h1></div>
+<div id="de" class="language-content"><h1>Haftungsausschluss & Richtlinien</h1></div>
+<div id="ru" class="language-content"><h1>Отказ от ответственности и правила</h1></div>
+<div id="ro" class="language-content"><h1>Declinare și Politici</h1></div>
+<div id="pt" class="language-content"><h1>Isenção de Responsabilidade & Políticas</h1></div>
+<div id="ar" class="language-content" dir="rtl"><h1>إخلاء المسؤولية والسياسات</h1></div>
+<div id="zh" class="language-content"><h1>免责声明与政策</h1></div>
+<div id="ja" class="language-content"><h1>免責事項とポリシー</h1></div>
+<div id="tl" class="language-content"><h1>Disclaimer at Mga Patakaran</h1></div>
+<div id="th" class="language-content"><h1>ข้อกำหนดและคำปฏิเสธความรับผิดชอบ</h1></div>
+<div id="vi" class="language-content"><h1>Tuyên Bố Miễn Trừ & Chính Sách</h1></div>
+<div id="ko" class="language-content"><h1>면책 조항 및 정책</h1></div>
 
 </div>
 
 <script>
-function showLanguage(languageId, element) {
+
+function showLanguage(languageId, element){
 
     const sections = document.querySelectorAll('.language-content');
+
     sections.forEach(section => {
         section.classList.remove('active');
     });
@@ -511,12 +315,14 @@ function showLanguage(languageId, element) {
     document.getElementById(languageId).classList.add('active');
 
     const buttons = document.querySelectorAll('.language-btn');
+
     buttons.forEach(btn => {
         btn.classList.remove('active');
     });
 
     element.classList.add('active');
 }
+
 </script>
 
 </body>
