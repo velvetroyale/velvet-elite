@@ -70,6 +70,50 @@ h1,h2,h3 {
     opacity:0.75;
 }
 
+/* LANGUAGE BAR */
+
+.language-bar{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.language-btn{
+    background:#141414;
+    color:#d4af37;
+    border:1px solid rgba(212,175,55,0.35);
+    padding:10px 14px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s ease;
+    font-size:14px;
+}
+
+.language-btn:hover,
+.language-btn.active{
+    background:#d4af37;
+    color:#0b0b0b;
+}
+
+.language-content{
+    display:none;
+}
+
+.language-content.active{
+    display:block;
+}
+
+@media(max-width:768px){
+
+.language-btn{
+    font-size:12px;
+    padding:8px 12px;
+}
+
+}
+
 </style>
 
 </head>
@@ -77,6 +121,34 @@ h1,h2,h3 {
 <body>
 
 <div class="container">
+
+<!-- LANGUAGE BAR -->
+
+<div class="language-bar">
+
+<button class="language-btn active" onclick="showLanguage('en', this)">English</button>
+<button class="language-btn" onclick="showLanguage('es', this)">Español</button>
+<button class="language-btn" onclick="showLanguage('fr', this)">Français</button>
+<button class="language-btn" onclick="showLanguage('it', this)">Italiano</button>
+<button class="language-btn" onclick="showLanguage('de', this)">Deutsch</button>
+<button class="language-btn" onclick="showLanguage('ru', this)">Русский</button>
+<button class="language-btn" onclick="showLanguage('uk', this)">Українська</button>
+<button class="language-btn" onclick="showLanguage('pl', this)">Polski</button>
+<button class="language-btn" onclick="showLanguage('ro', this)">Română</button>
+<button class="language-btn" onclick="showLanguage('pt', this)">Português</button>
+<button class="language-btn" onclick="showLanguage('ar', this)">العربية</button>
+<button class="language-btn" onclick="showLanguage('zh', this)">中文</button>
+<button class="language-btn" onclick="showLanguage('ja', this)">日本語</button>
+<button class="language-btn" onclick="showLanguage('tl', this)">Tagalog</button>
+<button class="language-btn" onclick="showLanguage('th', this)">ไทย</button>
+<button class="language-btn" onclick="showLanguage('vi', this)">Tiếng Việt</button>
+<button class="language-btn" onclick="showLanguage('ko', this)">한국어</button>
+
+</div>
+
+<!-- ENGLISH CONTENT -->
+
+<div id="en" class="language-content active">
 
 <h1>How Velvet Elite Works</h1>
 
@@ -126,43 +198,43 @@ Access is strictly invitation-only. Choose your concierge application path below
 
 <div class="cta-container">
 
-    <!-- WOMEN -->
-    <div style="text-align:center;">
-        
-        <div style="
-            font-size:11px;
-            letter-spacing:1px;
-            text-transform:uppercase;
-            opacity:0.65;
-            margin-bottom:6px;
-        ">
-           💎For Women
-        </div>
+<!-- WOMEN -->
+<div style="text-align:center;">
 
-        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
-            Request Private Membership
-        </a>
+<div style="
+font-size:11px;
+letter-spacing:1px;
+text-transform:uppercase;
+opacity:0.65;
+margin-bottom:6px;
+">
+💎For Women
+</div>
 
-    </div>
+<a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+Request Private Membership
+</a>
 
-    <!-- MEN -->
-    <div style="text-align:center;">
+</div>
 
-        <div style="
-            font-size:11px;
-            letter-spacing:1px;
-            text-transform:uppercase;
-            opacity:0.65;
-            margin-bottom:6px;
-        ">
-            💼 For Men
-        </div>
+<!-- MEN -->
+<div style="text-align:center;">
 
-        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
-            Request Private Evaluation
-        </a>
+<div style="
+font-size:11px;
+letter-spacing:1px;
+text-transform:uppercase;
+opacity:0.65;
+margin-bottom:6px;
+">
+💼 For Men
+</div>
 
-    </div>
+<a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+Request Private Evaluation
+</a>
+
+</div>
 
 </div>
 
@@ -199,46 +271,2088 @@ Velvet Elite operates on a selective access model. Men may be offered concierge 
 </div>
 
 </div>
-<!-- FOOTER -->
-<div class="footer" style="padding:40px 20px;">
 
-    <!-- Facebook CTA (primary element) -->
-    <div style="margin-bottom:18px;">
-        <a href="https://www.facebook.com/velvetelitematchmaking" target="_blank"
-           style="
-           display:inline-flex;
-           align-items:center;
-           gap:10px;
-           padding:12px 22px;
-           border-radius:30px;
-           background:linear-gradient(145deg,#d4af37,#f5dc8a);
-           color:#0b0b0b;
-           font-weight:600;
-           text-decoration:none;
-           box-shadow:0 8px 20px rgba(212,175,55,0.18);
-           ">
-            📘 Follow us on Facebook
+
+<!-- ENGLISH CONTENT -->
+<div id="en" class="language-content active">
+    <!-- English content here -->
+</div>
+
+
+<!-- FRANÇAIS CONTENT -->
+
+<div id="fr" class="language-content">
+
+<h1 style="text-align:center;">Comment Fonctionne Velvet Elite</h1>
+
+<p style="text-align:center;">
+Velvet Elite est un service privé de mise en relation de luxe et d’introductions concierge conçu pour des personnes vérifiées recherchant des relations internationales sérieuses. Chaque introduction est soigneusement sélectionnée, discrète et gérée à travers un processus de sélection humain.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Étape 1 — Candidature Privée</h2>
+<p>Soumettez une candidature confidentielle décrivant votre profil, vos préférences et vos intentions relationnelles.</p>
+</div>
+
+<div class="card">
+<h2>Étape 2 — Examen Humain</h2>
+<p>Chaque candidature est examinée manuellement afin de vérifier l’authenticité, les intentions et la compatibilité.</p>
+</div>
+
+<div class="card">
+<h2>Étape 3 — Approbation Sélective</h2>
+<p>Seul un pourcentage limité de candidats est accepté dans le réseau afin de préserver l’exclusivité.</p>
+</div>
+
+<div class="card">
+<h2>Étape 4 — Sélection des Compatibilités</h2>
+<p>Les membres sont mis en relation selon leur style de vie, leurs valeurs et leur compatibilité à long terme à travers notre réseau mondial.</p>
+</div>
+
+<div class="card">
+<h2>Étape 5 — Introductions Privées</h2>
+<p>Toutes les introductions sont organisées de manière privée. Il n’existe ni profils publics, ni système de swipe, ni navigation ouverte.</p>
+</div>
+
+<div class="card">
+<h2>Étape 6 — Assistance Concierge</h2>
+<p>Les membres sélectionnés bénéficient d’une assistance concierge continue afin de faciliter les introductions et la communication.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Commencez Votre Candidature Privée</h2>
+
+<p>
+L’accès est strictement réservé sur invitation. Choisissez ci-dessous votre parcours de candidature concierge.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Pour Femmes
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Demander une Adhésion Privée
         </a>
+
     </div>
 
-    <!-- Legal link (secondary) -->
-    <div style="margin-bottom:10px;">
-        <a href="https://velvetroyale.github.io/velvet-elite/disclaimer.html"
-           style="color:rgba(212,175,55,0.75);
-           text-decoration:underline;
-           font-size:13px;">
-            Disclaimer & Policies
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 Pour Hommes
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Demander une Évaluation Privée
         </a>
-    </div>
 
-    <!-- Divider line feel -->
-    <div style="width:60px; height:1px; background:rgba(212,175,55,0.25); margin:14px auto;"></div>
-
-    <!-- Copyright (tertiary hierarchy) -->
-    <div style="font-size:12px; opacity:0.6; margin-top:12px; letter-spacing:0.3px;">
-        © 2026 Velvet Elite Matchmaking. All Rights Reserved.
     </div>
 
 </div>
+
+<p class="tag" style="margin-top:14px;">
+Examen sélectif • Vérification humaine • Réponse sous 24–72 heures
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Questions Fréquemment Posées</h2>
+
+<h3>Velvet Elite est-il une plateforme de rencontres ?</h3>
+<p>
+Non. Velvet Elite est un service privé de mise en relation de luxe et d’introductions concierge. Il n’existe aucune fonction de swipe, aucun profil public et aucun système de navigation ouverte.
+</p>
+
+<h3>Combien de temps prend l’approbation ?</h3>
+<p>La plupart des candidatures sont examinées sous 24 à 72 heures.</p>
+
+<h3>Pourquoi Velvet Elite est-il sélectif ?</h3>
+<p>La sélectivité garantit la compatibilité, la confidentialité et des introductions internationales de haute qualité.</p>
+
+<h3>Mes informations sont-elles privées ?</h3>
+<p>Oui. Toutes les données sont traitées de manière confidentielle et ne sont jamais rendues publiques.</p>
+
+<h3>Le matchmaking de luxe est-il gratuit ou payant ?</h3>
+<p>
+Velvet Elite fonctionne selon un modèle d’accès sélectif. Les hommes peuvent se voir proposer des niveaux d’adhésion concierge après approbation. Les femmes peuvent bénéficier d’un accès d’introduction gratuit pour une durée limitée, avec des options d’amélioration pour une meilleure visibilité et des introductions prioritaires.
+</p>
+
+</div>
+
+</div>
+
+<!-- ITALIANO CONTENT -->
+
+<div id="it" class="language-content">
+
+<h1 style="text-align:center;">Come Funziona Velvet Elite</h1>
+
+<p style="text-align:center;">
+Velvet Elite è un servizio privato di matchmaking di lusso e introduzioni concierge progettato per individui verificati che cercano relazioni internazionali significative. Ogni introduzione è curata, discreta e gestita attraverso un processo di selezione guidato da esseri umani.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Fase 1 — Candidatura Privata</h2>
+<p>Invia una candidatura confidenziale indicando il tuo background, le tue preferenze e le tue intenzioni relazionali.</p>
+</div>
+
+<div class="card">
+<h2>Fase 2 — Revisione Umana</h2>
+<p>Ogni candidatura viene esaminata manualmente per verificarne autenticità, intenzioni e compatibilità.</p>
+</div>
+
+<div class="card">
+<h2>Fase 3 — Approvazione Selettiva</h2>
+<p>Solo una percentuale limitata di candidati viene accettata nella rete per mantenere l’esclusività.</p>
+</div>
+
+<div class="card">
+<h2>Fase 4 — Cura delle Corrispondenze</h2>
+<p>I membri vengono abbinati in base allo stile di vita, ai valori e alla compatibilità a lungo termine all’interno della nostra rete globale.</p>
+</div>
+
+<div class="card">
+<h2>Fase 5 — Introduzioni Private</h2>
+<p>Tutte le introduzioni sono organizzate privatamente. Non esistono profili pubblici, swipe o navigazione aperta.</p>
+</div>
+
+<div class="card">
+<h2>Fase 6 — Supporto Concierge</h2>
+<p>I membri selezionati ricevono supporto concierge continuo per facilitare le introduzioni e la comunicazione.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Inizia la Tua Candidatura Privata</h2>
+
+<p>
+L’accesso è strettamente su invito. Scegli il tuo percorso di candidatura concierge qui sotto.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Per Donne
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Richiedi Iscrizione Privata
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 Per Uomini
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Richiedi Valutazione Privata
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Revisione selettiva • Screening umano • Risposta entro 24–72 ore
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Domande Frequenti</h2>
+
+<h3>Velvet Elite è una piattaforma di incontri?</h3>
+<p>
+No. Velvet Elite è un servizio privato di matchmaking di lusso e introduzioni concierge. Non esistono funzionalità di swipe, profili pubblici o sistemi di navigazione aperta.
+</p>
+
+<h3>Quanto tempo richiede l’approvazione?</h3>
+<p>La maggior parte delle candidature viene esaminata entro 24–72 ore.</p>
+
+<h3>Perché Velvet Elite è selettivo?</h3>
+<p>La selettività garantisce compatibilità, privacy e introduzioni internazionali di alta qualità.</p>
+
+<h3>Le mie informazioni sono private?</h3>
+<p>Sì. Tutti i dati sono trattati in modo confidenziale e non vengono mai resi pubblici.</p>
+
+<h3>Il matchmaking di lusso è gratuito o a pagamento?</h3>
+<p>
+Velvet Elite opera con un modello di accesso selettivo. Gli uomini possono ricevere livelli di membership concierge dopo l’approvazione. Le donne possono ricevere accesso introduttivo gratuito per un periodo limitato, con opzioni di upgrade per maggiore visibilità e introduzioni prioritarie.
+</p>
+
+</div>
+
+</div>
+
+<!-- DEUTSCH CONTENT -->
+
+<div id="de" class="language-content">
+
+<h1 style="text-align:center;">Wie Velvet Elite Funktioniert</h1>
+
+<p style="text-align:center;">
+Velvet Elite ist ein privater Luxus-Matchmaking- und Concierge-Introduktionsservice, der für verifizierte Personen entwickelt wurde, die bedeutungsvolle internationale Beziehungen suchen. Jede Einführung wird sorgfältig kuratiert, diskret behandelt und durch einen menschlich geführten Auswahlprozess durchgeführt.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Schritt 1 — Private Bewerbung</h2>
+<p>Reichen Sie eine vertrauliche Bewerbung ein, in der Sie Ihren Hintergrund, Ihre Präferenzen und Ihre Beziehungsabsichten beschreiben.</p>
+</div>
+
+<div class="card">
+<h2>Schritt 2 — Menschliche Prüfung</h2>
+<p>Jede Bewerbung wird manuell geprüft, um Authentizität, Absicht und Kompatibilität sicherzustellen.</p>
+</div>
+
+<div class="card">
+<h2>Schritt 3 — Selektive Aufnahme</h2>
+<p>Nur ein begrenzter Prozentsatz der Bewerber wird in das Netzwerk aufgenommen, um Exklusivität zu gewährleisten.</p>
+</div>
+
+<div class="card">
+<h2>Schritt 4 — Match-Kuration</h2>
+<p>Mitglieder werden basierend auf Lebensstil, Werten und langfristiger Kompatibilität innerhalb unseres globalen Netzwerks gematcht.</p>
+</div>
+
+<div class="card">
+<h2>Schritt 5 — Private Einführungen</h2>
+<p>Alle Einführungen werden privat organisiert. Es gibt keine öffentlichen Profile, kein Swiping und kein offenes Durchsuchen.</p>
+</div>
+
+<div class="card">
+<h2>Schritt 6 — Concierge-Support</h2>
+<p>Ausgewählte Mitglieder erhalten laufenden Concierge-Support zur Unterstützung von Einführungen und Kommunikation.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Beginnen Sie Ihre Private Bewerbung</h2>
+
+<p>
+Der Zugang ist streng nur auf Einladung möglich. Wählen Sie unten Ihren Concierge-Bewerbungsweg.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Für Frauen
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Private Mitgliedschaft anfordern
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 Für Männer
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Private Bewertung anfordern
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Selektive Prüfung • Menschliche Überprüfung • Antwortzeit 24–72 Stunden
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Häufig gestellte Fragen</h2>
+
+<h3>Ist Velvet Elite eine Dating-Plattform?</h3>
+<p>
+Nein. Velvet Elite ist ein privater Luxus-Matchmaking- und Concierge-Introduktionsservice. Es gibt keine Swipe-Funktionen, keine öffentlichen Profile und kein offenes Browsing-System.
+</p>
+
+<h3>Wie lange dauert die Genehmigung?</h3>
+<p>Die meisten Bewerbungen werden innerhalb von 24–72 Stunden geprüft.</p>
+
+<h3>Warum ist Velvet Elite selektiv?</h3>
+<p>Selektivität gewährleistet Kompatibilität, Privatsphäre und hochwertige internationale Einführungen.</p>
+
+<h3>Sind meine Daten privat?</h3>
+<p>Ja. Alle Daten werden vertraulich behandelt und niemals öffentlich gemacht.</p>
+
+<h3>Ist Luxus-Matchmaking kostenlos oder kostenpflichtig?</h3>
+<p>
+Velvet Elite arbeitet mit einem selektiven Zugangsmodell. Männer können nach der Genehmigung Concierge-Mitgliedschaftsstufen erhalten. Frauen können für einen begrenzten Zeitraum kostenlosen Einführungszugang erhalten, mit optionalen Upgrade-Möglichkeiten für mehr Sichtbarkeit und priorisierte Einführungen.
+</p>
+
+</div>
+
+</div>
+
+<!-- РУССКИЙ CONTENT -->
+
+<div id="ru" class="language-content">
+
+<h1 style="text-align:center;">Как Работает Velvet Elite</h1>
+
+<p style="text-align:center;">
+Velvet Elite — это приватный сервис люксового мэтчмейкинга и консьерж-знакомств, созданный для проверенных людей, ищущих значимые международные отношения. Каждое знакомство тщательно подбирается, проводится в полной конфиденциальности и управляется через процесс отбора с участием человека.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Шаг 1 — Приватная Заявка</h2>
+<p>Отправьте конфиденциальную заявку, указав свой опыт, предпочтения и намерения в отношениях.</p>
+</div>
+
+<div class="card">
+<h2>Шаг 2 — Ручная Проверка</h2>
+<p>Каждая заявка вручную проверяется на подлинность, намерения и совместимость.</p>
+</div>
+
+<div class="card">
+<h2>Шаг 3 — Избирательное Одобрение</h2>
+<p>Только ограниченный процент заявителей принимается в сеть для сохранения эксклюзивности.</p>
+</div>
+
+<div class="card">
+<h2>Шаг 4 — Подбор Партнёров</h2>
+<p>Участники подбираются по образу жизни, ценностям и долгосрочной совместимости в рамках нашей глобальной сети.</p>
+</div>
+
+<div class="card">
+<h2>Шаг 5 — Приватные Знакомства</h2>
+<p>Все знакомства организуются конфиденциально. Нет публичных профилей, свайпов или открытого просмотра.</p>
+</div>
+
+<div class="card">
+<h2>Шаг 6 — Консьерж Поддержка</h2>
+<p>Отобранные участники получают постоянную консьерж-поддержку для организации знакомств и общения.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Начните Вашу Приватную Заявку</h2>
+
+<p>
+Доступ строго по приглашению. Выберите свой путь подачи заявки ниже.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Для Женщин
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Запросить Приватное Членство
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 Для Мужчин
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Запросить Приватную Оценку
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Избирательный отбор • Человеческая проверка • Ответ в течение 24–72 часов
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Часто Задаваемые Вопросы</h2>
+
+<h3>Velvet Elite — это платформа знакомств?</h3>
+<p>
+Нет. Velvet Elite — это приватный сервис люксового мэтчмейкинга и консьерж-знакомств. Здесь нет свайпов, публичных профилей или открытого просмотра.
+</p>
+
+<h3>Сколько длится одобрение?</h3>
+<p>Большинство заявок рассматривается в течение 24–72 часов.</p>
+
+<h3>Почему Velvet Elite является избирательным?</h3>
+<p>Избирательность обеспечивает совместимость, конфиденциальность и высококачественные международные знакомства.</p>
+
+<h3>Мои данные конфиденциальны?</h3>
+<p>Да. Все данные обрабатываются конфиденциально и никогда не публикуются.</p>
+
+<h3>Люксовый мэтчмейкинг бесплатный или платный?</h3>
+<p>
+Velvet Elite работает по модели избирательного доступа. Мужчинам могут предлагаться уровни консьерж-членства после одобрения. Женщины могут получить бесплатный вводный доступ на ограниченный период с возможностью улучшения для повышения видимости и приоритетных знакомств.
+</p>
+
+</div>
+
+</div>
+
+<!-- УКРАЇНСЬКА CONTENT -->
+
+<div id="uk" class="language-content">
+
+<h1 style="text-align:center;">Як Працює Velvet Elite</h1>
+
+<p style="text-align:center;">
+Velvet Elite — це приватний сервіс люксового matchmaking та консьєрж-знайомств, створений для перевірених осіб, які шукають значущі міжнародні стосунки. Кожне знайомство ретельно підбирається, проходить у повній конфіденційності та керується людським процесом відбору.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Крок 1 — Приватна Заявка</h2>
+<p>Надішліть конфіденційну заявку, вказавши свій досвід, вподобання та наміри у стосунках.</p>
+</div>
+
+<div class="card">
+<h2>Крок 2 — Людська Перевірка</h2>
+<p>Кожна заявка вручну перевіряється на автентичність, наміри та сумісність.</p>
+</div>
+
+<div class="card">
+<h2>Крок 3 — Вибіркове Схвалення</h2>
+<p>Лише обмежений відсоток заявників приймається до мережі для збереження ексклюзивності.</p>
+</div>
+
+<div class="card">
+<h2>Крок 4 — Підбір Партнерів</h2>
+<p>Учасники підбираються за стилем життя, цінностями та довгостроковою сумісністю в нашій глобальній мережі.</p>
+</div>
+
+<div class="card">
+<h2>Крок 5 — Приватні Знайомства</h2>
+<p>Усі знайомства організовуються приватно. Немає публічних профілів, свайпів або відкритого перегляду.</p>
+</div>
+
+<div class="card">
+<h2>Крок 6 — Консьєрж Підтримка</h2>
+<p>Відібрані учасники отримують постійну консьєрж-підтримку для організації знайомств і комунікації.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Розпочніть Вашу Приватну Заявку</h2>
+
+<p>
+Доступ суворо лише за запрошенням. Оберіть свій шлях подачі заявки нижче.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Для Жінок
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Запросити Приватне Членство
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 Для Чоловіків
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Запросити Приватну Оцінку
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Вибірковий відбір • Людська перевірка • Відповідь протягом 24–72 годин
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Часті Питання</h2>
+
+<h3>Velvet Elite — це платформа знайомств?</h3>
+<p>
+Ні. Velvet Elite — це приватний сервіс люксового matchmaking та консьєрж-знайомств. Тут немає свайпів, публічних профілів або відкритого перегляду.
+</p>
+
+<h3>Скільки триває схвалення?</h3>
+<p>Більшість заявок розглядаються протягом 24–72 годин.</p>
+
+<h3>Чому Velvet Elite є вибірковим?</h3>
+<p>Вибірковість забезпечує сумісність, конфіденційність і високоякісні міжнародні знайомства.</p>
+
+<h3>Чи є мої дані конфіденційними?</h3>
+<p>Так. Усі дані обробляються конфіденційно та ніколи не публікуються.</p>
+
+<h3>Чи є люксовий matchmaking безкоштовним чи платним?</h3>
+<p>
+Velvet Elite працює за моделлю вибіркового доступу. Чоловікам можуть пропонуватися рівні консьєрж-членства після схвалення. Жінки можуть отримати безкоштовний вступний доступ на обмежений період з можливістю покращення для більшої видимості та пріоритетних знайомств.
+</p>
+
+</div>
+
+</div>
+
+<!-- POLSKI CONTENT -->
+
+<div id="pl" class="language-content">
+
+<h1 style="text-align:center;">Jak Działa Velvet Elite</h1>
+
+<p style="text-align:center;">
+Velvet Elite to prywatna luksusowa usługa kojarzenia i concierge, stworzona dla zweryfikowanych osób poszukujących znaczących relacji międzynarodowych. Każde wprowadzenie jest starannie dobierane, dyskretne i zarządzane przez proces selekcji prowadzony przez człowieka.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Krok 1 — Prywatna Aplikacja</h2>
+<p>Prześlij poufną aplikację opisującą Twoje doświadczenie, preferencje i intencje relacyjne.</p>
+</div>
+
+<div class="card">
+<h2>Krok 2 — Weryfikacja Ludzka</h2>
+<p>Każda aplikacja jest ręcznie sprawdzana pod kątem autentyczności, intencji i dopasowania.</p>
+</div>
+
+<div class="card">
+<h2>Krok 3 — Selektywna Akceptacja</h2>
+<p>Tylko ograniczony procent kandydatów jest przyjmowany do sieci, aby zachować ekskluzywność.</p>
+</div>
+
+<div class="card">
+<h2>Krok 4 — Dobór Dopasowań</h2>
+<p>Członkowie są dobierani na podstawie stylu życia, wartości i długoterminowej kompatybilności w naszej globalnej sieci.</p>
+</div>
+
+<div class="card">
+<h2>Krok 5 — Prywatne Wprowadzenia</h2>
+<p>Wszystkie wprowadzenia są organizowane prywatnie. Nie ma profili publicznych, przewijania ani otwartego przeglądania.</p>
+</div>
+
+<div class="card">
+<h2>Krok 6 — Wsparcie Concierge</h2>
+<p>Wybrani członkowie otrzymują stałe wsparcie concierge w organizacji wprowadzeń i komunikacji.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Rozpocznij Swoją Prywatną Aplikację</h2>
+
+<p>
+Dostęp wyłącznie na zaproszenie. Wybierz poniżej swoją ścieżkę aplikacji concierge.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Dla Kobiet
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Poproś o Prywatne Członkostwo
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 Dla Mężczyzn
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Poproś o Prywatną Ocenę
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Selektywna weryfikacja • Ocena ludzka • Czas odpowiedzi 24–72 godziny
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Najczęściej Zadawane Pytania</h2>
+
+<h3>Czy Velvet Elite to platforma randkowa?</h3>
+<p>
+Nie. Velvet Elite to prywatna luksusowa usługa kojarzenia i concierge. Nie ma funkcji przewijania, publicznych profili ani otwartego przeglądania.
+</p>
+
+<h3>Jak długo trwa zatwierdzenie?</h3>
+<p>Większość aplikacji jest rozpatrywana w ciągu 24–72 godzin.</p>
+
+<h3>Dlaczego Velvet Elite jest selektywny?</h3>
+<p>Selektywność zapewnia kompatybilność, prywatność i wysokiej jakości międzynarodowe wprowadzenia.</p>
+
+<h3>Czy moje dane są prywatne?</h3>
+<p>Tak. Wszystkie dane są traktowane poufnie i nigdy nie są upubliczniane.</p>
+
+<h3>Czy luksusowe kojarzenie jest darmowe czy płatne?</h3>
+<p>
+Velvet Elite działa w modelu selektywnego dostępu. Mężczyźni mogą otrzymać poziomy członkostwa concierge po zatwierdzeniu. Kobiety mogą otrzymać bezpłatny dostęp wprowadzający na ograniczony czas, z opcjonalnymi ulepszeniami dla większej widoczności i priorytetowych wprowadzeń.
+</p>
+
+</div>
+
+</div>
+
+<!-- ROMÂNĂ CONTENT -->
+
+<div id="ro" class="language-content">
+
+<h1 style="text-align:center;">Cum Funcționează Velvet Elite</h1>
+
+<p style="text-align:center;">
+Velvet Elite este un serviciu privat de matchmaking de lux și concierge, creat pentru persoane verificate care caută relații internaționale semnificative. Fiecare introducere este atent selectată, discretă și gestionată printr-un proces de selecție condus de oameni.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Pasul 1 — Aplicație Privată</h2>
+<p>Trimite o aplicație confidențială în care îți descrii experiența, preferințele și intențiile relaționale.</p>
+</div>
+
+<div class="card">
+<h2>Pasul 2 — Analiză Umană</h2>
+<p>Fiecare aplicație este analizată manual pentru autenticitate, intenție și compatibilitate.</p>
+</div>
+
+<div class="card">
+<h2>Pasul 3 — Aprobare Selectivă</h2>
+<p>Doar un procent limitat de aplicanți este acceptat în rețea pentru a menține exclusivitatea.</p>
+</div>
+
+<div class="card">
+<h2>Pasul 4 — Curationarea Potrivirilor</h2>
+<p>Membrii sunt potriviți pe baza stilului de viață, valorilor și compatibilității pe termen lung în rețeaua noastră globală.</p>
+</div>
+
+<div class="card">
+<h2>Pasul 5 — Introduceri Private</h2>
+<p>Toate introducerile sunt organizate în privat. Nu există profiluri publice, swipe-uri sau navigare deschisă.</p>
+</div>
+
+<div class="card">
+<h2>Pasul 6 — Suport Concierge</h2>
+<p>Membrii selectați primesc suport concierge continuu pentru facilitarea introducerilor și comunicării.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Începe Aplicația Ta Privată</h2>
+
+<p>
+Accesul este strict doar pe bază de invitație. Alege mai jos calea ta de aplicare concierge.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Pentru Femei
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Solicită Membrie Privată
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 Pentru Bărbați
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Solicită Evaluare Privată
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Selecție riguroasă • Evaluare umană • Timp de răspuns 24–72 ore
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Întrebări Frecvente</h2>
+
+<h3>Este Velvet Elite o platformă de dating?</h3>
+<p>
+Nu. Velvet Elite este un serviciu privat de matchmaking de lux și concierge. Nu există funcții de swipe, profiluri publice sau navigare deschisă.
+</p>
+
+<h3>Cât durează aprobarea?</h3>
+<p>Majoritatea aplicațiilor sunt analizate în 24–72 de ore.</p>
+
+<h3>De ce este Velvet Elite selectiv?</h3>
+<p>Selecția asigură compatibilitate, confidențialitate și introduceri internaționale de înaltă calitate.</p>
+
+<h3>Sunt datele mele private?</h3>
+<p>Da. Toate datele sunt tratate confidențial și nu sunt niciodată făcute publice.</p>
+
+<h3>Matchmaking-ul de lux este gratuit sau plătit?</h3>
+<p>
+Velvet Elite funcționează pe un model de acces selectiv. Bărbații pot primi niveluri de membru concierge după aprobare. Femeile pot primi acces introductiv gratuit pentru o perioadă limitată, cu opțiuni de upgrade pentru vizibilitate sporită și introduceri prioritare.
+</p>
+
+</div>
+
+</div>
+
+<!-- PORTUGUÊS CONTENT -->
+
+<div id="pt" class="language-content">
+
+<h1 style="text-align:center;">Como Funciona o Velvet Elite</h1>
+
+<p style="text-align:center;">
+O Velvet Elite é um serviço privado de matchmaking de luxo e concierge, criado para indivíduos verificados que procuram relacionamentos internacionais significativos. Cada introdução é cuidadosamente selecionada, discreta e gerida através de um processo de seleção conduzido por humanos.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Passo 1 — Candidatura Privada</h2>
+<p>Envie uma candidatura confidencial descrevendo o seu histórico, preferências e intenções de relacionamento.</p>
+</div>
+
+<div class="card">
+<h2>Passo 2 — Revisão Humana</h2>
+<p>Cada candidatura é analisada manualmente quanto à autenticidade, intenção e compatibilidade.</p>
+</div>
+
+<div class="card">
+<h2>Passo 3 — Aprovação Seletiva</h2>
+<p>Apenas uma percentagem limitada de candidatos é aceite na rede para manter a exclusividade.</p>
+</div>
+
+<div class="card">
+<h2>Passo 4 — Curadoria de Compatibilidade</h2>
+<p>Os membros são combinados com base no estilo de vida, valores e compatibilidade a longo prazo dentro da nossa rede global.</p>
+</div>
+
+<div class="card">
+<h2>Passo 5 — Introduções Privadas</h2>
+<p>Todas as introduções são organizadas de forma privada. Não existem perfis públicos, nem sistemas de swipe ou navegação aberta.</p>
+</div>
+
+<div class="card">
+<h2>Passo 6 — Suporte Concierge</h2>
+<p>Os membros selecionados recebem suporte concierge contínuo para facilitar introduções e comunicação.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Inicie a Sua Candidatura Privada</h2>
+
+<p>
+O acesso é estritamente apenas por convite. Escolha abaixo o seu caminho de candidatura concierge.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Para Mulheres
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Solicitar Membro Privado
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 Para Homens
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Solicitar Avaliação Privada
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Revisão seletiva • Triagem humana • Tempo de resposta 24–72 horas
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Perguntas Frequentes</h2>
+
+<h3>O Velvet Elite é uma plataforma de encontros?</h3>
+<p>
+Não. O Velvet Elite é um serviço privado de matchmaking de luxo e concierge. Não existem funcionalidades de swipe, perfis públicos ou navegação aberta.
+</p>
+
+<h3>Quanto tempo demora a aprovação?</h3>
+<p>A maioria das candidaturas é analisada dentro de 24–72 horas.</p>
+
+<h3>Porque é que o Velvet Elite é seletivo?</h3>
+<p>A seletividade garante compatibilidade, privacidade e introduções internacionais de alta qualidade.</p>
+
+<h3>Os meus dados são privados?</h3>
+<p>Sim. Todos os dados são tratados de forma confidencial e nunca são tornados públicos.</p>
+
+<h3>O matchmaking de luxo é gratuito ou pago?</h3>
+<p>
+O Velvet Elite opera num modelo de acesso seletivo. Homens podem receber níveis de adesão concierge após aprovação. Mulheres podem receber acesso introdutório gratuito por um período limitado, com opções de upgrade para maior visibilidade e introduções prioritárias.
+</p>
+
+</div>
+
+</div>
+
+<!-- العربية CONTENT -->
+
+<div id="ar" class="language-content">
+
+<h1 style="text-align:center;">كيف يعمل Velvet Elite</h1>
+
+<p style="text-align:center;">
+Velvet Elite هو خدمة خاصة للتعارف الفاخر والكونسيرج، مصممة للأشخاص الموثقين الذين يبحثون عن علاقات دولية ذات معنى. يتم تنسيق كل تعريف بعناية وبسرية تامة، ويتم إدارته من خلال عملية اختيار يقودها الإنسان.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>الخطوة 1 — طلب خاص</h2>
+<p>قم بتقديم طلب سري يوضح خلفيتك وتفضيلاتك ونواياك في العلاقات.</p>
+</div>
+
+<div class="card">
+<h2>الخطوة 2 — مراجعة بشرية</h2>
+<p>يتم مراجعة كل طلب يدويًا للتحقق من الأصالة والنية والتوافق.</p>
+</div>
+
+<div class="card">
+<h2>الخطوة 3 — قبول انتقائي</h2>
+<p>يتم قبول نسبة محدودة فقط من المتقدمين للحفاظ على الحصرية.</p>
+</div>
+
+<div class="card">
+<h2>الخطوة 4 — تنسيق المطابقات</h2>
+<p>يتم مطابقة الأعضاء بناءً على نمط الحياة والقيم والتوافق طويل الأمد ضمن شبكتنا العالمية.</p>
+</div>
+
+<div class="card">
+<h2>الخطوة 5 — تعريفات خاصة</h2>
+<p>يتم تنظيم جميع التعريفات بشكل خاص. لا توجد ملفات عامة أو تمرير أو تصفح مفتوح.</p>
+</div>
+
+<div class="card">
+<h2>الخطوة 6 — دعم الكونسيرج</h2>
+<p>يتلقى الأعضاء المختارون دعم كونسيرج مستمر لتسهيل التعارف والتواصل.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 ابدأ طلبك الخاص</h2>
+
+<p>
+الدخول حصري وبالدعوة فقط. اختر طريق التقديم الخاص بك أدناه.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎للنساء
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            طلب عضوية خاصة
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 للرجال
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            طلب تقييم خاص
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+مراجعة انتقائية • فحص بشري • وقت الرد 24–72 ساعة
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>الأسئلة الشائعة</h2>
+
+<h3>هل Velvet Elite منصة تعارف؟</h3>
+<p>
+لا. Velvet Elite هي خدمة خاصة للتعارف الفاخر والكونسيرج. لا توجد ميزات تمرير أو ملفات عامة أو تصفح مفتوح.
+</p>
+
+<h3>كم يستغرق القبول؟</h3>
+<p>يتم مراجعة معظم الطلبات خلال 24–72 ساعة.</p>
+
+<h3>لماذا Velvet Elite انتقائي؟</h3>
+<p>الانتقائية تضمن التوافق والخصوصية والتعارف الدولي عالي الجودة.</p>
+
+<h3>هل معلوماتي خاصة؟</h3>
+<p>نعم. يتم التعامل مع جميع البيانات بسرية تامة ولا يتم نشرها أبدًا.</p>
+
+<h3>هل التعارف الفاخر مجاني أم مدفوع؟</h3>
+<p>
+يعمل Velvet Elite بنموذج وصول انتقائي. قد يحصل الرجال على مستويات عضوية كونسيرج بعد القبول. قد تحصل النساء على وصول تمهيدي مجاني لفترة محدودة، مع خيارات ترقية لزيادة الظهور والتعارف ذو الأولوية.
+</p>
+
+</div>
+
+</div>
+
+<!-- 中文 CONTENT -->
+
+<div id="zh" class="language-content">
+
+<h1 style="text-align:center;">Velvet Elite 如何运作</h1>
+
+<p style="text-align:center;">
+Velvet Elite 是一项私人高端婚恋与礼宾介绍服务，专为经过验证、寻求有意义国际关系的人士设计。每一次介绍都经过精心筛选、严格保密，并通过人工主导的筛选流程进行管理。
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>步骤 1 — 私人申请</h2>
+<p>提交一份保密申请，说明您的背景、偏好以及关系意向。</p>
+</div>
+
+<div class="card">
+<h2>步骤 2 — 人工审核</h2>
+<p>每一份申请都会由人工逐一审核，以确认真实性、意图与匹配度。</p>
+</div>
+
+<div class="card">
+<h2>步骤 3 — 选择性批准</h2>
+<p>只有极小比例的申请者会被接受进入网络，以保持稀缺性与高端性。</p>
+</div>
+
+<div class="card">
+<h2>步骤 4 — 匹配策划</h2>
+<p>成员将根据生活方式、价值观以及长期匹配度在全球网络中进行配对。</p>
+</div>
+
+<div class="card">
+<h2>步骤 5 — 私人介绍</h2>
+<p>所有介绍均为私密安排。不存在公开资料、滑动匹配或开放浏览系统。</p>
+</div>
+
+<div class="card">
+<h2>步骤 6 — 礼宾支持</h2>
+<p>入选成员将获得持续礼宾支持，以协助介绍与沟通。</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 开始您的私人申请</h2>
+
+<p>
+本服务严格限邀制。请选择您的礼宾申请路径。
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎女性专属
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            申请私人会员
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼男性专属
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            申请私人评估
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+精选审核 • 人工筛选 • 24–72小时回复时间
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>常见问题</h2>
+
+<h3>Velvet Elite 是约会平台吗？</h3>
+<p>
+不是。Velvet Elite 是一项私人高端婚恋与礼宾介绍服务。没有滑动匹配、公开资料或开放浏览功能。
+</p>
+
+<h3>审核需要多久？</h3>
+<p>大多数申请会在 24–72 小时内完成审核。</p>
+
+<h3>为什么 Velvet Elite 是筛选制？</h3>
+<p>筛选机制确保匹配质量、隐私保护以及高端国际介绍的质量。</p>
+
+<h3>我的信息是否安全？</h3>
+<p>是的。所有数据均严格保密，绝不公开。</p>
+
+<h3>高端婚恋是免费还是付费？</h3>
+<p>
+Velvet Elite 采用选择性准入模式。男性在通过审核后可能获得礼宾会员等级。女性可在限定时间内获得免费初始访问，并可选择升级以获得更高曝光与优先匹配机会。
+</p>
+
+</div>
+
+</div>
+
+<!-- 日本語 CONTENT -->
+
+<div id="ja" class="language-content">
+
+<h1 style="text-align:center;">Velvet Elite の仕組み</h1>
+
+<p style="text-align:center;">
+Velvet Elite は、信頼された個人のために設計されたプライベートなラグジュアリーマッチメイキングおよびコンシェルジュ紹介サービスです。すべての紹介は厳選され、完全に非公開で、人間による選定プロセスによって管理されています。
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>ステップ 1 — プライベート申請</h2>
+<p>あなたの経歴、希望条件、関係性の意向を記載した機密申請を提出します。</p>
+</div>
+
+<div class="card">
+<h2>ステップ 2 — 人による審査</h2>
+<p>すべての申請は、真正性・意図・適合性を確認するために手動で審査されます。</p>
+</div>
+
+<div class="card">
+<h2>ステップ 3 — 選択的承認</h2>
+<p>排他性を維持するため、限られた割合の申請者のみがネットワークに参加できます。</p>
+</div>
+
+<div class="card">
+<h2>ステップ 4 — マッチキュレーション</h2>
+<p>メンバーはライフスタイル、価値観、長期的な相性に基づきグローバルネットワーク内でマッチングされます。</p>
+</div>
+
+<div class="card">
+<h2>ステップ 5 — プライベート紹介</h2>
+<p>すべての紹介は非公開で行われます。公開プロフィール、スワイプ、オープン閲覧はありません。</p>
+</div>
+
+<div class="card">
+<h2>ステップ 6 — コンシェルジュサポート</h2>
+<p>選ばれたメンバーには、紹介やコミュニケーションを支援するコンシェルジュサポートが提供されます。</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 プライベート申請を開始する</h2>
+
+<p>
+アクセスは完全招待制です。以下からコンシェルジュ申請ルートを選択してください。
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎女性向け
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            プライベート会員を申請
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼男性向け
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            プライベート審査を申請
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+選択審査 • 人によるスクリーニング • 24〜72時間以内に返信
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>よくある質問</h2>
+
+<h3>Velvet Elite は出会い系アプリですか？</h3>
+<p>
+いいえ。Velvet Elite はプライベートなラグジュアリーマッチメイキングおよびコンシェルジュ紹介サービスです。スワイプ機能、公開プロフィール、オープン閲覧はありません。
+</p>
+
+<h3>承認にはどのくらい時間がかかりますか？</h3>
+<p>ほとんどの申請は24〜72時間以内に審査されます。</p>
+
+<h3>なぜ選択制なのですか？</h3>
+<p>選択制により、相性、プライバシー、そして高品質な国際的紹介が保証されます。</p>
+
+<h3>私の情報は保護されていますか？</h3>
+<p>はい。すべてのデータは機密として扱われ、公開されることはありません。</p>
+
+<h3>ラグジュアリーマッチメイキングは無料ですか？有料ですか？</h3>
+<p>
+Velvet Elite は選択制アクセスモデルを採用しています。男性は承認後にコンシェルジュ会員プランを提供される場合があります。女性は一定期間無料の導入アクセスを受けられる場合があり、より高い可視性や優先紹介のためのアップグレードオプションも利用できます。
+</p>
+
+</div>
+
+</div>
+
+<!-- TAGALOG CONTENT -->
+
+<div id="tl" class="language-content">
+
+<h1 style="text-align:center;">Paano Gumagana ang Velvet Elite</h1>
+
+<p style="text-align:center;">
+Ang Velvet Elite ay isang pribadong luxury matchmaking at concierge introduction service na dinisenyo para sa mga verified na indibidwal na naghahanap ng makabuluhang internasyonal na relasyon. Bawat introduction ay maingat na pinipili, kumpidensyal, at pinamamahalaan sa pamamagitan ng human-led na proseso ng seleksyon.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Hakbang 1 — Pribadong Aplikasyon</h2>
+<p>Mag-sumite ng kumpidensyal na aplikasyon na naglalarawan ng iyong background, mga kagustuhan, at intensyon sa relasyon.</p>
+</div>
+
+<div class="card">
+<h2>Hakbang 2 — Pagsusuring Tao</h2>
+<p>Bawat aplikasyon ay manu-manong sinusuri para sa pagiging totoo, intensyon, at compatibility.</p>
+</div>
+
+<div class="card">
+<h2>Hakbang 3 — Selektibong Pag-apruba</h2>
+<p>Limitadong porsyento lamang ng mga aplikante ang tinatanggap sa network upang mapanatili ang pagiging eksklusibo.</p>
+</div>
+
+<div class="card">
+<h2>Hakbang 4 — Pagpili ng Match</h2>
+<p>Ang mga miyembro ay pinagtutugma batay sa lifestyle, values, at pangmatagalang compatibility sa loob ng aming global network.</p>
+</div>
+
+<div class="card">
+<h2>Hakbang 5 — Pribadong Introduksyon</h2>
+<p>Lahat ng introductions ay isinasagawa nang pribado. Walang public profiles, walang swiping, at walang open browsing.</p>
+</div>
+
+<div class="card">
+<h2>Hakbang 6 — Concierge Support</h2>
+<p>Ang mga napiling miyembro ay tumatanggap ng tuloy-tuloy na concierge support para sa introductions at komunikasyon.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Simulan ang Iyong Pribadong Aplikasyon</h2>
+
+<p>
+Ang access ay mahigpit na by invitation lamang. Piliin ang iyong concierge application path sa ibaba.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Para sa Kababaihan
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Humiling ng Pribadong Membership
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼 Para sa Kalalakihan
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Humiling ng Pribadong Evaluation
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Selektibong pagsusuri • Human screening • Tugon sa loob ng 24–72 oras
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Mga Madalas Itanong</h2>
+
+<h3>Ang Velvet Elite ba ay dating platform?</h3>
+<p>
+Hindi. Ang Velvet Elite ay isang pribadong luxury matchmaking at concierge introduction service. Walang swiping features, public profiles, o open browsing.
+</p>
+
+<h3>Gaano katagal ang approval?</h3>
+<p>Karamihan ng mga aplikasyon ay sinusuri sa loob ng 24–72 oras.</p>
+
+<h3>Bakit selektibo ang Velvet Elite?</h3>
+<p>Tinitiyak ng pagiging selektibo ang compatibility, privacy, at de-kalidad na international introductions.</p>
+
+<h3>Ligtas ba ang aking impormasyon?</h3>
+<p>Oo. Lahat ng data ay kumpidensyal at hindi kailanman isinasapubliko.</p>
+
+<h3>Libre ba o bayad ang luxury matchmaking?</h3>
+<p>
+Ang Velvet Elite ay gumagamit ng selective access model. Ang mga lalaki ay maaaring bigyan ng concierge membership tiers pagkatapos ng approval. Ang mga babae ay maaaring makatanggap ng libreng introductory access sa limitadong panahon, na may optional upgrades para sa mas mataas na visibility at priority introductions.
+</p>
+
+</div>
+
+</div>
+
+<!-- ไทย CONTENT -->
+
+<div id="th" class="language-content">
+
+<h1 style="text-align:center;">Velvet Elite ทำงานอย่างไร</h1>
+
+<p style="text-align:center;">
+Velvet Elite คือบริการจับคู่ออกเดทระดับลักชัวรีแบบส่วนตัวและคอนเซียร์จ สำหรับบุคคลที่ได้รับการยืนยันตัวตนซึ่งกำลังมองหาความสัมพันธ์ระหว่างประเทศที่มีความหมาย ทุกการแนะนำถูกคัดสรรอย่างพิถีพิถัน เป็นความลับ และดำเนินการผ่านกระบวนการคัดเลือกโดยมนุษย์
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>ขั้นตอนที่ 1 — การสมัครแบบส่วนตัว</h2>
+<p>ส่งใบสมัครแบบเป็นความลับ โดยระบุประวัติ ความต้องการ และเจตนาเกี่ยวกับความสัมพันธ์ของคุณ</p>
+</div>
+
+<div class="card">
+<h2>ขั้นตอนที่ 2 — การตรวจสอบโดยมนุษย์</h2>
+<p>ทุกใบสมัครจะถูกตรวจสอบด้วยมือ เพื่อยืนยันความถูกต้อง เจตนา และความเข้ากันได้</p>
+</div>
+
+<div class="card">
+<h2>ขั้นตอนที่ 3 — การคัดเลือกแบบเข้มงวด</h2>
+<p>มีผู้สมัครเพียงส่วนน้อยเท่านั้นที่ได้รับการยอมรับเข้าสู่เครือข่าย เพื่อรักษาความเอ็กซ์คลูซีฟ</p>
+</div>
+
+<div class="card">
+<h2>ขั้นตอนที่ 4 — การคัดสรรคู่ที่เหมาะสม</h2>
+<p>สมาชิกจะถูกจับคู่ตามไลฟ์สไตล์ ค่านิยม และความเข้ากันได้ในระยะยาวภายในเครือข่ายทั่วโลก</p>
+</div>
+
+<div class="card">
+<h2>ขั้นตอนที่ 5 — การแนะนำแบบส่วนตัว</h2>
+<p>การแนะนำทั้งหมดดำเนินการแบบส่วนตัว ไม่มีโปรไฟล์สาธารณะ ไม่มีการปัด (swipe) และไม่มีการค้นหาแบบเปิด</p>
+</div>
+
+<div class="card">
+<h2>ขั้นตอนที่ 6 — การสนับสนุนคอนเซียร์จ</h2>
+<p>สมาชิกที่ได้รับการคัดเลือกจะได้รับการดูแลจากคอนเซียร์จอย่างต่อเนื่อง เพื่อช่วยในการแนะนำและการสื่อสาร</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 เริ่มการสมัครแบบส่วนตัวของคุณ</h2>
+
+<p>
+การเข้าถึงเป็นแบบเชิญเท่านั้น เลือกเส้นทางการสมัครคอนเซียร์จของคุณด้านล่าง
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎สำหรับผู้หญิง
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            ขอสมัครสมาชิกแบบส่วนตัว
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼สำหรับผู้ชาย
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            ขอรับการประเมินแบบส่วนตัว
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+การคัดเลือกอย่างเข้มงวด • ตรวจสอบโดยมนุษย์ • ตอบกลับภายใน 24–72 ชั่วโมง
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>คำถามที่พบบ่อย</h2>
+
+<h3>Velvet Elite เป็นแอปหาคู่หรือไม่?</h3>
+<p>
+ไม่ใช่ Velvet Elite เป็นบริการจับคู่ออกเดทระดับลักชัวรีและคอนเซียร์จแบบส่วนตัว ไม่มีฟีเจอร์การปัด โปรไฟล์สาธารณะ หรือการค้นหาแบบเปิด
+</p>
+
+<h3>การอนุมัติใช้เวลานานเท่าไหร่?</h3>
+<p>ใบสมัครส่วนใหญ่จะได้รับการตรวจสอบภายใน 24–72 ชั่วโมง</p>
+
+<h3>ทำไม Velvet Elite ถึงมีการคัดเลือก?</h3>
+<p>การคัดเลือกช่วยให้มั่นใจในความเข้ากันได้ ความเป็นส่วนตัว และการแนะนำระดับนานาชาติคุณภาพสูง</p>
+
+<h3>ข้อมูลของฉันปลอดภัยหรือไม่?</h3>
+<p>ใช่ ข้อมูลทั้งหมดถูกเก็บเป็นความลับและจะไม่ถูกเปิดเผยต่อสาธารณะ</p>
+
+<h3>บริการนี้ฟรีหรือมีค่าใช้จ่าย?</h3>
+<p>
+Velvet Elite ใช้โมเดลการเข้าถึงแบบคัดเลือก ผู้ชายอาจได้รับระดับสมาชิกคอนเซียร์จหลังการอนุมัติ ผู้หญิงอาจได้รับการเข้าถึงเบื้องต้นแบบฟรีในช่วงเวลาจำกัด พร้อมตัวเลือกอัปเกรดเพื่อเพิ่มการมองเห็นและการแนะนำแบบพิเศษ
+</p>
+
+</div>
+
+</div>
+
+<!-- TIẾNG VIỆT CONTENT -->
+
+<div id="vi" class="language-content">
+
+<h1 style="text-align:center;">Velvet Elite Hoạt Động Như Thế Nào</h1>
+
+<p style="text-align:center;">
+Velvet Elite là dịch vụ matchmaking và giới thiệu concierge cao cấp riêng tư, được thiết kế dành cho những cá nhân đã được xác minh và đang tìm kiếm các mối quan hệ quốc tế có ý nghĩa. Mỗi lần giới thiệu đều được tuyển chọn kỹ lưỡng, bảo mật tuyệt đối và vận hành thông qua quy trình lựa chọn do con người thực hiện.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Bước 1 — Đăng ký riêng tư</h2>
+<p>Gửi đơn đăng ký bảo mật, bao gồm thông tin nền tảng, sở thích và mục tiêu quan hệ của bạn.</p>
+</div>
+
+<div class="card">
+<h2>Bước 2 — Xét duyệt thủ công</h2>
+<p>Mỗi đơn đăng ký đều được xem xét thủ công để đảm bảo tính xác thực, mục đích và mức độ phù hợp.</p>
+</div>
+
+<div class="card">
+<h2>Bước 3 — Phê duyệt chọn lọc</h2>
+<p>Chỉ một tỷ lệ nhỏ ứng viên được chấp nhận vào hệ thống nhằm duy trì tính độc quyền.</p>
+</div>
+
+<div class="card">
+<h2>Bước 4 — Tuyển chọn ghép đôi</h2>
+<p>Các thành viên được ghép đôi dựa trên lối sống, giá trị và mức độ tương thích dài hạn trong mạng lưới toàn cầu.</p>
+</div>
+
+<div class="card">
+<h2>Bước 5 — Giới thiệu riêng tư</h2>
+<p>Tất cả các buổi giới thiệu đều được tổ chức riêng tư. Không có hồ sơ công khai, không vuốt (swipe), và không duyệt mở.</p>
+</div>
+
+<div class="card">
+<h2>Bước 6 — Hỗ trợ Concierge</h2>
+<p>Các thành viên được chọn sẽ nhận hỗ trợ concierge liên tục để hỗ trợ giới thiệu và giao tiếp.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Bắt Đầu Đơn Đăng Ký Riêng Tư</h2>
+
+<p>
+Quyền truy cập chỉ dành cho lời mời. Hãy chọn lộ trình đăng ký concierge của bạn bên dưới.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎Dành cho Nữ
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            Yêu Cầu Thành Viên Riêng Tư
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼Dành cho Nam
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            Yêu Cầu Đánh Giá Riêng Tư
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Xét duyệt chọn lọc • Kiểm tra bởi con người • Phản hồi trong 24–72 giờ
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Câu Hỏi Thường Gặp</h2>
+
+<h3>Velvet Elite có phải là ứng dụng hẹn hò không?</h3>
+<p>
+Không. Velvet Elite là dịch vụ matchmaking và giới thiệu concierge cao cấp riêng tư. Không có tính năng vuốt, hồ sơ công khai hoặc duyệt mở.
+</p>
+
+<h3>Mất bao lâu để được phê duyệt?</h3>
+<p>Hầu hết các đơn đăng ký được xét duyệt trong vòng 24–72 giờ.</p>
+
+<h3>Tại sao Velvet Elite lại chọn lọc?</h3>
+<p>Tính chọn lọc giúp đảm bảo sự tương thích, quyền riêng tư và các mối giới thiệu quốc tế chất lượng cao.</p>
+
+<h3>Thông tin của tôi có được bảo mật không?</h3>
+<p>Có. Tất cả dữ liệu đều được bảo mật tuyệt đối và không bao giờ được công khai.</p>
+
+<h3>Dịch vụ matchmaking là miễn phí hay trả phí?</h3>
+<p>
+Velvet Elite hoạt động theo mô hình truy cập chọn lọc. Nam giới có thể được cung cấp các cấp độ thành viên concierge sau khi được phê duyệt. Nữ giới có thể nhận quyền truy cập giới thiệu miễn phí trong thời gian giới hạn, với các tùy chọn nâng cấp để tăng khả năng hiển thị và ưu tiên giới thiệu.
+</p>
+
+</div>
+
+</div>
+
+<!-- 한국어 CONTENT -->
+
+<div id="ko" class="language-content">
+
+<h1 style="text-align:center;">Velvet Elite 작동 방식</h1>
+
+<p style="text-align:center;">
+Velvet Elite는 검증된 개인을 대상으로 의미 있는 국제 관계를 찾을 수 있도록 설계된 프라이빗 럭셔리 매치메이킹 및 컨시어지 소개 서비스입니다. 모든 소개는 엄선되고 철저히 비공개로 진행되며, 인간 중심의 선별 프로세스를 통해 관리됩니다.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>1단계 — 프라이빗 신청</h2>
+<p>배경, 선호도, 관계 의도를 포함한 비밀 신청서를 제출합니다.</p>
+</div>
+
+<div class="card">
+<h2>2단계 — 인간 검토</h2>
+<p>모든 신청서는 진정성, 의도, 적합성을 확인하기 위해 수작업으로 검토됩니다.</p>
+</div>
+
+<div class="card">
+<h2>3단계 — 선택적 승인</h2>
+<p>독점성을 유지하기 위해 제한된 비율의 신청자만 네트워크에 승인됩니다.</p>
+</div>
+
+<div class="card">
+<h2>4단계 — 매칭 큐레이션</h2>
+<p>회원들은 라이프스타일, 가치관, 장기적인 호환성을 기반으로 글로벌 네트워크 내에서 매칭됩니다.</p>
+</div>
+
+<div class="card">
+<h2>5단계 — 프라이빗 소개</h2>
+<p>모든 소개는 비공개로 진행됩니다. 공개 프로필, 스와이프 기능, 오픈 브라우징은 없습니다.</p>
+</div>
+
+<div class="card">
+<h2>6단계 — 컨시어지 지원</h2>
+<p>선정된 회원들은 소개 및 커뮤니케이션을 지원하는 컨시어지 서비스를 지속적으로 받습니다.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 프라이빗 신청 시작</h2>
+
+<p>
+접근은 초대 전용입니다. 아래에서 컨시어지 신청 경로를 선택하세요.
+</p>
+
+<div class="cta-container">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+           💎여성 전용
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+            프라이빗 멤버십 신청
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            💼남성 전용
+        </div>
+
+        <a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+            프라이빗 평가 신청
+        </a>
+
+    </div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+선별 심사 • 인간 검토 • 24~72시간 내 응답
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>자주 묻는 질문</h2>
+
+<h3>Velvet Elite는 데이팅 앱인가요?</h3>
+<p>
+아니요. Velvet Elite는 프라이빗 럭셔리 매치메이킹 및 컨시어지 소개 서비스입니다. 스와이프 기능, 공개 프로필, 또는 오픈 검색 시스템이 없습니다.
+</p>
+
+<h3>승인까지 얼마나 걸리나요?</h3>
+<p>대부분의 신청은 24~72시간 이내에 검토됩니다.</p>
+
+<h3>왜 선택제로 운영되나요?</h3>
+<p>선택적 시스템은 호환성, 프라이버시, 그리고 고품질 국제 소개를 보장합니다.</p>
+
+<h3>내 정보는 안전한가요?</h3>
+<p>네. 모든 데이터는 철저히 기밀로 보호되며 공개되지 않습니다.</p>
+
+<h3>럭셔리 매치메이킹은 무료인가요 유료인가요?</h3>
+<p>
+Velvet Elite는 선택적 접근 모델을 사용합니다. 남성은 승인 후 컨시어지 멤버십 등급을 제공받을 수 있습니다. 여성은 제한된 기간 동안 무료 소개 접근을 받을 수 있으며, 더 높은 노출 및 우선 소개를 위한 업그레이드 옵션이 제공됩니다.
+</p>
+
+</div>
+
+</div>
+
+<!-- ESPAÑOL CONTENT -->
+
+<div id="es" class="language-content">
+
+<h1 style="text-align:center;">Cómo Funciona Velvet Elite</h1>
+
+<p style="text-align:center;">
+Velvet Elite es un servicio privado de introducciones y matchmaking de lujo diseñado para personas verificadas que buscan relaciones internacionales significativas. Cada introducción es cuidadosamente seleccionada, discreta y gestionada mediante un proceso de selección dirigido por humanos.
+</p>
+
+<!-- STEPS -->
+<div class="card">
+<h2>Paso 1 — Solicitud Privada</h2>
+<p>Envíe una solicitud confidencial describiendo su perfil, preferencias e intención de relación.</p>
+</div>
+
+<div class="card">
+<h2>Paso 2 — Revisión Humana</h2>
+<p>Cada solicitud es revisada manualmente para verificar autenticidad, intención y compatibilidad.</p>
+</div>
+
+<div class="card">
+<h2>Paso 3 — Aprobación Selectiva</h2>
+<p>Solo un porcentaje limitado de solicitantes es aceptado en la red para mantener la exclusividad.</p>
+</div>
+
+<div class="card">
+<h2>Paso 4 — Curación de Compatibilidad</h2>
+<p>Los miembros son emparejados según estilo de vida, valores y compatibilidad a largo plazo dentro de nuestra red global.</p>
+</div>
+
+<div class="card">
+<h2>Paso 5 — Introducciones Privadas</h2>
+<p>Todas las introducciones se organizan de forma privada. No existen perfiles públicos, deslizamientos ni navegación abierta.</p>
+</div>
+
+<div class="card">
+<h2>Paso 6 — Soporte Concierge</h2>
+<p>Los miembros seleccionados reciben soporte concierge continuo para facilitar presentaciones y comunicación.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align:center;">
+
+<h2>💎 Comience Su Solicitud Privada</h2>
+
+<p>
+El acceso es estrictamente solo por invitación. Elija abajo su camino de solicitud concierge.
+</p>
+
+<div class="cta-container">
+
+<!-- WOMEN -->
+<div style="text-align:center;">
+
+<div style="
+font-size:11px;
+letter-spacing:1px;
+text-transform:uppercase;
+opacity:0.65;
+margin-bottom:6px;
+">
+💎Para Mujeres
+</div>
+
+<a href="https://velvetroyale.github.io/velvet-elite/women.html" class="cta">
+Solicitar Membresía Privada
+</a>
+
+</div>
+
+<!-- MEN -->
+<div style="text-align:center;">
+
+<div style="
+font-size:11px;
+letter-spacing:1px;
+text-transform:uppercase;
+opacity:0.65;
+margin-bottom:6px;
+">
+💼 Para Hombres
+</div>
+
+<a href="https://velvetroyale.github.io/velvet-elite/men.html" class="cta">
+Solicitar Evaluación Privada
+</a>
+
+</div>
+
+</div>
+
+<p class="tag" style="margin-top:14px;">
+Revisión selectiva • Evaluación humana • Tiempo de respuesta de 24–72 horas
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="card">
+
+<h2>Preguntas Frecuentes</h2>
+
+<h3>¿Velvet Elite es una plataforma de citas?</h3>
+<p>
+No. Velvet Elite es un servicio privado de introducciones y matchmaking de lujo. No existen funciones de deslizamiento, perfiles públicos ni sistemas de navegación abierta.
+</p>
+
+<h3>¿Cuánto tiempo tarda la aprobación?</h3>
+<p>La mayoría de las solicitudes se revisan dentro de 24–72 horas.</p>
+
+<h3>¿Por qué Velvet Elite es selectivo?</h3>
+<p>La selectividad garantiza compatibilidad, privacidad e introducciones internacionales de alta calidad.</p>
+
+<h3>¿Mi información es privada?</h3>
+<p>Sí. Todos los datos se manejan de manera confidencial y nunca se hacen públicos.</p>
+
+<h3>¿El matchmaking de lujo es gratuito o de pago?</h3>
+<p>
+Velvet Elite opera bajo un modelo de acceso selectivo. A los hombres se les pueden ofrecer niveles de membresía concierge después de la aprobación. Las mujeres pueden recibir acceso introductorio gratuito por un período limitado, con opciones de mejora para mayor visibilidad e introducciones prioritarias.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer" style="padding:40px 20px;">
+
+<div style="margin-bottom:18px;">
+<a href="https://www.facebook.com/velvetelitematchmaking" target="_blank"
+style="
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:12px 22px;
+border-radius:30px;
+background:linear-gradient(145deg,#d4af37,#f5dc8a);
+color:#0b0b0b;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(212,175,55,0.18);
+">
+📘 Follow us on Facebook
+</a>
+</div>
+
+<div style="margin-bottom:10px;">
+<a href="https://velvetroyale.github.io/velvet-elite/disclaimer.html"
+style="color:rgba(212,175,55,0.75);
+text-decoration:underline;
+font-size:13px;">
+Disclaimer & Policies
+</a>
+</div>
+
+<div style="width:60px; height:1px; background:rgba(212,175,55,0.25); margin:14px auto;"></div>
+
+<div style="font-size:12px; opacity:0.6; margin-top:12px; letter-spacing:0.3px;">
+© 2026 Velvet Elite Matchmaking. All Rights Reserved.
+</div>
+
+</div>
+
+<script>
+
+function showLanguage(lang, el){
+
+    document.querySelectorAll('.language-content').forEach(section=>{
+        section.classList.remove('active');
+    });
+
+    document.querySelectorAll('.language-btn').forEach(btn=>{
+        btn.classList.remove('active');
+    });
+
+    document.getElementById(lang).classList.add('active');
+    el.classList.add('active');
+
+}
+
+</script>
+
 </body>
 </html>
