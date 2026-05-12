@@ -139,7 +139,7 @@ Applications are reviewed for approval.
 <input type="hidden" name="_next" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
 
 <input type="hidden" name="_subject" value="💎 New Velvet Elite Women Application">
-
+<input type="hidden" name="Selected Language" id="selectedLanguage" value="English">
 <label data-key="first">First Name *</label>
 <input type="text" name="First Name" required>
 
@@ -453,20 +453,47 @@ about:"자기소개"
 
 };
 function setLang(l, btn){
+
 document.querySelectorAll('.language-btn').forEach(b=>b.classList.remove('active'));
 btn.classList.add('active');
 
 const t = lang[l];
 if(!t) return;
 
+/* UPDATE TEXT */
 document.getElementById("title").innerText = t.title;
 document.getElementById("desc").innerText = t.desc;
 document.getElementById("btn").innerText = t.btn;
 
+/* UPDATE LABELS */
 document.querySelectorAll("label").forEach(el=>{
 let k = el.getAttribute("data-key");
 if(k && t[k]) el.innerText = t[k];
 });
+
+/* TRACK SELECTED LANGUAGE */
+const languageNames = {
+en:"English",
+es:"Español",
+fr:"Français",
+it:"Italiano",
+de:"Deutsch",
+ru:"Русский",
+uk:"Українська",
+pl:"Polski",
+ro:"Română",
+pt:"Português",
+ar:"العربية",
+zh:"中文",
+ja:"日本語",
+tl:"Tagalog",
+th:"ไทย",
+vi:"Tiếng Việt",
+ko:"한국어"
+};
+
+document.getElementById("selectedLanguage").value = languageNames[l];
+
 }
 </script>
 
