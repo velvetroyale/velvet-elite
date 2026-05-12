@@ -7,24 +7,44 @@
 
 <style>
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     background:#0b0b0b;
-    color:#d4af37; /* GOLD */
+    color:#d4af37;
     font-family:Arial;
     text-align:center;
-    padding:90px 20px;
+    padding:60px 20px;
     margin:0;
+}
+
+/* LANGUAGE BAR */
+.language-bar{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:6px;
+    margin-bottom:30px;
+}
+
+.language-btn{
+    padding:6px 10px;
+    border-radius:18px;
+    font-size:11px;
+    background:#141414;
+    color:#d4af37;
+    border:1px solid rgba(212,175,55,0.35);
+    cursor:pointer;
+}
+
+.language-btn.active{
+    background:#d4af37;
+    color:#0b0b0b;
 }
 
 /* TITLE */
 h1 {
-    color:#d4af37;
     margin-bottom:10px;
-    letter-spacing:1px;
 }
 
 /* TEXT */
@@ -34,13 +54,13 @@ p {
     max-width:600px;
 }
 
-/* CARD STYLE FEEL (optional depth) */
+/* CONTAINER */
 .container {
     max-width:700px;
     margin:auto;
 }
 
-/* BUTTON LINK */
+/* BUTTON */
 a {
     display:inline-block;
     margin-top:25px;
@@ -57,7 +77,7 @@ a:hover {
     background:#e6c35a;
 }
 
-/* SMALL STATUS TEXT */
+/* STATUS */
 .status {
     font-size:13px;
     opacity:0.7;
@@ -71,22 +91,205 @@ a:hover {
 
 <div class="container">
 
-<h1>✅ Application Received</h1>
+<!-- LANGUAGE BAR -->
+<div class="language-bar">
 
-<p>Thank you for applying to Velvet Elite.</p>
+<button class="language-btn active" onclick="setLang('en', this)">English</button>
+<button class="language-btn" onclick="setLang('es', this)">Español</button>
+<button class="language-btn" onclick="setLang('fr', this)">Français</button>
+<button class="language-btn" onclick="setLang('it', this)">Italiano</button>
+<button class="language-btn" onclick="setLang('de', this)">Deutsch</button>
+<button class="language-btn" onclick="setLang('ru', this)">Русский</button>
+<button class="language-btn" onclick="setLang('uk', this)">Українська</button>
+<button class="language-btn" onclick="setLang('pl', this)">Polski</button>
+<button class="language-btn" onclick="setLang('ro', this)">Română</button>
+<button class="language-btn" onclick="setLang('pt', this)">Português</button>
+<button class="language-btn" onclick="setLang('ar', this)">العربية</button>
+<button class="language-btn" onclick="setLang('zh', this)">中文</button>
+<button class="language-btn" onclick="setLang('ja', this)">日本語</button>
+<button class="language-btn" onclick="setLang('tl', this)">Tagalog</button>
+<button class="language-btn" onclick="setLang('th', this)">ไทย</button>
+<button class="language-btn" onclick="setLang('vi', this)">Tiếng Việt</button>
+<button class="language-btn" onclick="setLang('ko', this)">한국어</button>
 
-<p>
+</div>
+
+<h1 id="title">✅ Application Received</h1>
+
+<p id="p1">Thank you for applying to Velvet Elite.</p>
+
+<p id="p2">
 Your application has been successfully submitted and is now under private review.
 If selected, you will be contacted shortly.
 </p>
 
-<div class="status">
+<div class="status" id="status">
 Private screening in progress • Confidential evaluation
 </div>
 
-<a href="index.html">Return to Home</a>
+<a id="btn" href="index.html">Return to Home</a>
 
 </div>
+
+<script>
+
+const lang = {
+
+en:{
+title:"✅ Application Received",
+p1:"Thank you for applying to Velvet Elite.",
+p2:"Your application has been successfully submitted and is now under private review. If selected, you will be contacted shortly.",
+status:"Private screening in progress • Confidential evaluation",
+btn:"Return to Home"
+},
+
+es:{
+title:"✅ Solicitud recibida",
+p1:"Gracias por solicitar acceso a Velvet Elite.",
+p2:"Tu solicitud ha sido enviada correctamente y está en revisión privada. Si eres seleccionado, serás contactado pronto.",
+status:"Evaluación privada en curso • Proceso confidencial",
+btn:"Volver al inicio"
+},
+
+fr:{
+title:"✅ Candidature reçue",
+p1:"Merci d’avoir postulé à Velvet Elite.",
+p2:"Votre candidature a été envoyée avec succès et est actuellement en cours d’examen privé. Si sélectionné, vous serez contacté prochainement.",
+status:"Évaluation privée en cours • Confidentialité totale",
+btn:"Retour à l’accueil"
+},
+
+it:{
+title:"✅ Candidatura ricevuta",
+p1:"Grazie per aver richiesto l’accesso a Velvet Elite.",
+p2:"La tua candidatura è stata inviata con successo ed è ora in revisione privata. Se selezionato, verrai contattato a breve.",
+status:"Valutazione privata in corso • Processo confidenziale",
+btn:"Torna alla home"
+},
+
+de:{
+title:"✅ Bewerbung erhalten",
+p1:"Vielen Dank für Ihre Bewerbung bei Velvet Elite.",
+p2:"Ihre Bewerbung wurde erfolgreich eingereicht und befindet sich nun in privater Prüfung. Falls ausgewählt, werden Sie kontaktiert.",
+status:"Private Prüfung läuft • Vertrauliche Bewertung",
+btn:"Zur Startseite"
+},
+
+ru:{
+title:"✅ Заявка получена",
+p1:"Спасибо за заявку в Velvet Elite.",
+p2:"Ваша заявка успешно отправлена и находится на приватной проверке. При выборе с вами свяжутся.",
+status:"Приватная проверка • Конфиденциальная оценка",
+btn:"На главную"
+},
+
+uk:{
+title:"✅ Заявку отримано",
+p1:"Дякуємо за заявку до Velvet Elite.",
+p2:"Вашу заявку успішно подано і вона перебуває на приватному розгляді. У разі відбору з вами зв’яжуться.",
+status:"Приватна перевірка • Конфіденційна оцінка",
+btn:"На головну"
+},
+
+pl:{
+title:"✅ Zgłoszenie otrzymane",
+p1:"Dziękujemy za aplikację do Velvet Elite.",
+p2:"Twoje zgłoszenie zostało wysłane i jest obecnie w prywatnej ocenie. Jeśli zostaniesz wybrany, skontaktujemy się z Tobą.",
+status:"Prywatna ocena • Poufny proces",
+btn:"Powrót"
+},
+
+ro:{
+title:"✅ Aplicație primită",
+p1:"Mulțumim pentru aplicarea la Velvet Elite.",
+p2:"Aplicația ta a fost trimisă cu succes și este în curs de evaluare privată. Dacă ești selectat, vei fi contactat.",
+status:"Evaluare privată • Proces confidențial",
+btn:"Înapoi"
+},
+
+pt:{
+title:"✅ Aplicação recebida",
+p1:"Obrigado por se candidatar ao Velvet Elite.",
+p2:"Sua candidatura foi enviada com sucesso e está em análise privada. Se selecionado, você será contatado.",
+status:"Avaliação privada em andamento • Processo confidencial",
+btn:"Voltar"
+},
+
+ar:{
+title:"✅ تم استلام الطلب",
+p1:"شكرًا لتقديمك إلى Velvet Elite.",
+p2:"تم إرسال طلبك بنجاح وهو قيد المراجعة الخاصة. سيتم التواصل معك إذا تم اختيارك.",
+status:"مراجعة خاصة • تقييم سري",
+btn:"العودة للرئيسية"
+},
+
+zh:{
+title:"✅ 已收到申请",
+p1:"感谢您申请 Velvet Elite。",
+p2:"您的申请已成功提交，目前正在私人审核中。如果被选中，我们将联系您。",
+status:"私人审核中 • 保密评估",
+btn:"返回首页"
+},
+
+ja:{
+title:"✅ 申請を受け付けました",
+p1:"Velvet Eliteへのご応募ありがとうございます。",
+p2:"申請は正常に送信され、現在プライベート審査中です。選ばれた場合ご連絡いたします。",
+status:"プライベート審査中 • 機密評価",
+btn:"ホームへ戻る"
+},
+
+tl:{
+title:"✅ Natanggap ang Aplikasyon",
+p1:"Salamat sa pag-apply sa Velvet Elite.",
+p2:"Ang iyong aplikasyon ay matagumpay na naisumite at kasalukuyang sinusuri nang pribado. Kung mapili, ikaw ay kokontakin.",
+status:"Pribadong pagsusuri • Kumpidensyal na proseso",
+btn:"Bumalik sa Home"
+},
+
+th:{
+title:"✅ ได้รับใบสมัครแล้ว",
+p1:"ขอบคุณสำหรับการสมัคร Velvet Elite",
+p2:"ใบสมัครของคุณถูกส่งเรียบร้อยและอยู่ระหว่างการตรวจสอบแบบส่วนตัว หากผ่านการคัดเลือกจะติดต่อกลับ",
+status:"กำลังตรวจสอบส่วนตัว • การประเมินลับ",
+btn:"กลับหน้าแรก"
+},
+
+vi:{
+title:"✅ Đã nhận đơn",
+p1:"Cảm ơn bạn đã đăng ký Velvet Elite.",
+p2:"Đơn của bạn đã được gửi thành công và đang được xét duyệt riêng tư. Nếu được chọn, chúng tôi sẽ liên hệ.",
+status:"Đang xét duyệt riêng tư • Quy trình bảo mật",
+btn:"Quay về trang chủ"
+},
+
+ko:{
+title:"✅ 지원서 접수됨",
+p1:"Velvet Elite 지원해 주셔서 감사합니다.",
+p2:"지원서는 성공적으로 제출되었으며 현재 비공개 검토 중입니다. 선정 시 연락드립니다.",
+status:"비공개 심사 진행 중 • 기밀 평가",
+btn:"홈으로"
+}
+
+};
+
+function setLang(l, btn){
+
+document.querySelectorAll('.language-btn').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+
+const t = lang[l];
+if(!t) return;
+
+document.getElementById("title").innerText = t.title;
+document.getElementById("p1").innerText = t.p1;
+document.getElementById("p2").innerText = t.p2;
+document.getElementById("status").innerText = t.status;
+document.getElementById("btn").innerText = t.btn;
+
+}
+
+</script>
 
 </body>
 </html>
