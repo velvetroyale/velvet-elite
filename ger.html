@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Velvet Elite | Privates Matchmaking-Netzwerk</title>
+    <!-- SEO META -->
+<meta name="description" content="Velvet Elite ist ein exklusives Matchmaking-Netzwerk nur auf Einladung für verifizierte Personen, die private, ernsthafte internationale Beziehungen suchen. Kein Swipen. Keine öffentlichen Profile. Ausschließlich von Menschen kuratierte Vorstellungen.">
+
+<meta name="keywords" content="Luxus Matchmaking, Elite Dating Netzwerk, privater Matchmaking Service, hochwertige Partnervermittlung, internationales Matchmaking, exklusiver Dating Club, verifizierte Dating Plattform, diskretes Matchmaking, Concierge Dating Service, Elite Beziehungen, VIP Dating Netzwerk, Premium Matchmaking, selektive Dating Community, ernsthafte Beziehungen, globales Matchmaking">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="Velvet Elite Matchmaking">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://velvetroyale.github.io/velvet-elite/">
+
+<!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+<meta property="og:title" content="Velvet Elite | Privates Matchmaking-Netzwerk">
+<meta property="og:description" content="Luxus-Matchmaking nur auf Einladung für verifizierte Personen. Kein Swipen. Keine öffentlichen Profile. Rein kuratierte Vorstellungen.">
+<meta property="og:image" content="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://velvetroyale.github.io/velvet-elite/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Velvet Elite | Privates Matchmaking-Netzwerk">
+<meta name="twitter:description" content="Exklusives Matchmaking nur auf Einladung für internationale Elite-Beziehungen.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png">
+
+<!-- Favicon (optional but recommended) -->
+<link rel="icon" href="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png">
+
+<!-- Structured Data (Google SEO Boost) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Velvet Elite",
+  "url": "https://velvetroyale.github.io/velvet-elite/",
+  "logo": "https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png",
+  "description": "Privates Matchmaking-Netzwerk nur auf Einladung mit kuratierten internationalen Vorstellungen für verifizierte Personen.",
+  "sameAs": [
+    "https://www.facebook.com/velvetelitematchmaking"
+  ]
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at top, #141414, #0b0b0b 70%);
+    color: #d4af37;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* ✅ GLOBAL LUXURY HEADING SYSTEM */
+h1, h2 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* HERO */
+.hero {
+    padding: 90px 20px 40px 20px;
+}
+
+/* HERO IMAGE */
+.hero img {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 22px auto;
+    filter: drop-shadow(0 0 45px rgba(212, 175, 55, 0.35));
+    border-radius: 24px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 780px;
+    margin: 12px auto;
+    color: rgba(212, 175, 55, 0.95);
+}
+
+/* TRUST */
+.trust {
+    font-size: 13px;
+    opacity: 0.75;
+    margin: 6px 0;
+}
+
+/* TRUST BAR */
+.trust-bar {
+    font-size: 12px;
+    opacity: 0.78;
+    line-height: 1.9;
+    margin-top: 14px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CONTAINER */
+.container {
+    padding: 30px 16px 60px 16px;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(145deg, #161616, #101010);
+    padding: 34px;
+    margin: 22px auto;
+    max-width: 600px;
+    border-radius: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    color: rgba(212, 175, 55, 0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* BUTTON */
+a.button {
+    display: block;
+    padding: 18px;
+    margin-top: 18px;
+
+    background: linear-gradient(145deg, #d4af37, #f5dc8a);
+    color: #0b0b0b;
+
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 12px;
+    font-size: 15px;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.18);
+}
+
+/* TAG */
+.tag {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* FOOTER (FIXED + RESTORED) */
+.footer {
+    margin-top: 60px;
+    font-size: 13px;
+    opacity: 0.75;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(212,175,55,0.15);
+}
+
+.footer a {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 70px 14px 30px 14px;
+    }
+
+    .hero img {
+        max-width: 92vw;
+        border-radius: 18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+    <img src="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png" alt="Velvet Elite Logo">
+
+    <p>
+      Reserviert für Personen, die für private internationale Vorstellungen in Europa, Nordamerika, Lateinamerika und Asien ausgewählt wurden. </p>
+
+    <!-- PRIMARY POSITIONING -->
+    <div class="trust" style="font-weight:500; opacity:0.92; margin-top:14px;">
+        Zugang nur per Bewerbung • Private Überprüfung • Vertrauliche Vorstellungen
+    </div>
+
+    <!-- LUXURY OPERATING PRINCIPLE -->
+    <div class="trust" style="opacity:0.72; margin-top:6px;">
+        Jedes Profil wird individuell geprüft • Einladungen werden selektiv innerhalb von 24–72 Stunden ausgesprochen
+    </div>
+
+<!-- DISCREET TOP CTA BUTTONS -->
+
+<div style="
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:18px;
+">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            Für Frauen
+        </div>
+
+        <a href="women.html" style="
+            display:inline-block;
+            padding:12px 20px;
+            border-radius:10px;
+            text-decoration:none;
+            font-size:13px;
+            font-weight:600;
+            letter-spacing:0.3px;
+            background:linear-gradient(145deg, #d4af37, #f5dc8a);
+            color:#0b0b0b;
+            box-shadow:0 6px 18px rgba(212,175,55,0.18);
+        ">
+            💎 Private Mitgliedschaft Anfragen
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            Für Männer
+        </div>
+
+        <a href="men.html" style="
+            display:inline-block;
+            padding:12px 20px;
+            border-radius:10px;
+            text-decoration:none;
+            font-size:13px;
+            font-weight:600;
+            letter-spacing:0.3px;
+            background:linear-gradient(145deg, #d4af37, #f5dc8a);
+            color:#0b0b0b;
+            box-shadow:0 6px 18px rgba(212,175,55,0.18);
+        ">
+            💼 Private Bewertung Anfragen
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- LUXURY DIVIDER (adds breathing + editorial feel) -->
+<div style="width:50px; height:1px; background:rgba(212,175,55,0.25); margin:18px auto;"></div>
+
+<!-- TRUST ARCHITECTURE (refined into 3 grouped lines) -->
+<div class="trust-bar">
+
+    ✔ Verifizierte Mitglieder in über 20 Ländern<br>
+    ✔ Von Menschen geprüfter Matchmaking-Prozess<br>
+    ✔ Monatliche private Vorstellungen <br><br>
+
+    ✔ Selektive Aufnahme (7–12 % Genehmigungsrate)<br>
+    ✔ Vertrauliche Profilverwaltung & Überprüfung<br><br>
+
+    ✔ Keine öffentlichen Profile • Kein Swipen • Keine Algorithmen
+
+</div>
+
+<p style="
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    line-height:1.9;
+    opacity:0.82;
+    margin-top:18px;
+">
+    Außergewöhnliche Verbindungen <br>
+    💎 <br>
+    Außergewöhnliche Standards
+</p>
+
+</div>
+<!-- HERO END -->
+
+<!-- LUXURY DIVIDER (adds breathing + editorial feel) -->
+<div style="width:50px; height:1px; background:rgba(212,175,55,0.25); margin:18px auto;"></div>
+
+<div class="container">
+
+<div class="card">
+
+<h2>💎 Wie Es Funktioniert</h2>
+
+<p>
+Velvet Elite arbeitet mit einem privaten Concierge-Matchmaking-Prozess, der auf selektiver Genehmigung, menschlicher Überprüfung und kuratierten internationalen Vorstellungen basiert.
+</p>
+
+<a class="button" href="process.html">
+Gesamten Prozess Anzeigen
+</a>
+
+</div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<div class="card">
+<h2>🔎 Selektive Aufnahme </h2>
+<p>Alle Bewerber werden auf Grundlage von Absicht, Authentizität und Kompatibilität geprüft. Wir akzeptieren nicht jede Bewerbung — nur kuratierte Profile werden genehmigt.</p>
+</div>
+
+<div class="card">
+
+<h2>💎 Für Wen Das Gedacht Ist</h2>
+
+<p style="opacity:0.85;">
+Velvet Elite ist für Personen reserviert, die Tiefe, Diskretion und langfristige Kompatibilität schätzen.
+</p>
+
+<ul style="
+    text-align:left;
+    margin-top:12px;
+    padding-left:18px;
+    opacity:0.9;
+    line-height:1.8;
+">
+    <li>Personen, die ernsthafte langfristige Beziehungen suchen</li>
+    <li>Berufstätige mit hoher Absicht und internationalem Lebensstil</li>
+    <li>Menschen, die genug von Dating-Apps und Swipe-Kultur haben</li>
+    <li>Personen, die Privatsphäre, Diskretion und Qualität über Quantität stellen</li>
+</ul>
+
+<p style="margin-top:14px; opacity:0.75;">
+Dies ist keine Plattform für lockere Dates — es ist ein kuratiertes Matchmaking-Netzwerk für bewusste Verbindungen.
+</p>
+
+</div>
+
+<div class="card">
+<h2>💎 Warum Velvet Elite</h2>
+<p>Im Gegensatz zu Dating-Apps ist Velvet Elite ein privates Concierge-Matchmaking-System, das sich auf kuratierte, von Menschen geprüfte Vorstellungen statt algorithmischem Swipen konzentriert.</p>
+</div>
+
+<div class="card">
+<h2>🔐 Privates System</h2>
+<p>Keine öffentlichen Profile. Kein Swipen. Alle Vorstellungen werden privat zwischen verifizierten Mitgliedern durchgeführt.</p>
+</div>
+
+<div class="card">
+<h2>⚖️ Ethische Standards</h2>
+<p>Velvet Elite arbeitet nach strengen Prinzipien von Zustimmung, Privatsphäre und ausschließlicher Teilnahme von Erwachsenen. Wir verfolgen eine Null-Toleranz-Politik gegenüber Zwang, Betrug oder illegalen Aktivitäten.</p>
+</div>
+
+</div>
+
+<!-- LUXURY DIVIDER (adds breathing + editorial feel) -->
+<div style="width:50px; height:1px; background:rgba(212,175,55,0.25); margin:18px auto;"></div>
+
+<!-- OPTIONS -->
+<div class="container">
+
+<div class="card">
+
+<h2>💎 Für Frauen </h2>
+
+<p>
+Erhalten Sie Zugang zu einem privaten internationalen Netzwerk kuratierter Vorstellungen mit verifizierten Mitgliedern aus Europa, Nordamerika, Lateinamerika und Asien.
+</p>
+
+<p class="tag" style="margin-top:12px; opacity:0.85;">
+Jedes Profil wird individuell geprüft. Ausgewählte Mitglieder werden zu privaten, vertraulichen Vorstellungen eingeladen, basierend auf Übereinstimmung und Präsentation.
+</p>
+
+<a class="button" href="women.html">
+    Private Mitgliedschaft Anfragen
+</a>
+
+<div class="tag" style="margin-top:12px;">
+Auswahl nur per Bewerbung • Vertraulicher Prüfungsprozess • Begrenzte Aufnahmekapazität
+</div>
+
+<p class="tag" style="margin-top:10px; opacity:0.7;">
+Optionale hervorgehobene Platzierung kann ausgewählten Profilen nach Genehmigung angeboten werden.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>💼 Für Männer </h2>
+
+<p>
+Erhalten Sie Zugang zu einem diskreten Concierge-Matchmaking-Netzwerk für erfolgreiche Männer, die ernsthafte internationale Beziehungen durch vollständig kuratierte private Vorstellungen suchen.
+</p>
+
+<p class="tag" style="margin-top:12px; opacity:0.85;">
+Kein Browsen. Kein Swipen. Keine öffentlichen Profile. Jede Vorstellung wird privat ausgewählt und arrangiert.
+</p>
+
+<a class="button" href="men.html">
+    Private Bewertung Anfragen
+</a>
+
+<div class="tag" style="margin-top:12px;">
+ Zugang nur per Bewerbung • Handverlesene internationale Vorstellungen • Vertraulicher Concierge-Prozess
+</div>
+
+<p class="tag" style="margin-top:10px; opacity:0.7;">
+Begrenzte Aufnahme zur Aufrechterhaltung von Selektivität und Kompatibilität innerhalb des Netzwerks.
+</p>
+
+</div>
+
+</div>
+
+<!-- SEO FAQ SECTION -->
+<div class="container">
+
+<div class="card" style="text-align:left;">
+
+<h2>❓ Häufig Gestellte Fragen</h2>
+
+<!-- FAQ 1 -->
+<h3>Was ist Velvet Elite?</h3>
+<p>
+Velvet Elite ist ein privates Luxus-Matchmaking-Netzwerk nur auf Einladung, das verifizierte Personen verbindet, die ernsthafte internationale Beziehungen suchen. Im Gegensatz zu Dating-Apps gibt es kein Swipen und keine öffentlichen Profile — jede Vorstellung wird von Menschen kuratiert.
+</p>
+
+<!-- FAQ 2 -->
+<h3>Wie funktioniert Luxus-Matchmaking?</h3>
+<p>
+Bewerber reichen ein privates Profil ein, das auf Grundlage von Absicht, Kompatibilität und Authentizität geprüft wird. Genehmigte Mitglieder werden anschließend sorgfältig ausgewählten Partnern aus unserem globalen Netzwerk vorgestellt.
+</p>
+
+<!-- FAQ 3 -->
+<h3>Wer kann Velvet Elite beitreten?</h3>
+<p>
+Velvet Elite wurde für Personen mit ernsthaften Absichten entwickelt, die bedeutungsvolle Beziehungen suchen. Alle Bewerber durchlaufen einen selektiven Prüfungsprozess, und nur ein kleiner Prozentsatz wird genehmigt.
+</p>
+
+<!-- FAQ 4 -->
+<h3>Ist Velvet Elite eine Dating-App?</h3>
+<p>
+Nein. Velvet Elite ist keine Dating-App. Es gibt kein Swipen, kein öffentliches Browsen und keinen Algorithmus. Es handelt sich um einen Concierge-Matchmaking-Service mit Fokus auf kuratierte Vorstellungen.
+</p>
+
+<!-- FAQ 5 -->
+<h3>Sind meine Informationen privat?</h3>
+<p>
+Ja. Alle Bewerbungen und Mitgliedsdaten werden vertraulich behandelt. Profile werden niemals öffentlich gemacht, und Vorstellungen erfolgen ausschließlich privat zwischen verifizierten Mitgliedern.
+</p>
+
+<!-- FAQ 6 -->
+<h3>Was unterscheidet Velvet Elite von anderen Matchmaking-Services?</h3>
+<p>
+Im Gegensatz zu traditionellen Partnervermittlungen konzentriert sich Velvet Elite auf internationale, kuratierte Vorstellungen mit strenger Überprüfung, selektiver Aufnahme und einem globalen Netzwerk verifizierter Mitglieder.
+</p>
+
+<!-- FAQ 7 -->
+<h3>Wie lange dauert der Bewerbungsprozess?</h3>
+<p>
+Die meisten Bewerbungen werden innerhalb von 24–72 Stunden geprüft. Nach Genehmigung werden Kandidaten in das Netzwerk für private Matchmaking-Vorstellungen eingeladen.
+</p>
+
+<!-- FAQ 8 -->
+<h3>Warum ist Velvet Elite selektiv?</h3>
+<p>
+Selektivität gewährleistet Kompatibilität, Privatsphäre und Qualität der Vorstellungen. Nur eine begrenzte Anzahl von Bewerbern wird akzeptiert, um einen hohen Matchmaking-Standard aufrechtzuerhalten.
+</p>
+
+</div>
+
+</div>
+
+<img 
+  src="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/velvet-elite-banner.png" 
+  alt="Velvet Elite Access"
+  style="
+    display:block;
+    width:100%;
+    max-width:920px;
+    height:auto;
+    margin:40px auto 0 auto;
+    border-radius:18px;
+    filter: drop-shadow(0 0 25px rgba(212,175,55,0.25));
+  "
+>
+
+<!-- FOOTER -->
+<div class="footer" style="padding:40px 20px;">
+
+    <!-- Facebook CTA (primary element) -->
+    <div style="margin-bottom:18px;">
+        <a href="https://www.facebook.com/velvetelitematchmaking" target="_blank"
+           style="
+           display:inline-flex;
+           align-items:center;
+           gap:10px;
+           padding:12px 22px;
+           border-radius:30px;
+           background:linear-gradient(145deg,#d4af37,#f5dc8a);
+           color:#0b0b0b;
+           font-weight:600;
+           text-decoration:none;
+           box-shadow:0 8px 20px rgba(212,175,55,0.18);
+           ">
+            📘 Folgen Sie uns auf Facebook
+        </a>
+    </div>
+
+    <!-- Legal link (secondary) -->
+    <div style="margin-bottom:10px;">
+        <a href="disclaimer.html"
+           style="color:rgba(212,175,55,0.75);
+           text-decoration:underline;
+           font-size:13px;">
+            Haftungsausschluss & Richtlinien
+        </a>
+    </div>
+
+    <!-- Divider line feel -->
+    <div style="width:60px; height:1px; background:rgba(212,175,55,0.25); margin:14px auto;"></div>
+
+    <!-- Copyright (tertiary hierarchy) -->
+    <div style="font-size:12px; opacity:0.6; margin-top:12px; letter-spacing:0.3px;">
+        © 2026 Velvet Elite Matchmaking. Alle Rechte vorbehalten.
+    </div>
+
+</div>
+
+</body>
+</html>
