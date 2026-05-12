@@ -1,0 +1,567 @@
+<!DOCTYPE html>    
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Velvet Elite | プライベート・マッチメイキング・ネットワーク</title>
+    <!-- SEO META -->
+<meta name="description" content="Velvet Eliteは、真剣な国際的関係を求める認証済み個人向けの招待制限定マッチメイキングネットワークです。スワイプなし。公開プロフィールなし。人による厳選紹介のみ。">
+
+<meta name="keywords" content="高級マッチメイキング, エリートデーティングネットワーク, プライベートマッチメイキングサービス, 高級デーティングエージェンシー, 国際マッチメイキング, 限定デーティングクラブ, 認証済みデーティングプラットフォーム, 秘密厳守マッチメイキング, コンシェルジュデーティングサービス, エリート恋愛, VIPデーティングネットワーク, プレミアムマッチメイキング, 厳選デーティングコミュニティ, 真剣な恋愛, グローバルマッチメイキング">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="Velvet Elite Matchmaking">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://velvetroyale.github.io/velvet-elite/">
+
+<!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+<meta property="og:title" content="Velvet Elite | プライベート・マッチメイキング・ネットワーク">
+<meta property="og:description" content="認証済み個人向けの招待制ラグジュアリーマッチメイキング。スワイプなし。公開プロフィールなし。純粋に厳選された紹介のみ。">
+<meta property="og:image" content="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://velvetroyale.github.io/velvet-elite/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Velvet Elite | プライベート・マッチメイキング・ネットワーク">
+<meta name="twitter:description" content="エリート国際関係のための限定招待制マッチメイキング。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png">
+
+<!-- Favicon (optional but recommended) -->
+<link rel="icon" href="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png">
+
+<!-- Structured Data (Google SEO Boost) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Velvet Elite",
+  "url": "https://velvetroyale.github.io/velvet-elite/",
+  "logo": "https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png",
+  "description": "認証済み個人向けに厳選された国際紹介を提供する招待制プライベートマッチメイキングネットワーク。",
+  "sameAs": [
+    "https://www.facebook.com/velvetelitematchmaking"
+  ]
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at top, #141414, #0b0b0b 70%);
+    color: #d4af37;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* ✅ GLOBAL LUXURY HEADING SYSTEM */
+h1, h2 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* HERO */
+.hero {
+    padding: 90px 20px 40px 20px;
+}
+
+/* HERO IMAGE */
+.hero img {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 22px auto;
+    filter: drop-shadow(0 0 45px rgba(212, 175, 55, 0.35));
+    border-radius: 24px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 780px;
+    margin: 12px auto;
+    color: rgba(212, 175, 55, 0.95);
+}
+
+/* TRUST */
+.trust {
+    font-size: 13px;
+    opacity: 0.75;
+    margin: 6px 0;
+}
+
+/* TRUST BAR */
+.trust-bar {
+    font-size: 12px;
+    opacity: 0.78;
+    line-height: 1.9;
+    margin-top: 14px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CONTAINER */
+.container {
+    padding: 30px 16px 60px 16px;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(145deg, #161616, #101010);
+    padding: 34px;
+    margin: 22px auto;
+    max-width: 600px;
+    border-radius: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    color: rgba(212, 175, 55, 0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* BUTTON */
+a.button {
+    display: block;
+    padding: 18px;
+    margin-top: 18px;
+
+    background: linear-gradient(145deg, #d4af37, #f5dc8a);
+    color: #0b0b0b;
+
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 12px;
+    font-size: 15px;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.18);
+}
+
+/* TAG */
+.tag {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* FOOTER (FIXED + RESTORED) */
+.footer {
+    margin-top: 60px;
+    font-size: 13px;
+    opacity: 0.75;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(212,175,55,0.15);
+}
+
+.footer a {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 70px 14px 30px 14px;
+    }
+
+    .hero img {
+        max-width: 92vw;
+        border-radius: 18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+    <img src="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/Velvet-Elite-Header1.png" alt="Velvet Elite Logo">
+
+    <p>
+      ヨーロッパ、北米、中南米、アジアにわたるプライベートな国際紹介のために選ばれた方限定。 </p>
+
+    <!-- PRIMARY POSITIONING -->
+    <div class="trust" style="font-weight:500; opacity:0.92; margin-top:14px;">
+        申請制アクセス • プライベート審査 • 秘密厳守の紹介
+    </div>
+
+    <!-- LUXURY OPERATING PRINCIPLE -->
+    <div class="trust" style="opacity:0.72; margin-top:6px;">
+        すべてのプロフィールは個別に審査されます • 招待は24〜72時間以内に厳選して送付されます
+    </div>
+<!-- DISCREET TOP CTA BUTTONS -->
+
+<div style="
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:18px;
+">
+
+    <!-- WOMEN -->
+    <div style="text-align:center;">
+        
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            女性向け
+        </div>
+
+        <a href="women.html" style="
+            display:inline-block;
+            padding:12px 20px;
+            border-radius:10px;
+            text-decoration:none;
+            font-size:13px;
+            font-weight:600;
+            letter-spacing:0.3px;
+            background:linear-gradient(145deg, #d4af37, #f5dc8a);
+            color:#0b0b0b;
+            box-shadow:0 6px 18px rgba(212,175,55,0.18);
+        ">
+            💎 プライベートメンバーシップを申請
+        </a>
+
+    </div>
+
+    <!-- MEN -->
+    <div style="text-align:center;">
+
+        <div style="
+            font-size:11px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            opacity:0.65;
+            margin-bottom:6px;
+        ">
+            男性向け
+        </div>
+
+        <a href="men.html" style="
+            display:inline-block;
+            padding:12px 20px;
+            border-radius:10px;
+            text-decoration:none;
+            font-size:13px;
+            font-weight:600;
+            letter-spacing:0.3px;
+            background:linear-gradient(145deg, #d4af37, #f5dc8a);
+            color:#0b0b0b;
+            box-shadow:0 6px 18px rgba(212,175,55,0.18);
+        ">
+            💼 プライベート審査を申請
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+    <!-- LUXURY DIVIDER (adds breathing + editorial feel) -->
+    <div style="width:50px; height:1px; background:rgba(212,175,55,0.25); margin:18px auto;"></div>
+
+    <!-- TRUST ARCHITECTURE (refined into 3 grouped lines) -->
+    <div class="trust-bar">
+
+        ✔ 20か国以上の認証済みメンバー<br>
+        ✔ 人による審査を経たマッチメイキングプロセス<br>
+        ✔ 毎月のプライベート紹介 <br><br>
+
+        ✔ 厳選された承認（承認率7〜12%）<br>
+        ✔ 秘密厳守のプロフィール管理と審査<br><br>
+
+        ✔ 公開プロフィールなし • スワイプなし • アルゴリズムなし
+
+    </div>
+
+<p style="
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    line-height:1.9;
+    opacity:0.82;
+    margin-top:18px;
+">
+    特別な出会い <br>
+    💎 <br>
+    卓越した基準
+</p>
+   
+
+</div>
+<!-- HERO END -->
+    
+    <!-- LUXURY DIVIDER (adds breathing + editorial feel) -->
+    <div style="width:50px; height:1px; background:rgba(212,175,55,0.25); margin:18px auto;"></div>
+   <div class="container">
+
+<div class="card">
+
+<h2>💎 ご利用の流れ</h2>
+
+<p>
+Velvet Eliteは、厳選承認、人による審査、そして厳選された国際紹介に基づくプライベート・コンシェルジュ型マッチメイキングプロセスを提供しています。
+</p>
+
+<a class="button" href="process.html">
+全プロセスを見る
+</a>
+
+</div>
+
+</div>
+    
+<!-- CONTENT -->
+<div class="container">
+
+<div class="card">
+<h2>🔎 厳選入会 </h2>
+<p>すべての応募者は、目的意識、信頼性、相性に基づいて審査されます。すべての申請が承認されるわけではなく、厳選されたプロフィールのみが承認されます。</p>
+</div>
+<div class="card">
+
+<h2>💎 このサービスが向いている方</h2>
+
+<p style="opacity:0.85;">
+Velvet Eliteは、深い関係性、秘密厳守、そして長期的な相性を重視する方のためのサービスです。
+</p>
+
+<ul style="
+    text-align:left;
+    margin-top:12px;
+    padding-left:18px;
+    opacity:0.9;
+    line-height:1.8;
+">
+    <li>真剣な長期的関係を求める方</li>
+    <li>高い目的意識を持つプロフェッショナルやグローバルなライフスタイルの方</li>
+    <li>デーティングアプリやスワイプ文化に疲れた方</li>
+    <li>量よりもプライバシー、秘密厳守、品質を重視する方</li>
+</ul>
+
+<p style="margin-top:14px; opacity:0.75;">
+これはカジュアルなデーティングプラットフォームではなく、意図的なつながりのための厳選マッチメイキングネットワークです。
+</p>
+
+</div>
+<div class="card">
+<h2>💎 Velvet Eliteを選ぶ理由</h2>
+<p>デーティングアプリとは異なり、Velvet Eliteはアルゴリズムによるスワイプではなく、人による厳選紹介に重点を置いたプライベート・コンシェルジュ型マッチメイキングシステムです。</p>
+</div>
+
+<div class="card">
+<h2>🔐 プライベートシステム</h2>
+<p>公開プロフィールなし。スワイプなし。すべての紹介は認証済みメンバー間で非公開に行われます。</p>
+</div>
+
+<div class="card">
+<h2>⚖️ 倫理基準</h2>
+<p>Velvet Eliteは、厳格な同意、プライバシー、成人限定参加の原則に基づいて運営されています。強制、詐欺、違法行為に対しては一切容認しません。</p>
+</div>
+
+</div>
+    
+    <!-- LUXURY DIVIDER (adds breathing + editorial feel) -->
+    <div style="width:50px; height:1px; background:rgba(212,175,55,0.25); margin:18px auto;"></div>
+    
+<!-- OPTIONS -->
+<div class="container">
+
+<div class="card">
+
+<h2>💎 女性向け </h2>
+
+<p>
+ヨーロッパ、北米、中南米、アジアにわたる認証済みメンバーとの厳選紹介による、プライベートな国際ネットワークへアクセス。
+</p>
+
+<p class="tag" style="margin-top:12px; opacity:0.85;">
+すべてのプロフィールは個別に審査されます。選ばれたメンバーのみが、相性と魅力に基づくプライベートかつ秘密厳守の紹介へ招待されます。
+</p>
+
+<a class="button" href="women.html">
+    プライベートメンバーシップを申請
+</a>
+
+<div class="tag" style="margin-top:12px;">
+申請制選考 • 秘密厳守の審査プロセス • 限定承認枠
+</div>
+
+<p class="tag" style="margin-top:10px; opacity:0.7;">
+承認後、一部の選ばれたプロフィールには特別掲載オプションが提供される場合があります。
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>💼 男性向け </h2>
+
+<p>
+完全に厳選されたプライベート紹介を通じて、真剣な国際関係を求める成功した男性向けの秘密厳守コンシェルジュ型マッチメイキングネットワークへアクセス。
+</p>
+
+<p class="tag" style="margin-top:12px; opacity:0.85;">
+閲覧なし。スワイプなし。公開プロフィールなし。すべての紹介は厳選され、非公開で手配されます。
+</p>
+
+<a class="button" href="men.html">
+    プライベート審査を申請
+</a>
+
+<div class="tag" style="margin-top:12px;">
+ 申請制アクセス • 厳選された国際紹介 • 秘密厳守コンシェルジュプロセス
+</div>
+
+<p class="tag" style="margin-top:10px; opacity:0.7;">
+ネットワーク全体の選別性と相性を維持するため、受け入れ人数を限定しています。
+</p>
+
+</div>
+
+</div>
+
+    <!-- SEO FAQ SECTION -->
+<div class="container">
+
+<div class="card" style="text-align:left;">
+
+<h2>❓ よくある質問</h2>
+
+<!-- FAQ 1 -->
+<h3>Velvet Eliteとは何ですか？</h3>
+<p>
+Velvet Eliteは、真剣な国際関係を求める認証済み個人を結びつける、招待制限定の高級マッチメイキングネットワークです。デーティングアプリとは異なり、スワイプや公開プロフィールは存在せず、すべての紹介は人によって厳選されます。
+</p>
+
+<!-- FAQ 2 -->
+<h3>高級マッチメイキングはどのように機能しますか？</h3>
+<p>
+応募者は、目的意識、相性、信頼性に基づいて審査されるプライベートプロフィールを提出します。承認されたメンバーは、その後、当社のグローバルネットワーク内で慎重に選ばれた相手と紹介されます。
+</p>
+
+<!-- FAQ 3 -->
+<h3>誰がVelvet Eliteに参加できますか？</h3>
+<p>
+Velvet Eliteは、意味のある関係を求める高い目的意識を持つ方のために設計されています。すべての応募者は厳選審査を受け、承認されるのはごく一部のみです。
+</p>
+
+<!-- FAQ 4 -->
+<h3>Velvet Eliteはデーティングアプリですか？</h3>
+<p>
+いいえ。Velvet Eliteはデーティングアプリではありません。スワイプ、公開閲覧、アルゴリズムは存在しません。厳選された紹介に重点を置いたコンシェルジュ型マッチメイキングサービスです。
+</p>
+
+<!-- FAQ 5 -->
+<h3>私の情報は非公開ですか？</h3>
+<p>
+はい。すべての申請およびメンバーデータは秘密厳守で取り扱われます。プロフィールが公開されることはなく、紹介は認証済みメンバー間のみで非公開に行われます。
+</p>
+
+<!-- FAQ 6 -->
+<h3>Velvet Eliteは他のマッチメイキングサービスと何が違いますか？</h3>
+<p>
+従来のマッチメイキング会社とは異なり、Velvet Eliteは厳格な審査、厳選承認、そして認証済みメンバーによるグローバルネットワークを備えた国際的な厳選紹介に重点を置いています。
+</p>
+
+<!-- FAQ 7 -->
+<h3>申請プロセスにはどれくらい時間がかかりますか？</h3>
+<p>
+ほとんどの申請は24〜72時間以内に審査されます。承認された場合、候補者はプライベートマッチメイキング紹介のためにネットワークへ招待されます。
+</p>
+
+<!-- FAQ 8 -->
+<h3>なぜVelvet Eliteは厳選制なのですか？</h3>
+<p>
+厳選制は、相性、プライバシー、そして紹介の質を保証するためです。高水準のマッチメイキングを維持するため、受け入れ人数は限定されています。
+</p>
+
+</div>
+
+</div>
+    
+<img 
+  src="https://raw.githubusercontent.com/velvetroyale/velvet-elite/main/velvet-elite-banner.png" 
+  alt="Velvet Elite Access"
+  style="
+    display:block;
+    width:100%;
+    max-width:920px;
+    height:auto;
+    margin:40px auto 0 auto;
+    border-radius:18px;
+    filter: drop-shadow(0 0 25px rgba(212,175,55,0.25));
+  "
+>
+<!-- FOOTER -->
+<div class="footer" style="padding:40px 20px;">
+
+    <!-- Facebook CTA (primary element) -->
+    <div style="margin-bottom:18px;">
+        <a href="https://www.facebook.com/velvetelitematchmaking" target="_blank"
+           style="
+           display:inline-flex;
+           align-items:center;
+           gap:10px;
+           padding:12px 22px;
+           border-radius:30px;
+           background:linear-gradient(145deg,#d4af37,#f5dc8a);
+           color:#0b0b0b;
+           font-weight:600;
+           text-decoration:none;
+           box-shadow:0 8px 20px rgba(212,175,55,0.18);
+           ">
+            📘 Facebookでフォロー
+        </a>
+    </div>
+
+    <!-- Legal link (secondary) -->
+    <div style="margin-bottom:10px;">
+        <a href="disclaimer.html"
+           style="color:rgba(212,175,55,0.75);
+           text-decoration:underline;
+           font-size:13px;">
+            免責事項 & ポリシー
+        </a>
+    </div>
+
+    <!-- Divider line feel -->
+    <div style="width:60px; height:1px; background:rgba(212,175,55,0.25); margin:14px auto;"></div>
+
+    <!-- Copyright (tertiary hierarchy) -->
+    <div style="font-size:12px; opacity:0.6; margin-top:12px; letter-spacing:0.3px;">
+        © 2026 Velvet Elite Matchmaking. All Rights Reserved.
+    </div>
+
+</div>
+
+</body>
+</html>
