@@ -130,16 +130,26 @@ Applications are reviewed for approval.
 <!-- FORM (WORKING FIX) -->
 <div class="card">
 
-<form action="https://formsubmit.co/rg.salesnetwork@gmail.com" method="POST">
+<form action="https://api.web3forms.com/submit" method="POST">
 
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
+<!-- WEB3FORMS ACCESS KEY -->
+<input type="hidden" name="access_key" value="e092569b-da4e-40d5-8da1-f3e18c98eaf4">
 
-<!-- IMPORTANT FIX: real redirect instead of JS -->
-<input type="hidden" name="_next" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
+<!-- REDIRECT AFTER SUBMIT -->
+<input type="hidden" name="redirect" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
 
-<input type="hidden" name="_subject" value="💼 New Velvet Elite Men Application">
+<!-- EMAIL SUBJECT -->
+<input type="hidden" name="subject" value="💼 New Velvet Elite Men Application">
+
+<!-- OPTIONAL FROM NAME -->
+<input type="hidden" name="from_name" value="Velvet Elite">
+
+<!-- OPTIONAL ANTI-SPAM -->
+<input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+<!-- LANGUAGE TRACKING -->
 <input type="hidden" name="Selected Language" id="selectedLanguage" value="English">
+    
 <label data-key="first">First Name *</label>
 <input type="text" name="First Name" required>
 
