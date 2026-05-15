@@ -6,210 +6,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
-*{
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#0b0b0b;
-    color:#d4af37;
-    display:flex;
-    justify-content:center;
-    min-height:100vh;
+margin:0;
+font-family:Arial,sans-serif;
+background:#0b0b0b;
+color:#d4af37;
+display:flex;
+justify-content:center;
+min-height:100vh;
 }
-
-.container{
-    max-width:850px;
-    width:100%;
-    padding:20px;
-    text-align:center;
-}
-
-/* HERO */
+.container{max-width:850px;width:100%;padding:20px;text-align:center;}
 
 .hero{
-    background:
-    linear-gradient(
-    135deg,
-    #0b0b0b,
-    #17120a);
-    border:1px solid rgba(212,175,55,0.18);
-    border-radius:18px;
-    padding:40px 25px;
-    margin-bottom:20px;
+background:linear-gradient(135deg,#0b0b0b,#17120a);
+border:1px solid rgba(212,175,55,0.18);
+border-radius:18px;
+padding:40px 25px;
+margin-bottom:20px;
 }
 
 .badge{
-    display:inline-block;
-    padding:8px 14px;
-    border-radius:100px;
-    border:1px solid rgba(212,175,55,0.35);
-    background:#141414;
-    font-size:12px;
-    letter-spacing:1px;
-    margin-bottom:18px;
+display:inline-block;
+padding:8px 14px;
+border-radius:100px;
+border:1px solid rgba(212,175,55,0.35);
+background:#141414;
+font-size:12px;
+letter-spacing:1px;
+margin-bottom:18px;
 }
 
 h1{
-    margin:0 0 18px;
-    font-size:42px;
-    line-height:1.1;
-    color:#f5d97a;
+margin:0 0 18px;
+font-size:42px;
+line-height:1.1;
+color:#f5d97a;
 }
 
 .hero p{
-    color:#d7d7d7;
-    font-size:17px;
-    line-height:1.7;
-    max-width:700px;
-    margin:auto;
+color:#d7d7d7;
+font-size:17px;
+line-height:1.7;
+max-width:700px;
+margin:auto;
 }
 
-/* BENEFITS */
-
 .benefits{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:12px;
-    margin-top:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:12px;
+margin-top:30px;
 }
 
 .benefit{
-    background:#141414;
-    border:1px solid rgba(212,175,55,0.14);
-    border-radius:12px;
-    padding:16px;
-    font-size:14px;
+background:#141414;
+border:1px solid rgba(212,175,55,0.14);
+border-radius:12px;
+padding:16px;
+font-size:14px;
 }
-
-/* CARD */
 
 .card{
-    background:#141414;
-    padding:24px;
-    border-radius:16px;
-    border:1px solid rgba(212,175,55,0.18);
-    margin-bottom:18px;
-    text-align:left;
+background:#141414;
+padding:24px;
+border-radius:16px;
+border:1px solid rgba(212,175,55,0.18);
+margin-bottom:18px;
+text-align:left;
 }
 
-/* FORM */
-
-form{
-    text-align:left;
-}
-
-label{
-    font-size:14px;
-    opacity:0.92;
-    display:block;
-    margin-bottom:5px;
-}
+label{font-size:14px;opacity:0.92;display:block;margin-bottom:5px;}
 
 input{
-    width:100%;
-    padding:14px;
-    margin:0 0 18px;
-    background:#111;
-    border:1px solid rgba(212,175,55,0.18);
-    color:#f5d97a;
-    border-radius:10px;
-    outline:none;
-    transition:0.2s ease;
-    font-size:15px;
+width:100%;
+padding:14px;
+margin:0 0 18px;
+background:#111;
+border:1px solid rgba(212,175,55,0.18);
+color:#f5d97a;
+border-radius:10px;
+font-size:15px;
 }
 
-input:focus{
-    border-color:#d4af37;
+button{
+margin-top:20px;
+padding:16px;
+background:#d4af37;
+border:none;
+font-weight:700;
+border-radius:12px;
+cursor:pointer;
+width:100%;
 }
-
-/* BUTTON */
-
-button[type="submit"]{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    margin:25px auto 0;
-    padding:16px 24px;
-    background:#d4af37;
-    color:#0b0b0b;
-    border:none;
-    font-weight:700;
-    border-radius:12px;
-    cursor:pointer;
-    width:100%;
-    font-size:16px;
-    transition:0.25s ease;
-}
-
-button[type="submit"]:hover{
-    transform:translateY(-2px);
-}
-
-/* PRIVACY */
-
-.privacy{
-    text-align:center;
-    font-size:13px;
-    opacity:0.72;
-    margin-top:16px;
-    line-height:1.6;
-}
-
-/* LANGUAGE BAR */
 
 .language-bar{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:8px;
-    margin-bottom:25px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:8px;
+margin-bottom:25px;
 }
 
 .language-btn{
-    padding:7px 12px;
-    border-radius:20px;
-    font-size:11px;
-    background:#141414;
-    color:#d4af37;
-    border:1px solid rgba(212,175,55,0.25);
-    cursor:pointer;
-    transition:0.2s ease;
-}
-
-.language-btn:hover{
-    border-color:#d4af37;
+padding:7px 12px;
+border-radius:20px;
+font-size:11px;
+background:#141414;
+color:#d4af37;
+border:1px solid rgba(212,175,55,0.25);
+cursor:pointer;
 }
 
 .language-btn.active{
-    background:#d4af37;
-    color:#0b0b0b;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-h1{
-    font-size:32px;
-}
-
-.hero{
-    padding:32px 20px;
-}
-
-.hero p{
-    font-size:15px;
-}
-
+background:#d4af37;
+color:#0b0b0b;
 }
 
 </style>
@@ -219,110 +131,54 @@ h1{
 
 <div class="container">
 
-<!-- LANGUAGE BAR -->
 <div class="language-bar">
-
-<button class="language-btn active" onclick="setLang('en', this)">English</button>
-<button class="language-btn" onclick="setLang('es', this)">Español</button>
-<button class="language-btn" onclick="setLang('fr', this)">Français</button>
-<button class="language-btn" onclick="setLang('it', this)">Italiano</button>
-<button class="language-btn" onclick="setLang('de', this)">Deutsch</button>
-<button class="language-btn" onclick="setLang('ru', this)">Русский</button>
-<button class="language-btn" onclick="setLang('uk', this)">Українська</button>
-<button class="language-btn" onclick="setLang('pl', this)">Polski</button>
-<button class="language-btn" onclick="setLang('ro', this)">Română</button>
-<button class="language-btn" onclick="setLang('pt', this)">Português</button>
-<button class="language-btn" onclick="setLang('ar', this)">العربية</button>
-<button class="language-btn" onclick="setLang('zh', this)">中文</button>
-<button class="language-btn" onclick="setLang('ja', this)">日本語</button>
-<button class="language-btn" onclick="setLang('tl', this)">Tagalog</button>
-<button class="language-btn" onclick="setLang('th', this)">ไทย</button>
-<button class="language-btn" onclick="setLang('vi', this)">Tiếng Việt</button>
-<button class="language-btn" onclick="setLang('ko', this)">한국어</button>
-
+<button class="language-btn active" onclick="setLang('en',this)">English</button>
+<button class="language-btn" onclick="setLang('es',this)">Español</button>
+<button class="language-btn" onclick="setLang('fr',this)">Français</button>
+<button class="language-btn" onclick="setLang('it',this)">Italiano</button>
+<button class="language-btn" onclick="setLang('de',this)">Deutsch</button>
+<button class="language-btn" onclick="setLang('ru',this)">Русский</button>
+<button class="language-btn" onclick="setLang('tl',this)">Tagalog</button>
 </div>
-
-<!-- HERO -->
 
 <div class="hero">
-
-<div class="badge" id="badge">
-PRIVATE INTERNATIONAL MATCHMAKING
-</div>
-
-<h1 id="title">
-Request Private Access
-</h1>
-
-<p id="desc">
-Velvet Elite is a private international introduction network for individuals seeking serious, high-intent relationships through curated matchmaking.
-</p>
+<div class="badge" id="badge">PRIVATE INTERNATIONAL MATCHMAKING</div>
+<h1 id="title">Request Private Access</h1>
+<p id="desc">Velvet Elite is a private international introduction network...</p>
 
 <div class="benefits">
-
-<div class="benefit" id="b1">
-✔ No public profiles
+<div class="benefit" id="b1">✔ No public profiles</div>
+<div class="benefit" id="b2">✔ Private introductions only</div>
+<div class="benefit" id="b3">✔ International member network</div>
+<div class="benefit" id="b4">✔ Applications reviewed manually</div>
 </div>
-
-<div class="benefit" id="b2">
-✔ Private introductions only
 </div>
-
-<div class="benefit" id="b3">
-✔ International member network
-</div>
-
-<div class="benefit" id="b4">
-✔ Applications reviewed manually
-</div>
-
-</div>
-
-</div>
-
-<!-- FORM -->
 
 <div class="card">
-
 <form action="https://api.web3forms.com/submit" method="POST">
 
 <input type="hidden" name="access_key" value="e092569b-da4e-40d5-8da1-f3e18c98eaf4">
-
-<input type="hidden" name="redirect" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
-
-<input type="hidden" name="subject" value="💼 Men Velvet Elite Private Access Request">
-
-<input type="hidden" name="from_name" value="Velvet Elite">
-
-<input type="checkbox" name="botcheck" style="display:none;">
-
 <input type="hidden" name="Selected Language" id="selectedLanguage" value="English">
 
 <label data-key="first">First Name *</label>
-<input type="text" name="First Name" required>
+<input type="text" required>
 
 <label data-key="email">Email *</label>
-<input type="email" name="Email" required>
+<input type="email" required>
 
 <label data-key="age">Age *</label>
-<input type="number" name="Age" min="18" required>
+<input type="number" required>
 
 <label data-key="location">Location *</label>
-<input type="text" name="Location" required>
+<input type="text" required>
 
-<label data-key="phone">Phone (optional)</label>
-<input type="text" name="Phone">
-
-<button type="submit" id="btn">
-Request Invitation
-</button>
+<button id="btn">Request Invitation</button>
 
 <div class="privacy" id="privacy">
-🔒 Private & confidential. No swiping. No public profiles.
+🔒 Private & confidential. No swiping.
 </div>
 
 </form>
-
 </div>
 
 </div>
@@ -330,353 +186,46 @@ Request Invitation
 <script>
 
 const lang = {
-
-/* ENGLISH */
-en:{
-title:"Request Private Access",
-desc:"Velvet Elite is a private international introduction network for individuals seeking serious, high-intent relationships through curated matchmaking.",
-btn:"Request Invitation",
-first:"First Name *",
-email:"Email *",
-phone:"Phone (optional)",
-age:"Age *",
-location:"Location *",
-privacy:"🔒 Private & confidential. No swiping. No public profiles.",
-b1:"✔ No public profiles",
-b2:"✔ Private introductions only",
-b3:"✔ International member network",
-b4:"✔ Applications reviewed manually"
-},
-
-/* SPANISH */
-es:{
-title:"Solicitar Acceso Privado",
-desc:"Velvet Elite es una red privada internacional de introducciones para personas que buscan relaciones serias mediante matchmaking selectivo.",
-btn:"Solicitar Invitación",
-first:"Nombre *",
-email:"Correo electrónico *",
-phone:"Teléfono (opcional)",
-age:"Edad *",
-location:"Ubicación *",
-privacy:"🔒 Privado y confidencial. Sin perfiles públicos. Sin swiping.",
-b1:"✔ Sin perfiles públicos",
-b2:"✔ Introducciones privadas únicamente",
-b3:"✔ Red internacional de miembros",
-b4:"✔ Solicitudes revisadas manualmente"
-},
-
-/* FRENCH */
-fr:{
-title:"Demander un Accès Privé",
-desc:"Velvet Elite est un réseau privé international destiné aux personnes recherchant des relations sérieuses grâce à un matchmaking sélectif.",
-btn:"Demander une invitation",
-first:"Prénom *",
-email:"Email *",
-phone:"Téléphone (optionnel)",
-age:"Âge *",
-location:"Localisation *",
-privacy:"🔒 Privé et confidentiel. Aucun profil public. Aucun swipe.",
-b1:"✔ Aucun profil public",
-b2:"✔ Introductions privées uniquement",
-b3:"✔ Réseau international de membres",
-b4:"✔ Candidatures examinées manuellement"
-}
-
-},
-
-/* ITALIAN */
-it:{
-title:"Richiedi Accesso Privato",
-desc:"Velvet Elite è una rete privata internazionale di introduzioni per persone che cercano relazioni serie e intenzionali attraverso matchmaking selettivo.",
-btn:"Richiedi Invito",
-first:"Nome *",
-email:"Email *",
-phone:"Telefono (opzionale)",
-age:"Età *",
-location:"Posizione *",
-privacy:"🔒 Privato e confidenziale. Nessun profilo pubblico. Nessuno swipe.",
-b1:"✔ Nessun profilo pubblico",
-b2:"✔ Solo introduzioni private",
-b3:"✔ Rete internazionale di membri",
-b4:"✔ Candidature esaminate manualmente"
-},
-
-/* GERMAN */
-de:{
-title:"Privaten Zugang anfordern",
-desc:"Velvet Elite ist ein privates internationales Einführungsnetzwerk für Personen, die ernsthafte Beziehungen durch kuratiertes Matchmaking suchen.",
-btn:"Einladung anfordern",
-first:"Vorname *",
-email:"E-Mail *",
-phone:"Telefon (optional)",
-age:"Alter *",
-location:"Standort *",
-privacy:"🔒 Privat und vertraulich. Keine öffentlichen Profile. Kein Swipen.",
-b1:"✔ Keine öffentlichen Profile",
-b2:"✔ Nur private Vorstellungen",
-b3:"✔ Internationales Mitgliedernetzwerk",
-b4:"✔ Bewerbungen werden manuell geprüft"
-},
-
-/* RUSSIAN */
-ru:{
-title:"Запросить приватный доступ",
-desc:"Velvet Elite — это международная частная сеть знакомств для людей, ищущих серьёзные отношения через персональный подбор.",
-btn:"Запросить приглашение",
-first:"Имя *",
-email:"Эл. почта *",
-phone:"Телефон (необязательно)",
-age:"Возраст *",
-location:"Местоположение *",
-privacy:"🔒 Конфиденциально и приватно. Без публичных профилей. Без свайпов.",
-b1:"✔ Без публичных профилей",
-b2:"✔ Только приватные знакомства",
-b3:"✔ Международная сеть участников",
-b4:"✔ Заявки проверяются вручную"
-},
-
-/* UKRAINIAN */
-uk:{
-title:"Запросити приватний доступ",
-desc:"Velvet Elite — це міжнародна приватна мережа знайомств для людей, які шукають серйозні стосунки через персональний підбір.",
-btn:"Запросити запрошення",
-first:"Ім'я *",
-email:"Ел. пошта *",
-phone:"Телефон (необов'язково)",
-age:"Вік *",
-location:"Місцезнаходження *",
-privacy:"🔒 Приватно та конфіденційно. Без публічних профілів. Без свайпів.",
-b1:"✔ Без публічних профілів",
-b2:"✔ Лише приватні знайомства",
-b3:"✔ Міжнародна мережа учасників",
-b4:"✔ Заявки перевіряються вручну"
-},
-
-/* POLISH */
-pl:{
-title:"Poproś o prywatny dostęp",
-desc:"Velvet Elite to prywatna międzynarodowa sieć zapoznawcza dla osób szukających poważnych relacji poprzez selektywne matchmaking.",
-btn:"Poproś o zaproszenie",
-first:"Imię *",
-email:"Email *",
-phone:"Telefon (opcjonalnie)",
-age:"Wiek *",
-location:"Lokalizacja *",
-privacy:"🔒 Prywatne i poufne. Bez publicznych profili. Bez przesuwania.",
-b1:"✔ Brak publicznych profili",
-b2:"✔ Tylko prywatne przedstawienia",
-b3:"✔ Międzynarodowa sieć członków",
-b4:"✔ Zgłoszenia sprawdzane ręcznie"
-},
-
-/* ROMANIAN */
-ro:{
-title:"Solicită Acces Privat",
-desc:"Velvet Elite este o rețea internațională privată de introduceri pentru persoane care caută relații serioase prin matchmaking selectiv.",
-btn:"Solicită Invitație",
-first:"Prenume *",
-email:"Email *",
-phone:"Telefon (opțional)",
-age:"Vârstă *",
-location:"Locație *",
-privacy:"🔒 Privat și confidențial. Fără profiluri publice. Fără swipe.",
-b1:"✔ Fără profiluri publice",
-b2:"✔ Doar introduceri private",
-b3:"✔ Rețea internațională de membri",
-b4:"✔ Aplicațiile sunt verificate manual"
-},
-
-/* PORTUGUESE */
-pt:{
-title:"Solicitar Acesso Privado",
-desc:"Velvet Elite é uma rede internacional privada de apresentações para pessoas que procuram relacionamentos sérios através de matchmaking seletivo.",
-btn:"Solicitar Convite",
-first:"Nome *",
-email:"Email *",
-phone:"Telefone (opcional)",
-age:"Idade *",
-location:"Localização *",
-privacy:"🔒 Privado e confidencial. Sem perfis públicos. Sem deslizar.",
-b1:"✔ Sem perfis públicos",
-b2:"✔ Apenas apresentações privadas",
-b3:"✔ Rede internacional de membros",
-b4:"✔ Candidaturas analisadas manualmente"
-},
-
-/* ARABIC */
-ar:{
-title:"طلب وصول خاص",
-desc:"Velvet Elite هي شبكة دولية خاصة للتعارف للأفراد الباحثين عن علاقات جادة من خلال التوفيق الانتقائي.",
-btn:"طلب دعوة",
-first:"الاسم الأول *",
-email:"البريد الإلكتروني *",
-phone:"الهاتف (اختياري)",
-age:"العمر *",
-location:"الموقع *",
-privacy:"🔒 خاص وسري. لا توجد ملفات عامة. بدون سحب.",
-b1:"✔ بدون ملفات شخصية عامة",
-b2:"✔ تقديمات خاصة فقط",
-b3:"✔ شبكة أعضاء دولية",
-b4:"✔ يتم مراجعة الطلبات يدويًا"
-},
-
-/* CHINESE */
-zh:{
-title:"申请私人访问",
-desc:"Velvet Elite 是一个国际私人高端配对网络，专为寻找认真关系的人士提供精选配对服务。",
-btn:"申请邀请",
-first:"名字 *",
-email:"电子邮件 *",
-phone:"电话（可选）",
-age:"年龄 *",
-location:"所在地 *",
-privacy:"🔒 私密且保密。无公开资料。无滑动配对。",
-b1:"✔ 无公开个人资料",
-b2:"✔ 仅限私人介绍",
-b3:"✔ 国际会员网络",
-b4:"✔ 申请将人工审核"
-},
-
-/* JAPANESE */
-ja:{
-title:"プライベートアクセスを申請",
-desc:"Velvet Elite は、真剣な関係を求める方のための国際的なプライベート紹介ネットワークです。",
-btn:"招待を申請",
-first:"名 *",
-email:"メール *",
-phone:"電話（任意）",
-age:"年齢 *",
-location:"所在地 *",
-privacy:"🔒 非公開かつ機密保持。公開プロフィールなし。スワイプなし。",
-b1:"✔ 公開プロフィールなし",
-b2:"✔ プライベート紹介のみ",
-b3:"✔ 国際メンバーネットワーク",
-b4:"✔ 申請は手動で審査"
-},
-
-/* TAGALOG */
-tl:{
-title:"Humiling ng Pribadong Access",
-desc:"Ang Velvet Elite ay isang pribadong international introduction network para sa mga taong naghahanap ng seryosong relasyon sa pamamagitan ng curated matchmaking.",
-btn:"Humiling ng Imbitasyon",
-first:"Pangalan *",
-email:"Email *",
-phone:"Telepono (opsyonal)",
-age:"Edad *",
-location:"Lokasyon *",
-privacy:"🔒 Pribado at kumpidensyal. Walang public profiles. Walang swiping.",
-b1:"✔ Walang public profiles",
-b2:"✔ Private introductions lamang",
-b3:"✔ International member network",
-b4:"✔ Manu-manong sinusuri ang applications"
-},
-
-/* THAI */
-th:{
-title:"ขอสิทธิ์เข้าถึงแบบส่วนตัว",
-desc:"Velvet Elite คือเครือข่ายจับคู่ระดับนานาชาติแบบส่วนตัว สำหรับผู้ที่กำลังมองหาความสัมพันธ์จริงจังผ่านการคัดเลือกเฉพาะบุคคล",
-btn:"ขอคำเชิญ",
-first:"ชื่อ *",
-email:"อีเมล *",
-phone:"โทรศัพท์ (ไม่บังคับ)",
-age:"อายุ *",
-location:"สถานที่ *",
-privacy:"🔒 เป็นส่วนตัวและเป็นความลับ ไม่มีโปรไฟล์สาธารณะ ไม่มีการปัด",
-b1:"✔ ไม่มีโปรไฟล์สาธารณะ",
-b2:"✔ แนะนำแบบส่วนตัวเท่านั้น",
-b3:"✔ เครือข่ายสมาชิกนานาชาติ",
-b4:"✔ ใบสมัครได้รับการตรวจสอบด้วยตนเอง"
-},
-
-/* VIETNAMESE */
-vi:{
-title:"Yêu cầu quyền truy cập riêng tư",
-desc:"Velvet Elite là mạng lưới kết nối riêng tư quốc tế dành cho những người tìm kiếm mối quan hệ nghiêm túc thông qua mai mối chọn lọc.",
-btn:"Yêu cầu lời mời",
-first:"Tên *",
-email:"Email *",
-phone:"Điện thoại (tùy chọn)",
-age:"Tuổi *",
-location:"Vị trí *",
-privacy:"🔒 Riêng tư và bảo mật. Không có hồ sơ công khai. Không vuốt.",
-b1:"✔ Không có hồ sơ công khai",
-b2:"✔ Chỉ giới thiệu riêng tư",
-b3:"✔ Mạng lưới thành viên quốc tế",
-b4:"✔ Hồ sơ được xét duyệt thủ công"
-},
-
-/* KOREAN */
-ko:{
-title:"비공개 액세스 요청",
-desc:"Velvet Elite는 진지한 관계를 원하는 사람들을 위한 국제 프라이빗 매칭 네트워크입니다.",
-btn:"초대 요청",
-first:"이름 *",
-email:"이메일 *",
-phone:"전화번호 (선택)",
-age:"나이 *",
-location:"위치 *",
-privacy:"🔒 비공개 및 기밀 유지. 공개 프로필 없음. 스와이프 없음.",
-b1:"✔ 공개 프로필 없음",
-b2:"✔ 비공개 소개만 제공",
-b3:"✔ 국제 회원 네트워크",
-b4:"✔ 신청서는 수동 검토"
+en:{badge:"PRIVATE INTERNATIONAL MATCHMAKING",title:"Request Private Access",btn:"Request Invitation"},
+es:{badge:"MATCHMAKING INTERNACIONAL PRIVADO",title:"Solicitar Acceso Privado",btn:"Solicitar Invitación"},
+fr:{badge:"MATCHMAKING INTERNATIONAL PRIVÉ",title:"Demander un Accès Privé",btn:"Demander une invitation"},
+it:{badge:"MATCHMAKING INTERNAZIONALE PRIVATO",title:"Richiedi Accesso Privato",btn:"Richiedi Invito"},
+de:{badge:"PRIVATES INTERNATIONALES MATCHMAKING",title:"Privaten Zugang anfordern",btn:"Einladung anfordern"},
+ru:{badge:"ЧАСТНОЕ МЕЖДУНАРОДНОЕ ЗНАКОМСТВО",title:"Запросить доступ",btn:"Запросить"},
+tl:{badge:"PRIBADONG MATCHMAKING",title:"Humiling ng Access",btn:"Humiling"}
 };
 
-function setLang(l, btn){
+function setLang(l,btn){
 
-document.querySelectorAll('.language-btn').forEach(b=>{
-b.classList.remove('active');
-});
+localStorage.setItem("lang",l);
 
+document.querySelectorAll('.language-btn').forEach(b=>b.classList.remove('active'));
 btn.classList.add('active');
 
-const t = lang[l];
-
+const t=lang[l];
 if(!t) return;
 
-document.getElementById("title").innerText = t.title;
-document.getElementById("desc").innerText = t.desc;
-document.getElementById("btn").innerText = t.btn;
-document.getElementById("privacy").innerText = t.privacy;
+document.getElementById("badge").innerText=t.badge;
+document.getElementById("title").innerText=t.title;
+document.getElementById("btn").innerText=t.btn;
 
-document.getElementById("b1").innerText = t.b1;
-document.getElementById("b2").innerText = t.b2;
-document.getElementById("b3").innerText = t.b3;
-document.getElementById("b4").innerText = t.b4;
+document.getElementById("selectedLanguage").value=l;
 
-document.querySelectorAll("label").forEach(el=>{
-
-let k = el.getAttribute("data-key");
-
-if(k && t[k]){
-el.innerText = t[k];
 }
 
-});
+window.onload=function(){
 
-const languageNames = {
-en:"English",
-es:"Español",
-fr:"Français",
-it:"Italiano",
-de:"Deutsch",
-ru:"Русский",
-uk:"Українська",
-pl:"Polski",
-ro:"Română",
-pt:"Português",
-ar:"العربية",
-zh:"中文",
-ja:"日本語",
-tl:"Tagalog",
-th:"ไทย",
-vi:"Tiếng Việt",
-ko:"한국어"
+let saved=localStorage.getItem("lang");
+let browser=navigator.language.slice(0,2);
+
+let langToUse=saved || (lang[browser]?browser:"en");
+
+let btn=[...document.querySelectorAll('.language-btn')]
+.find(b=>b.getAttribute("onclick").includes(langToUse));
+
+if(btn) setLang(langToUse,btn);
+
 };
-
-document.getElementById("selectedLanguage").value = languageNames[l];
-
-}
 
 </script>
 
