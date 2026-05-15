@@ -2,94 +2,186 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Velvet Elite - Men Application</title>
+<title>Velvet Elite | Private Access</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* { box-sizing: border-box; }
 
-body {
+*{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
     margin:0;
-    font-family: Arial;
+    font-family:Arial,sans-serif;
     background:#0b0b0b;
     color:#d4af37;
     display:flex;
     justify-content:center;
+    min-height:100vh;
 }
 
-.container {
+.container{
     max-width:850px;
     width:100%;
     padding:20px;
     text-align:center;
 }
 
-h1 { margin-bottom:20px; }
+/* HERO */
 
-.card {
+.hero{
+    background:linear-gradient(135deg,#0b0b0b,#17120a);
+    border:1px solid rgba(212,175,55,0.18);
+    border-radius:18px;
+    padding:40px 25px;
+    margin-bottom:20px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:100px;
+    border:1px solid rgba(212,175,55,0.35);
     background:#141414;
-    padding:22px;
+    font-size:12px;
+    letter-spacing:1px;
+    margin-bottom:18px;
+}
+
+h1{
+    margin:0 0 18px;
+    font-size:42px;
+    line-height:1.1;
+    color:#f5d97a;
+}
+
+.hero p{
+    color:#d4af37;
+    font-size:17px;
+    line-height:1.7;
+    max-width:700px;
+    margin:auto;
+}
+
+/* BENEFITS */
+
+.benefits{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:12px;
+    margin-top:30px;
+}
+
+.benefit{
+    background:#141414;
+    border:1px solid rgba(212,175,55,0.14);
     border-radius:12px;
-    border:1px solid rgba(212,175,55,0.25);
-    margin-bottom:15px;
+    padding:16px;
+    font-size:14px;
+}
+
+/* CARD */
+
+.card{
+    background:#141414;
+    padding:24px;
+    border-radius:16px;
+    border:1px solid rgba(212,175,55,0.18);
+    margin-bottom:18px;
     text-align:left;
 }
 
-form { text-align:left; }
+/* FORM */
 
-label {
+form{ text-align:left; }
+
+label{
     font-size:14px;
-    opacity:0.9;
+    opacity:0.92;
     display:block;
+    margin-bottom:5px;
 }
 
-input, textarea {
+input{
     width:100%;
-    padding:12px;
-    margin:8px 0 14px;
+    padding:14px;
+    margin:0 0 18px;
     background:#111;
-    border:1px solid rgba(212,175,55,0.2);
-    color:#d4af37;
-    border-radius:6px;
+    border:1px solid rgba(212,175,55,0.18);
+    color:#f5d97a;
+    border-radius:10px;
     outline:none;
+    font-size:15px;
 }
+
+input:focus{ border-color:#d4af37; }
+
+/* BUTTON */
 
 button[type="submit"]{
-    display:block;
-    margin:20px auto 0;
-    padding:12px 26px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:25px auto 0;
+    padding:16px 24px;
     background:#d4af37;
     color:#0b0b0b;
     border:none;
-    font-weight:bold;
-    border-radius:10px;
+    font-weight:700;
+    border-radius:12px;
     cursor:pointer;
-    width:auto;
+    width:100%;
+    font-size:16px;
+}
+
+button[type="submit"]:hover{
+    transform:translateY(-2px);
+}
+
+/* PRIVACY */
+
+.privacy{
+    text-align:center;
+    font-size:13px;
+    opacity:0.72;
+    margin-top:16px;
 }
 
 /* LANGUAGE BAR */
+
 .language-bar{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:6px;
+    gap:8px;
     margin-bottom:25px;
 }
 
 .language-btn{
-    padding:6px 10px;
-    border-radius:18px;
+    padding:7px 12px;
+    border-radius:20px;
     font-size:11px;
     background:#141414;
     color:#d4af37;
-    border:1px solid rgba(212,175,55,0.35);
+    border:1px solid rgba(212,175,55,0.25);
     cursor:pointer;
+    flex:0 0 auto;
 }
 
 .language-btn.active{
     background:#d4af37;
     color:#0b0b0b;
 }
+
+/* MOBILE */
+
+@media(max-width:768px){
+h1{ font-size:32px; }
+.hero{ padding:32px 20px; }
+.hero p{ font-size:15px; }
+}
+
 </style>
 </head>
 
@@ -97,7 +189,6 @@ button[type="submit"]{
 
 <div class="container">
 
-<!-- LANGUAGE BAR -->
 <div class="language-bar">
 <button class="language-btn active" onclick="setLang('en', this)">English</button>
 <button class="language-btn" onclick="setLang('es', this)">Español</button>
@@ -118,49 +209,41 @@ button[type="submit"]{
 <button class="language-btn" onclick="setLang('ko', this)">한국어</button>
 </div>
 
-<h1 id="title">💎 Women Application </h1>
+<div class="hero">
 
-<div class="card">
+<div class="badge">PRIVATE INTERNATIONAL MATCHMAKING</div>
+
+<h1 id="title">💎 Request Private Access</h1>
+
 <p id="desc">
-Apply for access to Velvet Elite private matchmaking system.
-Applications are reviewed for approval.
+Apply for access to Velvet Elite private matchmaking system. Your application will be reviewed for approval.
 </p>
+
+<div class="benefits">
+<div class="benefit" id="b1">✔ No public profiles</div>
+<div class="benefit" id="b2">✔ Private introductions only</div>
+<div class="benefit" id="b3">✔ International member network</div>
+<div class="benefit" id="b4">✔ Applications reviewed manually</div>
 </div>
 
-<!-- FORM (WORKING FIX) -->
+</div>
+
 <div class="card">
 
 <form action="https://api.web3forms.com/submit" method="POST">
 
-<!-- WEB3FORMS ACCESS KEY -->
 <input type="hidden" name="access_key" value="e092569b-da4e-40d5-8da1-f3e18c98eaf4">
-
-<!-- REDIRECT AFTER SUBMIT -->
 <input type="hidden" name="redirect" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
-
-<!-- EMAIL SUBJECT -->
-<input type="hidden" name="subject" value="💎 New Velvet Elite Women Application">
-
-<!-- OPTIONAL FROM NAME -->
+<input type="hidden" name="subject" value="Women Velvet Elite Private Access Request">
 <input type="hidden" name="from_name" value="Velvet Elite">
-
-<!-- OPTIONAL ANTI-SPAM -->
-<input type="checkbox" name="botcheck" class="hidden" style="display:none;">
-
-<!-- LANGUAGE TRACKING -->
+<input type="checkbox" name="botcheck" style="display:none;">
 <input type="hidden" name="Selected Language" id="selectedLanguage" value="English">
-    
+
 <label data-key="first">First Name *</label>
 <input type="text" name="First Name" required>
 
-<label data-key="last">Last Name *</label>
-<input type="text" name="Last Name" required>
-
 <label data-key="email">Email *</label>
 <input type="email" name="Email" required>
-
-<label data-key="phone">Phone (optional)</label>
-<input type="text" name="Phone">
 
 <label data-key="age">Age *</label>
 <input type="number" name="Age" min="18" required>
@@ -168,16 +251,17 @@ Applications are reviewed for approval.
 <label data-key="location">Location *</label>
 <input type="text" name="Location" required>
 
-<label data-key="occupation">Occupation</label>
-<input type="text" name="Occupation">
+<label data-key="phone">Phone (optional)</label>
+<input type="text" name="Phone">
 
-<label data-key="goals">Relationship Goals</label>
-<input type="text" name="Relationship Goals">
+<label data-key="goals">Relationship Goals *</label>
+<input type="text" name="Relationship Goals" required>
 
-<label data-key="about">About You</label>
-<textarea name="About"></textarea>
+<button type="submit" id="btn">Request Invitation</button>
 
-<button type="submit" id="btn">Submit Application</button>
+<div class="privacy" id="privacy">
+🔒 Private & confidential. No swiping. No public profiles.
+</div>
 
 </form>
 
@@ -187,281 +271,166 @@ Applications are reviewed for approval.
 
 <script>
 
+const subtitle = "Apply for access to Velvet Elite private matchmaking system. Your application will be reviewed for approval.";
+
 const lang = {
 
 /* ENGLISH */
 en:{
-title:"💎 Women Application",
-desc:"Apply for access to Velvet Elite private matchmaking system. Applications are reviewed for approval.",
-btn:"Submit Application",
-first:"First Name *",
-last:"Last Name *",
-email:"Email *",
-phone:"Phone (optional)",
-age:"Age *",
-location:"Location *",
-occupation:"Occupation",
-goals:"Relationship Goals",
-about:"About You"
+desc:"Apply for access to Velvet Elite private matchmaking system. Your application will be reviewed for approval.",
+first:"First Name *",email:"Email *",phone:"Phone (optional)",age:"Age *",location:"Location *",goals:"Relationship Goals *",
+btn:"Request Invitation",
+privacy:"🔒 Private & confidential. No swiping. No public profiles.",
+b1:"✔ No public profiles",b2:"✔ Private introductions only",b3:"✔ International member network",b4:"✔ Applications reviewed manually"
 },
 
 /* SPANISH */
 es:{
-title:"💎 Solicitud para Mujeres",
-desc:"Solicita acceso al sistema privado de emparejamiento Velvet Elite. Las solicitudes son revisadas para su aprobación.",
-btn:"Enviar Solicitud",
-first:"Nombre *",
-last:"Apellido *",
-email:"Correo electrónico *",
-phone:"Teléfono (opcional)",
-age:"Edad *",
-location:"Ubicación *",
-occupation:"Ocupación",
-goals:"Objetivos de relación",
-about:"Sobre ti"
+desc:"Solicita acceso al sistema privado de matchmaking Velvet Elite. Tu solicitud será revisada para aprobación.",
+first:"Nombre *",email:"Correo electrónico *",phone:"Teléfono (opcional)",age:"Edad *",location:"Ubicación *",goals:"Objetivos de relación *",
+btn:"Solicitar Invitación",
+privacy:"🔒 Privado y confidencial.",
+b1:"✔ Sin perfiles públicos",b2:"✔ Introducciones privadas",b3:"✔ Red internacional",b4:"✔ Revisadas manualmente"
 },
 
 /* FRENCH */
 fr:{
-title:"💎 Candidature pour Femmes",
-desc:"Demandez l’accès au système privé de mise en relation Velvet Elite. Les candidatures sont examinées pour approbation.",
-btn:"Soumettre la candidature",
-first:"Prénom *",
-last:"Nom *",
-email:"Email *",
-phone:"Téléphone (facultatif)",
-age:"Âge *",
-location:"Localisation *",
-occupation:"Profession",
-goals:"Objectifs relationnels",
-about:"À propos de vous"
+desc:"Demandez l'accès au système privé de matchmaking Velvet Elite. Votre candidature sera examinée pour approbation.",
+first:"Prénom *",email:"Email *",phone:"Téléphone",age:"Âge *",location:"Localisation *",goals:"Objectifs relationnels *",
+btn:"Demander",
+privacy:"🔒 Privé",
+b1:"✔ Aucun profil public",b2:"✔ Introductions privées",b3:"✔ Réseau international",b4:"✔ Vérification"
 },
 
 /* ITALIAN */
 it:{
-title:"💎 Candidatura per Donne",
-desc:"Richiedi l’accesso al sistema privato di matchmaking Velvet Elite. Le candidature vengono esaminate per approvazione.",
-btn:"Invia candidatura",
-first:"Nome *",
-last:"Cognome *",
-email:"Email *",
-phone:"Telefono (opzionale)",
-age:"Età *",
-location:"Posizione *",
-occupation:"Occupazione",
-goals:"Obiettivi di relazione",
-about:"Su di te"
+desc:"Richiedi accesso al sistema privato di matchmaking Velvet Elite. La tua richiesta sarà esaminata per approvazione.",
+first:"Nome *",email:"Email *",phone:"Telefono",age:"Età *",location:"Posizione *",goals:"Obiettivi relazionali *",
+btn:"Richiedi",
+privacy:"🔒 Privato",
+b1:"✔ Nessun profilo",b2:"✔ Privato",b3:"✔ Internazionale",b4:"✔ Manuale"
 },
 
 /* GERMAN */
 de:{
-title:"💎 Bewerbung für Frauen",
-desc:"Beantragen Sie Zugang zum privaten Velvet Elite Matchmaking-System. Bewerbungen werden zur Genehmigung geprüft.",
-btn:"Bewerbung absenden",
-first:"Vorname *",
-last:"Nachname *",
-email:"E-Mail *",
-phone:"Telefon (optional)",
-age:"Alter *",
-location:"Standort *",
-occupation:"Beruf",
-goals:"Beziehungsziele",
-about:"Über dich"
+desc:"Beantragen Sie Zugang zum privaten Velvet Elite Matchmaking-System. Ihre Anfrage wird zur Genehmigung geprüft.",
+first:"Vorname *",email:"E-Mail *",phone:"Telefon",age:"Alter *",location:"Standort *",goals:"Beziehungsziele *",
+btn:"Anfordern",
+privacy:"🔒 Privat",
+b1:"✔ Keine Profile",b2:"✔ Privat",b3:"✔ International",b4:"✔ Prüfung"
 },
 
 /* RUSSIAN */
 ru:{
-title:"💎 Заявка для женщин",
-desc:"Подайте заявку на доступ к частной системе знакомств Velvet Elite. Заявки проходят проверку на одобрение.",
-btn:"Отправить заявку",
-first:"Имя *",
-last:"Фамилия *",
-email:"Эл. почта *",
-phone:"Телефон (необязательно)",
-age:"Возраст *",
-location:"Местоположение *",
-occupation:"Профессия",
-goals:"Цели отношений",
-about:"О себе"
+desc:"Подайте заявку на доступ к приватной системе знакомств Velvet Elite. Ваша заявка будет рассмотрена.",
+first:"Имя *",email:"Email *",phone:"Телефон",age:"Возраст *",location:"Локация *",goals:"Цели отношений *",
+btn:"Запрос",
+privacy:"🔒 Конфиденциально",
+b1:"✔ Без профилей",b2:"✔ Приватно",b3:"✔ Международно",b4:"✔ Проверка"
 },
 
 /* UKRAINIAN */
 uk:{
-title:"💎 Заявка для жінок",
-desc:"Подайте заявку на доступ до приватної системи знайомств Velvet Elite. Заявки перевіряються для затвердження.",
-btn:"Надіслати заявку",
-first:"Ім'я *",
-last:"Прізвище *",
-email:"Ел. пошта *",
-phone:"Телефон (необов'язково)",
-age:"Вік *",
-location:"Місцезнаходження *",
-occupation:"Професія",
-goals:"Цілі стосунків",
-about:"Про себе"
+desc:"Подайте заявку на доступ до приватної системи знайомств Velvet Elite. Ваша заявка буде розглянута.",
+first:"Ім'я *",email:"Email *",phone:"Телефон",age:"Вік *",location:"Локація *",goals:"Цілі відносин *",
+btn:"Запросити",
+privacy:"🔒 Приватно",
+b1:"✔ Без профілів",b2:"✔ Приватно",b3:"✔ Міжнародно",b4:"✔ Перевірка"
 },
 
 /* POLISH */
 pl:{
-title:"💎 Aplikacja dla kobiet",
-desc:"Złóż wniosek o dostęp do prywatnego systemu kojarzeń Velvet Elite. Zgłoszenia są sprawdzane i zatwierdzane.",
-btn:"Wyślij aplikację",
-first:"Imię *",
-last:"Nazwisko *",
-email:"Email *",
-phone:"Telefon (opcjonalnie)",
-age:"Wiek *",
-location:"Lokalizacja *",
-occupation:"Zawód",
-goals:"Cele relacji",
-about:"O Tobie"
+desc:"Złóż wniosek o dostęp do prywatnego systemu matchmaking Velvet Elite. Twoja aplikacja zostanie rozpatrzona.",
+first:"Imię *",email:"Email *",phone:"Telefon",age:"Wiek *",location:"Lokalizacja *",goals:"Cele relacji *",
+btn:"Poproś",
+privacy:"🔒 Prywatne",
+b1:"✔ Brak profili",b2:"✔ Prywatne",b3:"✔ Międzynarodowe",b4:"✔ Weryfikacja"
 },
 
 /* ROMANIAN */
 ro:{
-title:"💎 Aplicație pentru femei",
-desc:"Solicită acces la sistemul privat de matchmaking Velvet Elite. Aplicațiile sunt revizuite pentru aprobare.",
-btn:"Trimite aplicația",
-first:"Prenume *",
-last:"Nume *",
-email:"Email *",
-phone:"Telefon (opțional)",
-age:"Vârstă *",
-location:"Locație *",
-occupation:"Ocupație",
-goals:"Obiective relaționale",
-about:"Despre tine"
+desc:"Aplică pentru acces la sistemul privat de matchmaking Velvet Elite. Cererea ta va fi analizată.",
+first:"Prenume *",email:"Email *",phone:"Telefon",age:"Vârstă *",location:"Locație *",goals:"Obiective relație *",
+btn:"Solicită",
+privacy:"🔒 Privat",
+b1:"✔ Fără profiluri",b2:"✔ Privat",b3:"✔ Internațional",b4:"✔ Verificare"
 },
 
 /* PORTUGUESE */
 pt:{
-title:"💎 Aplicação Feminina",
-desc:"Solicite acesso ao sistema privado de matchmaking Velvet Elite. As candidaturas são analisadas para aprovação.",
-btn:"Enviar candidatura",
-first:"Nome *",
-last:"Sobrenome *",
-email:"Email *",
-phone:"Telefone (opcional)",
-age:"Idade *",
-location:"Localização *",
-occupation:"Profissão",
-goals:"Objetivos de relacionamento",
-about:"Sobre você"
+desc:"Solicite acesso ao sistema privado de matchmaking Velvet Elite. Sua inscrição será analisada.",
+first:"Nome *",email:"Email *",phone:"Telefone",age:"Idade *",location:"Localização *",goals:"Objetivos de relacionamento *",
+btn:"Solicitar",
+privacy:"🔒 Privado",
+b1:"✔ Sem perfis",b2:"✔ Privado",b3:"✔ Internacional",b4:"✔ Revisão"
 },
 
 /* ARABIC */
 ar:{
-title:"💎 طلب للنساء",
-desc:"قدّمي طلبك للوصول إلى نظام التعارف الخاص Velvet Elite. تتم مراجعة الطلبات للموافقة.",
-btn:"إرسال الطلب",
-first:"الاسم الأول *",
-last:"اسم العائلة *",
-email:"البريد الإلكتروني *",
-phone:"الهاتف (اختياري)",
-age:"العمر *",
-location:"الموقع *",
-occupation:"المهنة",
-goals:"أهداف العلاقة",
-about:"عنك"
+desc:"قدّم طلبًا للوصول إلى نظام التعارف الخاص Velvet Elite. سيتم مراجعة طلبك للموافقة.",
+first:"الاسم *",email:"البريد *",phone:"هاتف",age:"العمر *",location:"الموقع *",goals:"أهداف العلاقة *",
+btn:"طلب",
+privacy:"🔒 خاص",
+b1:"✔ بدون ملفات",b2:"✔ خاص",b3:"✔ دولي",b4:"✔ مراجعة"
 },
 
 /* CHINESE */
 zh:{
-title:"💎 女性申请",
-desc:"申请加入 Velvet Elite 私人匹配系统。所有申请将被审核并批准。",
-btn:"提交申请",
-first:"名字 *",
-last:"姓氏 *",
-email:"电子邮件 *",
-phone:"电话（可选）",
-age:"年龄 *",
-location:"所在地 *",
-occupation:"职业",
-goals:"关系目标",
-about:"关于你"
+desc:"申请访问 Velvet Elite 私人配对系统。您的申请将被审核批准。",
+first:"名字 *",email:"邮箱 *",phone:"电话",age:"年龄 *",location:"位置 *",goals:"关系目标 *",
+btn:"申请",
+privacy:"🔒 私密",
+b1:"✔ 无公开资料",b2:"✔ 私人介绍",b3:"✔ 国际网络",b4:"✔ 审核"
 },
 
 /* JAPANESE */
 ja:{
-title:"💎 女性申請",
-desc:"Velvet Elite プライベートマッチングシステムへの申請です。申請は審査され承認されます。",
-btn:"申請する",
-first:"名 *",
-last:"姓 *",
-email:"メール *",
-phone:"電話（任意）",
-age:"年齢 *",
-location:"所在地 *",
-occupation:"職業",
-goals:"関係の目標",
-about:"あなたについて"
+desc:"Velvet Eliteのプライベートマッチメイキングシステムへのアクセスを申請してください。申請は審査されます。",
+first:"名前 *",email:"メール *",phone:"電話",age:"年齢 *",location:"場所 *",goals:"関係の目的 *",
+btn:"申請",
+privacy:"🔒 非公開",
+b1:"✔ 公開なし",b2:"✔ プライベート",b3:"✔ 国際",b4:"✔ 審査"
 },
 
 /* TAGALOG */
 tl:{
-title:"💎 Aplikasyon para sa Babae",
-desc:"Mag-apply para sa access sa Velvet Elite private matchmaking system. Ang mga aplikasyon ay sinusuri para sa pag-apruba.",
-btn:"Isumite ang Aplikasyon",
-first:"Pangalan *",
-last:"Apelyido *",
-email:"Email *",
-phone:"Telepono (opsyonal)",
-age:"Edad *",
-location:"Lokasyon *",
-occupation:"Trabaho",
-goals:"Layunin sa relasyon",
-about:"Tungkol sa iyo"
+desc:"Mag-apply para sa access sa Velvet Elite private matchmaking system. Susuriin ang iyong application.",
+first:"Pangalan *",email:"Email *",phone:"Telepono",age:"Edad *",location:"Lokasyon *",goals:"Layunin ng relasyon *",
+btn:"Humiling",
+privacy:"🔒 Pribado",
+b1:"✔ Walang profiles",b2:"✔ Private",b3:"✔ International",b4:"✔ Manual"
 },
 
 /* THAI */
 th:{
-title:"💎 ใบสมัครสำหรับผู้หญิง",
-desc:"สมัครเข้าระบบจับคู่ส่วนตัว Velvet Elite ใบสมัครจะถูกตรวจสอบเพื่ออนุมัติ",
-btn:"ส่งใบสมัคร",
-first:"ชื่อ *",
-last:"นามสกุล *",
-email:"อีเมล *",
-phone:"โทรศัพท์ (ไม่บังคับ)",
-age:"อายุ *",
-location:"สถานที่ *",
-occupation:"อาชีพ",
-goals:"เป้าหมายความสัมพันธ์",
-about:"เกี่ยวกับคุณ"
+desc:"สมัครเพื่อเข้าถึงระบบจับคู่ส่วนตัว Velvet Elite ใบสมัครของคุณจะได้รับการตรวจสอบ",
+first:"ชื่อ *",email:"อีเมล *",phone:"โทรศัพท์",age:"อายุ *",location:"สถานที่ *",goals:"เป้าหมายความสัมพันธ์ *",
+btn:"ขอ",
+privacy:"🔒 ส่วนตัว",
+b1:"✔ ไม่มีโปรไฟล์",b2:"✔ ส่วนตัว",b3:"✔ นานาชาติ",b4:"✔ ตรวจสอบ"
 },
 
 /* VIETNAMESE */
 vi:{
-title:"💎 Đơn đăng ký dành cho nữ",
-desc:"Đăng ký truy cập hệ thống mai mối riêng Velvet Elite. Hồ sơ sẽ được xét duyệt để phê duyệt.",
-btn:"Gửi đơn đăng ký",
-first:"Tên *",
-last:"Họ *",
-email:"Email *",
-phone:"Điện thoại (tùy chọn)",
-age:"Tuổi *",
-location:"Vị trí *",
-occupation:"Nghề nghiệp",
-goals:"Mục tiêu quan hệ",
-about:"Về bạn"
+desc:"Yêu cầu quyền truy cập vào hệ thống mai mối riêng tư Velvet Elite. Hồ sơ của bạn sẽ được xét duyệt.",
+first:"Tên *",email:"Email *",phone:"Điện thoại",age:"Tuổi *",location:"Vị trí *",goals:"Mục tiêu mối quan hệ *",
+btn:"Yêu cầu",
+privacy:"🔒 Riêng tư",
+b1:"✔ Không công khai",b2:"✔ Riêng tư",b3:"✔ Quốc tế",b4:"✔ Kiểm duyệt"
 },
 
 /* KOREAN */
 ko:{
-title:"💎 여성 지원서",
-desc:"Velvet Elite 비공개 매칭 시스템에 지원합니다. 신청서는 승인 심사를 거칩니다.",
-btn:"지원하기",
-first:"이름 *",
-last:"성 *",
-email:"이메일 *",
-phone:"전화 (선택)",
-age:"나이 *",
-location:"위치 *",
-occupation:"직업",
-goals:"관계 목표",
-about:"자기소개"
+desc:"Velvet Elite 프라이빗 매칭 시스템에 접근을 신청하세요. 신청서는 검토됩니다.",
+first:"이름 *",email:"이메일 *",phone:"전화",age:"나이 *",location:"위치 *",goals:"관계 목표 *",
+btn:"요청",
+privacy:"🔒 비공개",
+b1:"✔ 공개 없음",b2:"✔ 프라이빗",b3:"✔ 글로벌",b4:"✔ 검토"
 }
 
 };
+
+
 function setLang(l, btn){
 
 document.querySelectorAll('.language-btn').forEach(b=>b.classList.remove('active'));
@@ -470,41 +439,23 @@ btn.classList.add('active');
 const t = lang[l];
 if(!t) return;
 
-/* UPDATE TEXT */
-document.getElementById("title").innerText = t.title;
 document.getElementById("desc").innerText = t.desc;
 document.getElementById("btn").innerText = t.btn;
+document.getElementById("privacy").innerText = t.privacy;
 
-/* UPDATE LABELS */
+["b1","b2","b3","b4"].forEach(id=>{
+document.getElementById(id).innerText = t[id];
+});
+
 document.querySelectorAll("label").forEach(el=>{
 let k = el.getAttribute("data-key");
 if(k && t[k]) el.innerText = t[k];
 });
 
-/* TRACK SELECTED LANGUAGE */
-const languageNames = {
-en:"English",
-es:"Español",
-fr:"Français",
-it:"Italiano",
-de:"Deutsch",
-ru:"Русский",
-uk:"Українська",
-pl:"Polski",
-ro:"Română",
-pt:"Português",
-ar:"العربية",
-zh:"中文",
-ja:"日本語",
-tl:"Tagalog",
-th:"ไทย",
-vi:"Tiếng Việt",
-ko:"한국어"
-};
-
-document.getElementById("selectedLanguage").value = languageNames[l];
+document.getElementById("selectedLanguage").value = l;
 
 }
+
 </script>
 
 </body>
