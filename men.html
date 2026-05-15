@@ -7,13 +7,9 @@
 
 <style>
 
-*{
-    box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
-html{
-    scroll-behavior:smooth;
-}
+html{ scroll-behavior:smooth; }
 
 body{
     margin:0;
@@ -35,11 +31,7 @@ body{
 /* HERO */
 
 .hero{
-    background:
-    linear-gradient(
-    135deg,
-    #0b0b0b,
-    #17120a);
+    background:linear-gradient(135deg,#0b0b0b,#17120a);
     border:1px solid rgba(212,175,55,0.18);
     border-radius:18px;
     padding:40px 25px;
@@ -102,9 +94,7 @@ h1{
 
 /* FORM */
 
-form{
-    text-align:left;
-}
+form{ text-align:left; }
 
 label{
     font-size:14px;
@@ -122,13 +112,10 @@ input{
     color:#f5d97a;
     border-radius:10px;
     outline:none;
-    transition:0.2s ease;
     font-size:15px;
 }
 
-input:focus{
-    border-color:#d4af37;
-}
+input:focus{ border-color:#d4af37; }
 
 /* BUTTON */
 
@@ -136,7 +123,6 @@ button[type="submit"]{
     display:flex;
     justify-content:center;
     align-items:center;
-    text-align:center;
     margin:25px auto 0;
     padding:16px 24px;
     background:#d4af37;
@@ -147,7 +133,6 @@ button[type="submit"]{
     cursor:pointer;
     width:100%;
     font-size:16px;
-    transition:0.25s ease;
 }
 
 button[type="submit"]:hover{
@@ -161,7 +146,6 @@ button[type="submit"]:hover{
     font-size:13px;
     opacity:0.72;
     margin-top:16px;
-    line-height:1.6;
 }
 
 /* LANGUAGE BAR */
@@ -182,12 +166,7 @@ button[type="submit"]:hover{
     color:#d4af37;
     border:1px solid rgba(212,175,55,0.25);
     cursor:pointer;
-    transition:0.2s ease;
-    flex:0 0 auto; /* FIX: prevents full width */
-}
-
-.language-btn:hover{
-    border-color:#d4af37;
+    flex:0 0 auto;
 }
 
 .language-btn.active{
@@ -198,23 +177,9 @@ button[type="submit"]:hover{
 /* MOBILE */
 
 @media(max-width:768px){
-
-h1{
-    font-size:32px;
-}
-
-.hero{
-    padding:32px 20px;
-}
-
-.hero p{
-    font-size:15px;
-}
-
-.language-bar{
-    justify-content:flex-start;
-}
-
+h1{ font-size:32px; }
+.hero{ padding:32px 20px; }
+.hero p{ font-size:15px; }
 }
 
 </style>
@@ -246,14 +211,12 @@ h1{
 
 <div class="hero">
 
-<div class="badge" id="badge">
-PRIVATE INTERNATIONAL MATCHMAKING
-</div>
+<div class="badge">PRIVATE INTERNATIONAL MATCHMAKING</div>
 
 <h1 id="title">Request Private Access</h1>
 
 <p id="desc">
-Velvet Elite is a private international introduction network for individuals seeking serious, high-intent relationships through curated matchmaking.
+Apply for access to Velvet Elite private matchmaking system. Your application will be reviewed for approval.
 </p>
 
 <div class="benefits">
@@ -291,6 +254,9 @@ Velvet Elite is a private international introduction network for individuals see
 <label data-key="phone">Phone (optional)</label>
 <input type="text" name="Phone">
 
+<label data-key="goals">Relationship Goals *</label>
+<input type="text" name="Relationship Goals" required>
+
 <button type="submit" id="btn">Request Invitation</button>
 
 <div class="privacy" id="privacy">
@@ -305,71 +271,65 @@ Velvet Elite is a private international introduction network for individuals see
 
 <script>
 
+const subtitle = "Apply for access to Velvet Elite private matchmaking system. Your application will be reviewed for approval.";
+
 const lang = {
 
-/* ENGLISH */
-en:{ title:"Request Private Access", desc:"Velvet Elite is a private international introduction network for individuals seeking serious, high-intent relationships through curated matchmaking.", btn:"Request Invitation", first:"First Name *", email:"Email *", phone:"Phone (optional)", age:"Age *", location:"Location *", privacy:"🔒 Private & confidential. No swiping. No public profiles.", b1:"✔ No public profiles", b2:"✔ Private introductions only", b3:"✔ International member network", b4:"✔ Applications reviewed manually" },
+en:{first:"First Name *",email:"Email *",phone:"Phone (optional)",age:"Age *",location:"Location *",goals:"Relationship Goals *",btn:"Request Invitation",privacy:"🔒 Private & confidential. No swiping. No public profiles.",b1:"✔ No public profiles",b2:"✔ Private introductions only",b3:"✔ International member network",b4:"✔ Applications reviewed manually"},
 
-es:{ title:"Solicitar Acceso Privado", desc:"Velvet Elite es una red privada internacional...", btn:"Solicitar Invitación", first:"Nombre *", email:"Correo electrónico *", phone:"Teléfono (opcional)", age:"Edad *", location:"Ubicación *", privacy:"🔒 Privado y confidencial.", b1:"✔ Sin perfiles públicos", b2:"✔ Introducciones privadas únicamente", b3:"✔ Red internacional", b4:"✔ Revisadas manualmente" },
+es:{first:"Nombre *",email:"Correo electrónico *",phone:"Teléfono (opcional)",age:"Edad *",location:"Ubicación *",goals:"Objetivos de relación *",btn:"Solicitar Invitación",privacy:"🔒 Privado y confidencial.",b1:"✔ Sin perfiles públicos",b2:"✔ Introducciones privadas",b3:"✔ Red internacional",b4:"✔ Revisadas manualmente"},
 
-fr:{ title:"Demander un Accès Privé", desc:"Velvet Elite est un réseau privé...", btn:"Demander une invitation", first:"Prénom *", email:"Email *", phone:"Téléphone (optionnel)", age:"Âge *", location:"Localisation *", privacy:"🔒 Privé et confidentiel.", b1:"✔ Aucun profil public", b2:"✔ Introductions privées", b3:"✔ Réseau international", b4:"✔ Vérification manuelle" },
+fr:{first:"Prénom *",email:"Email *",phone:"Téléphone",age:"Âge *",location:"Localisation *",goals:"Objectifs relationnels *",btn:"Demander",privacy:"🔒 Privé",b1:"✔ Aucun profil public",b2:"✔ Introductions privées",b3:"✔ Réseau international",b4:"✔ Vérification"},
 
-it:{ title:"Richiedi Accesso Privato", desc:"Velvet Elite è una rete privata...", btn:"Richiedi Invito", first:"Nome *", email:"Email *", phone:"Telefono", age:"Età *", location:"Posizione *", privacy:"🔒 Privato", b1:"✔ Nessun profilo pubblico", b2:"✔ Introduzioni private", b3:"✔ Rete internazionale", b4:"✔ Controllo manuale" },
+it:{first:"Nome *",email:"Email *",phone:"Telefono",age:"Età *",location:"Posizione *",goals:"Obiettivi relazionali *",btn:"Richiedi",privacy:"🔒 Privato",b1:"✔ Nessun profilo",b2:"✔ Privato",b3:"✔ Internazionale",b4:"✔ Manuale"},
 
-de:{ title:"Privaten Zugang anfordern", desc:"Velvet Elite ist ein privates Netzwerk...", btn:"Einladung anfordern", first:"Vorname *", email:"E-Mail *", phone:"Telefon", age:"Alter *", location:"Standort *", privacy:"🔒 Privat", b1:"✔ Keine öffentlichen Profile", b2:"✔ Private Vorstellungen", b3:"✔ International", b4:"✔ Manuell geprüft" },
+de:{first:"Vorname *",email:"E-Mail *",phone:"Telefon",age:"Alter *",location:"Standort *",goals:"Beziehungsziele *",btn:"Anfordern",privacy:"🔒 Privat",b1:"✔ Keine Profile",b2:"✔ Privat",b3:"✔ International",b4:"✔ Prüfung"},
 
-ru:{ title:"Запросить доступ", desc:"Velvet Elite — частная сеть...", btn:"Запросить", first:"Имя *", email:"Email *", phone:"Телефон", age:"Возраст *", location:"Локация *", privacy:"🔒 Конфиденциально", b1:"✔ Без профилей", b2:"✔ Приватно", b3:"✔ Международно", b4:"✔ Проверка вручную" },
+ru:{first:"Имя *",email:"Email *",phone:"Телефон",age:"Возраст *",location:"Локация *",goals:"Цели отношений *",btn:"Запрос",privacy:"🔒 Конфиденциально",b1:"✔ Без профилей",b2:"✔ Приватно",b3:"✔ Международно",b4:"✔ Проверка"},
 
-uk:{ title:"Запросити доступ", desc:"Velvet Elite — приватна мережа...", btn:"Запросити", first:"Ім'я *", email:"Email *", phone:"Телефон", age:"Вік *", location:"Локація *", privacy:"🔒 Приватно", b1:"✔ Без профілів", b2:"✔ Приватно", b3:"✔ Міжнародно", b4:"✔ Перевірка вручну" },
+uk:{first:"Ім'я *",email:"Email *",phone:"Телефон",age:"Вік *",location:"Локація *",goals:"Цілі відносин *",btn:"Запросити",privacy:"🔒 Приватно",b1:"✔ Без профілів",b2:"✔ Приватно",b3:"✔ Міжнародно",b4:"✔ Перевірка"},
 
-pl:{ title:"Poproś o dostęp", desc:"Velvet Elite to prywatna sieć...", btn:"Poproś", first:"Imię *", email:"Email *", phone:"Telefon", age:"Wiek *", location:"Lokalizacja *", privacy:"🔒 Prywatne", b1:"✔ Brak profili", b2:"✔ Prywatne", b3:"✔ Międzynarodowe", b4:"✔ Ręczna weryfikacja" },
+pl:{first:"Imię *",email:"Email *",phone:"Telefon",age:"Wiek *",location:"Lokalizacja *",goals:"Cele relacji *",btn:"Poproś",privacy:"🔒 Prywatne",b1:"✔ Brak profili",b2:"✔ Prywatne",b3:"✔ Międzynarodowe",b4:"✔ Weryfikacja"},
 
-ro:{ title:"Solicită acces", desc:"Velvet Elite este o rețea...", btn:"Solicită", first:"Prenume *", email:"Email *", phone:"Telefon", age:"Vârstă *", location:"Locație *", privacy:"🔒 Privat", b1:"✔ Fără profiluri", b2:"✔ Privat", b3:"✔ Internațional", b4:"✔ Verificare manuală" },
+ro:{first:"Prenume *",email:"Email *",phone:"Telefon",age:"Vârstă *",location:"Locație *",goals:"Obiective relație *",btn:"Solicită",privacy:"🔒 Privat",b1:"✔ Fără profiluri",b2:"✔ Privat",b3:"✔ Internațional",b4:"✔ Verificare"},
 
-pt:{ title:"Solicitar acesso", desc:"Velvet Elite é uma rede...", btn:"Solicitar", first:"Nome *", email:"Email *", phone:"Telefone", age:"Idade *", location:"Localização *", privacy:"🔒 Privado", b1:"✔ Sem perfis", b2:"✔ Privado", b3:"✔ Internacional", b4:"✔ Revisão manual" },
+pt:{first:"Nome *",email:"Email *",phone:"Telefone",age:"Idade *",location:"Localização *",goals:"Objetivos de relacionamento *",btn:"Solicitar",privacy:"🔒 Privado",b1:"✔ Sem perfis",b2:"✔ Privado",b3:"✔ Internacional",b4:"✔ Revisão"},
 
-ar:{ title:"طلب الوصول", desc:"Velvet Elite شبكة خاصة...", btn:"طلب", first:"الاسم *", email:"البريد *", phone:"هاتف", age:"العمر *", location:"الموقع *", privacy:"🔒 خاص", b1:"✔ بدون ملفات", b2:"✔ خاص", b3:"✔ دولي", b4:"✔ مراجعة" },
+ar:{first:"الاسم *",email:"البريد *",phone:"هاتف",age:"العمر *",location:"الموقع *",goals:"أهداف العلاقة *",btn:"طلب",privacy:"🔒 خاص",b1:"✔ بدون ملفات",b2:"✔ خاص",b3:"✔ دولي",b4:"✔ مراجعة"},
 
-zh:{ title:"申请访问", desc:"Velvet Elite 是私人网络", btn:"申请", first:"名字 *", email:"邮箱 *", phone:"电话", age:"年龄 *", location:"位置 *", privacy:"🔒 私密", b1:"✔ 无公开资料", b2:"✔ 私人介绍", b3:"✔ 国际网络", b4:"✔ 人工审核" },
+zh:{first:"名字 *",email:"邮箱 *",phone:"电话",age:"年龄 *",location:"位置 *",goals:"关系目标 *",btn:"申请",privacy:"🔒 私密",b1:"✔ 无公开资料",b2:"✔ 私人介绍",b3:"✔ 国际网络",b4:"✔ 审核"},
 
-ja:{ title:"アクセス申請", desc:"Velvet Elite は非公開ネットワーク", btn:"申請", first:"名前 *", email:"メール *", phone:"電話", age:"年齢 *", location:"場所 *", privacy:"🔒 非公開", b1:"✔ 公開なし", b2:"✔ プライベート", b3:"✔ 国際", b4:"✔ 手動審査" },
+ja:{first:"名前 *",email:"メール *",phone:"電話",age:"年齢 *",location:"場所 *",goals:"関係の目的 *",btn:"申請",privacy:"🔒 非公開",b1:"✔ 公開なし",b2:"✔ プライベート",b3:"✔ 国際",b4:"✔ 審査"},
 
-tl:{ title:"Humiling ng Access", desc:"Velvet Elite ay private network", btn:"Humiling", first:"Pangalan *", email:"Email *", phone:"Telepono", age:"Edad *", location:"Lokasyon *", privacy:"🔒 Pribado", b1:"✔ Walang profiles", b2:"✔ Private", b3:"✔ International", b4:"✔ Manual" },
+tl:{first:"Pangalan *",email:"Email *",phone:"Telepono",age:"Edad *",location:"Lokasyon *",goals:"Layunin ng relasyon *",btn:"Humiling",privacy:"🔒 Pribado",b1:"✔ Walang profiles",b2:"✔ Private",b3:"✔ International",b4:"✔ Manual"},
 
-th:{ title:"ขอสิทธิ์", desc:"Velvet Elite เป็นเครือข่ายส่วนตัว", btn:"ขอ", first:"ชื่อ *", email:"อีเมล *", phone:"โทรศัพท์", age:"อายุ *", location:"สถานที่ *", privacy:"🔒 ส่วนตัว", b1:"✔ ไม่มีโปรไฟล์", b2:"✔ ส่วนตัว", b3:"✔ นานาชาติ", b4:"✔ ตรวจสอบ" },
+th:{first:"ชื่อ *",email:"อีเมล *",phone:"โทรศัพท์",age:"อายุ *",location:"สถานที่ *",goals:"เป้าหมายความสัมพันธ์ *",btn:"ขอ",privacy:"🔒 ส่วนตัว",b1:"✔ ไม่มีโปรไฟล์",b2:"✔ ส่วนตัว",b3:"✔ นานาชาติ",b4:"✔ ตรวจสอบ"},
 
-vi:{ title:"Yêu cầu truy cập", desc:"Velvet Elite là mạng riêng", btn:"Yêu cầu", first:"Tên *", email:"Email *", phone:"Điện thoại", age:"Tuổi *", location:"Vị trí *", privacy:"🔒 Riêng tư", b1:"✔ Không công khai", b2:"✔ Riêng tư", b3:"✔ Quốc tế", b4:"✔ Kiểm duyệt" },
+vi:{first:"Tên *",email:"Email *",phone:"Điện thoại",age:"Tuổi *",location:"Vị trí *",goals:"Mục tiêu mối quan hệ *",btn:"Yêu cầu",privacy:"🔒 Riêng tư",b1:"✔ Không công khai",b2:"✔ Riêng tư",b3:"✔ Quốc tế",b4:"✔ Kiểm duyệt"},
 
-ko:{ title:"접근 요청", desc:"Velvet Elite는 비공개 네트워크", btn:"요청", first:"이름 *", email:"이메일 *", phone:"전화", age:"나이 *", location:"위치 *", privacy:"🔒 비공개", b1:"✔ 공개 없음", b2:"✔ 프라이빗", b3:"✔ 글로벌", b4:"✔ 수동 검토" }
+ko:{first:"이름 *",email:"이메일 *",phone:"전화",age:"나이 *",location:"위치 *",goals:"관계 목표 *",btn:"요청",privacy:"🔒 비공개",b1:"✔ 공개 없음",b2:"✔ 프라이빗",b3:"✔ 글로벌",b4:"✔ 검토"}
 
 };
 
 function setLang(l, btn){
 
-document.querySelectorAll('.language-btn').forEach(b=>{
-b.classList.remove('active');
-});
-
+document.querySelectorAll('.language-btn').forEach(b=>b.classList.remove('active'));
 btn.classList.add('active');
 
 const t = lang[l];
 if(!t) return;
 
-document.getElementById("title").innerText = t.title;
-document.getElementById("desc").innerText = t.desc;
+document.getElementById("desc").innerText = subtitle;
 document.getElementById("btn").innerText = t.btn;
 document.getElementById("privacy").innerText = t.privacy;
 
-document.getElementById("b1").innerText = t.b1;
-document.getElementById("b2").innerText = t.b2;
-document.getElementById("b3").innerText = t.b3;
-document.getElementById("b4").innerText = t.b4;
+["b1","b2","b3","b4"].forEach(id=>{
+document.getElementById(id).innerText = t[id];
+});
 
 document.querySelectorAll("label").forEach(el=>{
 let k = el.getAttribute("data-key");
-if(k && t[k]){
-el.innerText = t[k];
-}
+if(k && t[k]) el.innerText = t[k];
 });
 
 document.getElementById("selectedLanguage").value = l;
