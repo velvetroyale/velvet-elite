@@ -190,7 +190,51 @@ h1{ font-size:32px; }
 .hero{ padding:32px 20px; }
 .hero p{ font-size:15px; }
 }
+/* WRAPPER FOR DROPDOWN */
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
 
+/* MATCH BUTTON STYLE */
+.select-wrapper select {
+    background: #141414;
+    color: #d4af37;
+
+    border: 1px solid rgba(212,175,55,0.35);
+    border-radius: 30px;
+
+    padding: 10px 38px 10px 14px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* HOVER GOLD EFFECT */
+.select-wrapper select:hover {
+    background: #d4af37;
+    color: #0b0b0b;
+}
+
+/* CUSTOM ARROW */
+.select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #d4af37;
+    pointer-events: none;
+}
 </style>
 </head>
 
@@ -198,14 +242,14 @@ h1{ font-size:32px; }
 
 <div class="container">
 
-<!-- LANGUAGE BAR (FIXED LUXURY VERSION) -->
+<!-- LANGUAGE BAR (UNIFIED LUXURY STYLE) -->
 <div class="language-bar">
 
   <!-- PRIMARY -->
   <button class="language-btn active" onclick="setLang('en', this)">English</button>
   <button class="language-btn" onclick="setLang('es', this)">Español</button>
 
-  <!-- DROPDOWN -->
+  <!-- DROPDOWN (SAME STYLE AS PROCESS PAGE) -->
   <div class="select-wrapper">
     <select onchange="if(this.value) setLang(this.value, document.querySelector('.language-btn.active'));">
 
