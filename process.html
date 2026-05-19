@@ -122,7 +122,7 @@ h1,h2,h3 {
 
 <div class="container">
 
-<!-- LANGUAGE BAR (UPGRADED) -->
+<!-- LANGUAGE BAR (FIXED + DROPDOWN ARROW RESTORED) -->
 <div class="language-bar">
 
   <!-- PRIMARY LANGUAGES -->
@@ -130,42 +130,31 @@ h1,h2,h3 {
   <button class="language-btn" onclick="showLanguage('es', this)">Español</button>
 
   <!-- MORE DROPDOWN -->
-  <select class="language-btn"
-    onchange="if(this.value) showLanguage(this.value, null); this.selectedIndex=0;"
-    style="
-      appearance:none;
-      -webkit-appearance:none;
-      -moz-appearance:none;
-      text-align:center;
-      padding:10px 14px;
-      border-radius:30px;
-      font-size:14px;
-      font-weight:600;
-      background:#141414;
-      color:#d4af37;
-      border:1px solid rgba(212,175,55,0.35);
-      cursor:pointer;
-    ">
+  <div class="select-wrapper">
+    <select
+      onchange="if(this.value) showLanguage(this.value, null);"
+    >
 
-    <option value="">More ▼</option>
+      <option value="">More ▼</option>
 
-    <option value="fr">Français</option>
-    <option value="it">Italiano</option>
-    <option value="de">Deutsch</option>
-    <option value="ru">Русский</option>
-    <option value="uk">Українська</option>
-    <option value="pl">Polski</option>
-    <option value="ro">Română</option>
-    <option value="pt">Português</option>
-    <option value="ar">العربية</option>
-    <option value="zh">中文</option>
-    <option value="ja">日本語</option>
-    <option value="tl">Tagalog</option>
-    <option value="th">ไทย</option>
-    <option value="vi">Tiếng Việt</option>
-    <option value="ko">한국어</option>
+      <option value="fr">Français</option>
+      <option value="it">Italiano</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="uk">Українська</option>
+      <option value="pl">Polski</option>
+      <option value="ro">Română</option>
+      <option value="pt">Português</option>
+      <option value="ar">العربية</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="tl">Tagalog</option>
+      <option value="th">ไทย</option>
+      <option value="vi">Tiếng Việt</option>
+      <option value="ko">한국어</option>
 
-  </select>
+    </select>
+  </div>
 
 </div>
 
