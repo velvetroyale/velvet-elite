@@ -200,14 +200,43 @@ background:#d4af37;
 color:#0b0b0b;
 }
 
-/* SELECT */
+/* DROPDOWN */
+
+.select-wrapper{
+position:relative;
+}
 
 .select-wrapper select{
+appearance:none;
+-webkit-appearance:none;
+-moz-appearance:none;
+
+padding:7px 34px 7px 14px;
+
+border-radius:20px;
+font-size:11px;
+font-weight:500;
+
 background:#141414;
 color:#d4af37;
-border:1px solid rgba(212,175,55,0.35);
-border-radius:30px;
-padding:8px 12px;
+
+border:1px solid rgba(212,175,55,0.25);
+
+cursor:pointer;
+outline:none;
+}
+
+/* CUSTOM ARROW */
+
+.select-wrapper::after{
+content:"▼";
+position:absolute;
+right:12px;
+top:50%;
+transform:translateY(-50%);
+font-size:9px;
+color:#d4af37;
+pointer-events:none;
 }
 
 /* MOBILE */
@@ -250,9 +279,34 @@ English
 Español
 </button>
 
-<button class="language-btn" onclick="setLang('fr', this)">
-Français
-</button>
+<!-- MORE DROPDOWN -->
+
+<div class="select-wrapper">
+
+<select onchange="if(this.value) setLang(this.value, document.querySelector('.language-btn.active'));">
+
+<option value="">More ▼</option>
+
+<option value="fr">Français</option>
+<option value="it">Italiano</option>
+<option value="de">Deutsch</option>
+<option value="ru">Русский</option>
+<option value="uk">Українська</option>
+<option value="pl">Polski</option>
+<option value="ro">Română</option>
+<option value="pt">Português</option>
+<option value="ar">العربية</option>
+<option value="zh">中文</option>
+<option value="ja">日本語</option>
+<option value="tl">Tagalog</option>
+<option value="th">ไทย</option>
+<option value="vi">Tiếng Việt</option>
+<option value="ko">한국어</option>
+<option value="hi">हिन्दी</option>
+
+</select>
+
+</div>
 
 </div>
 
