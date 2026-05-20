@@ -20,7 +20,6 @@ line-height:1.6;
 }
 
 /* HERO */
-
 .hero{
 padding:70px 16px;
 background:radial-gradient(circle at top,#1a1a1a,#0b0b0b);
@@ -40,7 +39,6 @@ font-size:15px;
 }
 
 /* CONTAINER */
-
 .container{
 max-width:900px;
 margin:auto;
@@ -48,7 +46,6 @@ padding:16px;
 }
 
 /* CARD */
-
 .card{
 background:linear-gradient(145deg,#151515,#101010);
 padding:22px;
@@ -66,7 +63,6 @@ font-size:22px;
 }
 
 /* TIER */
-
 .tier{
 margin-bottom:30px;
 font-size:14px;
@@ -76,19 +72,12 @@ border:1px solid rgba(212,175,55,.15);
 background:rgba(255,255,255,.02);
 }
 
-/* FEATURED */
-
 .featured-tier{
 border:1px solid rgba(212,175,55,.45);
-background:linear-gradient(
-145deg,
-rgba(212,175,55,.08),
-rgba(255,255,255,.02)
-);
+background:linear-gradient(145deg,rgba(212,175,55,.08),rgba(255,255,255,.02));
 }
 
 /* BADGE */
-
 .badge{
 display:inline-block;
 background:#d4af37;
@@ -103,18 +92,13 @@ text-transform:uppercase;
 }
 
 /* BUTTON */
-
 .button{
 display:block;
 width:100%;
 max-width:420px;
 padding:18px;
 margin:25px auto 10px auto;
-background:linear-gradient(
-145deg,
-#d4af37,
-#f5dc8a
-);
+background:linear-gradient(145deg,#d4af37,#f5dc8a);
 color:#0b0b0b;
 text-decoration:none;
 font-weight:bold;
@@ -131,7 +115,6 @@ transform:translateY(-1px);
 }
 
 /* SMALL */
-
 .small{
 font-size:12px;
 opacity:.75;
@@ -140,7 +123,6 @@ text-align:center;
 }
 
 /* FOOTER */
-
 .footer{
 margin-top:40px;
 font-size:12px;
@@ -148,34 +130,64 @@ opacity:.6;
 padding:20px;
 }
 
-/* MOBILE */
+/* TABLE */
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+font-size:13px;
+}
 
+th, td{
+border-bottom:1px solid rgba(212,175,55,.15);
+padding:10px;
+text-align:center;
+}
+
+th{
+color:#f5dc8a;
+font-weight:700;
+}
+
+/* WHY UPGRADE */
+.why{
+background:linear-gradient(145deg,#141414,#0f0f0f);
+border:1px solid rgba(212,175,55,.25);
+border-radius:16px;
+padding:22px;
+max-width:650px;
+margin:20px auto;
+text-align:left;
+}
+
+.why h3{
+margin-top:0;
+font-size:20px;
+color:#f5dc8a;
+}
+
+.why p{
+font-size:14px;
+opacity:.9;
+margin-bottom:10px;
+}
+
+/* MOBILE */
 @media (min-width:768px){
 
-h1{
-font-size:44px;
-}
+h1{ font-size:44px; }
 
-.hero{
-padding:90px 20px;
-}
+.hero{ padding:90px 20px; }
 
-.card{
-padding:28px;
-}
+.card{ padding:28px; }
 
-.tier{
-font-size:15px;
-padding:24px;
-}
+.tier{ font-size:15px; padding:24px; }
 
 }
 </style>
 </head>
 
 <body>
-
-<!-- HERO -->
 
 <div class="hero">
 
@@ -190,17 +202,68 @@ Your application has been reviewed. You have been selected for curated internati
 <div class="container">
 
 <!-- INTRO -->
-
 <div class="card">
-
 <p>
 Velvet Elite is a private concierge matchmaking system designed for serious, high-intent individuals seeking curated international introductions.
 </p>
+</div>
+
+<!-- WHY UPGRADE -->
+<div class="why">
+
+<h3>🚀 Why Upgrade?</h3>
+
+<p>Higher tiers dramatically increase your match quality, speed, and number of curated introductions.</p>
+
+<p>✔ Faster review cycles = quicker introductions</p>
+<p>✔ Higher tiers receive priority candidate selection</p>
+<p>✔ More introductions per month (up to 5x difference)</p>
+<p>✔ Access to more exclusive international profiles</p>
+
+</div>
+
+<!-- COMPARISON TABLE -->
+<div class="card">
+
+<h2>📊 Tier Comparison</h2>
+
+<table>
+<tr>
+<th>Tier</th>
+<th>Monthly Introductions</th>
+<th>Priority Level</th>
+<th>Review Speed</th>
+<th>Visibility</th>
+</tr>
+
+<tr>
+<td>Starter</td>
+<td>1–2</td>
+<td>Standard</td>
+<td>Queue</td>
+<td>Basic</td>
+</tr>
+
+<tr>
+<td>Premium</td>
+<td>3–6</td>
+<td>High</td>
+<td>Fast</td>
+<td>Priority</td>
+</tr>
+
+<tr>
+<td>Elite</td>
+<td>8–15</td>
+<td>Top Priority</td>
+<td>Instant</td>
+<td>Maximum</td>
+</tr>
+</table>
 
 </div>
 
 <!-- MEMBERSHIP -->
-
 <div class="card">
 
 <h2>💼 Choose Your Access Level</h2>
@@ -209,9 +272,7 @@ Velvet Elite is a private concierge matchmaking system designed for serious, hig
 Each tier determines your visibility, priority level, and frequency of curated introductions.
 </p>
 
-
 <!-- STARTER -->
-
 <div class="tier">
 
 <h2>🥉 Starter — $25</h2>
@@ -221,21 +282,16 @@ Each tier determines your visibility, priority level, and frequency of curated i
 ✔ Queue-based review system<br>
 ✔ Basic visibility placement
 
-<a class="button"
-href="{{STARTER_LINK}}">
+<a class="button" href="{{STARTER_LINK}}">
 Activate Starter Access
 </a>
 
 </div>
 
-
 <!-- PREMIUM -->
-
 <div class="tier featured-tier">
 
-<div class="badge">
-Most Requested
-</div>
+<div class="badge">Most Requested</div>
 
 <h2>🥈 Premium — $250</h2>
 
@@ -244,16 +300,13 @@ Most Requested
 ✔ Increased profile visibility<br>
 ✔ Higher compatibility selection priority
 
-<a class="button"
-href="{{PREMIUM_LINK}}">
+<a class="button" href="{{PREMIUM_LINK}}">
 Activate Premium Access
 </a>
 
 </div>
 
-
 <!-- ELITE -->
-
 <div class="tier">
 
 <h2>🥇 Elite — $1,000</h2>
@@ -264,8 +317,7 @@ Activate Premium Access
 ✔ Maximum visibility within elite network<br>
 ✔ Dedicated matchmaking handling
 
-<a class="button"
-href="{{ELITE_LINK}}">
+<a class="button" href="{{ELITE_LINK}}">
 Activate Elite Access
 </a>
 
@@ -277,9 +329,7 @@ Elite members receive priority access to the most compatible international intro
 
 </div>
 
-
 <!-- TRUST -->
-
 <div class="card">
 
 <h2>🔐 Private & Confidential</h2>
@@ -290,14 +340,8 @@ All profiles and introductions remain confidential. No public listings exist. Ma
 
 </div>
 
-<div class="small" style="
-max-width:650px;
-margin:25px auto;
-padding-bottom:20px;
-">
-
+<div class="small" style="max-width:650px;margin:25px auto;padding-bottom:20px;">
 Secure checkout • Instant activation after payment • Private & confidential system
-
 </div>
 
 </div>
