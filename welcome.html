@@ -7,111 +7,189 @@
 
 <style>
 
-* {
-    box-sizing: border-box;
+*{
+box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0b0b;
-    color: #d4af37;
-    text-align: center;
-    line-height: 1.6;
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0b0b0b;
+color:#d4af37;
+text-align:center;
+line-height:1.6;
+}
+
+/* LANGUAGE BAR */
+
+.language-bar{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:6px;
+padding:20px 10px 0;
+}
+
+.language-btn{
+padding:6px 10px;
+border-radius:18px;
+font-size:11px;
+background:#141414;
+color:#d4af37;
+border:1px solid rgba(212,175,55,0.35);
+cursor:pointer;
+}
+
+.language-btn.active{
+background:#d4af37;
+color:#0b0b0b;
+}
+
+/* DROPDOWN */
+
+.select-wrapper{
+position:relative;
+}
+
+.select-wrapper select{
+appearance:none;
+-webkit-appearance:none;
+-moz-appearance:none;
+
+padding:6px 30px 6px 12px;
+
+border-radius:18px;
+font-size:11px;
+
+background:#141414;
+color:#d4af37;
+
+border:1px solid rgba(212,175,55,0.35);
+
+cursor:pointer;
+outline:none;
+}
+
+.select-wrapper::after{
+content:"▼";
+position:absolute;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+font-size:9px;
+color:#d4af37;
+pointer-events:none;
 }
 
 /* HERO */
-.hero {
-    padding: 90px 20px;
-    background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+
+.hero{
+padding:70px 20px;
+background:radial-gradient(circle at top,#1a1a1a,#0b0b0b);
 }
 
 /* TITLE */
-h1 {
-    color: #d4af37;
-    font-size: 44px;
-    margin: 0 0 10px 0;
-    letter-spacing: 1px;
+
+h1{
+color:#d4af37;
+font-size:44px;
+margin:0 0 10px 0;
+letter-spacing:1px;
 }
 
 /* HERO TEXT */
-.hero p {
-    opacity: 0.9;
-    max-width: 750px;
-    margin: 0 auto;
-    font-size: 16px;
-    color: #d4af37;
+
+.hero p{
+opacity:0.9;
+max-width:750px;
+margin:0 auto;
+font-size:16px;
+color:#d4af37;
 }
 
 /* CONTAINER */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
 }
 
 /* CARD */
-.card {
-    background: #141414;
-    padding: 25px;
-    margin: 18px auto;
-    max-width: 650px;
-    border-radius: 14px;
-    border: 1px solid rgba(212, 175, 55, 0.25);
-    color: #d4af37;
+
+.card{
+background:#141414;
+padding:25px;
+margin:18px auto;
+max-width:650px;
+border-radius:14px;
+border:1px solid rgba(212,175,55,0.25);
+color:#d4af37;
 }
 
-/* HIGHLIGHT CARD */
-.highlight {
-    border: 1px solid #d4af37;
-    box-shadow: 0 0 22px rgba(212, 175, 55, 0.15);
+/* HIGHLIGHT */
+
+.highlight{
+border:1px solid #d4af37;
+box-shadow:0 0 22px rgba(212,175,55,0.15);
 }
 
 /* HEADINGS */
-.card h2 {
-    color: #d4af37;
-    margin-top: 0;
+
+.card h2{
+color:#d4af37;
+margin-top:0;
 }
 
 /* BUTTON */
-a.button {
-    display: inline-block;
-    padding: 16px 22px;
-    margin-top: 20px;
-    background: #d4af37;
-    color: #0b0b0b;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    transition: 0.2s ease;
+
+a.button{
+display:inline-block;
+padding:16px 22px;
+margin-top:20px;
+background:#d4af37;
+color:#0b0b0b;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+transition:0.2s ease;
 }
 
-a.button:hover {
-    background: #e6c35a;
+a.button:hover{
+background:#e6c35a;
 }
 
-/* SMALL TEXT */
-.small {
-    font-size: 12px;
-    opacity: 0.75;
-    margin-top: 10px;
-    color: #d4af37;
+/* SMALL */
+
+.small{
+font-size:12px;
+opacity:0.75;
+margin-top:10px;
+color:#d4af37;
 }
 
 /* FOOTER */
-.footer {
-    margin-top: 50px;
-    font-size: 12px;
-    opacity: 0.6;
-    padding: 20px;
-    color: #d4af37;
+
+.footer{
+margin-top:50px;
+font-size:12px;
+opacity:0.6;
+padding:20px;
+color:#d4af37;
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 32px;
-    }
+
+@media(max-width:600px){
+
+h1{
+font-size:32px;
+}
+
+.hero{
+padding:50px 18px;
+}
+
 }
 
 </style>
@@ -119,78 +197,655 @@ a.button:hover {
 
 <body>
 
+<!-- LANGUAGE BAR -->
+
+<div class="language-bar">
+
+<button class="language-btn active" onclick="setLang('en', this)">
+English
+</button>
+
+<button class="language-btn" onclick="setLang('es', this)">
+Español
+</button>
+
+<div class="select-wrapper">
+
+<select onchange="if(this.value) setLang(this.value, document.querySelector('.language-btn.active'));">
+
+<option value="">More ▼</option>
+
+<option value="fr">Français</option>
+<option value="it">Italiano</option>
+<option value="de">Deutsch</option>
+<option value="ru">Русский</option>
+<option value="uk">Українська</option>
+<option value="pl">Polski</option>
+<option value="ro">Română</option>
+<option value="pt">Português</option>
+<option value="ar">العربية</option>
+<option value="zh">中文</option>
+<option value="ja">日本語</option>
+<option value="tl">Tagalog</option>
+<option value="th">ไทย</option>
+<option value="vi">Tiếng Việt</option>
+<option value="ko">한국어</option>
+<option value="hi">हिन्दी</option>
+
+</select>
+
+</div>
+
+</div>
+
 <!-- HERO -->
+
 <div class="hero">
-    <h1>Welcome to Velvet Elite</h1>
-    <p>
-        Your payment has been successfully received.  
-        You now have full access to the Velvet Elite private matchmaking network.
-    </p>
+
+<h1 id="heroTitle">
+Welcome to Velvet Elite
+</h1>
+
+<p id="heroText">
+Your payment has been successfully received.
+You now have full access to the Velvet Elite private matchmaking network.
+</p>
+
 </div>
 
 <div class="container">
 
 <!-- CONFIRMATION -->
+
 <div class="card highlight">
-    <h2>✔ Access Activated</h2>
-    <p>
-        You made a premium decision — you’re now inside a high-value private matchmaking system.  
-        Your profile is now prioritized within the current matchmaking cycle.
-    </p>
+
+<h2 id="accessTitle">
+✔ Access Activated
+</h2>
+
+<p id="accessText">
+You made a premium decision — you’re now inside a high-value private matchmaking system.
+Your profile is now prioritized within the current matchmaking cycle.
+</p>
+
 </div>
 
 <!-- NEXT STEPS -->
+
 <div class="card">
-    <h2>What Happens Next</h2>
-    <p>
-        • First, you will receive an onboarding email with a match preference questionnaire<br>
-        • After you submit your preferences, our team will begin identifying highly compatible introductions based on your profile and responses<br>
-        • Your profile will then be reviewed and positioned within the network<br>
-        • Compatibility and preference mapping will take place<br>
-        • Our concierge team will begin curated matchmaking selection<br>
-        • You will begin receiving curated introductions shortly after
-    </p>
+
+<h2 id="nextTitle">
+What Happens Next
+</h2>
+
+<p id="nextText">
+• First, you will receive an onboarding email with a match preference questionnaire<br><br>
+
+• After you submit your preferences, our team will begin identifying highly compatible introductions based on your profile and responses<br><br>
+
+• Your profile will then be reviewed and positioned within the network<br><br>
+
+• Compatibility and preference mapping will take place<br><br>
+
+• Our concierge team will begin curated matchmaking selection<br><br>
+
+• You will begin receiving curated introductions shortly after
+</p>
+
 </div>
 
 <!-- EXPERIENCE -->
+
 <div class="card">
-    <h2>Private Concierge Experience</h2>
-    <p>
-        Each introduction is manually curated based on compatibility, intent, and availability.  
-        All introductions are curated privately within a closed member network.
-    </p>
+
+<h2 id="expTitle">
+Private Concierge Experience
+</h2>
+
+<p id="expText">
+Each introduction is manually curated based on compatibility, intent, and availability.
+All introductions are curated privately within a closed member network.
+</p>
+
 </div>
 
 <!-- TIMELINE -->
+
 <div class="card">
-    <h2>⏳ Processing Time</h2>
-    <p>
-        Initial onboarding updates are typically delivered within 24–72 hours depending on current matchmaking activity.
-    </p>
+
+<h2 id="timeTitle">
+⏳ Processing Time
+</h2>
+
+<p id="timeText">
+Initial onboarding updates are typically delivered within 24–72 hours depending on current matchmaking activity.
+</p>
+
 </div>
 
 <!-- SUPPORT -->
+
 <div class="card">
-    <h2>📩 Concierge Support</h2>
-    <p>
-        Our concierge team is available for onboarding assistance and membership guidance.
-    </p>
 
-    <a class="button" href="mailto:velvet.elite.concierge@gmail.com">
-        Contact Concierge
-    </a>
+<h2 id="supportTitle">
+📩 Concierge Support
+</h2>
 
-    <div class="small">
-        Concierge response within 24 hours.
-    </div>
+<p id="supportText">
+Our concierge team is available for onboarding assistance and membership guidance.
+</p>
+
+<a class="button" id="supportBtn" href="mailto:velvet.elite.concierge@gmail.com">
+Contact Concierge
+</a>
+
+<div class="small" id="supportSmall">
+Concierge response within 24 hours.
+</div>
+
 </div>
 
 </div>
 
 <!-- FOOTER -->
-<div class="footer">
+
+<div class="footer" id="footer">
 © 2026 Velvet Elite Matchmaking. All Rights Reserved.
 </div>
+
+<script>
+
+const lang = {
+
+en:{
+heroTitle:"Welcome to Velvet Elite",
+heroText:"Your payment has been successfully received. You now have full access to the Velvet Elite private matchmaking network.",
+
+accessTitle:"✔ Access Activated",
+accessText:"You made a premium decision — you’re now inside a high-value private matchmaking system. Your profile is now prioritized within the current matchmaking cycle.",
+
+nextTitle:"What Happens Next",
+nextText:"• First, you will receive an onboarding email with a match preference questionnaire<br><br>• After you submit your preferences, our team will begin identifying highly compatible introductions based on your profile and responses<br><br>• Your profile will then be reviewed and positioned within the network<br><br>• Compatibility and preference mapping will take place<br><br>• Our concierge team will begin curated matchmaking selection<br><br>• You will begin receiving curated introductions shortly after",
+
+expTitle:"Private Concierge Experience",
+expText:"Each introduction is manually curated based on compatibility, intent, and availability. All introductions are curated privately within a closed member network.",
+
+timeTitle:"⏳ Processing Time",
+timeText:"Initial onboarding updates are typically delivered within 24–72 hours depending on current matchmaking activity.",
+
+supportTitle:"📩 Concierge Support",
+supportText:"Our concierge team is available for onboarding assistance and membership guidance.",
+supportBtn:"Contact Concierge",
+supportSmall:"Concierge response within 24 hours.",
+
+footer:"© 2026 Velvet Elite Matchmaking. All Rights Reserved."
+},
+
+es:{
+heroTitle:"Bienvenido a Velvet Elite",
+heroText:"Tu pago ha sido recibido correctamente. Ahora tienes acceso completo a la red privada de matchmaking de Velvet Elite.",
+
+accessTitle:"✔ Acceso Activado",
+accessText:"Has tomado una decisión premium — ahora estás dentro de un sistema privado de matchmaking de alto nivel. Tu perfil ahora tiene prioridad dentro del ciclo actual.",
+
+nextTitle:"Qué Sucede Ahora",
+nextText:"• Primero recibirás un correo de bienvenida con un cuestionario de preferencias<br><br>• Después de enviar tus preferencias, nuestro equipo comenzará a identificar perfiles altamente compatibles<br><br>• Tu perfil será revisado y posicionado dentro de la red<br><br>• Se realizará un análisis de compatibilidad y preferencias<br><br>• Nuestro equipo concierge comenzará la selección personalizada<br><br>• Comenzarás a recibir introducciones seleccionadas pronto",
+
+expTitle:"Experiencia Concierge Privada",
+expText:"Cada introducción es seleccionada manualmente según compatibilidad, intención y disponibilidad. Todas las conexiones se realizan de forma privada.",
+
+timeTitle:"⏳ Tiempo de Procesamiento",
+timeText:"Las primeras actualizaciones suelen enviarse dentro de 24–72 horas dependiendo de la actividad actual.",
+
+supportTitle:"📩 Soporte Concierge",
+supportText:"Nuestro equipo concierge está disponible para asistencia y orientación.",
+
+supportBtn:"Contactar Concierge",
+supportSmall:"Respuesta dentro de 24 horas.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Todos los derechos reservados."
+}
+
+},
+
+fr:{
+heroTitle:"Bienvenue chez Velvet Elite",
+heroText:"Votre paiement a été reçu avec succès. Vous avez désormais un accès complet au réseau privé de matchmaking Velvet Elite.",
+
+accessTitle:"✔ Accès Activé",
+accessText:"Vous avez pris une décision premium — vous êtes maintenant dans un système privé de matchmaking haut de gamme. Votre profil est désormais prioritaire.",
+
+nextTitle:"Prochaines Étapes",
+nextText:"• Vous recevrez d’abord un email d’intégration avec un questionnaire de préférences<br><br>• Après soumission, notre équipe commencera à identifier des profils hautement compatibles<br><br>• Votre profil sera ensuite positionné dans le réseau<br><br>• Une analyse de compatibilité sera effectuée<br><br>• Notre équipe concierge commencera la sélection personnalisée<br><br>• Vous commencerez bientôt à recevoir des introductions privées",
+
+expTitle:"Expérience Concierge Privée",
+expText:"Chaque introduction est sélectionnée manuellement selon la compatibilité, les intentions et la disponibilité.",
+
+timeTitle:"⏳ Temps de Traitement",
+timeText:"Les premières mises à jour sont généralement envoyées sous 24–72 heures.",
+
+supportTitle:"📩 Support Concierge",
+supportText:"Notre équipe concierge est disponible pour vous accompagner.",
+
+supportBtn:"Contacter le Concierge",
+supportSmall:"Réponse sous 24 heures.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Tous droits réservés."
+},
+
+it:{
+heroTitle:"Benvenuto su Velvet Elite",
+heroText:"Il tuo pagamento è stato ricevuto con successo. Ora hai pieno accesso alla rete privata di matchmaking Velvet Elite.",
+
+accessTitle:"✔ Accesso Attivato",
+accessText:"Hai preso una decisione premium — ora fai parte di un sistema privato di matchmaking esclusivo.",
+
+nextTitle:"Cosa Succede Ora",
+nextText:"• Riceverai un’email iniziale con un questionario sulle preferenze<br><br>• Dopo l’invio, il nostro team inizierà a selezionare profili compatibili<br><br>• Il tuo profilo verrà posizionato nel network<br><br>• Verrà effettuata un’analisi di compatibilità<br><br>• Il team concierge inizierà la selezione personalizzata<br><br>• Inizierai presto a ricevere presentazioni curate",
+
+expTitle:"Esperienza Concierge Privata",
+expText:"Ogni introduzione viene selezionata manualmente in base a compatibilità e disponibilità.",
+
+timeTitle:"⏳ Tempo di Elaborazione",
+timeText:"Gli aggiornamenti iniziali vengono generalmente inviati entro 24–72 ore.",
+
+supportTitle:"📩 Supporto Concierge",
+supportText:"Il nostro team concierge è disponibile per assistenza.",
+
+supportBtn:"Contatta Concierge",
+supportSmall:"Risposta entro 24 ore.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Tutti i diritti riservati."
+},
+
+de:{
+heroTitle:"Willkommen bei Velvet Elite",
+heroText:"Ihre Zahlung wurde erfolgreich erhalten. Sie haben jetzt vollen Zugang zum privaten Velvet Elite Matchmaking-Netzwerk.",
+
+accessTitle:"✔ Zugang Aktiviert",
+accessText:"Sie haben eine Premium-Entscheidung getroffen — Ihr Profil wird jetzt priorisiert.",
+
+nextTitle:"Wie Es Weitergeht",
+nextText:"• Zunächst erhalten Sie eine Willkommens-E-Mail mit Fragen zu Ihren Präferenzen<br><br>• Danach beginnt unser Team mit der Auswahl kompatibler Kontakte<br><br>• Ihr Profil wird innerhalb des Netzwerks positioniert<br><br>• Eine Kompatibilitätsanalyse wird durchgeführt<br><br>• Unser Concierge-Team startet die Auswahl<br><br>• Sie erhalten bald kuratierte Vorstellungen",
+
+expTitle:"Private Concierge-Erfahrung",
+expText:"Jede Vorstellung wird manuell und vertraulich kuratiert.",
+
+timeTitle:"⏳ Bearbeitungszeit",
+timeText:"Erste Updates erfolgen normalerweise innerhalb von 24–72 Stunden.",
+
+supportTitle:"📩 Concierge Support",
+supportText:"Unser Concierge-Team steht Ihnen zur Verfügung.",
+
+supportBtn:"Concierge Kontaktieren",
+supportSmall:"Antwort innerhalb von 24 Stunden.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Alle Rechte vorbehalten."
+},
+
+ru:{
+heroTitle:"Добро пожаловать в Velvet Elite",
+heroText:"Ваш платеж успешно получен. Теперь у вас есть полный доступ к приватной сети знакомств Velvet Elite.",
+
+accessTitle:"✔ Доступ Активирован",
+accessText:"Вы приняли премиальное решение — теперь ваш профиль имеет приоритет.",
+
+nextTitle:"Что Дальше",
+nextText:"• Сначала вы получите письмо с анкетой предпочтений<br><br>• После отправки команда начнет подбор совместимых кандидатов<br><br>• Ваш профиль будет размещен в сети<br><br>• Будет проведен анализ совместимости<br><br>• Команда concierge начнет подбор<br><br>• Вскоре вы начнете получать знакомства",
+
+expTitle:"Приватный Concierge Сервис",
+expText:"Каждое знакомство подбирается вручную на основе совместимости и намерений.",
+
+timeTitle:"⏳ Время Обработки",
+timeText:"Первые обновления обычно отправляются в течение 24–72 часов.",
+
+supportTitle:"📩 Поддержка Concierge",
+supportText:"Наша команда concierge готова помочь вам.",
+
+supportBtn:"Связаться",
+supportSmall:"Ответ в течение 24 часов.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Все права защищены."
+},
+
+uk:{
+heroTitle:"Ласкаво просимо до Velvet Elite",
+heroText:"Ваш платіж успішно отримано. Тепер ви маєте повний доступ до приватної мережі Velvet Elite.",
+
+accessTitle:"✔ Доступ Активовано",
+accessText:"Ваш профіль тепер має пріоритет у поточному циклі.",
+
+nextTitle:"Що Далі",
+nextText:"• Ви отримаєте лист із анкетою вподобань<br><br>• Після цього команда почне підбір сумісних кандидатів<br><br>• Профіль буде розміщений у мережі<br><br>• Буде проведено аналіз сумісності<br><br>• Concierge-команда почне відбір<br><br>• Незабаром ви почнете отримувати знайомства",
+
+expTitle:"Приватний Concierge Досвід",
+expText:"Кожне знайомство підбирається вручну.",
+
+timeTitle:"⏳ Час Обробки",
+timeText:"Перші оновлення зазвичай надходять протягом 24–72 годин.",
+
+supportTitle:"📩 Concierge Підтримка",
+supportText:"Наша concierge-команда готова допомогти.",
+
+supportBtn:"Зв’язатися",
+supportSmall:"Відповідь протягом 24 годин.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Усі права захищено."
+},
+
+pl:{
+heroTitle:"Witamy w Velvet Elite",
+heroText:"Twoja płatność została pomyślnie otrzymana. Masz teraz pełny dostęp do prywatnej sieci matchmakingowej Velvet Elite.",
+
+accessTitle:"✔ Dostęp Aktywowany",
+accessText:"Podjąłeś decyzję premium — Twój profil ma teraz priorytet w obecnym cyklu matchmakingowym.",
+
+nextTitle:"Co Dalej",
+nextText:"• Najpierw otrzymasz e-mail onboardingowy z ankietą preferencji<br><br>• Po jej przesłaniu nasz zespół rozpocznie wyszukiwanie kompatybilnych dopasowań<br><br>• Twój profil zostanie pozycjonowany w sieci<br><br>• Nastąpi analiza kompatybilności i preferencji<br><br>• Nasz concierge rozpocznie selekcję dopasowań<br><br>• Wkrótce zaczniesz otrzymywać prywatne przedstawienia",
+
+expTitle:"Prywatne Doświadczenie Concierge",
+expText:"Każde przedstawienie jest ręcznie dobierane na podstawie kompatybilności i intencji.",
+
+timeTitle:"⏳ Czas Przetwarzania",
+timeText:"Pierwsze aktualizacje są zwykle wysyłane w ciągu 24–72 godzin.",
+
+supportTitle:"📩 Wsparcie Concierge",
+supportText:"Nasz concierge jest dostępny, aby pomóc Ci na każdym etapie.",
+
+supportBtn:"Kontakt z Concierge",
+supportSmall:"Odpowiedź w ciągu 24 godzin.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Wszelkie prawa zastrzeżone."
+},
+
+ro:{
+heroTitle:"Bine ai venit la Velvet Elite",
+heroText:"Plata ta a fost primită cu succes. Acum ai acces complet la rețeaua privată Velvet Elite.",
+
+accessTitle:"✔ Acces Activat",
+accessText:"Ai făcut o alegere premium — profilul tău are acum prioritate.",
+
+nextTitle:"Ce Urmează",
+nextText:"• Vei primi un email de onboarding cu un chestionar de preferințe<br><br>• După completare, echipa noastră va începe identificarea profilurilor compatibile<br><br>• Profilul tău va fi poziționat în rețea<br><br>• Va avea loc analiza compatibilității<br><br>• Echipa concierge va începe selecția personalizată<br><br>• Vei începe curând să primești introduceri private",
+
+expTitle:"Experiență Concierge Privată",
+expText:"Fiecare introducere este selectată manual pe baza compatibilității și intenției.",
+
+timeTitle:"⏳ Timp de Procesare",
+timeText:"Primele actualizări sunt de obicei trimise în 24–72 ore.",
+
+supportTitle:"📩 Suport Concierge",
+supportText:"Echipa noastră concierge este disponibilă pentru asistență.",
+
+supportBtn:"Contactează Concierge",
+supportSmall:"Răspuns în 24 de ore.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Toate drepturile rezervate."
+},
+
+pt:{
+heroTitle:"Bem-vindo ao Velvet Elite",
+heroText:"Seu pagamento foi recebido com sucesso. Agora você tem acesso total à rede privada Velvet Elite.",
+
+accessTitle:"✔ Acesso Ativado",
+accessText:"Você tomou uma decisão premium — seu perfil agora possui prioridade no sistema.",
+
+nextTitle:"O Que Acontece Agora",
+nextText:"• Primeiro você receberá um email inicial com um questionário de preferências<br><br>• Após enviar suas respostas, nossa equipe iniciará a busca de perfis compatíveis<br><br>• Seu perfil será posicionado dentro da rede<br><br>• Será realizado um mapeamento de compatibilidade<br><br>• Nossa equipe concierge iniciará a seleção personalizada<br><br>• Você começará a receber apresentações privadas em breve",
+
+expTitle:"Experiência Concierge Privada",
+expText:"Cada apresentação é selecionada manualmente com base em compatibilidade e intenção.",
+
+timeTitle:"⏳ Tempo de Processamento",
+timeText:"As primeiras atualizações geralmente são entregues em 24–72 horas.",
+
+supportTitle:"📩 Suporte Concierge",
+supportText:"Nossa equipe concierge está disponível para assistência.",
+
+supportBtn:"Contato Concierge",
+supportSmall:"Resposta dentro de 24 horas.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Todos os direitos reservados."
+},
+
+ar:{
+heroTitle:"مرحبًا بك في Velvet Elite",
+heroText:"تم استلام دفعتك بنجاح. لديك الآن وصول كامل إلى شبكة Velvet Elite الخاصة.",
+
+accessTitle:"✔ تم تفعيل الوصول",
+accessText:"لقد اتخذت قرارًا مميزًا — ملفك الآن ضمن نظام خاص عالي المستوى.",
+
+nextTitle:"ماذا يحدث بعد ذلك",
+nextText:"• ستتلقى أولاً رسالة ترحيب مع استبيان التفضيلات<br><br>• بعد الإرسال سيبدأ فريقنا بتحديد الملفات المتوافقة<br><br>• سيتم وضع ملفك داخل الشبكة<br><br>• سيتم إجراء تحليل التوافق والتفضيلات<br><br>• سيبدأ فريق الكونسيرج الاختيار المخصص<br><br>• ستبدأ قريبًا بتلقي التعارفات الخاصة",
+
+expTitle:"تجربة كونسيرج خاصة",
+expText:"كل تعارف يتم اختياره يدويًا بناءً على التوافق والنية والتوفر.",
+
+timeTitle:"⏳ وقت المعالجة",
+timeText:"عادةً ما يتم إرسال التحديثات الأولية خلال 24–72 ساعة.",
+
+supportTitle:"📩 دعم الكونسيرج",
+supportText:"فريق الكونسيرج متاح لمساعدتك وإرشادك.",
+
+supportBtn:"التواصل مع الكونسيرج",
+supportSmall:"الرد خلال 24 ساعة.",
+
+footer:"© 2026 Velvet Elite Matchmaking. جميع الحقوق محفوظة."
+},
+
+zh:{
+heroTitle:"欢迎加入 Velvet Elite",
+heroText:"您的付款已成功收到。您现在已获得 Velvet Elite 私人配对网络的完整访问权限。",
+
+accessTitle:"✔ 访问已激活",
+accessText:"您做出了高端选择 — 您的资料现在在当前配对周期中享有优先权。",
+
+nextTitle:"接下来会发生什么",
+nextText:"• 您将首先收到一封包含偏好问卷的欢迎邮件<br><br>• 提交后，我们的团队将开始筛选高匹配度人选<br><br>• 您的资料将被纳入网络系统<br><br>• 将进行兼容性分析<br><br>• Concierge 团队将开始私人筛选<br><br>• 您很快将开始收到私人介绍",
+
+expTitle:"私人 Concierge 体验",
+expText:"每次介绍都会根据兼容性和意向进行人工筛选。",
+
+timeTitle:"⏳ 处理时间",
+timeText:"初步更新通常会在 24–72 小时内发送。",
+
+supportTitle:"📩 Concierge 支持",
+supportText:"我们的 concierge 团队可为您提供帮助。",
+
+supportBtn:"联系 Concierge",
+supportSmall:"24 小时内回复。",
+
+footer:"© 2026 Velvet Elite Matchmaking. 版权所有。"
+},
+
+ja:{
+heroTitle:"Velvet Eliteへようこそ",
+heroText:"お支払いが正常に完了しました。現在、Velvet Eliteのプライベートマッチメイキングネットワークへ完全アクセスできます。",
+
+accessTitle:"✔ アクセスが有効化されました",
+accessText:"あなたのプロフィールは現在優先的に扱われています。",
+
+nextTitle:"次に起こること",
+nextText:"• まず、希望条件アンケート付きのメールが届きます<br><br>• 送信後、チームが高い相性の候補を選定します<br><br>• あなたのプロフィールはネットワーク内で配置されます<br><br>• 相性分析が行われます<br><br>• Conciergeチームが選定を開始します<br><br>• 間もなく紹介を受け取り始めます",
+
+expTitle:"プライベート Concierge 体験",
+expText:"すべての紹介は相性や意向に基づき手動で選定されます。",
+
+timeTitle:"⏳ 処理時間",
+timeText:"通常、初回更新は24〜72時間以内に行われます。",
+
+supportTitle:"📩 Concierge サポート",
+supportText:"Conciergeチームがサポートいたします。",
+
+supportBtn:"Conciergeへ連絡",
+supportSmall:"24時間以内に返信します。",
+
+footer:"© 2026 Velvet Elite Matchmaking. All Rights Reserved."
+},
+
+tl:{
+heroTitle:"Maligayang Pagdating sa Velvet Elite",
+heroText:"Matagumpay na natanggap ang iyong bayad. Mayroon ka nang buong access sa pribadong matchmaking network ng Velvet Elite.",
+
+accessTitle:"✔ Activated na ang Access",
+accessText:"Gumawa ka ng premium na desisyon — ang iyong profile ay may priority na ngayon sa kasalukuyang matchmaking cycle.",
+
+nextTitle:"Ano ang Susunod",
+nextText:"• Makakatanggap ka muna ng onboarding email na may questionnaire tungkol sa iyong preferences<br><br>• Pagkatapos mong isumite ito, magsisimula ang aming team sa paghahanap ng highly compatible matches<br><br>• Ang iyong profile ay ilalagay sa loob ng network<br><br>• Isasagawa ang compatibility at preference mapping<br><br>• Magsisimula ang aming concierge team sa curated matchmaking selection<br><br>• Magsisimula kang makatanggap ng curated introductions sa lalong madaling panahon",
+
+expTitle:"Pribadong Concierge Experience",
+expText:"Bawat introduction ay mano-manong pinipili batay sa compatibility, intent, at availability.",
+
+timeTitle:"⏳ Processing Time",
+timeText:"Karaniwang ipinapadala ang unang onboarding updates sa loob ng 24–72 oras.",
+
+supportTitle:"📩 Concierge Support",
+supportText:"Available ang aming concierge team para sa onboarding assistance at membership guidance.",
+
+supportBtn:"Kontakin ang Concierge",
+supportSmall:"Sagot sa loob ng 24 oras.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Lahat ng Karapatan ay Nakalaan."
+},
+
+th:{
+heroTitle:"ยินดีต้อนรับสู่ Velvet Elite",
+heroText:"เราได้รับการชำระเงินของคุณเรียบร้อยแล้ว ตอนนี้คุณสามารถเข้าถึงเครือข่ายจับคู่ส่วนตัวของ Velvet Elite ได้เต็มรูปแบบ",
+
+accessTitle:"✔ เปิดใช้งานการเข้าถึงแล้ว",
+accessText:"คุณได้ตัดสินใจในระดับพรีเมียม — โปรไฟล์ของคุณได้รับลำดับความสำคัญในระบบแล้ว",
+
+nextTitle:"ขั้นตอนต่อไป",
+nextText:"• คุณจะได้รับอีเมลต้อนรับพร้อมแบบสอบถามเกี่ยวกับความต้องการของคุณ<br><br>• หลังจากส่งข้อมูล ทีมงานของเราจะเริ่มค้นหาคู่ที่เข้ากันได้สูง<br><br>• โปรไฟล์ของคุณจะถูกจัดวางภายในเครือข่าย<br><br>• จะมีการวิเคราะห์ความเข้ากันได้และความต้องการ<br><br>• ทีม concierge ของเราจะเริ่มการคัดเลือกแบบส่วนตัว<br><br>• คุณจะเริ่มได้รับการแนะนำในเร็ว ๆ นี้",
+
+expTitle:"ประสบการณ์ Concierge แบบส่วนตัว",
+expText:"ทุกการแนะนำถูกคัดเลือกด้วยตนเองตามความเข้ากันได้และความตั้งใจ.",
+
+timeTitle:"⏳ เวลาดำเนินการ",
+timeText:"โดยปกติการอัปเดตครั้งแรกจะถูกส่งภายใน 24–72 ชั่วโมง",
+
+supportTitle:"📩 Concierge Support",
+supportText:"ทีม concierge ของเราพร้อมให้ความช่วยเหลือและคำแนะนำ",
+
+supportBtn:"ติดต่อ Concierge",
+supportSmall:"ตอบกลับภายใน 24 ชั่วโมง",
+
+footer:"© 2026 Velvet Elite Matchmaking. สงวนลิขสิทธิ์ทั้งหมด"
+},
+
+vi:{
+heroTitle:"Chào mừng đến với Velvet Elite",
+heroText:"Khoản thanh toán của bạn đã được nhận thành công. Bạn hiện có toàn quyền truy cập vào mạng lưới matchmaking riêng tư của Velvet Elite.",
+
+accessTitle:"✔ Quyền Truy Cập Đã Được Kích Hoạt",
+accessText:"Bạn đã đưa ra một lựa chọn cao cấp — hồ sơ của bạn hiện được ưu tiên trong hệ thống matchmaking.",
+
+nextTitle:"Điều Gì Sẽ Xảy Ra Tiếp Theo",
+nextText:"• Trước tiên bạn sẽ nhận được email onboarding với bảng câu hỏi sở thích<br><br>• Sau khi gửi, đội ngũ của chúng tôi sẽ bắt đầu tìm kiếm những kết nối tương thích cao<br><br>• Hồ sơ của bạn sẽ được định vị trong mạng lưới<br><br>• Quá trình phân tích tương thích sẽ được thực hiện<br><br>• Đội ngũ concierge sẽ bắt đầu tuyển chọn cá nhân hóa<br><br>• Bạn sẽ sớm bắt đầu nhận được các giới thiệu riêng tư",
+
+expTitle:"Trải Nghiệm Concierge Riêng Tư",
+expText:"Mỗi kết nối đều được lựa chọn thủ công dựa trên mức độ tương thích và mục tiêu.",
+
+timeTitle:"⏳ Thời Gian Xử Lý",
+timeText:"Các cập nhật đầu tiên thường được gửi trong vòng 24–72 giờ.",
+
+supportTitle:"📩 Hỗ Trợ Concierge",
+supportText:"Đội ngũ concierge của chúng tôi luôn sẵn sàng hỗ trợ bạn.",
+
+supportBtn:"Liên Hệ Concierge",
+supportSmall:"Phản hồi trong vòng 24 giờ.",
+
+footer:"© 2026 Velvet Elite Matchmaking. Đã đăng ký bản quyền."
+},
+
+ko:{
+heroTitle:"Velvet Elite에 오신 것을 환영합니다",
+heroText:"결제가 성공적으로 완료되었습니다. 이제 Velvet Elite 프라이빗 매치메이킹 네트워크에 전체 접근 권한이 부여되었습니다.",
+
+accessTitle:"✔ 액세스 활성화 완료",
+accessText:"프리미엄 결정을 내리셨습니다 — 현재 귀하의 프로필은 우선적으로 처리됩니다.",
+
+nextTitle:"다음 단계",
+nextText:"• 먼저 선호도 설문이 포함된 온보딩 이메일을 받게 됩니다<br><br>• 제출 후 저희 팀이 높은 호환성을 가진 매칭을 찾기 시작합니다<br><br>• 귀하의 프로필은 네트워크 내에 배치됩니다<br><br>• 호환성 분석이 진행됩니다<br><br>• Concierge 팀이 맞춤 선정을 시작합니다<br><br>• 곧 프라이빗 소개를 받기 시작하게 됩니다",
+
+expTitle:"프라이빗 Concierge 경험",
+expText:"모든 소개는 호환성과 의도를 기반으로 수동으로 선정됩니다.",
+
+timeTitle:"⏳ 처리 시간",
+timeText:"초기 업데이트는 일반적으로 24–72시간 내 제공됩니다.",
+
+supportTitle:"📩 Concierge 지원",
+supportText:"저희 concierge 팀이 도움을 드릴 준비가 되어 있습니다.",
+
+supportBtn:"Concierge 문의",
+supportSmall:"24시간 내 답변.",
+
+footer:"© 2026 Velvet Elite Matchmaking. All Rights Reserved."
+},
+
+hi:{
+heroTitle:"Velvet Elite में आपका स्वागत है",
+heroText:"आपका भुगतान सफलतापूर्वक प्राप्त हो गया है। अब आपके पास Velvet Elite निजी matchmaking नेटवर्क की पूर्ण पहुँच है।",
+
+accessTitle:"✔ एक्सेस सक्रिय हो गया",
+accessText:"आपने एक प्रीमियम निर्णय लिया है — आपकी प्रोफ़ाइल अब प्राथमिकता के साथ दिखाई जाएगी।",
+
+nextTitle:"अब आगे क्या होगा",
+nextText:"• सबसे पहले आपको onboarding ईमेल और preference questionnaire प्राप्त होगा<br><br>• आपके उत्तर जमा करने के बाद हमारी टीम highly compatible introductions की पहचान शुरू करेगी<br><br>• आपकी प्रोफ़ाइल नेटवर्क में स्थानित की जाएगी<br><br>• compatibility analysis किया जाएगा<br><br>• हमारी concierge टीम curated matchmaking selection शुरू करेगी<br><br>• आपको जल्द ही curated introductions प्राप्त होने लगेंगे",
+
+expTitle:"प्राइवेट Concierge अनुभव",
+expText:"हर introduction compatibility और intent के आधार पर manually curated किया जाता है।",
+
+timeTitle:"⏳ प्रोसेसिंग समय",
+timeText:"प्रारंभिक onboarding updates आमतौर पर 24–72 घंटों के भीतर भेजे जाते हैं।",
+
+supportTitle:"📩 Concierge सहायता",
+supportText:"हमारी concierge टीम सहायता और मार्गदर्शन के लिए उपलब्ध है।",
+
+supportBtn:"Concierge से संपर्क करें",
+supportSmall:"24 घंटों के भीतर उत्तर।",
+
+footer:"© 2026 Velvet Elite Matchmaking. सर्वाधिकार सुरक्षित।"
+};
+    
+function setLang(l, btn){
+
+document.querySelectorAll('.language-btn')
+.forEach(b=>b.classList.remove('active'));
+
+if(btn){
+btn.classList.add('active');
+}
+
+const t = lang[l];
+
+if(!t) return;
+
+document.getElementById("heroTitle").innerHTML = t.heroTitle;
+document.getElementById("heroText").innerHTML = t.heroText;
+
+document.getElementById("accessTitle").innerHTML = t.accessTitle;
+document.getElementById("accessText").innerHTML = t.accessText;
+
+document.getElementById("nextTitle").innerHTML = t.nextTitle;
+document.getElementById("nextText").innerHTML = t.nextText;
+
+document.getElementById("expTitle").innerHTML = t.expTitle;
+document.getElementById("expText").innerHTML = t.expText;
+
+document.getElementById("timeTitle").innerHTML = t.timeTitle;
+document.getElementById("timeText").innerHTML = t.timeText;
+
+document.getElementById("supportTitle").innerHTML = t.supportTitle;
+document.getElementById("supportText").innerHTML = t.supportText;
+document.getElementById("supportBtn").innerHTML = t.supportBtn;
+document.getElementById("supportSmall").innerHTML = t.supportSmall;
+
+document.getElementById("footer").innerHTML = t.footer;
+
+}
+
+</script>
 
 </body>
 </html>
