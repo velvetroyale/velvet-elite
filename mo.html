@@ -6,7 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{box-sizing:border-box;font-family:Arial,sans-serif;}
+
+*{
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
 body{
 margin:0;
@@ -17,6 +21,7 @@ line-height:1.6;
 }
 
 /* HERO */
+
 .hero{
 padding:70px 16px;
 background:radial-gradient(circle at top,#1a1a1a,#0b0b0b);
@@ -35,6 +40,7 @@ font-size:15px;
 }
 
 /* WRAPPER */
+
 .container{
 max-width:1100px;
 margin:auto;
@@ -42,6 +48,7 @@ padding:20px;
 }
 
 /* PRICING */
+
 .pricing{
 display:flex;
 gap:18px;
@@ -49,6 +56,8 @@ justify-content:center;
 flex-wrap:wrap;
 margin-top:30px;
 }
+
+/* CARD */
 
 .plan{
 background:linear-gradient(145deg,#151515,#0f0f0f);
@@ -67,11 +76,15 @@ transform:translateY(-4px);
 border-color:rgba(212,175,55,.4);
 }
 
+/* POPULAR */
+
 .popular{
 border:1px solid rgba(212,175,55,.6);
 background:linear-gradient(145deg,rgba(212,175,55,.08),#0f0f0f);
 transform:scale(1.05);
 }
+
+/* BADGE */
 
 .badge{
 position:absolute;
@@ -85,13 +98,19 @@ border-radius:20px;
 font-weight:700;
 }
 
+/* PRICE */
+
 .price{
 font-size:28px;
 margin:10px 0;
 color:#f5dc8a;
 }
 
-ul{padding-left:18px;font-size:14px;opacity:.9;}
+ul{
+padding-left:18px;
+font-size:14px;
+opacity:.9;
+}
 
 .button{
 display:block;
@@ -105,6 +124,8 @@ border-radius:12px;
 text-decoration:none;
 }
 
+/* SECTION */
+
 .section{
 max-width:900px;
 margin:40px auto;
@@ -114,6 +135,8 @@ padding:22px;
 border-radius:14px;
 border:1px solid rgba(212,175,55,.15);
 }
+
+/* TABLE */
 
 table{
 width:100%;
@@ -128,7 +151,11 @@ padding:10px;
 text-align:center;
 }
 
-th{color:#f5dc8a;}
+th{
+color:#f5dc8a;
+}
+
+/* NOTICE */
 
 .notice{
 background:linear-gradient(145deg,#151515,#0f0f0f);
@@ -139,6 +166,8 @@ margin-top:20px;
 font-size:14px;
 }
 
+/* FOOTER */
+
 .footer{
 opacity:.6;
 font-size:12px;
@@ -146,7 +175,8 @@ margin:40px 0 20px;
 text-align:center;
 }
 
-/* LANGUAGE */
+/* LANGUAGE BAR */
+
 .language-bar{
 display:flex;
 flex-wrap:wrap;
@@ -170,203 +200,458 @@ background:#d4af37;
 color:#0b0b0b;
 }
 
-/* MOBILE */
-@media(max-width:900px){
-.pricing{flex-direction:column;align-items:center;}
-.plan{width:90%;}
-.popular{transform:none;}
+/* SELECT */
+
+.select-wrapper select{
+background:#141414;
+color:#d4af37;
+border:1px solid rgba(212,175,55,0.35);
+border-radius:30px;
+padding:8px 12px;
 }
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.pricing{
+flex-direction:column;
+align-items:center;
+}
+
+.plan{
+width:90%;
+}
+
+.popular{
+transform:none;
+}
+
+h1{
+font-size:30px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- LANGUAGE BAR -->
+
 <div class="language-bar">
-<button class="language-btn active" onclick="setLang('en', this)">EN</button>
-<button class="language-btn" onclick="setLang('es', this)">ES</button>
+
+<button class="language-btn active" onclick="setLang('en', this)">
+English
+</button>
+
+<button class="language-btn" onclick="setLang('es', this)">
+Español
+</button>
+
+<button class="language-btn" onclick="setLang('fr', this)">
+Français
+</button>
+
 </div>
 
 <!-- HERO -->
+
 <div class="hero">
-<h1 id="h1">💼 Membership Access</h1>
-<p id="hero">Select your membership level to activate curated matchmaking.</p>
+
+<h1 id="h1">
+💼 Membership Access
+</h1>
+
+<p id="hero">
+Your application has been reviewed. Select your membership level to activate curated matchmaking.
+</p>
+
 </div>
 
 <div class="container">
 
-<!-- INFO -->
+<!-- HOW -->
+
 <div class="section">
-<h2 id="howTitle">How It Works</h2>
-<p id="howText">Each tier controls introductions, speed, and priority access.</p>
+
+<h2 id="howTitle">
+🚀 How Membership Works
+</h2>
+
+<p id="howText">
+Each tier determines introductions, speed, and priority.
+</p>
 
 <div class="notice" id="notice">
-Higher tiers receive more introductions and better matches first.
-</div>
+⚡ Higher tiers receive significantly more introductions and priority access to premium profiles.
 </div>
 
-<!-- TIERS -->
+</div>
+
+<!-- PRICING -->
+
 <div class="pricing">
 
+<!-- STARTER -->
+
 <div class="plan">
-<h2 id="t1">Starter</h2>
-<div class="price">$25</div>
-<p id="d1">1 Month Access</p>
-<ul>
-<li id="s1">1–2 introductions/month</li>
-<li id="s2">Standard queue</li>
-<li id="s3">Basic visibility</li>
-</ul>
-<a class="button">Activate</a>
+
+<h2 id="t1">
+🥉 Starter
+</h2>
+
+<div class="price">
+$25
 </div>
+
+<p id="d1">
+<b>1 Month Access</b>
+</p>
+
+<ul>
+<li id="s1a">1–2 introductions / month</li>
+<li id="s1b">Standard queue</li>
+<li id="s1c">Basic visibility</li>
+</ul>
+
+<a class="button" href="#">
+Activate Starter
+</a>
+
+</div>
+
+<!-- PREMIUM -->
 
 <div class="plan popular">
-<div class="badge">Most Popular</div>
-<h2 id="t2">Premium</h2>
-<div class="price">$250</div>
-<p id="d2">2 Months Access</p>
-<ul>
-<li id="p1">3–6 introductions/month</li>
-<li id="p2">Priority matching</li>
-<li id="p3">Faster review</li>
-</ul>
-<a class="button">Activate</a>
+
+<div class="badge">
+Most Popular
 </div>
 
-<div class="plan">
-<h2 id="t3">Elite</h2>
-<div class="price">$1000</div>
-<p id="d3">3 Months Access</p>
+<h2 id="t2">
+🥈 Premium
+</h2>
+
+<div class="price">
+$250
+</div>
+
+<p id="d2">
+<b>2 Months Access</b>
+</p>
+
 <ul>
-<li id="e1">8–15 introductions/month</li>
-<li id="e2">Top priority access</li>
-<li id="e3">Concierge sourcing</li>
+<li id="p1a">3–6 introductions / month</li>
+<li id="p1b">Priority matching</li>
+<li id="p1c">Faster review</li>
 </ul>
-<a class="button">Activate</a>
+
+<a class="button" href="#">
+Activate Premium
+</a>
+
+</div>
+
+<!-- ELITE -->
+
+<div class="plan">
+
+<h2 id="t3">
+🥇 Elite
+</h2>
+
+<div class="price">
+$1,000
+</div>
+
+<p id="d3">
+<b>3 Months Access</b>
+</p>
+
+<ul>
+<li id="e1a">8–15 introductions / month</li>
+<li id="e1b">Top priority access</li>
+<li id="e1c">Concierge sourcing</li>
+</ul>
+
+<a class="button" href="#">
+Activate Elite
+</a>
+
 </div>
 
 </div>
 
 <!-- TABLE -->
+
 <div class="section">
-<h2 id="tableTitle">Tier Comparison</h2>
+
+<h2 id="tableTitle">
+📊 Tier Comparison
+</h2>
 
 <table>
+
 <tr>
-<th id="th1"></th>
-<th id="th2"></th>
-<th id="th3"></th>
-<th id="th4"></th>
+<th id="th1">Tier</th>
+<th id="th2">Duration</th>
+<th id="th3">Introductions</th>
+<th id="th4">Priority</th>
 </tr>
 
 <tr>
-<td id="r1a"></td>
-<td id="r1b"></td>
-<td id="r1c"></td>
-<td id="r1d"></td>
+<td id="r1c1">Starter</td>
+<td id="r1c2">1 Month</td>
+<td id="r1c3">1–2</td>
+<td id="r1c4">Standard</td>
 </tr>
 
 <tr>
-<td id="r2a"></td>
-<td id="r2b"></td>
-<td id="r2c"></td>
-<td id="r2d"></td>
+<td id="r2c1">Premium</td>
+<td id="r2c2">2 Months</td>
+<td id="r2c3">3–6</td>
+<td id="r2c4">High</td>
 </tr>
 
 <tr>
-<td id="r3a"></td>
-<td id="r3b"></td>
-<td id="r3c"></td>
-<td id="r3d"></td>
+<td id="r3c1">Elite</td>
+<td id="r3c2">3 Months</td>
+<td id="r3c3">8–15</td>
+<td id="r3c4">Top</td>
 </tr>
 
 </table>
 
 <p id="eliteRule" style="margin-top:10px;font-size:12px;opacity:.7;">
-Elite access depends on tier level — higher tiers unlock Elite members first.
+Elite access is tier-dependent — higher tiers gain priority access to Elite members first.
 </p>
+
 </div>
 
 <!-- IMPACT -->
+
 <div class="section">
-<h2 id="impactTitle">Upgrade Impact</h2>
+
+<h2 id="impactTitle">
+⚡ Upgrade Impact
+</h2>
+
 <p id="impactText">
-Starter has lower match volume and slower priority.
+Starter gives fewer introductions and slower access to top matches.
 </p>
 
 <div class="notice" id="impactNotice">
-Premium = 3x more introductions. Elite = up to 8x more opportunities.
+💡 Premium = ~3x more introductions. Elite = up to ~8x more opportunities.
 </div>
+
 </div>
 
 </div>
 
-<div class="footer">© 2026 Velvet Elite</div>
+<div class="footer">
+© 2026 Velvet Elite
+</div>
 
 <script>
 
 const lang = {
+
 en:{
 h1:"💼 Membership Access",
-hero:"Select your membership level to activate curated matchmaking.",
-howTitle:"How It Works",
-howText:"Each tier controls introductions, speed, and priority access.",
-notice:"Higher tiers receive more introductions and better matches first.",
+hero:"Your application has been reviewed. Select your membership level to activate curated matchmaking.",
 
-t1:"Starter",t2:"Premium",t3:"Elite",
-d1:"1 Month Access",d2:"2 Months Access",d3:"3 Months Access",
+howTitle:"🚀 How Membership Works",
+howText:"Each tier determines introductions, speed, and priority.",
+notice:"⚡ Higher tiers receive significantly more introductions and priority access to premium profiles.",
 
-s1:"1–2 introductions/month",s2:"Standard queue",s3:"Basic visibility",
-p1:"3–6 introductions/month",p2:"Priority matching",p3:"Faster review",
-e1:"8–15 introductions/month",e2:"Top priority access",e3:"Concierge sourcing",
+t1:"🥉 Starter",
+t2:"🥈 Premium",
+t3:"🥇 Elite",
 
-th1:"Tier",th2:"Duration",th3:"Introductions",th4:"Priority",
+d1:"1 Month Access",
+d2:"2 Months Access",
+d3:"3 Months Access",
 
-r1a:"Starter",r1b:"1 Month",r1c:"1–2",r1d:"Standard",
-r2a:"Premium",r2b:"2 Months",r2c:"3–6",r2d:"High",
-r3a:"Elite",r3b:"3 Months",r3c:"8–15",r3d:"Top",
+s1a:"1–2 introductions / month",
+s1b:"Standard queue",
+s1c:"Basic visibility",
 
-eliteRule:"Elite access depends on tier level — higher tiers unlock Elite members first.",
+p1a:"3–6 introductions / month",
+p1b:"Priority matching",
+p1c:"Faster review",
 
-impactTitle:"Upgrade Impact",
-impactText:"Starter has lower match volume and slower priority.",
-impactNotice:"Premium = 3x more introductions. Elite = up to 8x more opportunities."
+e1a:"8–15 introductions / month",
+e1b:"Top priority access",
+e1c:"Concierge sourcing",
+
+tableTitle:"📊 Tier Comparison",
+
+th1:"Tier",
+th2:"Duration",
+th3:"Introductions",
+th4:"Priority",
+
+r1c1:"Starter",
+r1c2:"1 Month",
+r1c3:"1–2",
+r1c4:"Standard",
+
+r2c1:"Premium",
+r2c2:"2 Months",
+r2c3:"3–6",
+r2c4:"High",
+
+r3c1:"Elite",
+r3c2:"3 Months",
+r3c3:"8–15",
+r3c4:"Top",
+
+eliteRule:"Elite access is tier-dependent — higher tiers gain priority access to Elite members first.",
+
+impactTitle:"⚡ Upgrade Impact",
+impactText:"Starter gives fewer introductions and slower access to top matches.",
+impactNotice:"💡 Premium = ~3x more introductions. Elite = up to ~8x more opportunities."
 },
 
 es:{
-h1:"💼 Membresía",
-hero:"Selecciona tu nivel.",
-howTitle:"Cómo funciona",
-howText:"Cada nivel controla introducciones y prioridad.",
-notice:"Niveles altos reciben más coincidencias.",
+h1:"💼 Acceso a Membresía",
+hero:"Tu solicitud ha sido revisada. Selecciona tu nivel de membresía.",
 
-t1:"Inicial",t2:"Premium",t3:"Elite",
-d1:"1 Mes",d2:"2 Meses",d3:"3 Meses",
+howTitle:"🚀 Cómo funciona",
+howText:"Cada nivel determina introducciones, velocidad y prioridad.",
+notice:"⚡ Los niveles superiores reciben más introducciones y acceso prioritario.",
 
-th1:"Nivel",th2:"Duración",th3:"Introducciones",th4:"Prioridad",
+t1:"🥉 Inicial",
+t2:"🥈 Premium",
+t3:"🥇 Elite",
 
-r1a:"Inicial",r1b:"1 Mes",r1c:"1–2",r1d:"Estándar",
-r2a:"Premium",r2b:"2 Meses",r2c:"3–6",r2d:"Alta",
-r3a:"Elite",r3b:"3 Meses",r3c:"8–15",r3d:"Máxima",
+d1:"Acceso por 1 Mes",
+d2:"Acceso por 2 Meses",
+d3:"Acceso por 3 Meses",
+
+s1a:"1–2 introducciones / mes",
+s1b:"Cola estándar",
+s1c:"Visibilidad básica",
+
+p1a:"3–6 introducciones / mes",
+p1b:"Prioridad en coincidencias",
+p1c:"Revisión más rápida",
+
+e1a:"8–15 introducciones / mes",
+e1b:"Acceso prioritario máximo",
+e1c:"Búsqueda concierge",
+
+tableTitle:"📊 Comparación de Planes",
+
+th1:"Nivel",
+th2:"Duración",
+th3:"Introducciones",
+th4:"Prioridad",
+
+r1c1:"Inicial",
+r1c2:"1 Mes",
+r1c3:"1–2",
+r1c4:"Estándar",
+
+r2c1:"Premium",
+r2c2:"2 Meses",
+r2c3:"3–6",
+r2c4:"Alta",
+
+r3c1:"Elite",
+r3c2:"3 Meses",
+r3c3:"8–15",
+r3c4:"Máxima",
 
 eliteRule:"El acceso Elite depende del nivel.",
-impactTitle:"Impacto",
-impactText:"Starter tiene menos coincidencias.",
-impactNotice:"Premium = 3x. Elite = 8x."
+
+impactTitle:"⚡ Impacto",
+impactText:"Starter ofrece menos introducciones y acceso más lento.",
+impactNotice:"💡 Premium = ~3x más introducciones. Elite = hasta ~8x más oportunidades."
+},
+
+fr:{
+h1:"💼 Accès Membre",
+hero:"Votre candidature a été examinée. Sélectionnez votre niveau d’adhésion.",
+
+howTitle:"🚀 Fonctionnement",
+howText:"Chaque niveau détermine les introductions, la rapidité et la priorité.",
+notice:"⚡ Les niveaux supérieurs reçoivent davantage d’introductions et un accès prioritaire.",
+
+t1:"🥉 Starter",
+t2:"🥈 Premium",
+t3:"🥇 Elite",
+
+d1:"Accès 1 Mois",
+d2:"Accès 2 Mois",
+d3:"Accès 3 Mois",
+
+s1a:"1–2 introductions / mois",
+s1b:"File standard",
+s1c:"Visibilité basique",
+
+p1a:"3–6 introductions / mois",
+p1b:"Matching prioritaire",
+p1c:"Examen accéléré",
+
+e1a:"8–15 introductions / mois",
+e1b:"Accès prioritaire maximal",
+e1c:"Service concierge",
+
+tableTitle:"📊 Comparaison",
+
+th1:"Niveau",
+th2:"Durée",
+th3:"Introductions",
+th4:"Priorité",
+
+r1c1:"Starter",
+r1c2:"1 Mois",
+r1c3:"1–2",
+r1c4:"Standard",
+
+r2c1:"Premium",
+r2c2:"2 Mois",
+r2c3:"3–6",
+r2c4:"Haute",
+
+r3c1:"Elite",
+r3c2:"3 Mois",
+r3c3:"8–15",
+r3c4:"Maximale",
+
+eliteRule:"L’accès Elite dépend du niveau.",
+
+impactTitle:"⚡ Impact",
+impactText:"Starter offre moins d’introductions et un accès plus lent.",
+impactNotice:"💡 Premium = ~3x plus d’introductions. Elite = jusqu’à ~8x plus d’opportunités."
 }
+
 };
 
 function setLang(l,btn){
-document.querySelectorAll('.language-btn').forEach(b=>b.classList.remove('active'));
+
+document.querySelectorAll('.language-btn')
+.forEach(b=>b.classList.remove('active'));
+
 if(btn) btn.classList.add('active');
 
 const t = lang[l];
+
 if(!t) return;
 
 Object.keys(t).forEach(id=>{
+
 const el = document.getElementById(id);
-if(el) el.innerText = t[id];
+
+if(el){
+el.innerText = t[id];
+}
+
 });
+
 }
 
 </script>
