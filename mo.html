@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Velvet Elite | Membership Access</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #d4af37;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    padding: 70px 16px;
+    background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+}
+
+h1 {
+    font-size: 34px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    opacity: 0.9;
+    max-width: 720px;
+    margin: 12px auto 0 auto;
+    font-size: 15px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 16px;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(145deg, #151515, #101010);
+    padding: 22px;
+    margin: 20px auto;
+    max-width: 650px;
+    border-radius: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* HEADINGS */
+.card h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+/* TIER */
+.tier {
+    margin-bottom: 30px;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(212,175,55,0.15);
+    background: rgba(255,255,255,0.02);
+}
+
+/* FEATURED */
+.featured-tier {
+    border: 1px solid rgba(212,175,55,0.45);
+    background: linear-gradient(145deg, rgba(212,175,55,0.08), rgba(255,255,255,0.02));
+}
+
+/* BADGE */
+.badge {
+    display: inline-block;
+    background: #d4af37;
+    color: #0b0b0b;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+/* BUTTON */
+a.button {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    padding: 18px;
+    margin: 25px auto 10px auto;
+    background: linear-gradient(145deg, #d4af37, #f5dc8a);
+    color: #0b0b0b;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(212,175,55,0.18);
+}
+
+/* SMALL */
+.small {
+    font-size: 12px;
+    opacity: 0.75;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.6;
+    padding: 20px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+h1 { font-size: 44px; }
+.hero { padding: 90px 20px; }
+.card { padding: 28px; }
+.tier { font-size: 15px; padding: 24px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>💼 Membership Access</h1>
+<p>
+Your application has been reviewed. You have been selected for curated international matchmaking within the Velvet Elite network.
+</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+<p>
+Velvet Elite is a private concierge matchmaking system for high-intent individuals seeking curated international introductions.
+</p>
+</div>
+
+<!-- TIERS -->
+<div class="card">
+
+<h2>💼 Choose Your Access Level</h2>
+<p>Each tier determines your priority level, visibility, and frequency of curated introductions.</p>
+
+<!-- STARTER -->
+<div class="tier">
+<h2>🥉 Starter — $25</h2>
+✔ Entry matchmaking pool<br>
+✔ Standard curated introductions<br>
+✔ Queue-based review system<br>
+✔ Basic visibility placement<br>
+
+<a class="button" href="{{TIER_SELECTION_LINK}}">
+Activate Starter Access
+</a>
+</div>
+
+<!-- PREMIUM -->
+<div class="tier featured-tier">
+
+<div class="badge">Most Requested</div>
+
+<h2>🥈 Premium — $250</h2>
+
+✔ Priority matchmaking cycle<br>
+✔ Faster introductions & review speed<br>
+✔ Increased visibility in active pool<br>
+✔ Higher compatibility selection priority<br>
+
+<a class="button" href="{{TIER_SELECTION_LINK}}">
+Activate Premium Access
+</a>
+</div>
+
+<!-- ELITE -->
+<div class="tier">
+
+<h2>🥇 Elite — $1,000</h2>
+
+✔ VIP concierge matchmaking cycle<br>
+✔ Highest priority introductions<br>
+✔ Direct curated match sourcing<br>
+✔ Maximum exposure within elite network<br>
+✔ Dedicated matchmaking handling<br>
+
+<a class="button" href="{{TIER_SELECTION_LINK}}">
+Activate Elite Access
+</a>
+
+<p class="small">
+Elite members receive priority access to the most compatible international introductions.
+</p>
+
+</div>
+
+</div>
+
+<!-- NEXT -->
+<div class="card">
+
+<h2>🔒 Next Steps</h2>
+
+<p>
+Once activated, your profile will enter the live matchmaking cycle immediately.
+</p>
+
+<p>
+1. Select your tier<br>
+2. Complete secure checkout<br>
+3. Receive onboarding instructions<br>
+4. Begin curated introductions
+</p>
+
+</div>
+
+<!-- TRUST -->
+<div class="card">
+
+<h2>🔐 Private & Confidential System</h2>
+
+<p>
+All profiles and introductions are handled privately. No public listings exist. Matches are curated based on compatibility, intent, and availability.
+</p>
+
+</div>
+
+<!-- FINAL CTA -->
+<div class="card" style="text-align:center;">
+
+<p>
+Your access is ready. Select your membership level to proceed.
+</p>
+
+<a class="button" href="{{TIER_SELECTION_LINK}}">
+Activate Membership Access
+</a>
+
+<div class="small">
+Secure checkout • Instant activation after payment
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Velvet Elite Matchmaking. All Rights Reserved.
+</div>
+
+</body>
+</html>
