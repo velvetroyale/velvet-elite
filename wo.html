@@ -14,14 +14,24 @@ font-family:Arial,sans-serif;
 background:#0b0b0b;
 color:#d4af37;
 text-align:center;
+line-height:1.6;
 }
 
 .hero{
-padding:60px 16px;
+padding:70px 16px;
 background:radial-gradient(circle at top,#1a1a1a,#0b0b0b);
 }
 
-h1{font-size:34px;margin:0}
+h1{
+font-size:34px;
+margin:0;
+}
+
+.hero p{
+max-width:700px;
+margin:12px auto 0;
+opacity:.9;
+}
 
 .container{
 max-width:850px;
@@ -31,36 +41,50 @@ padding:16px;
 
 .card{
 background:#141414;
-border:1px solid rgba(212,175,55,0.2);
+border:1px solid rgba(212,175,55,.2);
 border-radius:14px;
 padding:22px;
-margin:16px auto;
+margin:20px auto;
 max-width:650px;
 text-align:left;
 }
 
-h2{margin-top:0;font-size:20px}
+h2{
+margin-top:0;
+font-size:20px;
+}
 
 .tier{
-margin-top:10px;
-line-height:1.7;
+line-height:1.8;
 font-size:14px;
 }
 
+.featured{
+border:1px solid rgba(212,175,55,.45);
+background:linear-gradient(
+145deg,
+rgba(212,175,55,.08),
+rgba(255,255,255,.02)
+);
+}
+
 .badge{
+display:inline-block;
 background:#d4af37;
 color:#0b0b0b;
-padding:4px 10px;
-border-radius:20px;
+padding:6px 12px;
+border-radius:30px;
 font-size:11px;
 font-weight:bold;
+margin-bottom:12px;
+letter-spacing:1px;
 }
 
 .button{
 display:block;
 width:100%;
 max-width:420px;
-margin:20px auto;
+margin:22px auto 10px;
 padding:16px;
 background:#d4af37;
 color:#0b0b0b;
@@ -68,15 +92,41 @@ text-decoration:none;
 font-weight:bold;
 border-radius:10px;
 text-align:center;
+font-size:15px;
 }
 
-.button:hover{opacity:0.9}
+.button:hover{
+opacity:.9;
+}
 
 .small{
 font-size:12px;
-opacity:0.7;
-text-align:center;
+opacity:.7;
 margin-top:10px;
+text-align:center;
+}
+
+.footer{
+margin-top:40px;
+padding:20px;
+font-size:12px;
+opacity:.6;
+}
+
+@media(min-width:768px){
+
+h1{
+font-size:44px;
+}
+
+.hero{
+padding:90px 20px;
+}
+
+.card{
+padding:28px;
+}
+
 }
 </style>
 </head>
@@ -85,80 +135,116 @@ margin-top:10px;
 
 <div class="hero">
 <h1>💎 Activate Your Membership</h1>
-<p>Your profile is approved. Select your access level to enter the private matchmaking cycle.</p>
+
+<p>
+Your profile has been approved. Select your preferred access level to enter the Velvet Elite private matchmaking cycle.
+</p>
+
 </div>
 
 <div class="container">
 
 <div class="card">
+
 <h2>⚡ Choose Your Access Level</h2>
+
 <p>
-Each tier determines your visibility, priority level, and frequency of curated introductions.
+Each tier determines profile visibility, priority level, and curated introduction frequency.
 </p>
+
 </div>
 
 <!-- STARTER -->
+
 <div class="card">
+
 <h2>🥉 Starter — $25 / month</h2>
+
 <div class="tier">
-✔ Entry-level matchmaking pool<br>
-✔ Standard curated introductions<br>
-✔ Queue-based consideration<br>
-✔ Basic profile visibility
+
+✔ Entry matchmaking pool<br>
+✔ Standard introductions<br>
+✔ Queue-based placement<br>
+✔ Basic profile visibility<br>
+✔ Active matchmaking access
+
 </div>
 
-<a class="button" href="{{TIER_SELECTION_LINK}}">
+<a class="button"
+href="YOUR_STARTER_LINK">
+
 Activate Starter Access
+
 </a>
+
 </div>
+
 
 <!-- PREMIUM -->
-<div class="card">
-<h2>🥈 Premium — $250 / 2 months</h2>
+
+<div class="card featured">
+
+<div class="badge">
+MOST REQUESTED
+</div>
+
+<h2>🥈 Premium — $250 / 2 Months</h2>
+
 <div class="tier">
-<span class="badge">MOST REQUESTED</span><br><br>
 
 ✔ Priority matchmaking cycle<br>
 ✔ Increased introduction frequency<br>
-✔ Faster review & matching speed<br>
-✔ Higher visibility within active network
+✔ Faster profile review speed<br>
+✔ Higher visibility within network<br>
+✔ Priority placement consideration
+
 </div>
 
-<a class="button" href="{{TIER_SELECTION_LINK}}">
+<a class="button"
+href="YOUR_PREMIUM_LINK">
+
 Activate Premium Access
+
 </a>
+
 </div>
+
 
 <!-- ELITE -->
+
 <div class="card">
-<h2>🥇 Elite — $750 / 3 months</h2>
+
+<h2>🥇 Elite — $750 / 3 Months</h2>
+
 <div class="tier">
+
 ✔ VIP concierge matchmaking cycle<br>
 ✔ Highest priority introductions<br>
 ✔ Direct curated sourcing<br>
-✔ Maximum visibility within elite pool<br>
-✔ Dedicated matchmaking handling
+✔ Maximum profile visibility<br>
+✔ Dedicated concierge handling
+
 </div>
 
-<a class="button" href="{{TIER_SELECTION_LINK}}">
+<a class="button"
+href="YOUR_ELITE_LINK">
+
 Activate Elite Access
+
 </a>
 
 <p class="small">
-Elite members receive priority placement in the most compatible international introductions.
-</p>
-</div>
 
-<div class="card" style="text-align:center;">
-<p>
-Once activated, your profile enters the active matchmaking cycle immediately.
+Elite members receive highest-priority placement and premium visibility for compatible international introductions.
+
 </p>
 
-<div class="small">
-Secure checkout • Instant activation after payment
-</div>
 </div>
 
+</div>
+
+<div class="footer">
+© 2026 Velvet Elite Matchmaking. All Rights Reserved.
 </div>
 
 </body>
