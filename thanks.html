@@ -7,81 +7,127 @@
 
 <style>
 
-* { box-sizing: border-box; }
+*{
+box-sizing:border-box;
+}
 
-body {
-    background:#0b0b0b;
-    color:#d4af37;
-    font-family:Arial;
-    text-align:center;
-    padding:60px 20px;
-    margin:0;
+body{
+background:#0b0b0b;
+color:#d4af37;
+font-family:Arial;
+text-align:center;
+padding:60px 20px;
+margin:0;
 }
 
 /* LANGUAGE BAR */
+
 .language-bar{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:6px;
-    margin-bottom:30px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:6px;
+margin-bottom:30px;
 }
 
 .language-btn{
-    padding:6px 10px;
-    border-radius:18px;
-    font-size:11px;
-    background:#141414;
-    color:#d4af37;
-    border:1px solid rgba(212,175,55,0.35);
-    cursor:pointer;
+padding:6px 10px;
+border-radius:18px;
+font-size:11px;
+background:#141414;
+color:#d4af37;
+border:1px solid rgba(212,175,55,0.35);
+cursor:pointer;
 }
 
 .language-btn.active{
-    background:#d4af37;
-    color:#0b0b0b;
+background:#d4af37;
+color:#0b0b0b;
+}
+
+/* DROPDOWN */
+
+.select-wrapper{
+position:relative;
+}
+
+.select-wrapper select{
+appearance:none;
+-webkit-appearance:none;
+-moz-appearance:none;
+
+padding:6px 30px 6px 12px;
+
+border-radius:18px;
+font-size:11px;
+
+background:#141414;
+color:#d4af37;
+
+border:1px solid rgba(212,175,55,0.35);
+
+cursor:pointer;
+outline:none;
+}
+
+/* CUSTOM ARROW */
+
+.select-wrapper::after{
+content:"▼";
+position:absolute;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+font-size:9px;
+color:#d4af37;
+pointer-events:none;
 }
 
 /* TITLE */
-h1 {
-    margin-bottom:10px;
+
+h1{
+margin-bottom:10px;
 }
 
 /* TEXT */
-p {
-    opacity:0.9;
-    margin:10px auto;
-    max-width:600px;
+
+p{
+opacity:0.9;
+margin:10px auto;
+max-width:600px;
 }
 
 /* CONTAINER */
-.container {
-    max-width:700px;
-    margin:auto;
+
+.container{
+max-width:700px;
+margin:auto;
 }
 
 /* BUTTON */
-a {
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 22px;
-    background:#d4af37;
-    color:#0b0b0b;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:10px;
-    transition:0.2s ease;
+
+a{
+display:inline-block;
+margin-top:25px;
+padding:14px 22px;
+background:#d4af37;
+color:#0b0b0b;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+transition:0.2s ease;
 }
 
-a:hover {
-    background:#e6c35a;
+a:hover{
+background:#e6c35a;
 }
 
 /* STATUS */
-.status {
-    font-size:13px;
-    opacity:0.7;
-    margin-top:15px;
+
+.status{
+font-size:13px;
+opacity:0.7;
+margin-top:15px;
 }
 
 </style>
@@ -92,31 +138,55 @@ a:hover {
 <div class="container">
 
 <!-- LANGUAGE BAR -->
+
 <div class="language-bar">
 
-<button class="language-btn active" onclick="setLang('en', this)">English</button>
-<button class="language-btn" onclick="setLang('es', this)">Español</button>
-<button class="language-btn" onclick="setLang('fr', this)">Français</button>
-<button class="language-btn" onclick="setLang('it', this)">Italiano</button>
-<button class="language-btn" onclick="setLang('de', this)">Deutsch</button>
-<button class="language-btn" onclick="setLang('ru', this)">Русский</button>
-<button class="language-btn" onclick="setLang('uk', this)">Українська</button>
-<button class="language-btn" onclick="setLang('pl', this)">Polski</button>
-<button class="language-btn" onclick="setLang('ro', this)">Română</button>
-<button class="language-btn" onclick="setLang('pt', this)">Português</button>
-<button class="language-btn" onclick="setLang('ar', this)">العربية</button>
-<button class="language-btn" onclick="setLang('zh', this)">中文</button>
-<button class="language-btn" onclick="setLang('ja', this)">日本語</button>
-<button class="language-btn" onclick="setLang('tl', this)">Tagalog</button>
-<button class="language-btn" onclick="setLang('th', this)">ไทย</button>
-<button class="language-btn" onclick="setLang('vi', this)">Tiếng Việt</button>
-<button class="language-btn" onclick="setLang('ko', this)">한국어</button>
+<button class="language-btn active" onclick="setLang('en', this)">
+English
+</button>
+
+<button class="language-btn" onclick="setLang('es', this)">
+Español
+</button>
+
+<!-- MORE DROPDOWN -->
+
+<div class="select-wrapper">
+
+<select onchange="if(this.value) setLang(this.value, document.querySelector('.language-btn.active'));">
+
+<option value="">More ▼</option>
+
+<option value="fr">Français</option>
+<option value="it">Italiano</option>
+<option value="de">Deutsch</option>
+<option value="ru">Русский</option>
+<option value="uk">Українська</option>
+<option value="pl">Polski</option>
+<option value="ro">Română</option>
+<option value="pt">Português</option>
+<option value="ar">العربية</option>
+<option value="zh">中文</option>
+<option value="ja">日本語</option>
+<option value="tl">Tagalog</option>
+<option value="th">ไทย</option>
+<option value="vi">Tiếng Việt</option>
+<option value="ko">한국어</option>
+<option value="hi">हिन्दी</option>
+
+</select>
 
 </div>
 
-<h1 id="title">✅ Application Received</h1>
+</div>
 
-<p id="p1">Thank you for applying to Velvet Elite.</p>
+<h1 id="title">
+✅ Application Received
+</h1>
+
+<p id="p1">
+Thank you for applying to Velvet Elite.
+</p>
 
 <p id="p2">
 Your application has been successfully submitted and is now under private review.
@@ -127,7 +197,9 @@ If selected, you will be contacted shortly.
 Private screening in progress • Confidential evaluation
 </div>
 
-<a id="btn" href="index.html">Return to Home</a>
+<a id="btn" href="index.html">
+Return to Home
+</a>
 
 </div>
 
@@ -269,16 +341,29 @@ p1:"Velvet Elite 지원해 주셔서 감사합니다.",
 p2:"지원서는 성공적으로 제출되었으며 현재 비공개 검토 중입니다. 선정 시 연락드립니다.",
 status:"비공개 심사 진행 중 • 기밀 평가",
 btn:"홈으로"
+},
+
+hi:{
+title:"✅ आवेदन प्राप्त हुआ",
+p1:"Velvet Elite में आवेदन करने के लिए धन्यवाद।",
+p2:"आपका आवेदन सफलतापूर्वक जमा हो गया है और अब निजी समीक्षा में है। यदि चयनित होते हैं, तो आपसे शीघ्र संपर्क किया जाएगा।",
+status:"निजी समीक्षा जारी • गोपनीय मूल्यांकन",
+btn:"होम पर वापस जाएँ"
 }
 
 };
 
 function setLang(l, btn){
 
-document.querySelectorAll('.language-btn').forEach(b=>b.classList.remove('active'));
+document.querySelectorAll('.language-btn')
+.forEach(b=>b.classList.remove('active'));
+
+if(btn){
 btn.classList.add('active');
+}
 
 const t = lang[l];
+
 if(!t) return;
 
 document.getElementById("title").innerText = t.title;
