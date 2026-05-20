@@ -489,29 +489,43 @@ b1:"✔ 공개 없음",b2:"✔ 프라이빗",b3:"✔ 글로벌",b4:"✔ 검토"
 
 function setLang(l, btn){
 
-document.querySelectorAll('.language-btn').forEach(b=>b.classList.remove('active'));
-btn.classList.add('active');
+// remove active state
+document.querySelectorAll('.language-btn')
+.forEach(b => b.classList.remove('active'));
+
+if(btn){
+    btn.classList.add('active');
+}
 
 const t = lang[l];
 if(!t) return;
 
+// update main text
 document.getElementById("desc").innerText = t.desc;
 document.getElementById("btn").innerText = t.btn;
 document.getElementById("privacy").innerText = t.privacy;
 
+// safe handling for b1-b4 if they exist
 ["b1","b2","b3","b4"].forEach(id=>{
-document.getElementById(id).innerText = t[id];
+    const el = document.getElementById(id);
+
+    if(el && t[id]){
+        el.innerText = t[id];
+    }
 });
 
+// translate labels
 document.querySelectorAll("label").forEach(el=>{
-let k = el.getAttribute("data-key");
-if(k && t[k]) el.innerText = t[k];
+    const k = el.getAttribute("data-key");
+
+    if(k && t[k]){
+        el.innerText = t[k];
+    }
 });
 
 document.getElementById("selectedLanguage").value = l;
 
 }
-
 </script>
 
 </body>
