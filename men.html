@@ -265,7 +265,6 @@ h1{ font-size:32px; }
     <select onchange="if(this.value) setLang(this.value, document.querySelector('.language-btn.active'));">
 
       <option value="">More ▼</option>
-
       <option value="fr">Français</option>
       <option value="it">Italiano</option>
       <option value="de">Deutsch</option>
@@ -281,7 +280,7 @@ h1{ font-size:32px; }
       <option value="th">ไทย</option>
       <option value="vi">Tiếng Việt</option>
       <option value="ko">한국어</option>
-
+        <option value="hi">हिन्दी</option>
     </select>
   </div>
 
@@ -324,7 +323,7 @@ h1{ font-size:32px; }
 <label data-key="goals">Relationship Goals *</label>
 <input type="text" name="Relationship Goals" required>
 
-<button type="submit" id="btn">Apply for Private Access</button>
+<button type="submit" id="btn">Request Invitation</button>
 
   <div class="benefits">
 
@@ -358,157 +357,346 @@ const subtitle = "💎 Apply for access to Velvet Elite private matchmaking syst
 
 const lang = {
 
-/* ENGLISH */
 en:{
 desc:"💼 Apply for access to Velvet Elite private matchmaking system. Your application will be reviewed for approval.",
-first:"First Name *",email:"Email *",phone:"Phone (optional)",age:"Age *",location:"Location *",goals:"Relationship Goals *",
-btn:"Apply for Private Access",
-privacy:"🔒 Private & confidential. No swiping. No public profiles.",
-b1:"✔ No public profiles",b2:"✔ Private introductions only",b3:"✔ International member network",b4:"✔ Applications reviewed manually"
+first:"First Name *",
+email:"Email *",
+phone:"Phone (optional)",
+age:"Age *",
+location:"Location *",
+goals:"Relationship Goals *",
+
+btn:"Request Private Invitation",
+
+privacy:"🔒 Confidential application. No public profiles. No algorithmic matching.",
+
+b1:"✔ Human-reviewed selection process",
+b2:"✔ Private international introductions",
+b3:"✔ Verified global member network",
+b4:"✔ Limited acceptance (selective approval only)"
 },
 
-/* SPANISH */
 es:{
 desc:"💼 Solicita acceso al sistema privado de matchmaking Velvet Elite. Tu solicitud será revisada para aprobación.",
-first:"Nombre *",email:"Correo electrónico *",phone:"Teléfono (opcional)",age:"Edad *",location:"Ubicación *",goals:"Objetivos de relación *",
-btn:"Solicitar Invitación",
-privacy:"🔒 Privado y confidencial.",
-b1:"✔ Sin perfiles públicos",b2:"✔ Introducciones privadas",b3:"✔ Red internacional",b4:"✔ Revisadas manualmente"
+first:"Nombre *",
+email:"Correo electrónico *",
+phone:"Teléfono (opcional)",
+age:"Edad *",
+location:"Ubicación *",
+goals:"Objetivos de relación *",
+
+btn:"Solicitar Invitación Privada",
+
+privacy:"🔒 Solicitud confidencial. Sin perfiles públicos. Sin emparejamiento automatizado.",
+
+b1:"✔ Proceso de selección revisado por humanos",
+b2:"✔ Introducciones privadas internacionales",
+b3:"✔ Red global de miembros verificados",
+b4:"✔ Admisión limitada (aprobación selectiva)"
 },
 
-/* FRENCH */
 fr:{
-desc:"💼 Demandez l'accès au système privé de matchmaking Velvet Elite. Votre candidature sera examinée pour approbation.",
-first:"Prénom *",email:"Email *",phone:"Téléphone",age:"Âge *",location:"Localisation *",goals:"Objectifs relationnels *",
-btn:"Demander",
-privacy:"🔒 Privé",
-b1:"✔ Aucun profil public",b2:"✔ Introductions privées",b3:"✔ Réseau international",b4:"✔ Vérification"
+desc:"💼 Demandez l’accès au système privé de matchmaking Velvet Elite. Votre candidature sera examinée pour approbation.",
+first:"Prénom *",
+email:"Email *",
+phone:"Téléphone (optionnel)",
+age:"Âge *",
+location:"Localisation *",
+goals:"Objectifs relationnels *",
+
+btn:"Demander une Invitation Privée",
+
+privacy:"🔒 Candidature confidentielle. Aucun profil public. Aucun algorithme de mise en relation.",
+
+b1:"✔ Processus de sélection vérifié par des humains",
+b2:"✔ Introductions privées internationales",
+b3:"✔ Réseau mondial de membres vérifiés",
+b4:"✔ Admission limitée (approbation sélective)"
 },
 
-/* ITALIAN */
 it:{
-desc:"💼 Richiedi accesso al sistema privato di matchmaking Velvet Elite. La tua richiesta sarà esaminata per approvazione.",
-first:"Nome *",email:"Email *",phone:"Telefono",age:"Età *",location:"Posizione *",goals:"Obiettivi relazionali *",
-btn:"Richiedi",
-privacy:"🔒 Privato",
-b1:"✔ Nessun profilo",b2:"✔ Privato",b3:"✔ Internazionale",b4:"✔ Manuale"
+desc:"💼 Richiedi l’accesso al sistema privato di matchmaking Velvet Elite. La tua candidatura sarà esaminata per approvazione.",
+first:"Nome *",
+email:"Email *",
+phone:"Telefono (opzionale)",
+age:"Età *",
+location:"Posizione *",
+goals:"Obiettivi relazionali *",
+
+btn:"Richiedi Invito Privato",
+
+privacy:"🔒 Candidatura riservata. Nessun profilo pubblico. Nessun algoritmo di abbinamento.",
+
+b1:"✔ Processo di selezione verificato da persone",
+b2:"✔ Introduzioni private internazionali",
+b3:"✔ Rete globale di membri verificati",
+b4:"✔ Ammissione limitata (approvazione selettiva)"
 },
 
-/* GERMAN */
 de:{
-desc:"💼 Beantragen Sie Zugang zum privaten Velvet Elite Matchmaking-System. Ihre Anfrage wird zur Genehmigung geprüft.",
-first:"Vorname *",email:"E-Mail *",phone:"Telefon",age:"Alter *",location:"Standort *",goals:"Beziehungsziele *",
-btn:"Anfordern",
-privacy:"🔒 Privat",
-b1:"✔ Keine Profile",b2:"✔ Privat",b3:"✔ International",b4:"✔ Prüfung"
+desc:"💼 Beantragen Sie Zugang zum privaten Velvet Elite Matchmaking-System. Ihre Bewerbung wird zur Prüfung freigegeben.",
+first:"Vorname *",
+email:"E-Mail *",
+phone:"Telefon (optional)",
+age:"Alter *",
+location:"Standort *",
+goals:"Beziehungsziele *",
+
+btn:"Privates Einladungsgesuch",
+
+privacy:"🔒 Vertrauliche Bewerbung. Keine öffentlichen Profile. Kein algorithmisches Matching.",
+
+b1:"✔ Menschlich geprüfter Auswahlprozess",
+b2:"✔ Private internationale Vorstellungen",
+b3:"✔ Globales Netzwerk verifizierter Mitglieder",
+b4:"✔ Begrenzte Aufnahme (selektive Genehmigung)"
 },
 
-/* RUSSIAN */
 ru:{
-desc:"💼 Подайте заявку на доступ к приватной системе знакомств Velvet Elite. Ваша заявка будет рассмотрена.",
-first:"Имя *",email:"Email *",phone:"Телефон",age:"Возраст *",location:"Локация *",goals:"Цели отношений *",
-btn:"Запрос",
-privacy:"🔒 Конфиденциально",
-b1:"✔ Без профилей",b2:"✔ Приватно",b3:"✔ Международно",b4:"✔ Проверка"
+desc:"💼 Подайте заявку на доступ к приватной системе знакомств Velvet Elite. Ваша заявка будет рассмотрена для одобрения.",
+first:"Имя *",
+email:"Email *",
+phone:"Телефон (необязательно)",
+age:"Возраст *",
+location:"Локация *",
+goals:"Цели отношений *",
+
+btn:"Запросить приватное приглашение",
+
+privacy:"🔒 Конфиденциальная заявка. Без публичных профилей. Без алгоритмического подбора.",
+
+b1:"✔ Процесс отбора, проверяемый людьми",
+b2:"✔ Приватные международные знакомства",
+b3:"✔ Глобальная сеть проверенных участников",
+b4:"✔ Ограниченный доступ (строгий отбор)"
 },
 
-/* UKRAINIAN */
 uk:{
-desc:"💼 Подайте заявку на доступ до приватної системи знайомств Velvet Elite. Ваша заявка буде розглянута.",
-first:"Ім'я *",email:"Email *",phone:"Телефон",age:"Вік *",location:"Локація *",goals:"Цілі відносин *",
-btn:"Запросити",
-privacy:"🔒 Приватно",
-b1:"✔ Без профілів",b2:"✔ Приватно",b3:"✔ Міжнародно",b4:"✔ Перевірка"
+desc:"💼 Подайте заявку на доступ до приватної системи знайомств Velvet Elite. Ваша заявка буде розглянута для схвалення.",
+first:"Ім’я *",
+email:"Email *",
+phone:"Телефон (необов’язково)",
+age:"Вік *",
+location:"Локація *",
+goals:"Цілі стосунків *",
+
+btn:"Запросити приватне запрошення",
+
+privacy:"🔒 Конфіденційна заявка. Без публічних профілів. Без алгоритмічного підбору.",
+
+b1:"✔ Процес відбору, перевірений людьми",
+b2:"✔ Приватні міжнародні знайомства",
+b3:"✔ Глобальна мережа перевірених учасників",
+b4:"✔ Обмежений доступ (суворий відбір)"
 },
 
-/* POLISH */
 pl:{
-desc:"💼 Złóż wniosek o dostęp do prywatnego systemu matchmaking Velvet Elite. Twoja aplikacja zostanie rozpatrzona.",
-first:"Imię *",email:"Email *",phone:"Telefon",age:"Wiek *",location:"Lokalizacja *",goals:"Cele relacji *",
-btn:"Poproś",
-privacy:"🔒 Prywatne",
-b1:"✔ Brak profili",b2:"✔ Prywatne",b3:"✔ Międzynarodowe",b4:"✔ Weryfikacja"
+desc:"💼 Złóż wniosek o dostęp do prywatnego systemu matchmaking Velvet Elite. Twoja aplikacja zostanie oceniona do zatwierdzenia.",
+first:"Imię *",
+email:"Email *",
+phone:"Telefon (opcjonalnie)",
+age:"Wiek *",
+location:"Lokalizacja *",
+goals:"Cele relacji *",
+
+btn:"Poproś o prywatne zaproszenie",
+
+privacy:"🔒 Poufna aplikacja. Brak publicznych profili. Brak algorytmicznego dopasowania.",
+
+b1:"✔ Proces selekcji weryfikowany przez ludzi",
+b2:"✔ Prywatne międzynarodowe wprowadzenia",
+b3:"✔ Globalna sieć zweryfikowanych członków",
+b4:"✔ Ograniczony dostęp (selektywna akceptacja)"
 },
 
-/* ROMANIAN */
 ro:{
-desc:"💼 Aplică pentru acces la sistemul privat de matchmaking Velvet Elite. Cererea ta va fi analizată.",
-first:"Prenume *",email:"Email *",phone:"Telefon",age:"Vârstă *",location:"Locație *",goals:"Obiective relație *",
-btn:"Solicită",
-privacy:"🔒 Privat",
-b1:"✔ Fără profiluri",b2:"✔ Privat",b3:"✔ Internațional",b4:"✔ Verificare"
+desc:"💼 Aplică pentru acces la sistemul privat de matchmaking Velvet Elite. Cererea ta va fi evaluată pentru aprobare.",
+first:"Prenume *",
+email:"Email *",
+phone:"Telefon (opțional)",
+age:"Vârstă *",
+location:"Locație *",
+goals:"Obiective relaționale *",
+
+btn:"Solicită invitație privată",
+
+privacy:"🔒 Cerere confidențială. Fără profiluri publice. Fără potrivire automată.",
+
+b1:"✔ Proces de selecție verificat de oameni",
+b2:"✔ Introduceri internaționale private",
+b3:"✔ Rețea globală de membri verificați",
+b4:"✔ Acces limitat (aprobare selectivă)"
 },
 
-/* PORTUGUESE */
 pt:{
-desc:"💼 Solicite acesso ao sistema privado de matchmaking Velvet Elite. Sua inscrição será analisada.",
-first:"Nome *",email:"Email *",phone:"Telefone",age:"Idade *",location:"Localização *",goals:"Objetivos de relacionamento *",
-btn:"Solicitar",
-privacy:"🔒 Privado",
-b1:"✔ Sem perfis",b2:"✔ Privado",b3:"✔ Internacional",b4:"✔ Revisão"
+desc:"💼 Solicite acesso ao sistema privado de matchmaking Velvet Elite. A sua candidatura será avaliada para aprovação.",
+first:"Nome *",
+email:"Email *",
+phone:"Telefone (opcional)",
+age:"Idade *",
+location:"Localização *",
+goals:"Objetivos de relacionamento *",
+
+btn:"Solicitar convite privado",
+
+privacy:"🔒 Candidatura confidencial. Sem perfis públicos. Sem correspondência automática.",
+
+b1:"✔ Processo de seleção verificado por humanos",
+b2:"✔ Introduções internacionais privadas",
+b3:"✔ Rede global de membros verificados",
+b4:"✔ Acesso limitado (aprovação seletiva)"
 },
 
-/* ARABIC */
 ar:{
-desc:"قدّم طلبًا للوصول إلى نظام التعارف الخاص Velvet Elite. سيتم مراجعة طلبك للموافقة. 💼",
-first:"الاسم *",email:"البريد *",phone:"هاتف",age:"العمر *",location:"الموقع *",goals:"أهداف العلاقة *",
-btn:"طلب",
-privacy:"🔒 خاص",
-b1:"✔ بدون ملفات",b2:"✔ خاص",b3:"✔ دولي",b4:"✔ مراجعة"
+desc:"💼 قدّم طلبًا للوصول إلى نظام التعارف الخاص Velvet Elite. سيتم تقييم طلبك للموافقة.",
+first:"الاسم *",
+email:"البريد الإلكتروني *",
+phone:"الهاتف (اختياري)",
+age:"العمر *",
+location:"الموقع *",
+goals:"أهداف العلاقة *",
+
+btn:"طلب دعوة خاصة",
+
+privacy:"🔒 طلب سري. بدون ملفات عامة. بدون مطابقة آلية.",
+
+b1:"✔ عملية اختيار يتم التحقق منها بشريًا",
+b2:"✔ تعارف دولي خاص",
+b3:"✔ شبكة عالمية من الأعضاء الموثوقين",
+b4:"✔ دخول محدود (قبول انتقائي)"
 },
 
-/* CHINESE */
 zh:{
-desc:"💼 申请访问 Velvet Elite 私人配对系统。您的申请将被审核批准。",
-first:"名字 *",email:"邮箱 *",phone:"电话",age:"年龄 *",location:"位置 *",goals:"关系目标 *",
-btn:"申请",
-privacy:"🔒 私密",
-b1:"✔ 无公开资料",b2:"✔ 私人介绍",b3:"✔ 国际网络",b4:"✔ 审核"
+desc:"💼 申请加入 Velvet Elite 私人配对系统。您的申请将被评估并审核批准。",
+first:"名字 *",
+email:"邮箱 *",
+phone:"电话（可选）",
+age:"年龄 *",
+location:"所在地 *",
+goals:"关系目标 *",
+
+btn:"申请私人邀请",
+
+privacy:"🔒 保密申请。无公开资料。无算法匹配。",
+
+b1:"✔ 人工审核筛选流程",
+b2:"✔ 私人国际介绍",
+b3:"✔ 全球认证会员网络",
+b4:"✔ 限量准入（选择性批准）"
 },
 
-/* JAPANESE */
 ja:{
-desc:"💼 Velvet Eliteのプライベートマッチメイキングシステムへのアクセスを申請してください。申請は審査されます。",
-first:"名前 *",email:"メール *",phone:"電話",age:"年齢 *",location:"場所 *",goals:"関係の目的 *",
-btn:"申請",
-privacy:"🔒 非公開",
-b1:"✔ 公開なし",b2:"✔ プライベート",b3:"✔ 国際",b4:"✔ 審査"
+desc:"💼 Velvet Eliteのプライベートマッチングシステムへのアクセスを申請してください。申請は審査・承認の対象となります。",
+first:"名前 *",
+email:"メールアドレス *",
+phone:"電話（任意）",
+age:"年齢 *",
+location:"居住地 *",
+goals:"関係の目的 *",
+
+btn:"プライベート招待を申請",
+
+privacy:"🔒 秘密申請。公開プロフィールなし。アルゴリズムによるマッチングなし。",
+
+b1:"✔ 人による審査プロセス",
+b2:"✔ プライベートな国際紹介",
+b3:"✔ 世界的な認証メンバーネットワーク",
+b4:"✔ 限定承認（選考制）"
 },
 
-/* TAGALOG */
 tl:{
-desc:"💼 Mag-apply para sa access sa Velvet Elite private matchmaking system. Susuriin ang iyong application.",
-first:"Pangalan *",email:"Email *",phone:"Telepono",age:"Edad *",location:"Lokasyon *",goals:"Layunin ng relasyon *",
-btn:"Humiling",
-privacy:"🔒 Pribado",
-b1:"✔ Walang profiles",b2:"✔ Private",b3:"✔ International",b4:"✔ Manual"
+desc:"💼 Mag-apply para sa access sa Velvet Elite private matchmaking system. Susuriin at aaprubahan ang iyong aplikasyon.",
+first:"Pangalan *",
+email:"Email *",
+phone:"Telepono (opsyonal)",
+age:"Edad *",
+location:"Lokasyon *",
+goals:"Layunin sa relasyon *",
+
+btn:"Humiling ng pribadong imbitasyon",
+
+privacy:"🔒 Kumpidensyal na aplikasyon. Walang pampublikong profile. Walang automated na matching.",
+
+b1:"✔ Proseso ng pagpili na sinusuri ng tao",
+b2:"✔ Pribadong internasyonal na introduksyon",
+b3:"✔ Pandaigdigang network ng mga beripikadong miyembro",
+b4:"✔ Limitadong pagtanggap (selektibong pag-apruba)"
 },
 
-/* THAI */
 th:{
-desc:"💼 สมัครเพื่อเข้าถึงระบบจับคู่ส่วนตัว Velvet Elite ใบสมัครของคุณจะได้รับการตรวจสอบ",
-first:"ชื่อ *",email:"อีเมล *",phone:"โทรศัพท์",age:"อายุ *",location:"สถานที่ *",goals:"เป้าหมายความสัมพันธ์ *",
-btn:"ขอ",
-privacy:"🔒 ส่วนตัว",
-b1:"✔ ไม่มีโปรไฟล์",b2:"✔ ส่วนตัว",b3:"✔ นานาชาติ",b4:"✔ ตรวจสอบ"
-},
+desc:"💼 สมัครเข้าระบบจับคู่ส่วนตัว Velvet Elite ใบสมัครของคุณจะได้รับการพิจารณาและอนุมัติ",
+first:"ชื่อ *",
+email:"อีเมล *",
+phone:"โทรศัพท์ (ไม่บังคับ)",
+age:"อายุ *",
+location:"สถานที่ *",
+goals:"เป้าหมายความสัมพันธ์ *",
 
-/* VIETNAMESE */
+btn:"ขอคำเชิญส่วนตัว",
+
+privacy:"🔒 ใบสมัครเป็นความลับ ไม่มีโปรไฟล์สาธารณะ ไม่มีการจับคู่แบบอัตโนมัติ",
+
+b1:"✔ กระบวนการคัดเลือกโดยมนุษย์",
+b2:"✔ การแนะนำแบบส่วนตัวระดับนานาชาติ",
+b3:"✔ เครือข่ายสมาชิกที่ได้รับการยืนยันทั่วโลก",
+b4:"✔ การรับจำกัด (คัดเลือกอย่างเข้มงวด)"
+},
+  
 vi:{
-desc:"💼 Yêu cầu quyền truy cập vào hệ thống mai mối riêng tư Velvet Elite. Hồ sơ của bạn sẽ được xét duyệt.",
-first:"Tên *",email:"Email *",phone:"Điện thoại",age:"Tuổi *",location:"Vị trí *",goals:"Mục tiêu mối quan hệ *",
-btn:"Yêu cầu",
-privacy:"🔒 Riêng tư",
-b1:"✔ Không công khai",b2:"✔ Riêng tư",b3:"✔ Quốc tế",b4:"✔ Kiểm duyệt"
+desc:"💼 Yêu cầu quyền truy cập vào hệ thống mai mối riêng tư Velvet Elite. Hồ sơ của bạn sẽ được xem xét và phê duyệt.",
+first:"Tên *",
+email:"Email *",
+phone:"Điện thoại (tùy chọn)",
+age:"Tuổi *",
+location:"Vị trí *",
+goals:"Mục tiêu mối quan hệ *",
+
+btn:"Yêu cầu lời mời riêng tư",
+
+privacy:"🔒 Hồ sơ bảo mật. Không có hồ sơ công khai. Không ghép đôi tự động.",
+
+b1:"✔ Quy trình tuyển chọn do con người xét duyệt",
+b2:"✔ Giới thiệu quốc tế riêng tư",
+b3:"✔ Mạng lưới thành viên toàn cầu đã xác minh",
+b4:"✔ Số lượng giới hạn (chỉ chọn lọc)"
 },
 
-/* KOREAN */
 ko:{
-desc:"💼 Velvet Elite 프라이빗 매칭 시스템에 접근을 신청하세요. 신청서는 검토됩니다.",
-first:"이름 *",email:"이메일 *",phone:"전화",age:"나이 *",location:"위치 *",goals:"관계 목표 *",
-btn:"요청",
-privacy:"🔒 비공개",
-b1:"✔ 공개 없음",b2:"✔ 프라이빗",b3:"✔ 글로벌",b4:"✔ 검토"
+desc:"💼 Velvet Elite 프라이빗 매칭 시스템에 접근을 신청하세요. 신청서는 검토 후 승인됩니다.",
+first:"이름 *",
+email:"이메일 *",
+phone:"전화 (선택)",
+age:"나이 *",
+location:"지역 *",
+goals:"관계 목표 *",
+
+btn:"프라이빗 초대 요청",
+
+privacy:"🔒 비공개 신청. 공개 프로필 없음. 자동 매칭 없음.",
+
+b1:"✔ 사람에 의한 검증된 선별 과정",
+b2:"✔ 프라이빗 국제 소개",
+b3:"✔ 검증된 글로벌 회원 네트워크",
+b4:"✔ 제한된 승인 (선별적 가입)"
+},
+  
+hi:{
+desc:"💼 Velvet Elite निजी मैचमेकिंग सिस्टम तक पहुँच के लिए आवेदन करें। आपके आवेदन की समीक्षा की जाएगी और स्वीकृति दी जाएगी।",
+first:"नाम *",
+email:"ईमेल *",
+phone:"फ़ोन (वैकल्पिक)",
+age:"आयु *",
+location:"स्थान *",
+goals:"रिश्ते के लक्ष्य *",
+
+btn:"निजी आमंत्रण का अनुरोध करें",
+
+privacy:"🔒 गोपनीय आवेदन। कोई सार्वजनिक प्रोफ़ाइल नहीं। कोई स्वचालित मैचिंग नहीं।",
+
+b1:"✔ मानव द्वारा सत्यापित चयन प्रक्रिया",
+b2:"✔ निजी अंतरराष्ट्रीय परिचय",
+b3:"✔ सत्यापित वैश्विक सदस्य नेटवर्क",
+b4:"✔ सीमित प्रवेश (चयनात्मक अनुमोदन)"
 }
 
 };
@@ -553,6 +741,7 @@ document.querySelectorAll("label").forEach(el=>{
 document.getElementById("selectedLanguage").value = l;
 
 }
+
 </script>
 
 </body>
