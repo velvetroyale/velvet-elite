@@ -20,8 +20,6 @@ text-align:center;
 line-height:1.6;
 }
 
-/* HERO */
-
 .hero{
 padding:70px 16px;
 background:radial-gradient(circle at top,#1a1a1a,#0b0b0b);
@@ -39,15 +37,11 @@ margin:12px auto 0;
 font-size:15px;
 }
 
-/* WRAPPER */
-
 .container{
 max-width:1100px;
 margin:auto;
 padding:20px;
 }
-
-/* PRICING */
 
 .pricing{
 display:flex;
@@ -56,8 +50,6 @@ justify-content:center;
 flex-wrap:wrap;
 margin-top:30px;
 }
-
-/* CARD */
 
 .plan{
 background:linear-gradient(145deg,#151515,#0f0f0f);
@@ -76,15 +68,11 @@ transform:translateY(-4px);
 border-color:rgba(212,175,55,.4);
 }
 
-/* POPULAR */
-
 .popular{
 border:1px solid rgba(212,175,55,.6);
 background:linear-gradient(145deg,rgba(212,175,55,.08),#0f0f0f);
 transform:scale(1.05);
 }
-
-/* BADGE */
 
 .badge{
 position:absolute;
@@ -97,8 +85,6 @@ padding:5px 10px;
 border-radius:20px;
 font-weight:700;
 }
-
-/* PRICE */
 
 .price{
 font-size:28px;
@@ -124,8 +110,6 @@ border-radius:12px;
 text-decoration:none;
 }
 
-/* SECTION */
-
 .section{
 max-width:900px;
 margin:40px auto;
@@ -135,8 +119,6 @@ padding:22px;
 border-radius:14px;
 border:1px solid rgba(212,175,55,.15);
 }
-
-/* TABLE */
 
 table{
 width:100%;
@@ -155,8 +137,6 @@ th{
 color:#f5dc8a;
 }
 
-/* NOTICE */
-
 .notice{
 background:linear-gradient(145deg,#151515,#0f0f0f);
 border-left:3px solid #d4af37;
@@ -166,16 +146,12 @@ margin-top:20px;
 font-size:14px;
 }
 
-/* FOOTER */
-
 .footer{
 opacity:.6;
 font-size:12px;
 margin:40px 0 20px;
 text-align:center;
 }
-
-/* LANGUAGE BAR */
 
 .language-bar{
 display:flex;
@@ -199,8 +175,6 @@ cursor:pointer;
 background:#d4af37;
 color:#0b0b0b;
 }
-
-/* DROPDOWN */
 
 .select-wrapper{
 position:relative;
@@ -226,8 +200,6 @@ cursor:pointer;
 outline:none;
 }
 
-/* CUSTOM ARROW */
-
 .select-wrapper::after{
 content:"▼";
 position:absolute;
@@ -238,8 +210,6 @@ font-size:9px;
 color:#d4af37;
 pointer-events:none;
 }
-
-/* MOBILE */
 
 @media(max-width:900px){
 
@@ -281,9 +251,9 @@ Español
 
 <div class="select-wrapper">
 
-<select onchange="if(this.value) setLang(this.value, document.querySelector('.language-btn.active'));">
-<option value="">More ▼</option>
+<select onchange="setLang(this.value, null);">
 
+<option value="">More ▼</option>
 <option value="fr">Français</option>
 <option value="it">Italiano</option>
 <option value="de">Deutsch</option>
@@ -323,7 +293,7 @@ Your application has been reviewed. Select your membership level to activate cur
 
 <div class="container">
 
-<!-- HOW -->
+<!-- HOW MEMBERSHIP WORKS -->
 
 <div class="section">
 
@@ -354,7 +324,7 @@ Each tier determines introductions, speed, and priority.
 </h2>
 
 <div class="price">
-$500
+$1,000
 </div>
 
 <p id="d1">
@@ -362,13 +332,26 @@ $500
 </p>
 
 <ul>
-<li id="s1a">1–2 introductions / month</li>
-<li id="s1b">Standard queue</li>
-<li id="s1c">Basic visibility</li>
+
+<li id="s1a">
+1–2 introductions / month
+</li>
+
+<li id="s1b">
+Standard queue
+</li>
+
+<li id="s1c">
+Basic visibility
+</li>
+
 </ul>
 
-<a class="button" href="https://www.paypal.com/ncp/payment/XXJ3X4A57B96N">
+<a class="button"
+href="https://www.paypal.com/ncp/payment/XXJ3X4A57B96N">
+
 Activate Starter
+
 </a>
 
 </div>
@@ -386,7 +369,7 @@ Most Popular
 </h2>
 
 <div class="price">
-$1,000
+$2,000
 </div>
 
 <p id="d2">
@@ -394,13 +377,26 @@ $1,000
 </p>
 
 <ul>
-<li id="p1a">3–5 introductions / month</li>
-<li id="p1b">Priority matching</li>
-<li id="p1c">Faster review</li>
+
+<li id="p1a">
+3–5 introductions / month
+</li>
+
+<li id="p1b">
+Priority matching
+</li>
+
+<li id="p1c">
+Faster review
+</li>
+
 </ul>
 
-<a class="button" href="https://www.paypal.com/ncp/payment/7GTJPZKPHPNES">
+<a class="button"
+href="https://www.paypal.com/ncp/payment/7GTJPZKPHPNES">
+
 Activate Premium
+
 </a>
 
 </div>
@@ -414,7 +410,7 @@ Activate Premium
 </h2>
 
 <div class="price">
-$3,000
+$5,000
 </div>
 
 <p id="d3">
@@ -422,20 +418,33 @@ $3,000
 </p>
 
 <ul>
-<li id="e1a">6–12 introductions / month</li>
-<li id="e1b">Top priority access</li>
-<li id="e1c">Concierge sourcing</li>
+
+<li id="e1a">
+6–10 introductions / month
+</li>
+
+<li id="e1b">
+Top priority access
+</li>
+
+<li id="e1c">
+Concierge sourcing
+</li>
+
 </ul>
 
-<a class="button" href="https://www.paypal.com/ncp/payment/Z7X2CND2VD9QC">
+<a class="button"
+href="https://www.paypal.com/ncp/payment/Z7X2CND2VD9QC">
+
 Activate Elite
+
 </a>
 
 </div>
 
 </div>
 
-<!-- TABLE -->
+<!-- COMPARISON -->
 
 <div class="section">
 
@@ -446,37 +455,92 @@ Activate Elite
 <table>
 
 <tr>
-<th id="th1">Tier</th>
-<th id="th2">Duration</th>
-<th id="th3">Introductions</th>
-<th id="th4">Priority</th>
+
+<th id="th1">
+Tier
+</th>
+
+<th id="th2">
+Duration
+</th>
+
+<th id="th3">
+Introductions
+</th>
+
+<th id="th4">
+Priority
+</th>
+
 </tr>
 
 <tr>
-<td id="r1c1">Starter</td>
-<td id="r1c2">1 Month</td>
-<td id="r1c3">1–2</td>
-<td id="r1c4">Standard</td>
+
+<td id="r1c1">
+Starter
+</td>
+
+<td id="r1c2">
+1 Month
+</td>
+
+<td id="r1c3">
+1–2
+</td>
+
+<td id="r1c4">
+Standard
+</td>
+
 </tr>
 
 <tr>
-<td id="r2c1">Premium</td>
-<td id="r2c2">2 Months</td>
-<td id="r2c3">3–5</td>
-<td id="r2c4">High</td>
+
+<td id="r2c1">
+Premium
+</td>
+
+<td id="r2c2">
+2 Months
+</td>
+
+<td id="r2c3">
+3–5
+</td>
+
+<td id="r2c4">
+High
+</td>
+
 </tr>
 
 <tr>
-<td id="r3c1">Elite</td>
-<td id="r3c2">3 Months</td>
-<td id="r3c3">6–12</td>
-<td id="r3c4">Top</td>
+
+<td id="r3c1">
+Elite
+</td>
+
+<td id="r3c2">
+3 Months
+</td>
+
+<td id="r3c3">
+6–10
+</td>
+
+<td id="r3c4">
+Top
+</td>
+
 </tr>
 
 </table>
 
-<p id="eliteRule" style="margin-top:10px;font-size:12px;opacity:.7;">
+<p id="eliteRule"
+style="margin-top:10px;font-size:12px;opacity:.7;">
+
 Elite access is tier-dependent — higher tiers gain priority access to Elite members first.
+
 </p>
 
 </div>
@@ -494,7 +558,9 @@ Starter gives fewer introductions and slower access to top matches.
 </p>
 
 <div class="notice" id="impactNotice">
-💡 Premium = more introductions. Elite = significantly more opportunities.
+
+💡 Premium offers more introductions and priority matching. Elite provides the highest level of access and opportunity.
+
 </div>
 
 </div>
@@ -533,7 +599,7 @@ p1a:"3–5 introductions / month",
 p1b:"Priority matching",
 p1c:"Faster review",
 
-e1a:"6–12 introductions / month",
+e1a:"6–10 introductions / month",
 e1b:"Top priority access",
 e1c:"Concierge sourcing",
 
@@ -556,7 +622,7 @@ r2c4:"High",
 
 r3c1:"Elite",
 r3c2:"3 Months",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Top",
 
 eliteRule:"Elite access is tier-dependent — higher tiers gain priority access to Elite members first.",
@@ -570,11 +636,11 @@ es:{
 h1:"💎 Acceso a Membresía",
 hero:"Tu solicitud ha sido revisada. Selecciona tu nivel de membresía.",
 
-howTitle:"🚀 Cómo funciona",
+howTitle:"🚀 Cómo Funciona",
 howText:"Cada nivel determina introducciones, velocidad y prioridad.",
 notice:"⚡ Los niveles superiores reciben más introducciones y acceso prioritario.",
 
-t1:"🥉 Inicial",
+t1:"🥉 Starter",
 t2:"🥈 Premium",
 t3:"🥇 Elite",
 
@@ -590,7 +656,7 @@ p1a:"3–5 introducciones / mes",
 p1b:"Prioridad en coincidencias",
 p1c:"Revisión más rápida",
 
-e1a:"6–12 introducciones / mes",
+e1a:"6–10 introducciones / mes",
 e1b:"Acceso prioritario máximo",
 e1c:"Búsqueda concierge",
 
@@ -601,7 +667,7 @@ th2:"Duración",
 th3:"Introducciones",
 th4:"Prioridad",
 
-r1c1:"Inicial",
+r1c1:"Starter",
 r1c2:"1 Mes",
 r1c3:"1–2",
 r1c4:"Estándar",
@@ -613,7 +679,7 @@ r2c4:"Alta",
 
 r3c1:"Elite",
 r3c2:"3 Meses",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Máxima",
 
 eliteRule:"El acceso Elite depende del nivel.",
@@ -647,7 +713,7 @@ p1a:"3–5 introduzioni / mese",
 p1b:"Matching prioritario",
 p1c:"Revisione veloce",
 
-e1a:"6–12 introduzioni / mese",
+e1a:"6–10 introduzioni / mese",
 e1b:"Accesso prioritario massimo",
 e1c:"Servizio concierge",
 
@@ -670,7 +736,7 @@ r2c4:"Alta",
 
 r3c1:"Elite",
 r3c2:"3 Mesi",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Massima",
 
 eliteRule:"L’accesso Elite dipende dal livello.",
@@ -704,7 +770,7 @@ p1a:"3–5 Vorstellungen / Monat",
 p1b:"Prioritäts-Matching",
 p1c:"Schnellere Prüfung",
 
-e1a:"6–12 Vorstellungen / Monat",
+e1a:"6–10 Vorstellungen / Monat",
 e1b:"Höchste Priorität",
 e1c:"Concierge-Service",
 
@@ -727,7 +793,7 @@ r2c4:"Hoch",
 
 r3c1:"Elite",
 r3c2:"3 Monate",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Top",
 
 eliteRule:"Elite-Zugang ist stufenabhängig.",
@@ -745,9 +811,9 @@ howTitle:"🚀 Как Это Работает",
 howText:"Каждый уровень определяет знакомства, скорость и приоритет.",
 notice:"⚡ Более высокие уровни получают больше знакомств и приоритетный доступ.",
 
-t1:"🥉 Старт",
-t2:"🥈 Премиум",
-t3:"🥇 Элит",
+t1:"🥉 Starter",
+t2:"🥈 Premium",
+t3:"🥇 Elite",
 
 d1:"Доступ на 1 Месяц",
 d2:"Доступ на 2 Месяца",
@@ -761,7 +827,7 @@ p1a:"3–5 знакомств / месяц",
 p1b:"Приоритетный подбор",
 p1c:"Быстрая проверка",
 
-e1a:"6–12 знакомств / месяц",
+e1a:"6–10 знакомств / месяц",
 e1b:"Максимальный приоритет",
 e1c:"Консьерж-сервис",
 
@@ -772,19 +838,19 @@ th2:"Срок",
 th3:"Знакомства",
 th4:"Приоритет",
 
-r1c1:"Старт",
+r1c1:"Starter",
 r1c2:"1 Месяц",
 r1c3:"1–2",
 r1c4:"Стандарт",
 
-r2c1:"Премиум",
+r2c1:"Premium",
 r2c2:"2 Месяца",
 r2c3:"3–5",
 r2c4:"Высокий",
 
-r3c1:"Элит",
+r3c1:"Elite",
 r3c2:"3 Месяца",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Максимум",
 
 eliteRule:"Доступ Elite зависит от уровня.",
@@ -818,7 +884,7 @@ p1a:"3–5 знайомств / місяць",
 p1b:"Пріоритетний підбір",
 p1c:"Швидший розгляд",
 
-e1a:"6–12 знайомств / місяць",
+e1a:"6–10 знайомств / місяць",
 e1b:"Найвищий пріоритет",
 e1c:"Консьєрж-сервіс",
 
@@ -841,7 +907,7 @@ r2c4:"Високий",
 
 r3c1:"Elite",
 r3c2:"3 Місяці",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Максимальний",
 
 eliteRule:"Доступ Elite залежить від рівня.",
@@ -875,7 +941,7 @@ p1a:"3–5 kontaktów / miesiąc",
 p1b:"Priorytetowe dopasowanie",
 p1c:"Szybsza weryfikacja",
 
-e1a:"6–12 kontaktów / miesiąc",
+e1a:"6–10 kontaktów / miesiąc",
 e1b:"Najwyższy priorytet",
 e1c:"Usługa concierge",
 
@@ -898,7 +964,7 @@ r2c4:"Wysoki",
 
 r3c1:"Elite",
 r3c2:"3 Miesiące",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Najwyższy",
 
 eliteRule:"Dostęp Elite zależy od poziomu.",
@@ -932,7 +998,7 @@ p1a:"3–5 introduceri / lună",
 p1b:"Potrivire prioritară",
 p1c:"Revizuire rapidă",
 
-e1a:"6–12 introduceri / lună",
+e1a:"6–10 introduceri / lună",
 e1b:"Prioritate maximă",
 e1c:"Serviciu concierge",
 
@@ -955,7 +1021,7 @@ r2c4:"Ridicată",
 
 r3c1:"Elite",
 r3c2:"3 Luni",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Maximă",
 
 eliteRule:"Accesul Elite depinde de nivel.",
@@ -989,7 +1055,7 @@ p1a:"3–5 introduções / mês",
 p1b:"Matching prioritário",
 p1c:"Revisão rápida",
 
-e1a:"6–12 introduções / mês",
+e1a:"6–10 introduções / mês",
 e1b:"Prioridade máxima",
 e1c:"Serviço concierge",
 
@@ -1012,7 +1078,7 @@ r2c4:"Alta",
 
 r3c1:"Elite",
 r3c2:"3 Meses",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Máxima",
 
 eliteRule:"O acesso Elite depende do nível.",
@@ -1046,7 +1112,7 @@ p1a:"3–5 تعارفات / شهرياً",
 p1b:"مطابقة ذات أولوية",
 p1c:"مراجعة أسرع",
 
-e1a:"6–12 تعارف / شهرياً",
+e1a:"6–10 تعارف / شهرياً",
 e1b:"أولوية قصوى",
 e1c:"خدمة كونسيرج",
 
@@ -1069,7 +1135,7 @@ r2c4:"مرتفعة",
 
 r3c1:"Elite",
 r3c2:"3 أشهر",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"قصوى",
 
 eliteRule:"الوصول إلى Elite يعتمد على مستوى العضوية.",
@@ -1103,7 +1169,7 @@ p1a:"每月 3–5 次介绍",
 p1b:"优先匹配",
 p1c:"更快审核",
 
-e1a:"每月 6–12 次介绍",
+e1a:"每月 6–10 次介绍",
 e1b:"最高优先级",
 e1c:"礼宾服务",
 
@@ -1126,7 +1192,7 @@ r2c4:"高级",
 
 r3c1:"Elite",
 r3c2:"3个月",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"最高",
 
 eliteRule:"Elite 权限取决于会员等级。",
@@ -1160,7 +1226,7 @@ p1a:"月3〜5件の紹介",
 p1b:"優先マッチング",
 p1c:"迅速レビュー",
 
-e1a:"月6〜12件の紹介",
+e1a:"月6〜10件の紹介",
 e1b:"最優先アクセス",
 e1c:"コンシェルジュサービス",
 
@@ -1183,7 +1249,7 @@ r2c4:"高",
 
 r3c1:"Elite",
 r3c2:"3か月",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"最高",
 
 eliteRule:"Eliteアクセスはメンバーシップレベルに依存します。",
@@ -1217,7 +1283,7 @@ p1a:"3–5 introductions / buwan",
 p1b:"Priority matching",
 p1c:"Mas mabilis na review",
 
-e1a:"6–12 introductions / buwan",
+e1a:"6–10 introductions / buwan",
 e1b:"Pinakamataas na priority",
 e1c:"Concierge sourcing",
 
@@ -1240,7 +1306,7 @@ r2c4:"Mataas",
 
 r3c1:"Elite",
 r3c2:"3 Buwan",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Pinakamataas",
 
 eliteRule:"Ang Elite access ay depende sa membership level.",
@@ -1274,7 +1340,7 @@ p1a:"3–5 การแนะนำ / เดือน",
 p1b:"การจับคู่แบบพิเศษ",
 p1c:"ตรวจสอบเร็วขึ้น",
 
-e1a:"6–12 การแนะนำ / เดือน",
+e1a:"6–10 การแนะนำ / เดือน",
 e1b:"ลำดับความสำคัญสูงสุด",
 e1c:"บริการคอนเซียร์จ",
 
@@ -1297,7 +1363,7 @@ r2c4:"สูง",
 
 r3c1:"Elite",
 r3c2:"3 เดือน",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"สูงสุด",
 
 eliteRule:"การเข้าถึง Elite ขึ้นอยู่กับระดับสมาชิก",
@@ -1331,7 +1397,7 @@ p1a:"3–5 lượt giới thiệu / tháng",
 p1b:"Ghép đôi ưu tiên",
 p1c:"Xét duyệt nhanh hơn",
 
-e1a:"6–12 lượt giới thiệu / tháng",
+e1a:"6–10 lượt giới thiệu / tháng",
 e1b:"Ưu tiên cao nhất",
 e1c:"Dịch vụ concierge",
 
@@ -1354,7 +1420,7 @@ r2c4:"Cao",
 
 r3c1:"Elite",
 r3c2:"3 tháng",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Tối đa",
 
 eliteRule:"Quyền truy cập Elite phụ thuộc vào cấp độ thành viên.",
@@ -1388,7 +1454,7 @@ p1a:"월 3–5회 소개",
 p1b:"우선 매칭",
 p1c:"빠른 검토",
 
-e1a:"월 6–12회 소개",
+e1a:"월 6–10회 소개",
 e1b:"최우선 접근",
 e1c:"컨시어지 서비스",
 
@@ -1411,7 +1477,7 @@ r2c4:"높음",
 
 r3c1:"Elite",
 r3c2:"3개월",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"최고",
 
 eliteRule:"Elite 이용 권한은 멤버십 등급에 따라 달라집니다.",
@@ -1445,7 +1511,7 @@ p1a:"3–5 परिचय / महीना",
 p1b:"प्राथमिकता मैचिंग",
 p1c:"तेज़ समीक्षा",
 
-e1a:"6–12 परिचय / महीना",
+e1a:"6–10 परिचय / महीना",
 e1b:"सर्वोच्च प्राथमिकता",
 e1c:"कंसीयर्ज सेवा",
 
@@ -1468,7 +1534,7 @@ r2c4:"उच्च",
 
 r3c1:"Elite",
 r3c2:"3 महीने",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"सर्वोच्च",
 
 eliteRule:"Elite एक्सेस मेंबरशिप स्तर पर निर्भर करता है।",
@@ -1502,7 +1568,7 @@ p1a:"3–5 introductions / mois",
 p1b:"Matching prioritaire",
 p1c:"Examen accéléré",
 
-e1a:"6–12 introductions / mois",
+e1a:"6–10 introductions / mois",
 e1b:"Accès prioritaire maximal",
 e1c:"Service concierge",
 
@@ -1525,7 +1591,7 @@ r2c4:"Haute",
 
 r3c1:"Elite",
 r3c2:"3 Mois",
-r3c3:"6–12",
+r3c3:"6–10",
 r3c4:"Maximale",
 
 eliteRule:"L’accès Elite dépend du niveau.",
@@ -1539,21 +1605,23 @@ impactNotice:"💡 Premium offre davantage d’introductions et de priorité. El
 
 function setLang(l,btn){
 
+if(!lang[l]) return;
+
 document.querySelectorAll('.language-btn')
 .forEach(b=>b.classList.remove('active'));
 
-if(btn) btn.classList.add('active');
+if(btn){
+btn.classList.add('active');
+}
 
-const t = lang[l];
-
-if(!t) return;
+const t=lang[l];
 
 Object.keys(t).forEach(id=>{
 
-const el = document.getElementById(id);
+const el=document.getElementById(id);
 
 if(el){
-el.innerText = t[id];
+el.innerText=t[id];
 }
 
 });
